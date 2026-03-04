@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 
 API_KEY  = 'fb382c284306f27f3c44e28cf6718dd7208691a64314f00df3dabf9008133b07'
 API_BASE = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService'
-DAYS     = 14   # 조회 범위 (일) — API 최대 허용 범위
+DAYS     = 14  # 조회 범위 (일) — API 최대 허용 범위
 
 XR_KEYWORDS = [
     'AR', 'VR', 'XR', 'MR', '증강현실', '가상현실', '혼합현실',
@@ -104,10 +104,13 @@ def fetch_g2b(session, keyword):
             print(f'    오류: {e}')
     return []
 
-def fetch_bizinfo(session):
+def fetch_bizinfo_keyword(session, keyword):
+    """bizinfo 키워드 검색 — 정부지원사업 포함"""
     out = []
     try:
-        r = session.get('https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/list.do',
+        url = 'https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/list.do'
+        params = {'schKeyword': keyword, 'pageIndex': 1}
+        r = session.get(url, params=params,
                         headers={'User-Agent':'Mozilla/5.0','Accept-Language':'ko-KR'}, timeout=15)
         if r.status_code != 200: return out
         pat = re.compile(r'pblancId=([\w_]+)[^"\']*["\'][^>]*>\s*([^<]{4,200}?)\s*</a>', re.DOTALL)
@@ -115,24 +118,23 @@ def fetch_bizinfo(session):
         for m in pat.finditer(r.text):
             pid, title = m.group(1), clean(m.group(2))
             if not title or len(title) < 4 or pid in seen: continue
-            if title in ['목록','이전','다음','확인','취소','닫기','스크랩']: continue
+            if title in ['목록','이전','다음','확인','취소','닫기','스크랩','검색']: continue
             seen.add(pid)
             ctx   = r.text[max(0,m.start()-50):m.end()+300]
             dates = re.findall(r'(\d{4}[.\-]\d{2}[.\-]\d{2})', ctx)
             out.append({
-                'id': f'BIZ-{pid}', 'stage': '입찰공고', 'title': title, 'agency': '',
+                'id': f'BIZ-{pid}', 'stage': '지원사업', 'title': title, 'agency': '',
                 'budget': '미정',
                 'deadline': dates[1].replace('.','-') if len(dates)>1 else '-',
                 'postDate': dates[0].replace('.','-') if dates else datetime.now().strftime('%Y-%m-%d'),
-                'contractType': '공모', 'category': category(title),
+                'contractType': '공모/지원', 'category': category(title),
                 'keywords': [k for k in XR_KEYWORDS if k in title],
                 'description': title, 'requirements': [],
                 'url': f'https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId={pid}',
                 'source': 'bizinfo',
             })
-        print(f'  bizinfo: {len(out)}건')
     except Exception as e:
-        print(f'  bizinfo 오류: {e}')
+        print(f'    bizinfo[{keyword}] 오류: {e}')
     return out
 
 def main():
@@ -154,24 +156,31 @@ def main():
         if n: print(f'  +{n}건 (누적 {len(all_bids)}건)')
         time.sleep(0.3)
 
-    print('\n[2단계] bizinfo (URL 매칭용)')
-    bizinfo_bids = fetch_bizinfo(sess)
-    # 공고명 → pblancId 매핑 테이블
-    title_to_biz_url = {}
-    for b in bizinfo_bids:
-        title_to_biz_url[b['title']] = b['url']
-        add([b])  # bizinfo 공고도 추가
+    print('\n[2단계] bizinfo 키워드 검색')
+    bizinfo_all = []
+    biz_seen_ids = set()
+    for kw in XR_KEYWORDS:
+        bids = fetch_bizinfo_keyword(sess, kw)
+        new = [b for b in bids if b['id'] not in biz_seen_ids]
+        for b in new: biz_seen_ids.add(b['id'])
+        if new:
+            print(f'  [{kw}]: {len(new)}건')
+        bizinfo_all.extend(new)
+        time.sleep(0.3)
 
-    # g2b 결과에 bizinfo URL 덮어쓰기 (매칭되면)
+    # bizinfo pblancId → URL 매핑 (g2b 결과 URL 보완용)
+    title_to_biz_url = {b['title']: b['url'] for b in bizinfo_all}
+
+    # g2b 결과에 bizinfo URL 덮어쓰기
     for b in all_bids:
         if b['source'] == 'g2b':
             matched = title_to_biz_url.get(b['title'])
             if matched:
                 b['url'] = matched
-            else:
-                # 매칭 안 되면 bizinfo 공고명 검색 (pblancNm 파라미터)
-                kw = requests.utils.quote(b['title'][:20])
-                b['url'] = f'https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/list.do?pblancNm={kw}'
+
+    # bizinfo 공고 추가
+    n = add(bizinfo_all)
+    print(f'  bizinfo 합계: {n}건 추가')
 
     xr = [b for b in all_bids if is_xr(b['title'])]
     if not xr and all_bids: xr = all_bids
