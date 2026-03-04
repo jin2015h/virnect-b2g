@@ -19,7 +19,16 @@ def clean(v):
         v = v.replace(a, b)
     return re.sub(r'\s+', ' ', v).strip()
 
-def is_xr(t): return any(k in t for k in XR_KEYWORDS)
+import re as _re
+# 영문 단독 키워드는 단어경계로 매칭, 한글은 포함 여부로 매칭
+_EN_KW = {'AR', 'VR', 'XR', 'MR', 'HMD'}
+_KO_KW = set(XR_KEYWORDS) - _EN_KW
+
+def is_xr(t):
+    for k in _EN_KW:
+        if _re.search(r'(?<![A-Za-z])' + k + r'(?![A-Za-z])', t):
+            return True
+    return any(k in t for k in _KO_KW)
 
 def category(title):
     if any(k in title for k in ['군','국방','방위']): return 'MR/군사'
@@ -47,9 +56,10 @@ def parse_items(items):
             'postDate':     clean(item.get('bidNtceDt') or datetime.now().strftime('%Y-%m-%d')),
             'contractType': clean(item.get('cntrctMthdNm') or '입찰'),
             'category':     category(title),
-            'keywords':     [k for k in XR_KEYWORDS if k in title],
+            'keywords':     [k for k in XR_KEYWORDS if _re.search(r'(?<![A-Za-z])'+k+r'(?![A-Za-z])', title) if k in _EN_KW] +
+                            [k for k in _KO_KW if k in title],
             'description':  title, 'requirements': [],
-            'url': f'https://www.g2b.go.kr:8101/ep/invitation/publish/bidInfoDtl.do?bidno={no}',
+            'url': f'https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm={no}&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1',
             'source': 'g2b',
         })
     return out
@@ -144,10 +154,26 @@ def main():
         if n: print(f'  +{n}건 (누적 {len(all_bids)}건)')
         time.sleep(0.3)
 
-    print('\n[2단계] bizinfo')
-    add(fetch_bizinfo(sess))
+    print('\n[2단계] bizinfo (URL 매칭용)')
+    bizinfo_bids = fetch_bizinfo(sess)
+    # 공고명 → pblancId 매핑 테이블
+    title_to_biz_url = {}
+    for b in bizinfo_bids:
+        title_to_biz_url[b['title']] = b['url']
+        add([b])  # bizinfo 공고도 추가
 
-    xr = [b for b in all_bids if b['source'] == 'g2b' or is_xr(b['title'])]
+    # g2b 결과에 bizinfo URL 덮어쓰기 (매칭되면)
+    for b in all_bids:
+        if b['source'] == 'g2b':
+            matched = title_to_biz_url.get(b['title'])
+            if matched:
+                b['url'] = matched
+            else:
+                # 매칭 안 되면 bizinfo 공고명 검색 (pblancNm 파라미터)
+                kw = requests.utils.quote(b['title'][:20])
+                b['url'] = f'https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/list.do?pblancNm={kw}'
+
+    xr = [b for b in all_bids if is_xr(b['title'])]
     if not xr and all_bids: xr = all_bids
     print(f'\n전체: {len(all_bids)}건, XR: {len(xr)}건')
 
