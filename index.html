@@ -393,9 +393,15 @@ function renderList() {
   const q=document.getElementById('search').value.trim();
   const list=document.getElementById('bid-list'); list.innerHTML='';
   const cEl=document.createElement('div'); cEl.id='list-count'; list.appendChild(cEl);
-  const filtered=BIDS.filter(b=>{
+  let filtered=BIDS.filter(b=>{
     const ms=!q||b.title.includes(q)||b.agency.includes(q)||(b.keywords||[]).some(k=>k.includes(q));
     return ms&&(activeCat==='전체'||b.category===activeCat)&&(activeStage==='전체'||b.stage===activeStage);
+  });
+  // 우선순위 정렬: AI 확률(40%) + 서버 priority 점수(60%)
+  filtered.sort((a,b)=>{
+    const pa=(analyses[a.id]&&!analyses[a.id].error?analyses[a.id].probability*0.4:0)+(a.priority||0);
+    const pb=(analyses[b.id]&&!analyses[b.id].error?analyses[b.id].probability*0.4:0)+(b.priority||0);
+    return pb-pa;
   });
   cEl.textContent='총 '+filtered.length+'건';
   filtered.forEach(b=>{
@@ -405,17 +411,27 @@ function renderList() {
     card.className='bid-card'+(b.id===selectedId?' selected':'');
     let probHtml='';
     if(a&&!a.error){ const pc=a.probability>=75?'#16a34a':a.probability>=55?'#d97706':'#dc2626'; probHtml=`<span class="bid-prob" style="color:${pc}">${a.probability}%</span>`; }
+    let urgBadge='';
+    try{ const d=Math.ceil((new Date(b.deadline)-new Date())/86400000);
+      if(d>=0&&d<=3) urgBadge=`<span style="background:#fef2f2;border:1px solid #fca5a5;color:#dc2626;border-radius:4px;padding:1px 5px;font-size:10px;font-weight:700">🔥D-${d}</span>`;
+      else if(d>=0&&d<=7) urgBadge=`<span style="background:#fff7ed;border:1px solid #fdba74;color:#ea580c;border-radius:4px;padding:1px 5px;font-size:10px;font-weight:700">⚡D-${d}</span>`;
+    }catch(e){}
+    const srcBadge=b.source==='bizinfo'
+      ?'<span class="src-badge">bizinfo</span>'
+      :b.source==='prespec'
+        ?'<span class="src-badge" style="border-color:#d8b4fe;background:#faf5ff;color:#7e22ce">사전규격</span>'
+        :'<span class="src-badge" style="border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8">나라장터</span>';
     card.innerHTML=`
       <div class="card-top"><div class="card-badges">
         <span class="cat-badge" style="border-color:${col.border};color:${col.text};background:${col.bg}">${b.category}</span>
         <span class="stage-badge">${b.stage}</span>
-        ${b.source==='bizinfo'?'<span class="src-badge">bizinfo</span>':'<span class="src-badge" style="border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8">나라장터</span>'}
+        ${srcBadge}${urgBadge}
         ${a&&!a.error?'<span class="cached-tag">분석됨</span>':''}
       </div>${probHtml}</div>
       <div class="card-title">${b.title}</div>
       <div class="card-meta">${b.agency}</div>
       <div class="card-budget">${b.budget}</div>
-      <div class="card-date">공고 ${b.postDate} · 마감 ${b.deadline}</div>`;
+      <div class="card-date">공고 ${b.postDate} · 마감 <span style="color:${(()=>{try{const d=Math.ceil((new Date(b.deadline)-new Date())/86400000);return d<=7?'#dc2626':d<=14?'#ea580c':'#64748b'}catch(e){return '#64748b'}})()};font-weight:${(()=>{try{return Math.ceil((new Date(b.deadline)-new Date())/86400000)<=7?'700':'400'}catch(e){return '400'}})()}">${b.deadline}</span></div>`;
     card.onclick=()=>selectBid(b);
     list.appendChild(card);
   });
@@ -436,14 +452,46 @@ function renderDetail(bid) {
   const col=CAT_COLORS[bid.category]||{border:'#e2e8f0',text:'#64748b',bg:'#f8fafc'};
   const si=STAGE_ORDER.indexOf(bid.stage);
   const tl=STAGE_ORDER.map((s,i)=>`<div class="st-item"><span class="st-step ${i<si?'done':i===si?'current':''}">${s}</span>${i<STAGE_ORDER.length-1?`<span class="st-arrow${i<si?' done':''}">›</span>`:''}</div>`).join('');
-  const bidNo = bid.id.replace('G2B-','').replace('BIZ-','');
+  const bidNo = bid.id.replace('G2B-','').replace('BIZ-','').replace('SPEC-','');
 
-  // 링크 버튼: bizinfo 소스는 직접 링크, g2b는 공고번호 복사 + 나라장터 메인
-  const linkBtns = bid.source === 'bizinfo'
-    ? `<a href="${bid.url}" target="_blank" class="open-btn">🏛️ bizinfo에서 보기</a>`
-    : `<button class="copy-btn" onclick="copyBidNo('${bidNo}')">📋 공고번호 복사</button>
-       <a href="https://www.g2b.go.kr" target="_blank" class="open-btn">🏛️ 나라장터 검색</a>
-       <span id="copy-feedback" style="font-size:11px;color:#16a34a;"></span>`;
+  // 마감 임박 계산
+  let urgencyHtml = '';
+  try {
+    const dl = bid.deadline?.slice(0,10);
+    if(dl && dl !== '-') {
+      const days = Math.ceil((new Date(dl) - new Date()) / 86400000);
+      if(days <= 3)       urgencyHtml = `<span style="background:#fef2f2;border:1px solid #fca5a5;color:#dc2626;border-radius:5px;padding:2px 8px;font-size:11px;font-weight:700">🔥 마감 ${days}일 전</span>`;
+      else if(days <= 7)  urgencyHtml = `<span style="background:#fff7ed;border:1px solid #fdba74;color:#ea580c;border-radius:5px;padding:2px 8px;font-size:11px;font-weight:700">⚡ 마감 ${days}일 전</span>`;
+      else if(days <= 14) urgencyHtml = `<span style="background:#fefce8;border:1px solid #fde047;color:#ca8a04;border-radius:5px;padding:2px 8px;font-size:11px;font-weight:700">📅 마감 ${days}일 전</span>`;
+    }
+  } catch(e){}
+
+  // 링크 버튼
+  let linkBtns = '';
+  if(bid.source === 'bizinfo') {
+    linkBtns = `<a href="${bid.url}" target="_blank" class="open-btn">🏛️ bizinfo 보기</a>`;
+  } else if(bid.source === 'prespec') {
+    linkBtns = `<a href="https://www.g2b.go.kr" target="_blank" class="open-btn" style="background:#faf5ff;border-color:#d8b4fe;color:#7e22ce">🔍 나라장터 사전규격</a>
+      <button class="copy-btn" onclick="copyBidNo('${bidNo}')">📋 번호 복사</button>
+      <span id="copy-feedback" style="font-size:11px;color:#16a34a;"></span>`;
+  } else {
+    linkBtns = `<a href="${bid.url}" target="_blank" class="open-btn">🔗 공고 바로가기</a>
+      <button class="copy-btn" onclick="copyBidNo('${bidNo}')">📋 공고번호 복사</button>
+      <span id="copy-feedback" style="font-size:11px;color:#16a34a;"></span>`;
+  }
+
+  // 첨부파일 링크 (files 배열 + 레거시 specUrl)
+  let fileLinks = '';
+  if(bid.files && bid.files.length) {
+    bid.files.forEach(f=>{
+      const icon = f.name.includes('공고문')?'📄':f.name.includes('규격')?'📋':f.name.includes('제안')?'📝':'📎';
+      fileLinks += `<a href="${f.url}" target="_blank" class="open-btn" style="background:#f0fdf4;border-color:#86efac;color:#166534">${icon} ${f.name}</a> `;
+    });
+  }
+  if(bid.specFileUrl) fileLinks += `<a href="${bid.specFileUrl}" target="_blank" class="open-btn" style="background:#f0fdf4;border-color:#86efac;color:#166534">📋 규격서 다운로드</a> `;
+  const fileSection = fileLinks
+    ? `<div class="section-title">📎 첨부 파일</div><div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">${fileLinks}</div>`
+    : '';
 
   detail.innerHTML=`
     <div class="panel">
@@ -452,24 +500,24 @@ function renderDetail(bid) {
           <span class="cat-badge" style="border-color:${col.border};color:${col.text};background:${col.bg}">${bid.category}</span>
           <span class="stage-badge" style="background:#e8f0fe;border-color:#93c5fd;color:#1d4ed8;font-weight:700">📍 ${bid.stage}</span>
           ${bid.source==='bizinfo'?'<span class="src-badge">📡 bizinfo</span>':'<span class="src-badge" style="border-color:#bfdbfe;background:#eff6ff;color:#1d4ed8">🏛️ 나라장터</span>'}
+          ${urgencyHtml}
         </div>
         <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">${linkBtns}</div>
       </div>
       <div class="detail-title">${bid.title}</div>
-      ${bid.source==='g2b'?`<div style="font-size:11px;color:#94a3b8;margin-bottom:11px">공고번호: <span style="font-family:monospace;color:#475569">${bidNo}</span> — 복사 후 나라장터에서 검색하세요</div>`:''}
       <div class="meta-grid">
-        <div class="meta-item"><div class="meta-label">발주기관</div><div class="meta-value">${bid.agency}</div></div>
-        <div class="meta-item"><div class="meta-label">예산</div><div class="meta-value" style="color:#4285f4">${bid.budget}</div></div>
+        <div class="meta-item"><div class="meta-label">발주기관</div><div class="meta-value">${bid.agency||'-'}</div></div>
+        <div class="meta-item"><div class="meta-label">수요기관</div><div class="meta-value">${bid.demandAgency||bid.agency||'-'}</div></div>
+        <div class="meta-item"><div class="meta-label">예산</div><div class="meta-value" style="color:#4285f4;font-weight:700">${bid.budget}</div></div>
         <div class="meta-item"><div class="meta-label">공고일</div><div class="meta-value">${bid.postDate}</div></div>
-        <div class="meta-item"><div class="meta-label">마감일</div><div class="meta-value" style="color:#dc2626">${bid.deadline}</div></div>
-      </div>
-      <div class="meta-grid-3">
-        <div class="meta-item"><div class="meta-label">계약 방식</div><div class="meta-value">${bid.contractType||'-'}</div></div>
-        <div class="meta-item"><div class="meta-label">현재 단계</div><div class="meta-value" style="color:#7c3aed">${bid.stage}</div></div>
-        <div class="meta-item"><div class="meta-label">분류</div><div class="meta-value">${bid.category}</div></div>
+        <div class="meta-item"><div class="meta-label">마감일</div><div class="meta-value" style="color:#dc2626;font-weight:700">${bid.deadline}</div></div>
+        <div class="meta-item"><div class="meta-label">계약방식</div><div class="meta-value">${bid.contractType||'-'}</div></div>
+        ${bid.manager?`<div class="meta-item"><div class="meta-label">담당자</div><div class="meta-value">${bid.manager}</div></div>`:''}
+        ${bid.tel?`<div class="meta-item"><div class="meta-label">연락처</div><div class="meta-value"><a href="tel:${bid.tel}" style="color:#4285f4">${bid.tel}</a></div></div>`:''}
       </div>
       <div class="section-title">📊 입찰 진행 단계</div>
       <div class="stage-timeline">${tl}</div>
+      ${fileSection}
       <div class="section-title">📋 사업 개요</div>
       <div class="desc-text">${bid.description||'-'}</div>
       ${bid.requirements&&bid.requirements.length?`<div class="section-title">✅ 주요 요구사항</div><div class="req-list">${bid.requirements.map(r=>`<div class="req-item"><span style="color:#4285f4;flex-shrink:0">▪</span>${r}</div>`).join('')}</div>`:''}
