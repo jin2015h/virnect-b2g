@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 
 API_KEY  = 'fb382c284306f27f3c44e28cf6718dd7208691a64314f00df3dabf9008133b07'
 API_BASE = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService'
-DAYS     = 7   # 조회 범위 (일) — 매일 자동실행 기준 7일이면 충분
+DAYS     = 30  # 조회 범위 (일)
 
 XR_KEYWORDS = [
     'AR', 'VR', 'XR', 'MR', '증강현실', '가상현실', '혼합현실',
@@ -22,7 +22,7 @@ def clean(v):
 import re as _re
 # 영문 단독 키워드는 단어경계로 매칭, 한글은 포함 여부로 매칭
 _EN_KW = {'AR', 'VR', 'XR', 'MR', 'HMD'}
-_KO_KW = set(XR_KEYWORDS) - _EN_KW
+_KO_KW = set(XR_KEYWORDS) - _EN_KW | {'디지털 트윈'}
 
 def is_xr(t):
     for k in _EN_KW:
@@ -173,7 +173,7 @@ def main():
                 kw = requests.utils.quote(b['title'][:20])
                 b['url'] = f'https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/list.do?pblancNm={kw}'
 
-    xr = [b for b in all_bids if b['source'] == 'g2b' or is_xr(b['title'])]
+    xr = [b for b in all_bids if is_xr(b['title'])]
     if not xr and all_bids: xr = all_bids
     print(f'\n전체: {len(all_bids)}건, XR: {len(xr)}건')
 
