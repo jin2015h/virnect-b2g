@@ -507,54 +507,94 @@ async function triggerAndReload() {
   if (!ghToken || !ghRepo) {
     btn.disabled = true; btn.textContent = '⏳ 로딩...';
     await loadBids();
-    btn.disabled = false; btn.textContent = '🔄 공고 새로고침';
+    btn.disabled = false; btn.textContent = '🔄 새로고침';
     return;
   }
-  btn.disabled = true; btn.textContent = '⏳ Actions 실행 중...';
+  btn.disabled = true; btn.textContent = '⏳ 실행 중...';
   const bar  = document.getElementById('action-bar');
   const fill = document.getElementById('action-progress-fill');
   const txt  = document.getElementById('action-text');
   bar.classList.add('visible'); fill.style.width = '5%';
-  txt.textContent = '① GitHub Actions 워크플로우 실행 요청 중...';
+  txt.textContent = '① Actions 실행 요청 중...';
+
+  const rawUrl = `https://raw.githubusercontent.com/${ghRepo}/main/data/bids.json`;
+
   try {
     const trigRes = await fetch(
       `https://api.github.com/repos/${ghRepo}/actions/workflows/${WORKFLOW_FILE}/dispatches`,
       { method:'POST', headers:{'Authorization':`Bearer ${ghToken}`,'Accept':'application/vnd.github+json','Content-Type':'application/json'}, body:JSON.stringify({ref:'main'}) }
     );
     if (!trigRes.ok) { const e=await trigRes.json().catch(()=>({message:trigRes.statusText})); throw new Error(e.message||trigRes.statusText); }
-    fill.style.width='15%'; txt.textContent='② 워크플로우 시작 대기 중... (최대 3분 소요)';
-    await sleep(3000);
+    fill.style.width='12%'; txt.textContent='② 워크플로우 시작 대기 중...';
+    await sleep(4000);
+
     let runId = null;
-    for (let i=0;i<10;i++) {
+    for (let i=0;i<12;i++) {
       const rd = await (await fetch(`https://api.github.com/repos/${ghRepo}/actions/workflows/${WORKFLOW_FILE}/runs?per_page=1`,{headers:{'Authorization':`Bearer ${ghToken}`,'Accept':'application/vnd.github+json'}})).json();
       const l  = rd.workflow_runs?.[0];
       if (l&&(l.status==='queued'||l.status==='in_progress')) { runId=l.id; break; }
       await sleep(2000);
     }
     if (!runId) throw new Error('워크플로우 실행을 찾을 수 없습니다');
-    fill.style.width='25%'; txt.textContent='③ XR 공고 수집 중...';
-    const started=Date.now(), MAX_WAIT=5*60*1000;
-    let progress=25;
-    while (Date.now()-started<MAX_WAIT) {
-      const rd=await (await fetch(`https://api.github.com/repos/${ghRepo}/actions/runs/${runId}`,{headers:{'Authorization':`Bearer ${ghToken}`,'Accept':'application/vnd.github+json'}})).json();
-      const elapsed=Math.round((Date.now()-started)/1000);
-      if (rd.status==='completed') {
-        if (rd.conclusion==='success') {
-          fill.style.width='90%'; txt.textContent='④ 공고 데이터 로드 중...';
-          await sleep(2000); await loadBids();
-          fill.style.width='100%'; txt.textContent=`✅ 완료! ${BIDS.length}건 공고 수집됨`;
-        } else { throw new Error(`워크플로우 실패: ${rd.conclusion}`); }
-        break;
-      }
-      progress=Math.min(85,25+(elapsed/(MAX_WAIT/1000))*60); fill.style.width=progress+'%';
-      txt.textContent=`③ 공고 수집 중... (${elapsed}초 경과)`;
-      await sleep(4000);
-    }
-  } catch(e) { txt.textContent='❌ 오류: '+e.message+' · JSON만 새로 로드합니다'; await loadBids(); }
-  setTimeout(()=>{ bar.classList.remove('visible'); fill.style.width='0%'; },4000);
-  btn.disabled=false; btn.textContent='🔄 공고 새로고침';
-}
 
+    fill.style.width='20%';
+    const started = Date.now(), MAX_WAIT = 6*60*1000;
+    let lastUpdatedAt = '';
+    let checkCount = 0;
+
+    while (Date.now()-started < MAX_WAIT) {
+      const elapsed = Math.round((Date.now()-started)/1000);
+
+      // 18초마다 Actions 완료 여부 확인
+      checkCount++;
+      if (checkCount % 6 === 0) {
+        const rd = await (await fetch(`https://api.github.com/repos/${ghRepo}/actions/runs/${runId}`,{headers:{'Authorization':`Bearer ${ghToken}`,'Accept':'application/vnd.github+json'}})).json();
+        if (rd.status === 'completed') {
+          if (rd.conclusion === 'success') {
+            await loadBids();
+            fill.style.width='100%';
+            txt.textContent=`✅ 수집 완료! ${BIDS.length}건`;
+          } else { throw new Error(`워크플로우 실패: ${rd.conclusion}`); }
+          break;
+        }
+      }
+
+      // 3초마다 raw JSON 폴링 → 중간 결과 즉시 반영
+      try {
+        const res = await fetch(rawUrl + '?t=' + Date.now());
+        if (res.ok) {
+          const data = await res.json();
+          if (data.updatedAt !== lastUpdatedAt && data.bids?.length) {
+            lastUpdatedAt = data.updatedAt;
+            const newBids = data.bids || [];
+            const added   = newBids.length - BIDS.length;
+            BIDS = newBids;
+            renderList(); updateBadge();
+
+            const progress = Math.min(88, 20 + (elapsed / (MAX_WAIT/1000)) * 70);
+            fill.style.width = progress + '%';
+            txt.innerHTML = `<b>${data.stage||'수집 중...'}</b>` +
+              (added > 0 ? ` &nbsp;<span style="color:#16a34a;font-weight:700">+${added}건 추가</span>` : '') +
+              ` &nbsp;<span style="opacity:.6">${elapsed}초</span>`;
+
+            if (data.status === 'done') {
+              fill.style.width='100%';
+              txt.textContent=`✅ 수집 완료! ${BIDS.length}건`;
+              break;
+            }
+          }
+        }
+      } catch(e) { /* 폴링 실패 무시 */ }
+
+      await sleep(3000);
+    }
+  } catch(e) {
+    txt.textContent='❌ 오류: '+e.message;
+    await loadBids();
+  }
+  setTimeout(()=>{ bar.classList.remove('visible'); fill.style.width='0%'; }, 5000);
+  btn.disabled=false; btn.textContent='🔄 새로고침';
+}
 async function loadBids() {
   try {
     const res  = await fetch('data/bids.json?t='+Date.now());
