@@ -202,7 +202,7 @@ def fetch_g2b(session, keyword):
     for op in ops:
         url = (f'{API_BASE}/getBidPblancListInfo{op}'
                f'?ServiceKey={API_KEY}'
-               f'&numOfRows=10&pageNo=1&type=json'
+               f'&numOfRows=30&pageNo=1&type=json'
                f'&inqryDiv=1'
                f'&inqryBgnDt={bgn}&inqryEndDt={end}'
                f'&bidNtceNm={kw}')
@@ -270,110 +270,87 @@ def fetch_prespec(keyword, bgn, end):
     return out
 
 
-def fetch_bizinfo_keyword(session, keyword):
-    """bizinfo 키워드 검색 — 정부지원사업 포함"""
-
-def fetch_prespec(keyword, bgn, end):
-    """사전규격정보서비스 — HrcspSsstndrdInfoService
-    검색파라미터: prdctNm (품명) 으로 검색
-    """
-    out = []
-    ops = ['Servc', 'Thng', 'Cnstwk']
-    for op in ops:
-        try:
-            url = (f'{BFSPEC_BASE}/getHrcspSsstndrdInfo{op}'
-                   f'?ServiceKey={API_KEY}'
-                   f'&numOfRows=10&pageNo=1&type=json'
-                   f'&inqryBgnDt={bgn}&inqryEndDt={end}'
-                   f'&prdctNm={requests.utils.quote(keyword)}')
-            r = requests.get(url, timeout=12)
-            if r.status_code != 200: continue
-            body = r.json().get('response', {})
-            code = body.get('header', {}).get('resultCode', '')
-            if code not in ('00', '0'):
-                print(f'    사전규격[{keyword}][{op}] code={code}')
-                continue
-            items = body.get('body', {}).get('items', {})
-            parsed = parse_prespec_items(items, keyword)
-            if parsed:
-                print(f'    사전규격[{keyword}][{op}]: {len(parsed)}건')
-            out.extend(parsed)
-        except Exception as e:
-            print(f'    사전규격[{keyword}][{op}] 오류: {e}')
-    return out
-
 
 def fetch_bizinfo_keyword(session, keyword):
-    """bizinfo 키워드 검색 — API 방식으로 시도, 실패시 스크래핑"""
+    """bizinfo 정부지원사업 수집 — RSS API → HTML 스크래핑 순서로 시도"""
     out = []
+    seen = set()
+
+    # ── 방법 1: RSS/JSON API ──────────────────────────────
     try:
-        # 1) Open API 시도 (bizinfo 공식 API)
-        api_url = 'https://www.bizinfo.go.kr/uss/rss/bizinfoApi.do'
-        r = session.get(api_url, params={
-            'crtfcKey': 'OPEN_API_KEY',  # 공개키 없으면 실패 → 스크래핑으로 fallback
-            'dataType': 'json',
-            'searchKeyword': keyword,
-            'pageUnit': 10,
-            'pageIndex': 1,
-        }, headers={'User-Agent':'Mozilla/5.0','Accept-Language':'ko-KR'}, timeout=10)
-
-        # 2) 스크래핑 방식 (API 실패시)
-        url = 'https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/list.do'
-        r = session.get(url,
-            params={'schKeyword': keyword, 'schCondition': 'title', 'pageIndex': 1},
-            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-                     'Accept-Language': 'ko-KR,ko;q=0.9',
-                     'Referer': 'https://www.bizinfo.go.kr/'},
-            timeout=15)
-        if r.status_code != 200:
-            return out
-
-        html = r.text
-        # pblancId 기반 링크 파싱 (여러 패턴 시도)
-        patterns = [
-            re.compile(r"pblancId=([\w]+)[^'\"]*['\"][^>]*>\s*([^<]{4,200}?)\s*</a>", re.DOTALL),
-            re.compile(r'fn_detail\(["\']?([\w]+)["\']?\)[^>]*>\s*([^<]{4,200}?)\s*</a>', re.DOTALL),
-            re.compile(r'<td[^>]*class="[^"]*subject[^"]*"[^>]*>.*?href="[^"]*pblancId=([\w]+)[^"]*"[^>]*>\s*([^<]{4,200}?)\s*</a>', re.DOTALL),
-        ]
-        seen = set()
-        for pat in patterns:
-            for m in pat.finditer(html):
-                pid   = m.group(1).strip()
-                title = clean(m.group(2))
-                if not title or len(title) < 4 or pid in seen: continue
-                if title in ['목록','이전','다음','확인','취소','닫기','스크랩','검색','공고명']: continue
-                if not is_xr(title): continue
+        r = session.get('https://www.bizinfo.go.kr/uss/rss/bizinfoApi.do', params={
+            'crtfcKey': 'OPEN_API_KEY', 'dataType': 'json',
+            'searchKeyword': keyword, 'pageUnit': 20, 'pageIndex': 1,
+        }, headers={'User-Agent':'Mozilla/5.0','Accept':'application/json,text/xml'}, timeout=12)
+        if r.status_code == 200:
+            data = r.json()
+            items = (data.get('jsonArray') or data.get('items') or data.get('resultList') or [])
+            for item in items:
+                title = clean(item.get('pblancNm') or item.get('title') or '')
+                pid   = str(item.get('pblancId') or item.get('id') or '')
+                if not title or not pid or pid in seen or not is_xr(title): continue
                 seen.add(pid)
-                ctx   = html[max(0, m.start()-100):m.end()+400]
-                dates = re.findall(r'(\d{4}[.\-]\d{2}[.\-]\d{2})', ctx)
-                # 예산 추출
-                budg_m = re.search(r'([\d,]+)\s*원', ctx)
-                budget = budg_m.group(0) if budg_m else '미정'
                 out.append({
-                    'id':           f'BIZ-{pid}',
-                    'stage':        '지원사업',
-                    'title':        title,
-                    'agency':       '',
+                    'id': f'BIZ-{pid}', 'stage': '지원사업', 'title': title,
+                    'agency':       clean(item.get('jrsdInsttNm') or ''),
                     'demandAgency': '',
-                    'budget':       budget,
-                    'deadline':     dates[1].replace('.', '-') if len(dates) > 1 else '-',
-                    'postDate':     dates[0].replace('.', '-') if dates else datetime.now().strftime('%Y-%m-%d'),
-                    'contractType': '공모/지원',
-                    'category':     category(title),
+                    'budget':       clean(item.get('totPbancBdgt') or '미정'),
+                    'deadline':     clean(item.get('reqstEndDt') or '-').replace('.', '-'),
+                    'postDate':     clean(item.get('pblancBgngDt') or datetime.now().strftime('%Y-%m-%d')).replace('.', '-'),
+                    'contractType': '공모/지원', 'category': category(title),
                     'keywords':     [k for k in XR_KEYWORDS if k in title],
-                    'description':  title,
-                    'requirements': [],
-                    'url':          f'https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId={pid}',
-                    'specUrl':      '',
-                    'draftUrl':     '',
-                    'contact':      '',
-                    'source':       'bizinfo',
+                    'description':  clean(item.get('bsnsSumryCn') or title),
+                    'requirements': [], 'specUrl': '', 'draftUrl': '', 'contact': '',
+                    'url': f'https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId={pid}',
+                    'source': 'bizinfo',
                 })
-            if out: break  # 첫 번째 패턴에서 결과 나오면 중단
-    except Exception as e:
-        print(f'    bizinfo[{keyword}] 오류: {e}')
-    return out
+    except Exception:
+        pass
+    if out: return out
 
+    # ── 방법 2: HTML 스크래핑 ────────────────────────────
+    for page_url, params in [
+        ('https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/list.do',
+         {'schKeyword': keyword, 'schCondition': 'title', 'pageIndex': 1}),
+    ]:
+        try:
+            r = session.get(page_url, params=params, headers={
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/122.0.0.0',
+                'Accept': 'text/html,application/xhtml+xml',
+                'Accept-Language': 'ko-KR,ko;q=0.9',
+                'Referer': 'https://www.bizinfo.go.kr/',
+            }, timeout=15)
+            if r.status_code != 200: continue
+            html = r.text
+            # pblancId 추출 후 주변 텍스트에서 제목 수집
+            for m in re.finditer(r'pblancId=([\w\-]+)', html):
+                pid = m.group(1).strip()
+                if not pid or pid in seen: continue
+                ctx = html[max(0, m.start()-30):m.end()+800]
+                candidates = [clean(c) for c in re.findall(r'>([^<]{5,200})<', ctx)]
+                title = max((c for c in candidates if len(c) > 5
+                             and c not in ['목록','이전','다음','확인','취소','닫기','스크랩','검색','공고명','접수마감']),
+                            key=len, default='')
+                if not title or not is_xr(title): continue
+                seen.add(pid)
+                dates = re.findall(r'(\d{4}[.\-]\d{2}[.\-]\d{2})', ctx)
+                bm = re.search(r'([\d,]+)\s*원', ctx)
+                out.append({
+                    'id': f'BIZ-{pid}', 'stage': '지원사업', 'title': title,
+                    'agency': '', 'demandAgency': '',
+                    'budget': bm.group(0) if bm else '미정',
+                    'deadline': dates[1].replace('.', '-') if len(dates) > 1 else '-',
+                    'postDate': dates[0].replace('.', '-') if dates else datetime.now().strftime('%Y-%m-%d'),
+                    'contractType': '공모/지원', 'category': category(title),
+                    'keywords': [k for k in XR_KEYWORDS if k in title],
+                    'description': title, 'requirements': [],
+                    'specUrl': '', 'draftUrl': '', 'contact': '',
+                    'url': f'https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId={pid}',
+                    'source': 'bizinfo',
+                })
+        except Exception as e:
+            print(f'    bizinfo[{keyword}] HTML오류: {e}')
+    return out
 
 def score_bid(b):
     """정렬 점수: 높을수록 위로 (마감 임박 + 핵심 XR 키워드)"""
