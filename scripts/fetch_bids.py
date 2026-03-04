@@ -64,7 +64,7 @@ def parse_items(items):
 def fetch_g2b(session, keyword):
     results = []
     end_dt   = datetime.now()
-    start_dt = end_dt - timedelta(days=90)
+    start_dt = end_dt - timedelta(days=30)
     bgnDt = start_dt.strftime('%Y%m%d') + '0000'
     endDt = end_dt.strftime('%Y%m%d') + '2359'
     kw_enc = requests.utils.quote(keyword)
