@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 
 API_KEY  = 'fb382c284306f27f3c44e28cf6718dd7208691a64314f00df3dabf9008133b07'
 API_BASE = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService'
-DAYS     = 30  # 조회 범위 (일)
+DAYS     = 14   # 조회 범위 (일) — API 최대 허용 범위
 
 XR_KEYWORDS = [
     'AR', 'VR', 'XR', 'MR', '증강현실', '가상현실', '혼합현실',
