@@ -606,7 +606,7 @@ def score_bid(b):
 def main():
     print(f'[{datetime.now():%Y-%m-%d %H:%M}] XR 공고 수집 (최근 {DAYS}일)')
 
-    # ── keywords.json 오버라이드 (HTML에서 저장한 커스텀 키워드) ──
+    # ── keywords.json 오버라이드 ───────────────────────────
     global G2B_KEYWORDS, XR_KEYWORDS
     kw_path = 'data/keywords.json'
     if os.path.exists(kw_path):
@@ -620,12 +620,35 @@ def main():
                 print(f'  ✅ keywords.json 로드: XR={len(XR_KEYWORDS)}개')
         except Exception as e:
             print(f'  ⚠️  keywords.json 로드 실패: {e}')
+
     sess = requests.Session()
     sess.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
                          'Accept': 'application/json, text/html'})
 
     all_bids, seen = [], set()
     lock_seen = __import__('threading').Lock()
+    save_lock  = __import__('threading').Lock()
+    last_saved = [0]  # 마지막 저장 시점의 건수
+
+    os.makedirs('data', exist_ok=True)
+
+    def save_partial(stage_label, status='running'):
+        """단계별 중간 결과를 bids.json에 저장 — HTML 폴링으로 실시간 표시"""
+        with save_lock:
+            xr_now = sorted(
+                [b for b in all_bids if is_xr(b['title'])],
+                key=score_bid, reverse=True
+            )
+            payload = {
+                'updatedAt': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                'status':    status,       # 'running' | 'done'
+                'stage':     stage_label,  # 진행 단계 메시지
+                'total':     len(xr_now),
+                'bids':      xr_now,
+            }
+            json.dump(payload, open('data/bids.json', 'w', encoding='utf-8'),
+                      ensure_ascii=False, indent=2)
+            last_saved[0] = len(all_bids)
 
     def add(bids):
         n = 0
@@ -633,14 +656,20 @@ def main():
             for b in bids:
                 if b['id'] not in seen:
                     seen.add(b['id']); all_bids.append(b); n += 1
+        # 3건 이상 쌓이면 중간 저장
+        if n and (len(all_bids) - last_saved[0]) >= 3:
+            save_partial('① 나라장터 수집 중...')
         return n
+
+    # 수집 시작 알림
+    save_partial('⏳ 수집 시작...', status='running')
 
     now   = datetime.now()
     start = now - timedelta(days=DAYS)
     bgn   = start.strftime('%Y%m%d') + '0000'
     end   = now.strftime('%Y%m%d')   + '2359'
 
-    # ── 1단계: 나라장터 입찰공고 병렬 ──────────────────
+    # ── 1단계: 나라장터 입찰공고 ─────────────────────────
     print(f'\n[1단계] 나라장터 API (병렬, {len(G2B_KEYWORDS)}개 키워드)')
     t0 = time.time()
     with ThreadPoolExecutor(max_workers=8) as ex:
@@ -652,8 +681,9 @@ def main():
             except Exception as e:
                 print(f'  ⚠️  [{futs[f]}] {e}')
     print(f'  → {len(all_bids)}건 ({time.time()-t0:.1f}초)')
+    save_partial(f'② 사전규격 수집 중... (나라장터 {len(all_bids)}건 완료)')
 
-    # ── 1.5단계: 사전규격 병렬 ──────────────────────────
+    # ── 1.5단계: 사전규격 ────────────────────────────────
     print(f'\n[1.5단계] 사전규격 API (병렬, {len(G2B_KEYWORDS)}개 키워드)')
     t0 = time.time()
     ps_count = 0
@@ -667,8 +697,9 @@ def main():
             except Exception as e:
                 print(f'  ⚠️  사전규격[{futs[f]}] {e}')
     print(f'  → 사전규격 {ps_count}건 ({time.time()-t0:.1f}초)')
+    save_partial(f'③ bizinfo 수집 중... (총 {len(all_bids)}건)')
 
-    # ── 2단계: bizinfo 병렬 ──────────────────────────────
+    # ── 2단계: bizinfo ───────────────────────────────────
     print(f'\n[2단계] bizinfo 검색 (병렬, {len(XR_KEYWORDS)}개 키워드)')
     t0 = time.time()
     bizinfo_all, biz_seen = [], set()
@@ -685,15 +716,15 @@ def main():
             except Exception: pass
     print(f'  → bizinfo {len(bizinfo_all)}건 ({time.time()-t0:.1f}초)')
 
-    # bizinfo URL로 g2b URL 보완
     title_to_biz_url = {b['title']: b['url'] for b in bizinfo_all}
     for b in all_bids:
         if b['source'] == 'g2b':
             matched = title_to_biz_url.get(b['title'])
             if matched: b['url'] = matched
     add(bizinfo_all)
+    save_partial(f'④ 첨부파일 수집 중... (총 {len(all_bids)}건)')
 
-    # ── 3단계: 나라장터 공고 상세 스크래핑 (첨부파일) ──────
+    # ── 3단계: 상세 스크래핑 ────────────────────────────
     g2b_bids = [b for b in all_bids if b['source'] == 'g2b' and b['stage'] == '입찰공고']
     print(f'\n[3단계] 공고 상세 스크래핑 ({len(g2b_bids)}건)')
     t0 = time.time()
@@ -709,30 +740,36 @@ def main():
             done[0] += 1
             if done[0] % 5 == 0:
                 print(f'  상세 {done[0]}/{len(g2b_bids)}건...')
+                save_partial(f'④ 첨부파일 수집 중... ({done[0]}/{len(g2b_bids)}건)')
 
     with ThreadPoolExecutor(max_workers=6) as ex:
         list(ex.map(enrich, g2b_bids))
     print(f'  → 완료 ({time.time()-t0:.1f}초)')
 
-    # ── 최종 필터 + 정렬 ────────────────────────────────
+    # ── 최종 저장 ────────────────────────────────────────
     xr = [b for b in all_bids if is_xr(b['title'])]
     if not xr and all_bids: xr = all_bids
-
-    # 점수 기준 내림차순 정렬
     xr.sort(key=score_bid, reverse=True)
-
     print(f'\n전체: {len(all_bids)}건, XR: {len(xr)}건')
 
-    os.makedirs('data', exist_ok=True)
     if not xr:
         if os.path.exists('data/bids.json'):
             cached = json.load(open('data/bids.json', encoding='utf-8'))
             if cached.get('total', 0) > 0:
-                cached['updatedAt'] = datetime.now().strftime('%Y-%m-%d %H:%M') + ' (캐시)'
+                cached['updatedAt'] = datetime.now().strftime('%Y-%m-%d %H:%M')
+                cached['status'] = 'done'
+                cached['stage']  = '완료 (캐시)'
                 json.dump(cached, open('data/bids.json','w',encoding='utf-8'), ensure_ascii=False, indent=2)
                 print('0건 — 기존 캐시 유지'); return
-    out = {'updatedAt': datetime.now().strftime('%Y-%m-%d %H:%M'), 'total': len(xr), 'bids': xr}
-    json.dump(out, open('data/bids.json','w',encoding='utf-8'), ensure_ascii=False, indent=2)
+
+    out = {
+        'updatedAt': datetime.now().strftime('%Y-%m-%d %H:%M'),
+        'status':    'done',
+        'stage':     f'✅ 완료 — {len(xr)}건',
+        'total':     len(xr),
+        'bids':      xr,
+    }
+    json.dump(out, open('data/bids.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
     print(f'✅ 저장: {len(xr)}건')
 
 if __name__ == '__main__':
