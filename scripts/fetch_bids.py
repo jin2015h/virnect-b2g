@@ -99,6 +99,7 @@ def fetch_g2b(session, keyword):
             if total == 0:
                 hdr = data.get('response', {}).get('header', {})
                 print(f'    header: {hdr}')
+                print(f'    raw응답: {resp.text[:400]}')
                 continue
 
             parsed = parse_items(body.get('items', {}))
