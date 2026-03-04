@@ -91,12 +91,14 @@ def fetch_g2b(session, keyword):
                 'pageNo': 1,
                 'type': 'json',
                 'inqryDiv': 1,
-                'bidNm': keyword,
+                'bidNtceNm': keyword,
                 'inqryBgnDt': bgnDt,
                 'inqryEndDt': endDt,
             }
             url = f'{API_BASE}/{op}'
-            resp = session.get(url, params=params, timeout=15)
+            # ServiceKey는 requests가 자동 인코딩하므로 URL에 직접 붙임
+            full_url = f'{url}?ServiceKey={API_KEY}&numOfRows=20&pageNo=1&type=json&inqryDiv=1&bidNtceNm={requests.utils.quote(keyword)}&inqryBgnDt={bgnDt}&inqryEndDt={endDt}'
+            resp = session.get(full_url, timeout=15)
             label = op.replace('getBidPblancListInfo','')
             print(f'  [{keyword}]{label}: {resp.status_code}')
 
