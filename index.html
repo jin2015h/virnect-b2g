@@ -146,38 +146,90 @@
   </div>
   <div class="header-right">
     <div id="status-badge"><span class="dot"></span><span id="badge-text">로딩 중...</span></div>
-    <button class="hbtn" id="btn-reload" onclick="triggerAndReload()">🔄 공고 새로고침</button>
+    <button class="hbtn" id="btn-settings" onclick="toggleSettings()" title="설정">⚙️ 설정</button>
+    <button class="hbtn" id="btn-reload" onclick="triggerAndReload()">🔄 새로고침</button>
     <button class="hbtn" id="btn-batch"  onclick="batchAnalyze()">⚡ 일괄 분석</button>
   </div>
 </div>
 
-<div class="apibar">
-  <label>🔑 Google API Key</label>
-  <input type="password" id="apikey" placeholder="AIza... (aistudio.google.com에서 무료 발급)" />
-  <button class="abtn abtn-blue" onclick="saveKey('apikey','key-status')">저장</button>
-  <span class="model-badge">🤖</span>
-  <select id="model-select" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:5px 9px;font-size:12px;color:#374151;outline:none;cursor:pointer;" onchange="saveModel()">
-    <option value="gemini-2.5-flash">gemini-2.5-flash ⭐ (권장)</option>
-    <option value="gemini-2.5-flash-lite">gemini-2.5-flash-lite (빠름/저렴)</option>
-    <option value="gemini-2.5-pro">gemini-2.5-pro (최고성능, 유료)</option>
-    <option value="gemini-2.0-flash">gemini-2.0-flash (구버전)</option>
-  </select>
-  <span class="key-status" id="key-status"></span>
-</div>
+<!-- 설정 드롭다운 패널 -->
+<div id="settings-panel" style="display:none;position:fixed;top:52px;right:16px;width:480px;max-width:calc(100vw - 32px);background:#fff;border:1px solid #e2e8f0;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.12);z-index:1000;overflow:hidden">
+  <div style="padding:12px 16px;background:#f8fafc;border-bottom:1px solid #e2e8f0;display:flex;align-items:center;justify-content:space-between">
+    <span style="font-size:13px;font-weight:700;color:#1e293b">⚙️ 설정</span>
+    <button onclick="toggleSettings()" style="background:none;border:none;font-size:16px;color:#94a3b8;cursor:pointer;padding:0 4px">✕</button>
+  </div>
+  <div style="padding:14px 16px;display:flex;flex-direction:column;gap:12px;max-height:80vh;overflow-y:auto">
 
-<div class="apibar">
-  <label>🐙 GitHub Token</label>
-  <input type="password" id="gh-token" placeholder="ghp_... (Settings → Developer settings → Personal access tokens → Fine-grained)" />
-  <button class="abtn abtn-gray" onclick="saveKey('gh-token','gh-status')">저장</button>
-  <span class="key-status" id="gh-status" style="font-size:10px;color:#64748b;">저장하면 새로고침 버튼으로 Actions를 즉시 실행합니다</span>
-</div>
+    <!-- Google API Key -->
+    <div>
+      <div style="font-size:11px;font-weight:600;color:#64748b;margin-bottom:5px">🔑 Google API Key</div>
+      <div style="display:flex;gap:6px;align-items:center">
+        <input type="password" id="apikey" placeholder="AIza... (aistudio.google.com 무료 발급)"
+          style="flex:1;background:#f8fafc;border:1px solid #cbd5e1;border-radius:6px;padding:6px 10px;font-size:12px;font-family:monospace;outline:none" />
+        <button class="abtn abtn-blue" onclick="saveKey('apikey','key-status')">저장</button>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;margin-top:6px">
+        <span style="font-size:11px;color:#64748b">🤖 모델</span>
+        <select id="model-select" onchange="saveModel()"
+          style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:4px 8px;font-size:11px;color:#374151;outline:none;cursor:pointer;flex:1">
+          <option value="gemini-2.5-flash">gemini-2.5-flash ⭐ (권장)</option>
+          <option value="gemini-2.5-flash-lite">gemini-2.5-flash-lite (빠름/저렴)</option>
+          <option value="gemini-2.5-pro">gemini-2.5-pro (최고성능, 유료)</option>
+          <option value="gemini-2.0-flash">gemini-2.0-flash (구버전)</option>
+        </select>
+        <span class="key-status" id="key-status"></span>
+      </div>
+    </div>
 
-<div class="apibar">
-  <label>📁 GitHub 저장소</label>
-  <input type="text" id="gh-repo" placeholder="예: jin2015h/virnect-g2b" style="font-family:monospace;" />
-  <button class="abtn abtn-gray" onclick="saveGhRepo()">저장</button>
-  <span class="key-status" id="repo-status"></span>
+    <div style="border-top:1px solid #f1f5f9"></div>
+
+    <!-- GitHub -->
+    <div>
+      <div style="font-size:11px;font-weight:600;color:#64748b;margin-bottom:5px">🐙 GitHub (Actions 자동 실행용)</div>
+      <div style="display:flex;gap:6px;margin-bottom:6px">
+        <input type="password" id="gh-token" placeholder="ghp_... Personal access token"
+          style="flex:1;background:#f8fafc;border:1px solid #cbd5e1;border-radius:6px;padding:6px 10px;font-size:12px;font-family:monospace;outline:none" />
+        <button class="abtn abtn-gray" onclick="saveKey('gh-token','gh-status')">저장</button>
+      </div>
+      <div style="display:flex;gap:6px;align-items:center">
+        <input type="text" id="gh-repo" placeholder="저장소: 예) jin2015h/virnect-g2b"
+          style="flex:1;background:#f8fafc;border:1px solid #cbd5e1;border-radius:6px;padding:6px 10px;font-size:12px;font-family:monospace;outline:none" />
+        <button class="abtn abtn-gray" onclick="saveGhRepo()">저장</button>
+      </div>
+      <div style="margin-top:5px;font-size:10px;color:#94a3b8">
+        <span class="key-status" id="gh-status"></span>
+        <span class="key-status" id="repo-status"></span>
+      </div>
+    </div>
+
+    <div style="border-top:1px solid #f1f5f9"></div>
+
+    <!-- 키워드 -->
+    <div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+        <div style="font-size:11px;font-weight:600;color:#64748b">🔍 검색 키워드</div>
+        <span id="kw-count-badge" style="font-size:10px;color:#94a3b8"></span>
+      </div>
+      <div style="display:flex;gap:6px;margin-bottom:8px">
+        <button class="abtn abtn-blue" onclick="showKwTab('g2b')" id="tab-g2b" style="font-size:11px;padding:4px 10px">🏛️ 나라장터</button>
+        <button class="abtn abtn-gray" onclick="showKwTab('xr')"  id="tab-xr"  style="font-size:11px;padding:4px 10px">🔎 XR 필터</button>
+        <button onclick="resetKeywords()" style="font-size:10px;padding:4px 8px;background:#fef2f2;border:1px solid #fecaca;color:#dc2626;border-radius:5px;cursor:pointer;margin-left:auto">↩ 초기화</button>
+      </div>
+      <div id="kw-desc" style="font-size:10px;color:#94a3b8;margin-bottom:5px"></div>
+      <textarea id="kw-textarea" rows="7"
+        style="width:100%;font-size:11px;font-family:monospace;border:1px solid #e2e8f0;border-radius:6px;padding:7px;resize:vertical;line-height:1.6;color:#1e293b;background:#fafafa;box-sizing:border-box"
+        placeholder="키워드 (줄바꿈 또는 쉼표 구분)"></textarea>
+      <div style="display:flex;gap:6px;margin-top:6px;align-items:center">
+        <button class="abtn abtn-blue" onclick="saveKeywords()" style="font-size:11px">💾 저장</button>
+        <span id="kw-save-status" style="font-size:11px;color:#16a34a"></span>
+      </div>
+      <div style="font-size:10px;color:#94a3b8;margin-top:4px">저장 후 새로고침 실행 시 적용됩니다</div>
+    </div>
+
+  </div>
 </div>
+<!-- 설정 패널 닫기 오버레이 -->
+<div id="settings-overlay" style="display:none;position:fixed;inset:0;z-index:999" onclick="toggleSettings()"></div>
 
 <div id="stagebar">
   <span class="stage-label">단계구분</span>
@@ -225,7 +277,42 @@ const STORAGE_KEY_GH    = 'virnect_gh_token';
 const STORAGE_KEY_REPO  = 'virnect_gh_repo';
 const STORAGE_KEY_CACHE = 'virnect_analyses_v4';
 const STORAGE_KEY_MODEL = 'virnect_gemini_model';
+const STORAGE_KEY_G2B_KW = 'virnect_g2b_keywords';
+const STORAGE_KEY_XR_KW  = 'virnect_xr_keywords';
 const WORKFLOW_FILE     = 'fetch-bids.yml';
+
+// ── 기본 키워드 (fetch_bids.py와 동일하게 유지) ──────────────
+const DEFAULT_G2B_KEYWORDS = [
+  'AR','VR','XR','MR','HMD',
+  '증강현실','가상현실','혼합현실','확장현실',
+  '메타버스','홀로그램','실감콘텐츠',
+  '디지털트윈','BIM',
+  '스마트팩토리','스마트공장',
+  '시뮬레이션','로봇시뮬레이션',
+  '머신비전','비전검사','육안검사',
+  '스마트안전','협동로봇','AMR','AGV','드론',
+  '피지컬AI','컴퓨터비전','AI검사',
+  '스마트글래스','원격협업','공정모니터링',
+];
+const DEFAULT_XR_KEYWORDS = [
+  'AR','VR','XR','MR','HMD',
+  '증강현실','가상현실','혼합현실','확장현실',
+  '메타버스','홀로그램','실감콘텐츠','실감기술','몰입형','공간컴퓨팅',
+  '스마트글래스','스마트안경','웨어러블','헤드셋',
+  '디지털트윈','원격협업','원격지원','원격점검','가상훈련',
+  '스마트안전','산업안전','안전관제','스마트헬멧',
+  '스마트팩토리','스마트공장','스마트제조','작업지시','설비점검',
+  '컴퓨터비전','비전AI','영상인식','포인트클라우드','실내측위',
+  'BIM','스마트건설','스마트시티',
+  '시뮬레이션','실감교육',
+  '피지컬AI','피지컬 AI','Physical AI','지능형로봇','지능형제조','자율제조',
+  '육안검사','검사자동화','표면검사','머신비전','AOI',
+  '가상공장','공장디지털화','디지털전환','CPS','공정모니터링','설비모니터링',
+  '협동로봇','자율주행로봇','서비스로봇','AMR','AGV','드론','UAV',
+  '비전검사','외관검사','불량검출','결함검출','품질검사','비파괴검사','AI검사',
+  '로봇시뮬레이션','공정시뮬레이션','가상환경',
+  '엣지AI','AI플랫폼',
+];
 
 const STAGES = ['전체','사전규격','발주계획','요청접수','입찰공고','지원사업','개찰결과','계약현황','납품요청','납품요구','검사검수','대금지급'];
 const STAGE_ORDER = STAGES.slice(1);
@@ -270,9 +357,15 @@ let selectedId = null;
 let activeCat  = '전체';
 let activeStage= '전체';
 
+// 키워드 로드 (localStorage 우선, 없으면 default)
+let g2bKeywords = JSON.parse(localStorage.getItem(STORAGE_KEY_G2B_KW) || 'null') || DEFAULT_G2B_KEYWORDS;
+let xrKeywords  = JSON.parse(localStorage.getItem(STORAGE_KEY_XR_KW)  || 'null') || DEFAULT_XR_KEYWORDS;
+let activeKwTab = 'g2b';
+
 if (apiKey)  { document.getElementById('apikey').value   = apiKey;   document.getElementById('key-status').textContent = '✅ 저장됨'; }
 if (ghToken) { document.getElementById('gh-token').value = ghToken;  document.getElementById('gh-status').textContent  = '✅ 저장됨'; }
 if (ghRepo)  { document.getElementById('gh-repo').value  = ghRepo;   document.getElementById('repo-status').textContent = '✅ ' + ghRepo; }
+updateKwBadge();
 document.getElementById('model-select').value = geminiModel;
 
 function saveModel() {
@@ -299,6 +392,111 @@ function saveGhRepo() {
   document.getElementById('repo-status').textContent = '✅ ' + val;
 }
 function saveAnalyses() { localStorage.setItem(STORAGE_KEY_CACHE, JSON.stringify(analyses)); }
+
+// ── 키워드 관리 함수들 ─────────────────────────────────────
+function updateKwBadge() {
+  const el = document.getElementById('kw-count-badge');
+  if(el) el.textContent = `나라장터 ${g2bKeywords.length}개 · XR필터 ${xrKeywords.length}개`;
+}
+
+function toggleSettings() {
+  const panel   = document.getElementById('settings-panel');
+  const overlay = document.getElementById('settings-overlay');
+  const btn     = document.getElementById('btn-settings');
+  const isOpen  = panel.style.display !== 'none';
+  panel.style.display   = isOpen ? 'none' : 'block';
+  overlay.style.display = isOpen ? 'none' : 'block';
+  btn.style.background  = isOpen ? '' : '#e8f0fe';
+  btn.style.color       = isOpen ? '' : '#4285f4';
+  if(!isOpen) showKwTab(activeKwTab);  // 패널 열릴 때 키워드 탭 초기화
+}
+
+function showKwTab(tab) {
+  activeKwTab = tab;
+  const ta   = document.getElementById('kw-textarea');
+  const desc = document.getElementById('kw-desc');
+  const btnG = document.getElementById('tab-g2b');
+  const btnX = document.getElementById('tab-xr');
+  if(tab === 'g2b') {
+    ta.value = g2bKeywords.join('\n');
+    desc.innerHTML = `<b>🏛️ 나라장터 API 검색어</b> — 공공데이터포털 API에 직접 질의하는 키워드입니다.<br>
+      너무 많으면 수집 시간이 늘어납니다. 핵심 키워드 <b>20~40개</b> 권장.`;
+    btnG.style.background='#4285f4'; btnG.style.color='#fff';
+    btnX.style.background=''; btnX.style.color='';
+  } else {
+    ta.value = xrKeywords.join('\n');
+    desc.innerHTML = `<b>🔎 XR 연관성 필터 키워드</b> — API 결과에서 VIRNECT 관련 공고를 걸러내는 키워드입니다.<br>
+      수집 후 제목에 이 키워드 중 하나라도 포함된 공고만 표시됩니다. <b>60~100개</b> 권장.`;
+    btnG.style.background=''; btnG.style.color='';
+    btnX.style.background='#4285f4'; btnX.style.color='#fff';
+  }
+  document.getElementById('kw-save-status').textContent = '';
+}
+
+async function saveKeywords() {
+  const raw = document.getElementById('kw-textarea').value;
+  const parsed = [...new Set(
+    raw.split(/[\n,]+/).map(k=>k.trim()).filter(k=>k.length>0)
+  )];
+  if(parsed.length === 0) {
+    document.getElementById('kw-save-status').textContent = '❌ 키워드가 없습니다';
+    return;
+  }
+  if(activeKwTab === 'g2b') {
+    g2bKeywords = parsed;
+    localStorage.setItem(STORAGE_KEY_G2B_KW, JSON.stringify(parsed));
+  } else {
+    xrKeywords = parsed;
+    localStorage.setItem(STORAGE_KEY_XR_KW, JSON.stringify(parsed));
+  }
+  updateKwBadge();
+  document.getElementById('kw-save-status').textContent = `✅ ${parsed.length}개 로컬 저장됨`;
+
+  // GitHub에도 keywords.json 커밋 (토큰 있을 때)
+  if(ghToken && ghRepo) {
+    document.getElementById('kw-save-status').textContent = `⏳ GitHub에 저장 중...`;
+    const ok = await pushKeywordsToGitHub();
+    document.getElementById('kw-save-status').textContent = ok
+      ? `✅ ${parsed.length}개 저장 완료 (GitHub 반영됨)`
+      : `✅ ${parsed.length}개 로컬 저장 (GitHub 저장 실패)`;
+  }
+  setTimeout(()=>{ document.getElementById('kw-save-status').textContent=''; }, 4000);
+}
+
+async function pushKeywordsToGitHub() {
+  try {
+    const payload = { g2b: g2bKeywords, xr: xrKeywords, updatedAt: new Date().toISOString() };
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(payload, null, 2))));
+    const path    = 'data/keywords.json';
+    const apiBase = `https://api.github.com/repos/${ghRepo}/contents/${path}`;
+    const headers = {'Authorization':`Bearer ${ghToken}`,'Accept':'application/vnd.github+json','Content-Type':'application/json'};
+    // 기존 파일 SHA 가져오기
+    let sha = '';
+    try {
+      const r = await fetch(apiBase, {headers});
+      if(r.ok) { sha = (await r.json()).sha; }
+    } catch(e){}
+    const body = { message:`키워드 업데이트 (${new Date().toLocaleDateString('ko-KR')})`, content, ...(sha?{sha}:{}) };
+    const res  = await fetch(apiBase, {method:'PUT', headers, body:JSON.stringify(body)});
+    return res.ok;
+  } catch(e) { return false; }
+}
+
+function resetKeywords() {
+  if(!confirm('기본 키워드로 초기화할까요?')) return;
+  if(activeKwTab === 'g2b') {
+    g2bKeywords = [...DEFAULT_G2B_KEYWORDS];
+    localStorage.removeItem(STORAGE_KEY_G2B_KW);
+    document.getElementById('kw-textarea').value = g2bKeywords.join('\n');
+  } else {
+    xrKeywords = [...DEFAULT_XR_KEYWORDS];
+    localStorage.removeItem(STORAGE_KEY_XR_KW);
+    document.getElementById('kw-textarea').value = xrKeywords.join('\n');
+  }
+  updateKwBadge();
+  document.getElementById('kw-save-status').textContent = '↩ 기본값으로 초기화됨';
+  setTimeout(()=>{ document.getElementById('kw-save-status').textContent=''; }, 3000);
+}
 function updateBadge() {
   const cached = Object.keys(analyses).length;
   document.getElementById('badge-text').textContent = BIDS.length + '건 공고' + (cached ? ' · 분석 ' + cached + '건' : '');
@@ -480,20 +678,39 @@ function renderDetail(bid) {
       <span id="copy-feedback" style="font-size:11px;color:#16a34a;"></span>`;
   }
 
-  // 첨부파일 링크 (files 배열 우선, 레거시 specUrl/draftUrl 병합)
+  // 첨부파일 렌더링 (files 배열 우선, 레거시 specUrl/draftUrl 병합)
   let allFiles = [...(bid.files || [])];
-  if(bid.specUrl  && !allFiles.find(f=>f.url===bid.specUrl))  allFiles.push({name:'📋 입찰규격서', url:bid.specUrl});
-  if(bid.draftUrl && !allFiles.find(f=>f.url===bid.draftUrl)) allFiles.push({name:'📄 서류', url:bid.draftUrl});
+  if(bid.specUrl  && !allFiles.find(f=>f.url===bid.specUrl))
+    allFiles.push({name:'📋 입찰규격서', url:bid.specUrl});
+  if(bid.draftUrl && !allFiles.find(f=>f.url===bid.draftUrl))
+    allFiles.push({name:'📄 서류', url:bid.draftUrl});
+
   const fileSection = allFiles.length
     ? `<div class="section-title">📎 첨부 파일 (${allFiles.length}건)</div>
-       <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:14px">
-         ${allFiles.map(f=>`<a href="${f.url}" target="_blank"
-           style="display:flex;align-items:center;gap:8px;padding:8px 12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:7px;text-decoration:none;color:#1e293b;font-size:12px;transition:background 0.15s"
-           onmouseover="this.style.background='#f0f9ff'" onmouseout="this.style.background='#f8fafc'">
-           <span style="font-size:16px">${f.name.match(/^[📝📕📊📄🗜️📎]/u)?.[0]||'📎'}</span>
-           <span style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${f.name.replace(/^[📝📕📊📄🗜️📎]\s*/u,'')}</span>
-           <span style="color:#4285f4;font-size:11px;flex-shrink:0">다운로드 ↓</span>
-         </a>`).join('')}
+       <div style="border:1px solid #e2e8f0;border-radius:8px;overflow:hidden;margin-bottom:14px">
+         <table style="width:100%;border-collapse:collapse;font-size:12px">
+           <thead><tr style="background:#f8fafc;border-bottom:1px solid #e2e8f0">
+             <th style="padding:7px 12px;text-align:left;color:#64748b;font-weight:600;width:30%">문서구분</th>
+             <th style="padding:7px 12px;text-align:left;color:#64748b;font-weight:600">파일명</th>
+             ${allFiles.some(f=>f.size)?'<th style="padding:7px 12px;text-align:right;color:#64748b;font-weight:600;width:90px">크기</th>':''}
+           </tr></thead>
+           <tbody>
+             ${allFiles.map((f,i)=>`
+               <tr style="border-bottom:${i<allFiles.length-1?'1px solid #f1f5f9':'none'};transition:background 0.1s"
+                 onmouseover="this.style.background='#f0f9ff'" onmouseout="this.style.background=''">
+                 <td style="padding:8px 12px;color:#64748b;font-size:11px">${f.docType||'-'}</td>
+                 <td style="padding:8px 12px">
+                   <a href="${f.url}" target="_blank"
+                     style="color:#1d4ed8;text-decoration:none;display:flex;align-items:center;gap:6px">
+                     <span>${f.name.match(/^[📝📕📊📄🗜️📎📋📢📐]/u)?.[0]||'📎'}</span>
+                     <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${f.name.replace(/^[📝📕📊📄🗜️📎📋📢📐]\s*/u,'')}</span>
+                     <span style="color:#94a3b8;font-size:10px;flex-shrink:0">↓</span>
+                   </a>
+                 </td>
+                 ${allFiles.some(ff=>ff.size)?`<td style="padding:8px 12px;text-align:right;color:#94a3b8;font-size:11px">${f.size||''}</td>`:''}
+               </tr>`).join('')}
+           </tbody>
+         </table>
        </div>`
     : '';
 
