@@ -64,7 +64,7 @@ def parse_items(items):
 def fetch_g2b(session, keyword):
     results = []
     end_dt   = datetime.now()
-    start_dt = end_dt - timedelta(days=30)
+    start_dt = end_dt - timedelta(days=7)
     bgnDt = start_dt.strftime('%Y%m%d') + '0000'
     endDt = end_dt.strftime('%Y%m%d') + '2359'
     kw_enc = requests.utils.quote(keyword)
@@ -78,10 +78,8 @@ def fetch_g2b(session, keyword):
         try:
             url = (f'{API_BASE}/{op}'
                    f'?ServiceKey={API_KEY}'
-                   f'&numOfRows=20&pageNo=1&type=json'
-                   f'&inqryDiv=1'
-                   f'&bidNtceNm={kw_enc}'
-                   f'&inqryBgnDt={bgnDt}&inqryEndDt={endDt}')
+                   f'&numOfRows=10&pageNo=1&type=json'
+                   f'&bidNtceNm={kw_enc}')
             label = op.replace('getBidPblancListInfo','').replace('PPSSrch','')
             resp = session.get(url, timeout=15)
             print(f'  [{keyword}]{label}: {resp.status_code}')
