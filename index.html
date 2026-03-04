@@ -192,7 +192,7 @@
         <button class="abtn abtn-gray" onclick="saveKey('gh-token','gh-status')">저장</button>
       </div>
       <div style="display:flex;gap:6px;align-items:center">
-        <input type="text" id="gh-repo" placeholder="저장소: 예) jin2015h/virnect-g2b"
+        <input type="text" id="gh-repo" placeholder="저장소: 예) jin2015h/vnt-b2g"
           style="flex:1;background:#f8fafc;border:1px solid #cbd5e1;border-radius:6px;padding:6px 10px;font-size:12px;font-family:monospace;outline:none" />
         <button class="abtn abtn-gray" onclick="saveGhRepo()">저장</button>
       </div>
@@ -593,7 +593,10 @@ function renderList() {
   const cEl=document.createElement('div'); cEl.id='list-count'; list.appendChild(cEl);
   let filtered=BIDS.filter(b=>{
     const ms=!q||b.title.includes(q)||b.agency.includes(q)||(b.keywords||[]).some(k=>k.includes(q));
-    return ms&&(activeCat==='전체'||b.category===activeCat)&&(activeStage==='전체'||b.stage===activeStage);
+    if(!ms) return false;
+    if(activeCat  !=='전체' && b.category!==activeCat)   return false;
+    if(activeStage!=='전체' && b.stage   !==activeStage) return false;
+    return true;
   });
   // 우선순위 정렬: AI 확률(40%) + 서버 priority 점수(60%)
   filtered.sort((a,b)=>{
