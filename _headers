@@ -1,0 +1,2 @@
+/*
+  Content-Security-Policy: default-src 'self' 'unsafe-inline' https://generativelanguage.googleapis.com https://api.github.com; connect-src 'self' https://generativelanguage.googleapis.com https://api.github.com; img-src 'self' data:;
