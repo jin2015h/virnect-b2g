@@ -108,10 +108,11 @@ def fetch_bizinfo_keyword(session, keyword):
     """bizinfo 키워드 검색 — 정부지원사업 포함"""
     out = []
     try:
+        # bizinfo는 GET 파라미터로 검색 지원
         url = 'https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/list.do'
-        params = {'schKeyword': keyword, 'pageIndex': 1}
-        r = session.get(url, params=params,
-                        headers={'User-Agent':'Mozilla/5.0','Accept-Language':'ko-KR'}, timeout=15)
+        r = session.get(url, params={'schKeyword': keyword, 'schCondition': 'title', 'pageIndex': 1},
+                        headers={'User-Agent':'Mozilla/5.0','Accept-Language':'ko-KR',
+                                 'Referer':'https://www.bizinfo.go.kr/'}, timeout=15)
         if r.status_code != 200: return out
         pat = re.compile(r'pblancId=([\w_]+)[^"\']*["\'][^>]*>\s*([^<]{4,200}?)\s*</a>', re.DOTALL)
         seen = set()
@@ -119,6 +120,8 @@ def fetch_bizinfo_keyword(session, keyword):
             pid, title = m.group(1), clean(m.group(2))
             if not title or len(title) < 4 or pid in seen: continue
             if title in ['목록','이전','다음','확인','취소','닫기','스크랩','검색']: continue
+            # 실제로 키워드가 제목에 포함된 것만
+            if not is_xr(title): continue
             seen.add(pid)
             ctx   = r.text[max(0,m.start()-50):m.end()+300]
             dates = re.findall(r'(\d{4}[.\-]\d{2}[.\-]\d{2})', ctx)
