@@ -8,7 +8,6 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: #f5f7fa; color: #1a1a2e; font-family: 'Malgun Gothic','Apple SD Gothic Neo',sans-serif; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
 
-  /* Header */
   #header { background: #fff; border-bottom: 1px solid #e2e8f0; padding: 11px 22px; display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
   #header-left { display: flex; align-items: center; gap: 11px; }
   #logo { width: 32px; height: 32px; background: linear-gradient(135deg,#2563eb,#06b6d4); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; }
@@ -22,14 +21,15 @@
   #btn-reload { background: linear-gradient(135deg,#059669,#0284c7); color: #fff; }
   #btn-batch  { background: linear-gradient(135deg,#7c3aed,#2563eb); color: #fff; }
 
-  /* API Bar */
-  #apibar { background: #fff; border-bottom: 1px solid #e2e8f0; padding: 7px 22px; display: flex; align-items: center; gap: 9px; flex-shrink: 0; }
-  #apibar label { font-size: 11px; color: #64748b; white-space: nowrap; }
-  #apikey { flex: 1; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 11px; color: #0f172a; font-size: 12px; outline: none; font-family: monospace; }
-  #apikey:focus { border-color: #4285f4; }
-  #save-key { background: #4285f4; border: none; border-radius: 6px; padding: 6px 13px; color: #fff; font-size: 12px; font-weight: 600; cursor: pointer; }
-  #save-key:hover { background: #3367d6; }
-  #key-status { font-size: 11px; color: #94a3b8; white-space: nowrap; }
+  /* API bars */
+  .apibar { background: #fff; border-bottom: 1px solid #e2e8f0; padding: 7px 22px; display: flex; align-items: center; gap: 9px; flex-shrink: 0; }
+  .apibar label { font-size: 11px; color: #64748b; white-space: nowrap; min-width: 100px; }
+  .apibar input { flex: 1; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 11px; color: #0f172a; font-size: 12px; outline: none; font-family: monospace; }
+  .apibar input:focus { border-color: #4285f4; }
+  .abtn { border: none; border-radius: 6px; padding: 6px 13px; color: #fff; font-size: 12px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+  .abtn-blue { background: #4285f4; } .abtn-blue:hover { background: #3367d6; }
+  .abtn-gray { background: #64748b; } .abtn-gray:hover { background: #475569; }
+  .key-status { font-size: 11px; color: #94a3b8; white-space: nowrap; }
   .model-badge { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 3px 9px; font-size: 11px; color: #5f6368; white-space: nowrap; }
 
   /* Stage bar */
@@ -39,10 +39,13 @@
   .stage-btn:hover { border-color: #93c5fd; color: #2563eb; }
   .stage-btn.active { border-color: #2563eb; background: #2563eb; color: #fff; font-weight: 700; }
 
-  /* Update info bar */
+  /* Info / progress bar */
   #infobar { background: #eff6ff; border-bottom: 1px solid #bfdbfe; padding: 5px 22px; font-size: 11px; color: #1d4ed8; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; }
-
-  /* Batch bar */
+  #action-bar { display: none; background: #f0fdf4; border-bottom: 1px solid #bbf7d0; padding: 7px 22px; flex-shrink: 0; align-items: center; gap: 10px; }
+  #action-bar.visible { display: flex; }
+  #action-progress-bg { flex: 1; height: 6px; background: #dcfce7; border-radius: 3px; overflow: hidden; }
+  #action-progress-fill { height: 100%; background: linear-gradient(90deg,#059669,#34d399); border-radius: 3px; transition: width 0.5s; }
+  #action-text { font-size: 11px; color: #065f46; white-space: nowrap; }
   #batch-bar { display: none; background: #fff; border-bottom: 1px solid #e2e8f0; padding: 7px 22px; flex-shrink: 0; align-items: center; gap: 10px; }
   #batch-bar.visible { display: flex; }
   #batch-progress-bg { flex: 1; height: 6px; background: #f1f5f9; border-radius: 3px; overflow: hidden; }
@@ -51,8 +54,6 @@
 
   /* Main */
   #main { display: flex; flex: 1; overflow: hidden; }
-
-  /* Left */
   #left { width: 375px; border-right: 1px solid #e2e8f0; display: flex; flex-direction: column; overflow: hidden; flex-shrink: 0; background: #fff; }
   #search-area { padding: 11px 11px 9px; border-bottom: 1px solid #e2e8f0; flex-shrink: 0; }
   #search { width: 100%; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 7px; padding: 8px 11px; color: #0f172a; font-size: 13px; outline: none; font-family: 'Malgun Gothic',sans-serif; }
@@ -61,7 +62,6 @@
   .filter-btn { padding: 3px 8px; border-radius: 9px; border: 1px solid #e2e8f0; background: transparent; color: #94a3b8; font-size: 11px; cursor: pointer; font-family: 'Malgun Gothic',sans-serif; transition: all 0.12s; }
   .filter-btn:hover { border-color: #4285f4; color: #4285f4; }
   .filter-btn.active { border-color: #4285f4; background: #e8f0fe; color: #4285f4; font-weight: 600; }
-
   #bid-list { flex: 1; overflow-y: auto; padding: 7px; background: #f8fafc; }
   #list-count { font-size: 11px; color: #94a3b8; padding: 3px 5px 7px; }
 
@@ -80,7 +80,6 @@
   .card-date { font-size: 10px; color: #94a3b8; margin-top: 2px; }
   .cached-tag { font-size: 10px; color: #7c3aed; background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 4px; padding: 1px 5px; }
 
-  /* Right */
   #right { flex: 1; overflow-y: auto; padding: 18px 22px; background: #f5f7fa; }
   #empty-state { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
   #empty-state .eicon { font-size: 44px; margin-bottom: 11px; }
@@ -89,19 +88,16 @@
 
   .panel { background: #fff; border: 1px solid #e2e8f0; border-radius: 11px; padding: 18px; margin-bottom: 11px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
   .panel-title { font-size: 12px; font-weight: 700; color: #4285f4; margin-bottom: 13px; }
-
   .detail-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 11px; flex-wrap: wrap; }
   .detail-badges { display: flex; gap: 5px; flex-wrap: wrap; align-items: center; }
   .open-btn { display: inline-flex; align-items: center; gap: 4px; background: #f0f9ff; border: 1px solid #7dd3fc; color: #0369a1; border-radius: 7px; padding: 6px 12px; font-size: 11px; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.15s; font-family: 'Malgun Gothic',sans-serif; white-space: nowrap; }
   .open-btn:hover { background: #e0f2fe; }
-
   .detail-title { font-size: 16px; font-weight: 700; margin-bottom: 13px; line-height: 1.4; color: #0f172a; }
   .meta-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 7px; margin-bottom: 9px; }
   .meta-grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 7px; margin-bottom: 13px; }
   .meta-item { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 7px; padding: 8px 11px; }
   .meta-label { font-size: 10px; color: #94a3b8; margin-bottom: 2px; }
   .meta-value { font-size: 12px; font-weight: 600; color: #0f172a; }
-
   .section-title { font-size: 11px; font-weight: 700; color: #374151; margin-bottom: 7px; }
   .desc-text { font-size: 12px; color: #475569; line-height: 1.75; margin-bottom: 11px; }
   .req-list { display: flex; flex-direction: column; gap: 4px; margin-bottom: 11px; }
@@ -109,7 +105,6 @@
   .tags { display: flex; flex-wrap: wrap; gap: 4px; }
   .tag { font-size: 10px; padding: 2px 7px; background: #f1f5f9; border-radius: 5px; color: #64748b; border: 1px solid #e2e8f0; }
 
-  /* Stage timeline */
   .stage-timeline { display: flex; align-items: center; overflow-x: auto; padding: 6px 0; margin-bottom: 13px; }
   .st-item { display: flex; align-items: center; flex-shrink: 0; }
   .st-step { padding: 4px 10px; border-radius: 5px; font-size: 10px; font-weight: 600; border: 1px solid #e2e8f0; background: #f8fafc; color: #94a3b8; white-space: nowrap; }
@@ -118,7 +113,6 @@
   .st-arrow { color: #cbd5e1; font-size: 11px; margin: 0 2px; flex-shrink: 0; }
   .st-arrow.done { color: #93c5fd; }
 
-  /* Analysis */
   .prob-row { display: flex; justify-content: space-between; margin-bottom: 5px; }
   .prob-label-txt { font-size: 11px; color: #64748b; }
   .prob-value { font-size: 17px; font-weight: 700; }
@@ -154,29 +148,55 @@
   </div>
   <div class="header-right">
     <div id="status-badge"><span class="dot"></span><span id="badge-text">로딩 중...</span></div>
-    <button class="hbtn" id="btn-reload" onclick="loadBids()">🔄 공고 새로고침</button>
-    <button class="hbtn" id="btn-batch" onclick="batchAnalyze()">⚡ 일괄 분석</button>
+    <button class="hbtn" id="btn-reload" onclick="triggerAndReload()">🔄 공고 새로고침</button>
+    <button class="hbtn" id="btn-batch"  onclick="batchAnalyze()">⚡ 일괄 분석</button>
   </div>
 </div>
 
-<div id="apibar">
+<!-- Gemini API Key -->
+<div class="apibar">
   <label>🔑 Google API Key</label>
-  <input type="password" id="apikey" placeholder="AIza..." />
-  <button id="save-key" onclick="saveKey()">저장</button>
+  <input type="password" id="apikey" placeholder="AIza... (aistudio.google.com에서 무료 발급)" />
+  <button class="abtn abtn-blue" onclick="saveKey('apikey','key-status')">저장</button>
   <span class="model-badge">🤖 gemini-1.5-flash</span>
-  <span id="key-status">발급: aistudio.google.com (무료)</span>
+  <span class="key-status" id="key-status"></span>
 </div>
 
+<!-- GitHub Token -->
+<div class="apibar">
+  <label>🐙 GitHub Token</label>
+  <input type="password" id="gh-token" placeholder="ghp_... (Settings → Developer settings → Personal access tokens → Fine-grained)" />
+  <button class="abtn abtn-gray" onclick="saveKey('gh-token','gh-status')">저장</button>
+  <span class="key-status" id="gh-status" style="font-size:10px;color:#64748b;">저장하면 새로고침 버튼으로 Actions를 즉시 실행합니다</span>
+</div>
+
+<!-- GitHub Repo 설정 -->
+<div class="apibar">
+  <label>📁 GitHub 저장소</label>
+  <input type="text" id="gh-repo" placeholder="예: jin2015h/virnect-g2b" style="font-family:monospace;" />
+  <button class="abtn abtn-gray" onclick="saveGhRepo()">저장</button>
+  <span class="key-status" id="repo-status"></span>
+</div>
+
+<!-- Stage filter -->
 <div id="stagebar">
   <span class="stage-label">단계구분</span>
   <div id="stage-filters" style="display:flex;gap:4px;flex-wrap:wrap;"></div>
 </div>
 
+<!-- 상태 바 -->
 <div id="infobar">
-  <span id="update-info">공고 업데이트: 매일 오전 10시 자동 갱신 (GitHub Actions)</span>
+  <span id="update-info">공고 업데이트: 매일 오전 6시 자동 갱신 (GitHub Actions) · 수동 새로고침 가능</span>
   <span id="last-updated" style="color:#64748b;font-size:10px;"></span>
 </div>
 
+<!-- Actions 진행 바 -->
+<div id="action-bar">
+  <div id="action-progress-bg"><div id="action-progress-fill" style="width:0%"></div></div>
+  <span id="action-text">GitHub Actions 실행 중...</span>
+</div>
+
+<!-- 일괄 분석 진행 바 -->
 <div id="batch-bar">
   <div id="batch-progress-bg"><div id="batch-progress-fill" style="width:0%"></div></div>
   <span id="batch-text">분석 중...</span>
@@ -194,15 +214,22 @@
     <div id="empty-state">
       <div class="eicon">📡</div>
       <div class="emsg">공고를 불러오는 중...</div>
-      <div class="esub">GitHub Actions가 매일 bizinfo.go.kr에서<br>XR 관련 공고를 자동으로 수집합니다.</div>
+      <div class="esub">GitHub Actions가 매일 오전 6시에<br>bizinfo.go.kr XR 공고를 자동 수집합니다.<br><br>
+        <span style="color:#94a3b8">🔄 새로고침 버튼으로 즉시 실행도 가능합니다</span>
+      </div>
     </div>
     <div id="detail" style="display:none; max-width:720px;"></div>
   </div>
 </div>
 
 <script>
-const STORAGE_KEY_API   = 'virnect_gemini_apikey';
-const STORAGE_KEY_CACHE = 'virnect_analyses_v4';
+// ── 상수 ──────────────────────────────────────────────────────────────
+const STORAGE_KEY_API    = 'virnect_gemini_apikey';
+const STORAGE_KEY_GH     = 'virnect_gh_token';
+const STORAGE_KEY_REPO   = 'virnect_gh_repo';
+const STORAGE_KEY_CACHE  = 'virnect_analyses_v4';
+const WORKFLOW_FILE      = 'fetch-bids.yml';
+
 const STAGES = ['전체','발주계획','요청접수','사전규격','입찰공고','개찰결과','계약현황','납품요청','납품요구','검사검수','대금지급'];
 const STAGE_ORDER = STAGES.slice(1);
 const CAT_COLORS = {
@@ -228,55 +255,167 @@ VIRNECT는 코스닥 상장 한국 XR/AR 기술 기업으로 다음 제품과 �
 취약 분야: 의료 전문 콘텐츠, 순수 VR 게임, 의료기기 인증 필요 사업
 `;
 
-let apiKey     = localStorage.getItem(STORAGE_KEY_API) || '';
-let analyses   = JSON.parse(localStorage.getItem(STORAGE_KEY_CACHE) || '{}');
-let BIDS       = [];
-let selectedId = null;
-let activeCat  = '전체';
-let activeStage= '전체';
+// ── 상태 ──────────────────────────────────────────────────────────────
+let apiKey      = localStorage.getItem(STORAGE_KEY_API)   || '';
+let ghToken     = localStorage.getItem(STORAGE_KEY_GH)    || '';
+let ghRepo      = localStorage.getItem(STORAGE_KEY_REPO)  || '';
+let analyses    = JSON.parse(localStorage.getItem(STORAGE_KEY_CACHE) || '{}');
+let BIDS        = [];
+let selectedId  = null;
+let activeCat   = '전체';
+let activeStage = '전체';
 
-if (apiKey) { document.getElementById('apikey').value = apiKey; document.getElementById('key-status').textContent = '✅ 저장됨'; }
+// ── 초기값 복원 ───────────────────────────────────────────────────────
+if (apiKey)  { document.getElementById('apikey').value   = apiKey;   document.getElementById('key-status').textContent = '✅ 저장됨'; }
+if (ghToken) { document.getElementById('gh-token').value = ghToken;  document.getElementById('gh-status').textContent  = '✅ 저장됨'; }
+if (ghRepo)  { document.getElementById('gh-repo').value  = ghRepo;   document.getElementById('repo-status').textContent = '✅ ' + ghRepo; }
 
-function saveKey() {
-  const val = document.getElementById('apikey').value.trim();
-  if (!val.startsWith('AIza')) { document.getElementById('key-status').textContent = '❌ AIza...로 시작해야 합니다'; return; }
-  apiKey = val; localStorage.setItem(STORAGE_KEY_API, val);
-  document.getElementById('key-status').textContent = '✅ 저장 완료!';
+// ── 저장 함수 ─────────────────────────────────────────────────────────
+function saveKey(inputId, statusId) {
+  const val = document.getElementById(inputId).value.trim();
+  if (!val) return;
+  if (inputId === 'apikey') {
+    if (!val.startsWith('AIza')) { document.getElementById(statusId).textContent='❌ AIza...로 시작해야 합니다'; return; }
+    apiKey = val; localStorage.setItem(STORAGE_KEY_API, val);
+  } else {
+    if (!val.startsWith('ghp_') && !val.startsWith('github_pat_')) { document.getElementById(statusId).textContent='❌ ghp_ 또는 github_pat_로 시작해야 합니다'; return; }
+    ghToken = val; localStorage.setItem(STORAGE_KEY_GH, val);
+  }
+  document.getElementById(statusId).textContent = '✅ 저장 완료!';
+}
+function saveGhRepo() {
+  const val = document.getElementById('gh-repo').value.trim();
+  if (!val.includes('/')) { document.getElementById('repo-status').textContent='❌ owner/repo 형식'; return; }
+  ghRepo = val; localStorage.setItem(STORAGE_KEY_REPO, val);
+  document.getElementById('repo-status').textContent = '✅ ' + val;
 }
 function saveAnalyses() { localStorage.setItem(STORAGE_KEY_CACHE, JSON.stringify(analyses)); }
 function updateBadge() {
   const cached = Object.keys(analyses).length;
-  document.getElementById('badge-text').textContent = BIDS.length + '건 공고' + (cached > 0 ? ' · 분석 ' + cached + '건' : '');
+  document.getElementById('badge-text').textContent = BIDS.length + '건 공고' + (cached ? ' · 분석 ' + cached + '건' : '');
 }
 
-// ─── 공고 로드 (data/bids.json) ──────────────────────────────────────
-async function loadBids() {
+// ── 공고 새로고침: Actions 트리거 → 폴링 → JSON 로드 ─────────────────
+async function triggerAndReload() {
   const btn = document.getElementById('btn-reload');
-  btn.disabled = true; btn.textContent = '⏳ 로딩 중...';
-  try {
-    const res = await fetch('data/bids.json?t=' + Date.now());
-    const data = await res.json();
-    BIDS = data.bids || [];
-    if (data.updatedAt) {
-      document.getElementById('last-updated').textContent = '최종 수집: ' + data.updatedAt;
-    }
-    rebuildCatFilter();
-    renderList();
-    updateBadge();
-    if (BIDS.length > 0) {
-      document.getElementById('empty-state').style.display = 'none';
-    } else {
-      document.getElementById('empty-state').querySelector('.emsg').textContent = '수집된 공고가 없습니다';
-      document.getElementById('empty-state').querySelector('.esub').textContent = 'GitHub Actions가 아직 실행되지 않았거나, XR 관련 공고가 없습니다.';
-    }
-  } catch(e) {
-    document.getElementById('empty-state').querySelector('.emsg').textContent = '공고 로드 실패';
-    document.getElementById('empty-state').querySelector('.esub').textContent = e.message;
+
+  // GitHub Token 없으면 그냥 JSON만 새로 로드
+  if (!ghToken || !ghRepo) {
+    btn.disabled = true; btn.textContent = '⏳ 로딩...';
+    await loadBids();
+    btn.disabled = false; btn.textContent = '🔄 공고 새로고침';
+    return;
   }
+
+  btn.disabled = true; btn.textContent = '⏳ Actions 실행 중...';
+  const bar   = document.getElementById('action-bar');
+  const fill  = document.getElementById('action-progress-fill');
+  const txt   = document.getElementById('action-text');
+  bar.classList.add('visible');
+  fill.style.width = '5%';
+  txt.textContent  = '① GitHub Actions 워크플로우 실행 요청 중...';
+
+  try {
+    // 1. workflow_dispatch 트리거
+    const trigRes = await fetch(
+      `https://api.github.com/repos/${ghRepo}/actions/workflows/${WORKFLOW_FILE}/dispatches`,
+      {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${ghToken}`,
+          'Accept': 'application/vnd.github+json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ref: 'main' }),
+      }
+    );
+    if (!trigRes.ok) {
+      const err = await trigRes.json().catch(()=>({message:trigRes.statusText}));
+      throw new Error(err.message || trigRes.statusText);
+    }
+
+    fill.style.width = '15%';
+    txt.textContent  = '② 워크플로우 시작 대기 중... (최대 3분 소요)';
+
+    // 2. 최신 run ID 가져오기 (3초 후 시작)
+    await sleep(3000);
+    let runId = null;
+    for (let attempt = 0; attempt < 10; attempt++) {
+      const runsRes = await fetch(
+        `https://api.github.com/repos/${ghRepo}/actions/workflows/${WORKFLOW_FILE}/runs?per_page=1`,
+        { headers: { 'Authorization': `Bearer ${ghToken}`, 'Accept': 'application/vnd.github+json' } }
+      );
+      const runsData = await runsRes.json();
+      const latest   = runsData.workflow_runs?.[0];
+      if (latest && (latest.status === 'queued' || latest.status === 'in_progress')) {
+        runId = latest.id; break;
+      }
+      await sleep(2000);
+    }
+    if (!runId) throw new Error('워크플로우 실행을 찾을 수 없습니다');
+
+    fill.style.width = '25%';
+    txt.textContent  = '③ bizinfo.go.kr에서 XR 공고 수집 중...';
+
+    // 3. 완료 폴링 (최대 5분)
+    const started = Date.now();
+    const MAX_WAIT = 5 * 60 * 1000;
+    let progress = 25;
+    while (Date.now() - started < MAX_WAIT) {
+      const runRes  = await fetch(
+        `https://api.github.com/repos/${ghRepo}/actions/runs/${runId}`,
+        { headers: { 'Authorization': `Bearer ${ghToken}`, 'Accept': 'application/vnd.github+json' } }
+      );
+      const runData = await runRes.json();
+      const elapsed = Math.round((Date.now() - started) / 1000);
+
+      if (runData.status === 'completed') {
+        if (runData.conclusion === 'success') {
+          fill.style.width = '90%';
+          txt.textContent  = '④ 공고 데이터 로드 중...';
+          await sleep(2000); // 파일이 Pages에 반영될 시간
+          await loadBids();
+          fill.style.width = '100%';
+          txt.textContent  = `✅ 완료! ${BIDS.length}건 공고 수집됨`;
+        } else {
+          throw new Error(`워크플로우 실패: ${runData.conclusion}`);
+        }
+        break;
+      }
+
+      // 진행 바 애니메이션 (25% → 85% 천천히)
+      progress = Math.min(85, 25 + (elapsed / (MAX_WAIT/1000)) * 60);
+      fill.style.width = progress + '%';
+      txt.textContent  = `③ 공고 수집 중... (${elapsed}초 경과)`;
+      await sleep(4000);
+    }
+
+  } catch(e) {
+    txt.textContent = '❌ 오류: ' + e.message + ' · JSON만 새로 로드합니다';
+    await loadBids();
+  }
+
+  setTimeout(() => { bar.classList.remove('visible'); fill.style.width='0%'; }, 4000);
   btn.disabled = false; btn.textContent = '🔄 공고 새로고침';
 }
 
-// ─── 단계 / 카테고리 필터 ─────────────────────────────────────────────
+// ── bids.json 로드 ────────────────────────────────────────────────────
+async function loadBids() {
+  try {
+    const res  = await fetch('data/bids.json?t=' + Date.now());
+    const data = await res.json();
+    BIDS = data.bids || [];
+    if (data.updatedAt) document.getElementById('last-updated').textContent = '최종 수집: ' + data.updatedAt;
+    rebuildCatFilter();
+    renderList();
+    updateBadge();
+    if (BIDS.length > 0) document.getElementById('empty-state').style.display = 'none';
+  } catch(e) {
+    console.error('bids.json 로드 실패:', e);
+  }
+}
+
+// ── 필터 ──────────────────────────────────────────────────────────────
 const stageFiltersEl = document.getElementById('stage-filters');
 STAGES.forEach(s => {
   const btn = document.createElement('button');
@@ -288,39 +427,39 @@ STAGES.forEach(s => {
 
 function rebuildCatFilter() {
   const cats = ['전체', ...new Set(BIDS.map(b=>b.category))];
-  const el = document.getElementById('cat-filters'); el.innerHTML = '';
+  const el   = document.getElementById('cat-filters'); el.innerHTML='';
   cats.forEach(cat => {
     const btn = document.createElement('button');
-    btn.className = 'filter-btn' + (cat===activeCat?' active':'');
+    btn.className = 'filter-btn'+(cat===activeCat?' active':'');
     btn.textContent = cat;
     btn.onclick = () => { activeCat=cat; document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); renderList(); };
     el.appendChild(btn);
   });
 }
 
-// ─── 목록 렌더 ────────────────────────────────────────────────────────
+// ── 목록 렌더 ─────────────────────────────────────────────────────────
 function renderList() {
-  const q = document.getElementById('search').value.trim();
+  const q    = document.getElementById('search').value.trim();
   const list = document.getElementById('bid-list'); list.innerHTML='';
-  const countEl = document.createElement('div'); countEl.id='list-count'; list.appendChild(countEl);
+  const cEl  = document.createElement('div'); cEl.id='list-count'; list.appendChild(cEl);
   const filtered = BIDS.filter(b => {
     const ms = !q || b.title.includes(q) || b.agency.includes(q) || (b.keywords||[]).some(k=>k.includes(q));
     return ms && (activeCat==='전체'||b.category===activeCat) && (activeStage==='전체'||b.stage===activeStage);
   });
-  countEl.textContent = '총 '+filtered.length+'건';
+  cEl.textContent = '총 '+filtered.length+'건';
   filtered.forEach(b => {
-    const a = analyses[b.id];
+    const a   = analyses[b.id];
     const col = CAT_COLORS[b.category]||{border:'#e2e8f0',text:'#64748b',bg:'#f8fafc'};
     const card = document.createElement('div');
     card.className = 'bid-card'+(b.id===selectedId?' selected':'');
     let probHtml='';
     if (a&&!a.error) { const pc=a.probability>=75?'#16a34a':a.probability>=55?'#d97706':'#dc2626'; probHtml=`<span class="bid-prob" style="color:${pc}">${a.probability}%</span>`; }
-    const srcTag = b.source==='bizinfo' ? `<span class="src-badge">bizinfo</span>` : '';
-    const cachedTag = a&&!a.error ? `<span class="cached-tag">분석됨</span>` : '';
     card.innerHTML = `
       <div class="card-top"><div class="card-badges">
         <span class="cat-badge" style="border-color:${col.border};color:${col.text};background:${col.bg}">${b.category}</span>
-        <span class="stage-badge">${b.stage}</span>${srcTag}${cachedTag}
+        <span class="stage-badge">${b.stage}</span>
+        ${b.source==='bizinfo'?'<span class="src-badge">bizinfo</span>':''}
+        ${a&&!a.error?'<span class="cached-tag">분석됨</span>':''}
       </div>${probHtml}</div>
       <div class="card-title">${b.title}</div>
       <div class="card-meta">${b.agency}</div>
@@ -331,15 +470,15 @@ function renderList() {
   });
 }
 
-// ─── 상세 ─────────────────────────────────────────────────────────────
+// ── 상세 ──────────────────────────────────────────────────────────────
 function selectBid(bid) { selectedId=bid.id; renderList(); renderDetail(bid); if(!analyses[bid.id]) analyze(bid); }
 
 function renderDetail(bid) {
   document.getElementById('empty-state').style.display='none';
   const detail = document.getElementById('detail'); detail.style.display='block';
   const col = CAT_COLORS[bid.category]||{border:'#e2e8f0',text:'#64748b',bg:'#f8fafc'};
-  const si = STAGE_ORDER.indexOf(bid.stage);
-  const tl = STAGE_ORDER.map((s,i)=>`<div class="st-item"><span class="st-step ${i<si?'done':i===si?'current':''}">${s}</span>${i<STAGE_ORDER.length-1?`<span class="st-arrow${i<si?' done':''}">›</span>`:''}</div>`).join('');
+  const si  = STAGE_ORDER.indexOf(bid.stage);
+  const tl  = STAGE_ORDER.map((s,i)=>`<div class="st-item"><span class="st-step ${i<si?'done':i===si?'current':''}">${s}</span>${i<STAGE_ORDER.length-1?`<span class="st-arrow${i<si?' done':''}">›</span>`:''}</div>`).join('');
   const bizUrl = bid.url || `https://www.bizinfo.go.kr/web/search/searchList.do?searchKeyword=${encodeURIComponent(bid.title)}`;
 
   detail.innerHTML = `
@@ -368,7 +507,7 @@ function renderDetail(bid) {
       <div class="stage-timeline">${tl}</div>
       <div class="section-title">📋 사업 개요</div>
       <div class="desc-text">${bid.description||'-'}</div>
-      ${bid.requirements&&bid.requirements.length?`<div class="section-title">✅ 주요 요구사항</div><div class="req-list">${bid.requirements.map(r=>`<div class="req-item"><span style="color:#4285f4;margin-top:1px;flex-shrink:0">▪</span>${r}</div>`).join('')}</div>`:''}
+      ${bid.requirements&&bid.requirements.length?`<div class="section-title">✅ 주요 요구사항</div><div class="req-list">${bid.requirements.map(r=>`<div class="req-item"><span style="color:#4285f4;flex-shrink:0">▪</span>${r}</div>`).join('')}</div>`:''}
       <div class="tags">${(bid.keywords||[]).map(k=>`<span class="tag">#${k}</span>`).join('')}</div>
     </div>
     <div class="panel" id="analysis-panel">
@@ -381,7 +520,7 @@ function renderAnalysisContent(id) {
   const a = analyses[id];
   if (!a) return `<div class="loading-state"><div style="font-size:24px;margin-bottom:9px">⚙️</div><div style="font-size:12px;font-weight:600;color:#64748b">Gemini 분석 중...</div></div>`;
   if (a.error) return `<div style="color:#dc2626;font-size:12px;padding:11px;background:#fef2f2;border-radius:7px;border:1px solid #fecaca">${a.error}</div>`;
-  const pc = a.probability>=75?'#16a34a':a.probability>=55?'#d97706':a.probability>=35?'#ea580c':'#dc2626';
+  const pc  = a.probability>=75?'#16a34a':a.probability>=55?'#d97706':a.probability>=35?'#ea580c':'#dc2626';
   const pbg = a.probability>=75?'linear-gradient(90deg,#86efac,#22c55e)':a.probability>=55?'linear-gradient(90deg,#fcd34d,#f59e0b)':'linear-gradient(90deg,#fca5a5,#ef4444)';
   const savedAt = a.savedAt ? new Date(a.savedAt).toLocaleString('ko-KR') : '';
   return `
@@ -401,18 +540,20 @@ function refreshAnalysisPanel(id) {
   if (panel&&selectedId===id) panel.innerHTML=`<div class="panel-title">🤖 AI 수주 가능성 분석 — VIRNECT <span style="font-size:10px;font-weight:400;color:#94a3b8">powered by Gemini 1.5 Flash</span></div>`+renderAnalysisContent(id);
 }
 
-// ─── Gemini API ───────────────────────────────────────────────────────
+// ── Gemini API ────────────────────────────────────────────────────────
 async function callGemini(bid) {
   const prompt = `당신은 공공조달 입찰 전문가입니다. VIRNECT의 수주 가능성을 분석하세요.\n\n[VIRNECT 프로필]\n${VIRNECT_PROFILE}\n\n[사업]\n사업명: ${bid.title}\n발주처: ${bid.agency}\n예산: ${bid.budget}\n단계: ${bid.stage}\n계약: ${bid.contractType||'미확인'}\n분류: ${bid.category}\n개요: ${bid.description}\n요구사항: ${(bid.requirements||[]).join(' / ')||'확인 필요'}\n\nJSON만 반환(마크다운 없이):\n{"probability":숫자0-100,"grade":"A/B/C/D","strengths":["강점1","강점2","강점3"],"weaknesses":["약점1","약점2"],"strategy":"수주 전략 2-3문장","summary":"한 줄 종합 평가"}`;
-  const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({contents:[{parts:[{text:prompt}]}],generationConfig:{temperature:0.3,maxOutputTokens:1000}})});
+  const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+    {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({contents:[{parts:[{text:prompt}]}],generationConfig:{temperature:0.3,maxOutputTokens:1000}})});
   const data = await res.json();
   if (data.error) throw new Error(data.error.message);
   return JSON.parse(data.candidates[0].content.parts[0].text.replace(/```json|```/g,'').trim());
 }
 
 async function analyze(bid) {
-  if (!apiKey) { analyses[bid.id]={error:'❌ Google API 키를 먼저 입력해주세요 (aistudio.google.com 무료)'}; refreshAnalysisPanel(bid.id); return; }
-  try { const r=await callGemini(bid); r.savedAt=Date.now(); analyses[bid.id]=r; saveAnalyses(); } catch(e) { analyses[bid.id]={error:'분석 실패: '+e.message}; }
+  if (!apiKey) { analyses[bid.id]={error:'❌ Google API 키를 먼저 입력해주세요'}; refreshAnalysisPanel(bid.id); return; }
+  try { const r=await callGemini(bid); r.savedAt=Date.now(); analyses[bid.id]=r; saveAnalyses(); }
+  catch(e) { analyses[bid.id]={error:'분석 실패: '+e.message}; }
   refreshAnalysisPanel(bid.id); renderList();
 }
 function reanalyze(id) { delete analyses[id]; saveAnalyses(); const b=BIDS.find(b=>b.id===id); if(b){refreshAnalysisPanel(id);analyze(b);} }
@@ -422,19 +563,21 @@ async function batchAnalyze() {
   if (!BIDS.length) { alert('공고를 먼저 불러오세요.'); return; }
   const pending = BIDS.filter(b=>!analyses[b.id]||analyses[b.id].error);
   if (!pending.length) { alert('모든 공고가 이미 분석되어 있습니다.'); return; }
-  const btn=document.getElementById('btn-batch'), bar=document.getElementById('batch-bar'), fill=document.getElementById('batch-progress-fill'), txt=document.getElementById('batch-text');
+  const btn=document.getElementById('btn-batch'),bar=document.getElementById('batch-bar'),fill=document.getElementById('batch-progress-fill'),txt=document.getElementById('batch-text');
   btn.disabled=true; bar.classList.add('visible');
   for (let i=0;i<pending.length;i++) {
     const bid=pending[i]; txt.textContent=`(${i+1}/${pending.length}) "${bid.title.slice(0,18)}..." 분석 중`; fill.style.width=((i/pending.length)*100)+'%';
     try { const r=await callGemini(bid); r.savedAt=Date.now(); analyses[bid.id]=r; saveAnalyses(); } catch(e) { analyses[bid.id]={error:'실패: '+e.message}; }
     renderList(); refreshAnalysisPanel(bid.id);
-    if (i<pending.length-1) await new Promise(r=>setTimeout(r,700));
+    if (i<pending.length-1) await sleep(700);
   }
   fill.style.width='100%'; txt.textContent='✅ 완료!'; btn.disabled=false;
   setTimeout(()=>{bar.classList.remove('visible');fill.style.width='0%';},3000);
 }
 
-// 시작
+function sleep(ms) { return new Promise(r=>setTimeout(r,ms)); }
+
+// ── 시작 ─────────────────────────────────────────────────────────────
 loadBids();
 </script>
 </body>
