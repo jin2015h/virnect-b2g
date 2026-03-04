@@ -21,9 +21,9 @@ HEADERS = {
     'Referer': 'https://www.bizinfo.go.kr/',
 }
 
-BASE = 'https://www.bizinfo.go.kr'
-LIST = f'{BASE}/web/lay1/bbs/S1T122C128/AS/74/list.do'
-MAX_PAGES = 20
+BASE   = 'https://www.bizinfo.go.kr'
+LIST   = f'{BASE}/web/lay1/bbs/S1T122C128/AS/74/list.do'
+MAX_PAGES = 20  # 최대 20페이지 (페이지당 ~15건 = 최대 300건 검토)
 
 def clean(text):
     if not text: return ''
@@ -46,88 +46,123 @@ def guess_category(title):
     return 'AR/XR'
 
 def parse_page(html):
+    """한 페이지에서 공고 목록 파싱"""
     items = []
     seen = set()
+
+    # pblancId 포함 링크와 제목 추출
     pat = re.compile(
         r'href=["\'][^"\']*pblancId=(PBLN_\w+)[^"\']*["\'][^>]*>\s*([^<]{4,200}?)\s*</a>',
         re.DOTALL
     )
     for m in pat.finditer(html):
-        pid = m.group(1)
+        pid   = m.group(1)
         title = clean(m.group(2))
         if not title or len(title) < 4 or pid in seen:
             continue
         if title in ['목록', '이전', '다음', '확인', '취소', '닫기', '스크랩']:
             continue
         seen.add(pid)
+
+        # 날짜 추출 (공고 주변 컨텍스트)
         ctx = clean(html[max(0, m.start()-100):min(len(html), m.end()+400)])
         dates = re.findall(r'(\d{4}[.\-]\d{2}[.\-]\d{2})', ctx)
+        # 기관명 추출 시도
         agency_m = re.search(r'소관[^:：]*[:：]\s*([^\s<,]{2,20})', ctx)
         agency = agency_m.group(1) if agency_m else ''
+
         items.append({
-            'id': f'BIZ-{pid}', 'stage': '입찰공고', 'title': title, 'agency': agency,
-            'budget': '미정',
-            'deadline': dates[1].replace('.','-') if len(dates)>1 else (dates[0].replace('.','-') if dates else '-'),
-            'postDate': dates[0].replace('.','-') if dates else datetime.now().strftime('%Y-%m-%d'),
-            'contractType': '공모', 'category': guess_category(title),
-            'keywords': [k for k in XR_KEYWORDS if k in title],
-            'description': title, 'requirements': [],
-            'url': f'{BASE}/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId={pid}',
-            'source': 'bizinfo',
+            'id'          : f'BIZ-{pid}',
+            'stage'       : '입찰공고',
+            'title'       : title,
+            'agency'      : agency,
+            'budget'      : '미정',
+            'deadline'    : dates[1].replace('.','-') if len(dates)>1 else (dates[0].replace('.','-') if dates else '-'),
+            'postDate'    : dates[0].replace('.','-') if dates else datetime.now().strftime('%Y-%m-%d'),
+            'contractType': '공모',
+            'category'    : guess_category(title),
+            'keywords'    : [k for k in XR_KEYWORDS if k in title],
+            'description' : title,
+            'requirements': [],
+            'url'         : f'{BASE}/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId={pid}',
+            'source'      : 'bizinfo',
         })
     return items
+
+def has_next_page(html):
+    """다음 페이지가 있는지 확인"""
+    return 'pageIndex=' in html and ('다음' in html or 'next' in html.lower())
 
 def main():
     print(f'[{datetime.now():%Y-%m-%d %H:%M}] bizinfo XR 공고 수집 시작')
     session = requests.Session()
     session.headers.update(HEADERS)
-    all_items = []
-    seen_ids = set()
-    xr_count = 0
 
+    all_items = []
+    seen_ids  = set()
+    xr_count  = 0
+
+    # 방법1: 페이지 순회 (최대 MAX_PAGES)
     print(f'\n[1단계] 전체 목록 페이지 순회 (최대 {MAX_PAGES}페이지)')
     for page in range(1, MAX_PAGES + 1):
         try:
             resp = session.get(LIST, params={'pageIndex': page, 'pageUnit': 15}, timeout=20)
             if resp.status_code != 200:
-                print(f'  페이지 {page}: {resp.status_code} 중단'); break
+                print(f'  페이지 {page}: {resp.status_code} — 중단')
+                break
             items = parse_page(resp.text)
             if not items:
-                print(f'  페이지 {page}: 항목 없음 중단'); break
+                print(f'  페이지 {page}: 항목 없음 — 중단')
+                break
+
             new_items = [i for i in items if i['id'] not in seen_ids]
             if not new_items:
-                print(f'  페이지 {page}: 중복 중단'); break
+                print(f'  페이지 {page}: 중복 — 중단')
+                break
+
             for i in new_items:
                 seen_ids.add(i['id'])
                 all_items.append(i)
-                if is_xr_related(i['title']): xr_count += 1
-            print(f'  페이지 {page}: {len(new_items)}건 (XR 누적: {xr_count}건)')
+                if is_xr_related(i['title']):
+                    xr_count += 1
+
+            print(f'  페이지 {page}: {len(new_items)}건 (XR 관련 누적: {xr_count}건)')
             time.sleep(0.8)
         except Exception as e:
-            print(f'  페이지 {page} 오류: {e}'); break
+            print(f'  페이지 {page} 오류: {e}')
+            break
 
-    print(f'\n[2단계] POST 키워드 검색')
-    for kw in ['증강현실', '가상현실', '디지털트윈', '메타버스']:
+    # 방법2: POST 키워드 검색
+    print(f'\n[2단계] POST 키워드 검색 시도')
+    for kw in ['증강현실', '가상현실', '디지털트윈', '메타버스', 'AR VR']:
         try:
-            resp = session.post(LIST, data={'searchKeyword': kw, 'pageIndex': 1, 'pageUnit': 20},
-                headers={**HEADERS, 'Content-Type': 'application/x-www-form-urlencoded'}, timeout=20)
+            resp = session.post(LIST,
+                data={'searchKeyword': kw, 'pageIndex': 1, 'pageUnit': 20},
+                headers={**HEADERS, 'Content-Type': 'application/x-www-form-urlencoded'},
+                timeout=20)
             if resp.status_code == 200:
                 items = parse_page(resp.text)
                 new_items = [i for i in items if i['id'] not in seen_ids]
                 for i in new_items:
-                    seen_ids.add(i['id']); all_items.append(i)
-                    if is_xr_related(i['title']): xr_count += 1
-                if new_items: print(f'  POST [{kw}]: +{len(new_items)}건')
+                    seen_ids.add(i['id'])
+                    all_items.append(i)
+                    if is_xr_related(i['title']):
+                        xr_count += 1
+                if new_items:
+                    print(f'  POST [{kw}]: +{len(new_items)}건')
         except Exception as e:
             print(f'  POST [{kw}] 오류: {e}')
         time.sleep(0.8)
 
+    # XR 관련 공고만 필터링
     xr_bids = [b for b in all_items if is_xr_related(b['title'], b['description'])]
-    print(f'\n전체: {len(all_items)}건, XR: {len(xr_bids)}건')
+    print(f'\n전체 수집: {len(all_items)}건')
+    print(f'XR 관련: {len(xr_bids)}건')
 
     os.makedirs('data', exist_ok=True)
+
     if not xr_bids:
-        print('⚠ XR 0건 — 기존 데이터 유지')
+        print('⚠ XR 공고 0건 — 기존 데이터 유지')
         if os.path.exists('data/bids.json'):
             with open('data/bids.json', encoding='utf-8') as f:
                 existing = json.load(f)
@@ -135,22 +170,17 @@ def main():
                 existing['updatedAt'] = datetime.now().strftime('%Y-%m-%d %H:%M') + ' (캐시)'
                 with open('data/bids.json', 'w', encoding='utf-8') as f:
                     json.dump(existing, f, ensure_ascii=False, indent=2)
+                print('기존 데이터 유지')
                 return
 
-    output = {'updatedAt': datetime.now().strftime('%Y-%m-%d %H:%M'), 'total': len(xr_bids), 'bids': xr_bids}
+    output = {
+        'updatedAt': datetime.now().strftime('%Y-%m-%d %H:%M'),
+        'total'    : len(xr_bids),
+        'bids'     : xr_bids,
+    }
     with open('data/bids.json', 'w', encoding='utf-8') as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
-    print(f'✅ 저장 완료: {len(xr_bids)}건')
+    print(f'✅ data/bids.json 저장: {len(xr_bids)}건')
 
 if __name__ == '__main__':
     main()
-```
-
-**④ 저장**
-```
-우상단 Commit changes 클릭 → Commit changes 클릭
-```
-
-**⑤ Actions 다시 실행**
-```
-Actions → Fetch XR Bids → Run workflow
