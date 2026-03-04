@@ -147,7 +147,7 @@ def main():
     print('\n[2단계] bizinfo')
     add(fetch_bizinfo(sess))
 
-    xr = [b for b in all_bids if is_xr(b['title'])]
+    xr = [b for b in all_bids if b['source'] == 'g2b' or is_xr(b['title'])]
     if not xr and all_bids: xr = all_bids
     print(f'\n전체: {len(all_bids)}건, XR: {len(xr)}건')
 
