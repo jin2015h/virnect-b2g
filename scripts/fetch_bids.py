@@ -1,13 +1,8 @@
 """
-나라장터 입찰공고 Open API
-- Base: http://apis.data.go.kr/1230000/BidPublicInfoService
-- 오퍼레이션: getBidPblancListInfoServc (용역), getBidPblancListInfoThng (물품)
-- 키워드 파라미터: bidNm
-- 날짜 파라미터: inqryBgnDt, inqryEndDt (형식: 202403010000)
+나라장터 입찰공고 Open API + bizinfo 수집
 """
-import json, time, re, os
+import json, time, re, os, requests
 from datetime import datetime, timedelta
-import requests
 
 API_KEY  = 'fb382c284306f27f3c44e28cf6718dd7208691a64314f00df3dabf9008133b07'
 API_BASE = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService'
@@ -38,16 +33,13 @@ def guess_category(title):
 
 def parse_items(items):
     results = []
-    if isinstance(items, dict):
-        items = items.get('item', [])
-    if isinstance(items, dict):
-        items = [items]
-    if not items:
-        return results
+    if isinstance(items, dict): items = items.get('item', [])
+    if isinstance(items, dict): items = [items]
+    if not items: return results
     for item in items:
-        title = clean(item.get('bidNm') or item.get('ntceNm') or '')
+        title = clean(item.get('bidNtceNm') or item.get('bidNm') or '')
         if not title: continue
-        bid_no = str(item.get('bidNo') or item.get('ntceNo') or abs(hash(title)) % 1000000)
+        bid_no = str(item.get('bidNtceNo') or item.get('bidNo') or abs(hash(title)) % 1000000)
         budget = str(item.get('presmptPrce') or item.get('asignBdgtAmt') or '')
         if budget.isdigit() and int(budget) > 0:
             budget = f"{int(budget):,}원"
@@ -56,10 +48,10 @@ def parse_items(items):
         results.append({
             'id': f'G2B-{bid_no}', 'stage': '입찰공고',
             'title': title,
-            'agency': clean(item.get('dminsttNm') or item.get('ntceInsttNm') or ''),
+            'agency': clean(item.get('ntceInsttNm') or item.get('dminsttNm') or ''),
             'budget': budget,
             'deadline': clean(item.get('bidClseDt') or '-'),
-            'postDate': clean(item.get('bidNtceDt') or datetime.now().strftime('%Y-%m-%d')),
+            'postDate': clean(item.get('bidNtceDt') or item.get('rgstDt') or datetime.now().strftime('%Y-%m-%d')),
             'contractType': clean(item.get('cntrctMthdNm') or '입찰'),
             'category': guess_category(title),
             'keywords': [k for k in XR_KEYWORDS if k in title],
@@ -70,46 +62,49 @@ def parse_items(items):
     return results
 
 def fetch_g2b(session, keyword):
-    """나라장터 API - 용역/물품 검색"""
     results = []
-    # 최근 90일 범위
     end_dt   = datetime.now()
     start_dt = end_dt - timedelta(days=90)
     bgnDt = start_dt.strftime('%Y%m%d') + '0000'
     endDt = end_dt.strftime('%Y%m%d') + '2359'
+    kw_enc = requests.utils.quote(keyword)
 
     ops = [
-        'getBidPblancListInfoServcPPSSrch',   # 용역 키워드검색
-        'getBidPblancListInfoThngPPSSrch',    # 물품 키워드검색
-        'getBidPblancListInfoCnstwkPPSSrch',  # 공사 키워드검색
+        'getBidPblancListInfoServcPPSSrch',
+        'getBidPblancListInfoThngPPSSrch',
+        'getBidPblancListInfoCnstwkPPSSrch',
     ]
     for op in ops:
         try:
-            # 날짜 없이 키워드만으로 검색 (inqryDiv 없으면 공고명 검색)
-            full_url = f'{API_BASE}/{op}?ServiceKey={API_KEY}&numOfRows=20&pageNo=1&type=json&bidNtceNm={requests.utils.quote(keyword)}'
-            resp = session.get(full_url, timeout=15)
-            label = op.replace('getBidPblancListInfo','')
+            url = (f'{API_BASE}/{op}'
+                   f'?ServiceKey={API_KEY}'
+                   f'&numOfRows=20&pageNo=1&type=json'
+                   f'&inqryDiv=1'
+                   f'&bidNtceNm={kw_enc}'
+                   f'&inqryBgnDt={bgnDt}&inqryEndDt={endDt}')
+            label = op.replace('getBidPblancListInfo','').replace('PPSSrch','')
+            resp = session.get(url, timeout=15)
             print(f'  [{keyword}]{label}: {resp.status_code}')
-
-            if resp.status_code != 200:
-                continue
+            if resp.status_code != 200: continue
 
             try:
                 data = resp.json()
             except Exception:
-                print(f'    JSON 파싱 실패, 응답: {resp.text[:200]}')
+                print(f'    JSON오류: {resp.text[:150]}')
                 continue
 
             body  = data.get('response', {}).get('body', {})
             total = body.get('totalCount', 0)
-            items = body.get('items', {})
             print(f'    totalCount: {total}')
             if total == 0:
-                print(f'    응답: {str(data)[:200]}')
-            parsed = parse_items(items)
+                hdr = data.get('response', {}).get('header', {})
+                print(f'    header: {hdr}')
+                continue
+
+            parsed = parse_items(body.get('items', {}))
+            print(f'    파싱: {len(parsed)}건')
             results.extend(parsed)
-            if parsed:
-                print(f'    파싱: {len(parsed)}건')
+            if results: break
         except Exception as e:
             print(f'    오류: {e}')
     return results
@@ -150,9 +145,7 @@ def main():
     session = requests.Session()
     session.headers.update({'User-Agent': 'Mozilla/5.0', 'Accept': 'application/json'})
 
-    all_bids = []
-    seen_ids = set()
-
+    all_bids = []; seen_ids = set()
     def add(bids):
         n = 0
         for b in bids:
@@ -170,9 +163,7 @@ def main():
     add(fetch_bizinfo_latest(session))
 
     xr_bids = [b for b in all_bids if is_xr(b['title'])]
-    if not xr_bids and all_bids:
-        xr_bids = all_bids
-
+    if not xr_bids and all_bids: xr_bids = all_bids
     print(f'\n전체: {len(all_bids)}건, XR: {len(xr_bids)}건')
 
     os.makedirs('data', exist_ok=True)
