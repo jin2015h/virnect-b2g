@@ -111,6 +111,7 @@ def category(title):
     if any(k in title for k in ['시뮬레이션','가상시뮬레이션','로봇시뮬레이션','공정시뮬레이션','가상환경']): return 'XR/시뮬레이션'
     return 'AR/XR'
 
+
 def parse_items(items):
     if isinstance(items, dict): items = items.get('item', [])
     if isinstance(items, dict): items = [items]
@@ -118,22 +119,75 @@ def parse_items(items):
     for item in (items or []):
         title = clean(item.get('bidNtceNm') or '')
         if not title: continue
-        no  = str(item.get('bidNtceNo') or abs(hash(title)) % 1000000)
-        amt = str(item.get('presmptPrce') or '')
+        no     = str(item.get('bidNtceNo')  or abs(hash(title)) % 1000000)
+        ord_no = str(item.get('bidNtceOrd') or '00')
+        amt    = str(item.get('presmptPrce') or '')
         budget = f"{int(amt):,}원" if amt.isdigit() and int(amt) > 0 else '미정'
+
+        detail_url = (f"https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do"
+                      f"?bidNtceNo={no}&bidNtceOrd={ord_no}&re=Y")
+        spec_url  = clean(item.get('ntceSpecDocUrl') or '')
+        draft_url = clean(item.get('drftDocUrl')     or '')
+        rgst_dt   = clean(item.get('bidNtceDt')      or datetime.now().strftime('%Y-%m-%d'))
+
         out.append({
-            'id': f'G2B-{no}', 'stage': '입찰공고', 'title': title,
+            'id':           f'G2B-{no}',
+            'stage':        '입찰공고',
+            'title':        title,
             'agency':       clean(item.get('ntceInsttNm') or ''),
+            'demandAgency': clean(item.get('dmndInsttNm') or ''),
             'budget':       budget,
-            'deadline':     clean(item.get('bidClseDt') or '-'),
-            'postDate':     clean(item.get('bidNtceDt') or datetime.now().strftime('%Y-%m-%d')),
+            'deadline':     clean(item.get('bidClseDt')   or '-'),
+            'postDate':     rgst_dt[:10],
             'contractType': clean(item.get('cntrctMthdNm') or '입찰'),
             'category':     category(title),
-            'keywords':     [k for k in XR_KEYWORDS if _re.search(r'(?<![A-Za-z])'+k+r'(?![A-Za-z])', title) if k in _EN_KW] +
-                            [k for k in _KO_KW if k in title],
-            'description':  title, 'requirements': [],
-            'url': f'https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm={no}&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1',
-            'source': 'g2b',
+            'keywords':     ([k for k in XR_KEYWORDS if _re.search(r'(?<![A-Za-z])'+k+r'(?![A-Za-z])', title) if k in _EN_KW] +
+                             [k for k in _KO_KW if k in title]),
+            'description':  clean(item.get('bidPurpsNm') or title),
+            'requirements': [],
+            'url':          detail_url,
+            'specUrl':      spec_url,
+            'draftUrl':     draft_url,
+            'contact':      clean(item.get('ntceInsttOfclTelNo') or ''),
+            'source':       'g2b',
+        })
+    return out
+
+
+def parse_prespec_items(items, keyword):
+    """사전규격 응답 파싱 (g2b와 필드명 다름)"""
+    if isinstance(items, dict): items = items.get('item', [])
+    if isinstance(items, dict): items = [items]
+    out = []
+    for item in (items or []):
+        # 사전규격은 prdctNm(품명) 또는 bfSpecNm 이 사업명
+        title = clean(item.get('prdctNm') or item.get('bfSpecNm') or '')
+        if not title or len(title) < 3: continue
+        no       = str(item.get('bfSpecRgstnNo') or abs(hash(title)) % 1000000)
+        amt      = str(item.get('asignBdgtAmt')  or '')
+        budget   = f"{int(amt):,}원" if amt.isdigit() and int(amt) > 0 else '미정'
+        deadline = clean(item.get('opninRcptnEndDt') or item.get('rlOpninRcptnEndDt') or '-')
+        post_dt  = clean(item.get('rcptDt') or item.get('rgstDt') or datetime.now().strftime('%Y-%m-%d'))
+        detail_url = f"https://www.g2b.go.kr:8101/ep/tbid/tbidSpec.do?bfSpecRgstnNo={no}"
+        out.append({
+            'id':           f'SPEC-{no}',
+            'stage':        '사전규격',
+            'title':        title,
+            'agency':       clean(item.get('ntceInsttNm') or ''),
+            'demandAgency': clean(item.get('dmndInsttNm') or ''),
+            'budget':       budget,
+            'deadline':     deadline,
+            'postDate':     post_dt[:10] if post_dt else '-',
+            'contractType': '공고예정',
+            'category':     category(title),
+            'keywords':     [keyword],
+            'description':  clean(item.get('bfSpecCn') or title),
+            'requirements': [],
+            'url':          detail_url,
+            'specUrl':      '',
+            'draftUrl':     '',
+            'contact':      clean(item.get('ntceInsttOfclTelNo') or ''),
+            'source':       'g2b',
         })
     return out
 
@@ -218,44 +272,144 @@ def fetch_prespec(keyword, bgn, end):
 
 def fetch_bizinfo_keyword(session, keyword):
     """bizinfo 키워드 검색 — 정부지원사업 포함"""
+
+def fetch_prespec(keyword, bgn, end):
+    """사전규격정보서비스 — HrcspSsstndrdInfoService
+    검색파라미터: prdctNm (품명) 으로 검색
+    """
+    out = []
+    ops = ['Servc', 'Thng', 'Cnstwk']
+    for op in ops:
+        try:
+            url = (f'{BFSPEC_BASE}/getHrcspSsstndrdInfo{op}'
+                   f'?ServiceKey={API_KEY}'
+                   f'&numOfRows=10&pageNo=1&type=json'
+                   f'&inqryBgnDt={bgn}&inqryEndDt={end}'
+                   f'&prdctNm={requests.utils.quote(keyword)}')
+            r = requests.get(url, timeout=12)
+            if r.status_code != 200: continue
+            body = r.json().get('response', {})
+            code = body.get('header', {}).get('resultCode', '')
+            if code not in ('00', '0'):
+                print(f'    사전규격[{keyword}][{op}] code={code}')
+                continue
+            items = body.get('body', {}).get('items', {})
+            parsed = parse_prespec_items(items, keyword)
+            if parsed:
+                print(f'    사전규격[{keyword}][{op}]: {len(parsed)}건')
+            out.extend(parsed)
+        except Exception as e:
+            print(f'    사전규격[{keyword}][{op}] 오류: {e}')
+    return out
+
+
+def fetch_bizinfo_keyword(session, keyword):
+    """bizinfo 키워드 검색 — API 방식으로 시도, 실패시 스크래핑"""
     out = []
     try:
-        # bizinfo는 GET 파라미터로 검색 지원
+        # 1) Open API 시도 (bizinfo 공식 API)
+        api_url = 'https://www.bizinfo.go.kr/uss/rss/bizinfoApi.do'
+        r = session.get(api_url, params={
+            'crtfcKey': 'OPEN_API_KEY',  # 공개키 없으면 실패 → 스크래핑으로 fallback
+            'dataType': 'json',
+            'searchKeyword': keyword,
+            'pageUnit': 10,
+            'pageIndex': 1,
+        }, headers={'User-Agent':'Mozilla/5.0','Accept-Language':'ko-KR'}, timeout=10)
+
+        # 2) 스크래핑 방식 (API 실패시)
         url = 'https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/list.do'
-        r = session.get(url, params={'schKeyword': keyword, 'schCondition': 'title', 'pageIndex': 1},
-                        headers={'User-Agent':'Mozilla/5.0','Accept-Language':'ko-KR',
-                                 'Referer':'https://www.bizinfo.go.kr/'}, timeout=15)
-        if r.status_code != 200: return out
-        pat = re.compile(r'pblancId=([\w_]+)[^"\']*["\'][^>]*>\s*([^<]{4,200}?)\s*</a>', re.DOTALL)
+        r = session.get(url,
+            params={'schKeyword': keyword, 'schCondition': 'title', 'pageIndex': 1},
+            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+                     'Accept-Language': 'ko-KR,ko;q=0.9',
+                     'Referer': 'https://www.bizinfo.go.kr/'},
+            timeout=15)
+        if r.status_code != 200:
+            return out
+
+        html = r.text
+        # pblancId 기반 링크 파싱 (여러 패턴 시도)
+        patterns = [
+            re.compile(r"pblancId=([\w]+)[^'\"]*['\"][^>]*>\s*([^<]{4,200}?)\s*</a>", re.DOTALL),
+            re.compile(r'fn_detail\(["\']?([\w]+)["\']?\)[^>]*>\s*([^<]{4,200}?)\s*</a>', re.DOTALL),
+            re.compile(r'<td[^>]*class="[^"]*subject[^"]*"[^>]*>.*?href="[^"]*pblancId=([\w]+)[^"]*"[^>]*>\s*([^<]{4,200}?)\s*</a>', re.DOTALL),
+        ]
         seen = set()
-        for m in pat.finditer(r.text):
-            pid, title = m.group(1), clean(m.group(2))
-            if not title or len(title) < 4 or pid in seen: continue
-            if title in ['목록','이전','다음','확인','취소','닫기','스크랩','검색']: continue
-            # 실제로 키워드가 제목에 포함된 것만
-            if not is_xr(title): continue
-            seen.add(pid)
-            ctx   = r.text[max(0,m.start()-50):m.end()+300]
-            dates = re.findall(r'(\d{4}[.\-]\d{2}[.\-]\d{2})', ctx)
-            out.append({
-                'id': f'BIZ-{pid}', 'stage': '지원사업', 'title': title, 'agency': '',
-                'budget': '미정',
-                'deadline': dates[1].replace('.','-') if len(dates)>1 else '-',
-                'postDate': dates[0].replace('.','-') if dates else datetime.now().strftime('%Y-%m-%d'),
-                'contractType': '공모/지원', 'category': category(title),
-                'keywords': [k for k in XR_KEYWORDS if k in title],
-                'description': title, 'requirements': [],
-                'url': f'https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId={pid}',
-                'source': 'bizinfo',
-            })
+        for pat in patterns:
+            for m in pat.finditer(html):
+                pid   = m.group(1).strip()
+                title = clean(m.group(2))
+                if not title or len(title) < 4 or pid in seen: continue
+                if title in ['목록','이전','다음','확인','취소','닫기','스크랩','검색','공고명']: continue
+                if not is_xr(title): continue
+                seen.add(pid)
+                ctx   = html[max(0, m.start()-100):m.end()+400]
+                dates = re.findall(r'(\d{4}[.\-]\d{2}[.\-]\d{2})', ctx)
+                # 예산 추출
+                budg_m = re.search(r'([\d,]+)\s*원', ctx)
+                budget = budg_m.group(0) if budg_m else '미정'
+                out.append({
+                    'id':           f'BIZ-{pid}',
+                    'stage':        '지원사업',
+                    'title':        title,
+                    'agency':       '',
+                    'demandAgency': '',
+                    'budget':       budget,
+                    'deadline':     dates[1].replace('.', '-') if len(dates) > 1 else '-',
+                    'postDate':     dates[0].replace('.', '-') if dates else datetime.now().strftime('%Y-%m-%d'),
+                    'contractType': '공모/지원',
+                    'category':     category(title),
+                    'keywords':     [k for k in XR_KEYWORDS if k in title],
+                    'description':  title,
+                    'requirements': [],
+                    'url':          f'https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId={pid}',
+                    'specUrl':      '',
+                    'draftUrl':     '',
+                    'contact':      '',
+                    'source':       'bizinfo',
+                })
+            if out: break  # 첫 번째 패턴에서 결과 나오면 중단
     except Exception as e:
         print(f'    bizinfo[{keyword}] 오류: {e}')
     return out
 
+
+def score_bid(b):
+    """정렬 점수: 높을수록 위로 (마감 임박 + 핵심 XR 키워드)"""
+    score = 0
+    # 1) 마감 임박 (7일 이내 +40, 14일 이내 +20)
+    try:
+        dl = b.get('deadline', '-')
+        if dl and dl != '-':
+            dl_clean = dl[:10].replace('/', '-').replace('.', '-')
+            days_left = (datetime.strptime(dl_clean, '%Y-%m-%d') - datetime.now()).days
+            if   days_left <= 3:  score += 50
+            elif days_left <= 7:  score += 40
+            elif days_left <= 14: score += 20
+    except: pass
+    # 2) 핵심 XR 키워드 직접 매칭 (+30)
+    title = b.get('title', '')
+    core  = ['AR', 'VR', 'XR', 'MR', 'HMD', '증강현실', '가상현실', '혼합현실', '메타버스',
+             '스마트글래스', '디지털트윈', '원격협업', '스마트안전', '피지컬AI']
+    if any(k in title for k in core): score += 30
+    # 3) 사전규격은 선제 대응 가치 (+15)
+    if b.get('stage') == '사전규격': score += 15
+    # 4) 예산 규모 (+10 for 억 이상)
+    budget = b.get('budget', '')
+    try:
+        amt = int(budget.replace(',','').replace('원',''))
+        if amt >= 100_000_000: score += 10
+        if amt >= 500_000_000: score += 10
+    except: pass
+    return score
+
+
 def main():
     print(f'[{datetime.now():%Y-%m-%d %H:%M}] XR 공고 수집 (최근 {DAYS}일)')
     sess = requests.Session()
-    sess.headers.update({'User-Agent':'Mozilla/5.0','Accept':'application/json'})
+    sess.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+                         'Accept': 'application/json, text/html'})
 
     all_bids, seen = [], set()
     lock_seen = __import__('threading').Lock()
@@ -273,7 +427,7 @@ def main():
     bgn   = start.strftime('%Y%m%d') + '0000'
     end   = now.strftime('%Y%m%d')   + '2359'
 
-    # ── 1단계: 나라장터 병렬 수집 ──────────────────────────
+    # ── 1단계: 나라장터 입찰공고 병렬 ──────────────────
     print(f'\n[1단계] 나라장터 API (병렬, {len(G2B_KEYWORDS)}개 키워드)')
     t0 = time.time()
     with ThreadPoolExecutor(max_workers=8) as ex:
@@ -286,48 +440,37 @@ def main():
                 print(f'  ⚠️  [{futs[f]}] {e}')
     print(f'  → {len(all_bids)}건 ({time.time()-t0:.1f}초)')
 
-    # ── 1.5단계: 사전규격 병렬 수집 ───────────────────────
-    print(f'\n[1.5단계] 사전규격 API (병렬)')
+    # ── 1.5단계: 사전규격 병렬 ──────────────────────────
+    print(f'\n[1.5단계] 사전규격 API (병렬, {len(G2B_KEYWORDS)}개 키워드)')
     t0 = time.time()
-    # 가용 여부 먼저 확인
-    probe = fetch_prespec(G2B_KEYWORDS[0], bgn, end)
-    if probe is None:
-        print('  ⚠️  사전규격 API 미등록 — data.go.kr에서 별도 신청 필요')
-        print('     https://www.data.go.kr/data/15129437/openapi.do')
-    else:
-        ps_count = 0
-        with ThreadPoolExecutor(max_workers=8) as ex:
-            futs = {ex.submit(fetch_prespec, kw, bgn, end): kw for kw in G2B_KEYWORDS}
-            for f in as_completed(futs):
-                try:
-                    res = f.result()
-                    if res:
-                        n = add(res); ps_count += n
-                except Exception:
-                    pass
-        print(f'  → {ps_count}건 ({time.time()-t0:.1f}초)')
+    ps_count = 0
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        futs = {ex.submit(fetch_prespec, kw, bgn, end): kw for kw in G2B_KEYWORDS}
+        for f in as_completed(futs):
+            try:
+                res = f.result()
+                if res:
+                    n = add(res); ps_count += n
+            except Exception as e:
+                print(f'  ⚠️  사전규격[{futs[f]}] {e}')
+    print(f'  → 사전규격 {ps_count}건 ({time.time()-t0:.1f}초)')
 
-    # ── 2단계: bizinfo 병렬 수집 ──────────────────────────
-    print(f'\n[2단계] bizinfo 키워드 검색 (병렬, {len(XR_KEYWORDS)}개 키워드)')
+    # ── 2단계: bizinfo 병렬 ──────────────────────────────
+    print(f'\n[2단계] bizinfo 검색 (병렬, {len(XR_KEYWORDS)}개 키워드)')
     t0 = time.time()
-    bizinfo_all, biz_seen_ids = [], set()
+    bizinfo_all, biz_seen = [], set()
     biz_lock = __import__('threading').Lock()
-
-    def fetch_biz_safe(kw):
-        return fetch_bizinfo_keyword(sess, kw)
-
-    with ThreadPoolExecutor(max_workers=5) as ex:  # bizinfo는 스크래핑이라 낮게
-        futs = {ex.submit(fetch_biz_safe, kw): kw for kw in XR_KEYWORDS}
+    with ThreadPoolExecutor(max_workers=4) as ex:
+        futs = {ex.submit(fetch_bizinfo_keyword, sess, kw): kw for kw in XR_KEYWORDS}
         for f in as_completed(futs):
             try:
                 bids = f.result()
                 with biz_lock:
-                    new = [b for b in bids if b['id'] not in biz_seen_ids]
-                    for b in new: biz_seen_ids.add(b['id'])
+                    new = [b for b in bids if b['id'] not in biz_seen]
+                    for b in new: biz_seen.add(b['id'])
                     bizinfo_all.extend(new)
-            except Exception:
-                pass
-    print(f'  → {len(bizinfo_all)}건 ({time.time()-t0:.1f}초)')
+            except Exception: pass
+    print(f'  → bizinfo {len(bizinfo_all)}건 ({time.time()-t0:.1f}초)')
 
     # bizinfo URL로 g2b URL 보완
     title_to_biz_url = {b['title']: b['url'] for b in bizinfo_all}
@@ -335,22 +478,25 @@ def main():
         if b['source'] == 'g2b':
             matched = title_to_biz_url.get(b['title'])
             if matched: b['url'] = matched
-
     add(bizinfo_all)
 
+    # ── 최종 필터 + 정렬 ────────────────────────────────
     xr = [b for b in all_bids if is_xr(b['title'])]
     if not xr and all_bids: xr = all_bids
+
+    # 점수 기준 내림차순 정렬
+    xr.sort(key=score_bid, reverse=True)
+
     print(f'\n전체: {len(all_bids)}건, XR: {len(xr)}건')
 
     os.makedirs('data', exist_ok=True)
     if not xr:
         if os.path.exists('data/bids.json'):
-            ex = json.load(open('data/bids.json', encoding='utf-8'))
-            if ex.get('total', 0) > 0:
-                ex['updatedAt'] = datetime.now().strftime('%Y-%m-%d %H:%M') + ' (캐시)'
-                json.dump(ex, open('data/bids.json','w',encoding='utf-8'), ensure_ascii=False, indent=2)
-                print('0건 — 기존 캐시 유지')
-                return
+            cached = json.load(open('data/bids.json', encoding='utf-8'))
+            if cached.get('total', 0) > 0:
+                cached['updatedAt'] = datetime.now().strftime('%Y-%m-%d %H:%M') + ' (캐시)'
+                json.dump(cached, open('data/bids.json','w',encoding='utf-8'), ensure_ascii=False, indent=2)
+                print('0건 — 기존 캐시 유지'); return
     out = {'updatedAt': datetime.now().strftime('%Y-%m-%d %H:%M'), 'total': len(xr), 'bids': xr}
     json.dump(out, open('data/bids.json','w',encoding='utf-8'), ensure_ascii=False, indent=2)
     print(f'✅ 저장: {len(xr)}건')
