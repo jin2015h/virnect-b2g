@@ -2,8 +2,9 @@ import json, time, re, os, requests
 from datetime import datetime, timedelta
 
 API_KEY  = 'fb382c284306f27f3c44e28cf6718dd7208691a64314f00df3dabf9008133b07'
-API_BASE = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService'
-DAYS     = 14  # 조회 범위 (일) — API 최대 허용 범위
+API_BASE      = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService'
+BFSPEC_BASE   = 'https://apis.data.go.kr/1230000/ao/HrcspSsstndrdInfoService'  # 사전규격정보서비스
+DAYS          = 14  # 조회 범위 (일) — API 최대 허용 범위
 
 XR_KEYWORDS = [
     # 핵심 XR
@@ -39,7 +40,21 @@ XR_KEYWORDS = [
     '시뮬레이션', '가상시뮬레이션', '안전교육VR',
     '실감교육', '체험형교육', '몰입형교육',
 
-    # 로봇 / 자율이동
+    # 피지컬 AI / 지능형 시스템
+    '피지컬AI', '피지컬 AI', 'Physical AI', 'PhysicalAI',
+    '지능형로봇', '지능형시스템', '지능형제조', '자율제조',
+    'AI로봇', 'AI검사시스템', 'AI기반',
+
+    # 육안검사 / 검사 자동화
+    '육안검사', '검사자동화', '자동화검사', '무인검사',
+    '표면검사', '외관불량', '품질자동화', '인라인검사',
+    '스마트검사', '검사솔루션',
+
+    # 디지털트윈 확장
+    '디지털트윈', '디지털 트윈', '가상공장', '가상플랜트',
+    '공장디지털화', '제조디지털화', '디지털전환',
+    'CPS', '사이버물리', '가상모델', '3D모델링',
+    '실시간모니터링', '공정모니터링', '설비모니터링',
     '로봇', '협동로봇', '자율주행로봇', '서비스로봇', '산업용로봇',
     'AMR', 'AGV', '자율이동', '로봇시스템', '로봇플랫폼',
     '드론', '무인기', 'UAV',
@@ -85,7 +100,9 @@ def category(title):
     if any(k in title for k in ['스마트팩토리','스마트공장','제조','작업지시','설비점검','유지보수']): return '스마트팩토리'
     if any(k in title for k in ['건설','스마트건설','현장','스마트시티']): return '스마트건설'
     if any(k in title for k in ['교육','훈련','시뮬레이션','체험','학습']): return 'XR/교육훈련'
-    if any(k in title for k in ['로봇','협동로봇','AMR','AGV','자율이동','드론','UAV','무인기']): return '로봇/자율화'
+    if any(k in title for k in ['피지컬AI','피지컬 AI','Physical AI','PhysicalAI','지능형로봇','지능형제조','자율제조']): return '피지컬AI'
+    if any(k in title for k in ['육안검사','검사자동화','표면검사','외관불량','인라인검사','스마트검사','무인검사']): return 'AI/비전검사'
+    if any(k in title for k in ['가상공장','가상플랜트','공장디지털화','제조디지털화','디지털전환','CPS','사이버물리','공정모니터링','설비모니터링']): return '디지털트윈'
     if any(k in title for k in ['비전검사','외관검사','불량검출','결함검출','품질검사','머신비전','AOI','비파괴']): return 'AI/비전검사'
     if any(k in title for k in ['시뮬레이션','가상시뮬레이션','로봇시뮬레이션','공정시뮬레이션','가상환경']): return 'XR/시뮬레이션'
     return 'AR/XR'
@@ -156,6 +173,45 @@ def fetch_g2b(session, keyword):
             print(f'    오류: {e}')
     return []
 
+def fetch_prespec(keyword, bgn, end):
+    """사전규격정보서비스 — 입찰공고 전 단계 (공공데이터포털 별도 신청 필요)
+    서비스: 조달청_나라장터 사전규격정보서비스 (data.go.kr ID: 15129437)
+    오퍼레이션:
+      - getBfSpecListInfoServc  (용역)
+      - getBfSpecListInfoThng   (물품)
+      - getBfSpecListInfoCnstwk (공사)
+    """
+    out = []
+    ops = [('Servc','용역'), ('Thng','물품'), ('Cnstwk','공사')]
+    for op, op_nm in ops:
+        try:
+            url = (f'{BFSPEC_BASE}/getHrcspSsstndrdInfo{op}'
+                   f'?ServiceKey={API_KEY}'
+                   f'&numOfRows=10&pageNo=1&type=json'
+                   f'&inqryBgnDt={bgn}&inqryEndDt={end}'
+                   f'&bidNtceNm={requests.utils.quote(keyword)}')
+            r = requests.get(url, timeout=10)
+            if r.status_code != 200:
+                continue
+            body = r.json().get('response', {})
+            hdr  = body.get('header', {})
+            code = hdr.get('resultCode', '')
+            if code not in ('00', '0'):
+                # 미등록 서비스인 경우 조용히 스킵
+                if code in ('99', '22', '30'):
+                    return []  # 이 키로 미등록 — 더 이상 시도 안 함
+                continue
+            items = body.get('body', {}).get('items', {})
+            parsed = parse_items(items)
+            for b in parsed:
+                b['stage'] = '사전규격'
+                b['contractType'] = b.get('contractType', '공모 예정')
+            out.extend(parsed)
+        except Exception:
+            pass
+    return out
+
+
 def fetch_bizinfo_keyword(session, keyword):
     """bizinfo 키워드 검색 — 정부지원사업 포함"""
     out = []
@@ -211,7 +267,28 @@ def main():
         if n: print(f'  +{n}건 (누적 {len(all_bids)}건)')
         time.sleep(0.3)
 
-    print('\n[2단계] bizinfo 키워드 검색')
+    print('\n[1.5단계] 사전규격 API')
+    prespec_ok = True
+    for kw in XR_KEYWORDS[:5]:  # 첫 5개 키워드로 서비스 가용 여부 확인
+        ps = fetch_prespec(kw, bgn, end)
+        if ps is None:  # 미등록 서비스
+            print('  ⚠️  사전규격 API 미등록 — data.go.kr에서 별도 신청 필요')
+            print('     https://www.data.go.kr/data/15129437/openapi.do')
+            prespec_ok = False
+            break
+        if ps:
+            n = add(ps)
+            print(f'  [{kw}]: {n}건')
+
+    if prespec_ok:
+        for kw in XR_KEYWORDS[5:]:
+            ps = fetch_prespec(kw, bgn, end)
+            if ps:
+                n = add(ps)
+                if n: print(f'  [{kw}]: {n}건')
+            time.sleep(0.2)
+
+
     bizinfo_all = []
     biz_seen_ids = set()
     for kw in XR_KEYWORDS:
