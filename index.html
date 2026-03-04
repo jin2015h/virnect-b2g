@@ -223,13 +223,20 @@ const WORKFLOW_FILE     = 'fetch-bids.yml';
 const STAGES = ['전체','발주계획','요청접수','사전규격','입찰공고','지원사업','개찰결과','계약현황','납품요청','납품요구','검사검수','대금지급'];
 const STAGE_ORDER = STAGES.slice(1);
 const CAT_COLORS = {
-  'AR/XR':     { border:'#93c5fd', text:'#1d4ed8', bg:'#eff6ff' },
-  'MR/군사':   { border:'#fca5a5', text:'#dc2626', bg:'#fef2f2' },
-  'AI/안전':   { border:'#86efac', text:'#16a34a', bg:'#f0fdf4' },
-  '디지털트윈':{ border:'#c4b5fd', text:'#7c3aed', bg:'#f5f3ff' },
-  'AR/물류':   { border:'#fcd34d', text:'#b45309', bg:'#fffbeb' },
-  'VR/의료':   { border:'#f9a8d4', text:'#be185d', bg:'#fdf2f8' },
-  '기타XR':    { border:'#a5b4fc', text:'#4338ca', bg:'#eef2ff' },
+  'AR/XR':       { border:'#93c5fd', text:'#1d4ed8', bg:'#eff6ff' },
+  'MR/군사':     { border:'#fca5a5', text:'#dc2626', bg:'#fef2f2' },
+  'AI/안전':     { border:'#86efac', text:'#16a34a', bg:'#f0fdf4' },
+  '디지털트윈':  { border:'#c4b5fd', text:'#7c3aed', bg:'#f5f3ff' },
+  'AR/물류':     { border:'#fcd34d', text:'#b45309', bg:'#fffbeb' },
+  'VR/의료':     { border:'#f9a8d4', text:'#be185d', bg:'#fdf2f8' },
+  '스마트팩토리':{ border:'#6ee7b7', text:'#065f46', bg:'#ecfdf5' },
+  '스마트건설':  { border:'#fdba74', text:'#9a3412', bg:'#fff7ed' },
+  'XR/교육훈련': { border:'#a5b4fc', text:'#4338ca', bg:'#eef2ff' },
+  '로봇/자율화':  { border:'#fbbf24', text:'#92400e', bg:'#fffbeb' },
+  'AI/비전검사':  { border:'#34d399', text:'#065f46', bg:'#ecfdf5' },
+  'XR/시뮬레이션':{ border:'#818cf8', text:'#3730a3', bg:'#eef2ff' },
+  'AI/비전':     { border:'#67e8f9', text:'#0e7490', bg:'#ecfeff' },
+  '기타XR':      { border:'#e2e8f0', text:'#64748b', bg:'#f8fafc' },
 };
 const VIRNECT_PROFILE = `
 VIRNECT는 코스닥 상장 한국 XR/AR 기술 기업으로 다음 제품과 역량을 보유:
