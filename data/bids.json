@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-03-04 13:15",
-  "total": 26,
+  "updatedAt": "2026-03-04 13:24",
+  "total": 37,
   "bids": [
     {
       "id": "G2B-R26BK01342794",
@@ -379,25 +379,69 @@
       "source": "g2b"
     },
     {
-      "id": "G2B-R26BK01363458",
+      "id": "G2B-R26BK01353672",
       "stage": "입찰공고",
-      "title": "2026년 메타버스 이용자보호 실태조사 용역",
-      "agency": "(사)한국가상융합디지털산업협회",
+      "title": "2026년 산불감시 계류형 드론 임차 용역",
+      "agency": "울산광역시 울주군",
       "demandAgency": "",
-      "budget": "100,000,000원",
-      "deadline": "-",
-      "postDate": "2026-03-03",
+      "budget": "48,510,000원",
+      "deadline": "2026-03-03 10:00:00",
+      "postDate": "2026-02-24",
       "contractType": "입찰",
       "category": "AR/XR",
       "keywords": [
-        "메타버스"
+        "드론"
       ],
-      "description": "2026년 메타버스 이용자보호 실태조사 용역",
+      "description": "2026년 산불감시 계류형 드론 임차 용역",
       "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01363458&bidNtceOrd=000&re=Y",
+      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01353672&bidNtceOrd=000&re=Y",
       "specUrl": "",
       "draftUrl": "",
-      "contact": "070-8765-8324",
+      "contact": "",
+      "source": "g2b"
+    },
+    {
+      "id": "G2B-R26BK01362225",
+      "stage": "입찰공고",
+      "title": "2026년 아산시보건소 드론 방역소독 민간 대행 용역 (5권역)(재공고)",
+      "agency": "충청남도 아산시 보건소",
+      "demandAgency": "",
+      "budget": "23,313,000원",
+      "deadline": "2026-03-06 15:00:00",
+      "postDate": "2026-02-27",
+      "contractType": "입찰",
+      "category": "AR/XR",
+      "keywords": [
+        "드론"
+      ],
+      "description": "2026년 아산시보건소 드론 방역소독 민간 대행 용역 (5권역)(재공고)",
+      "requirements": [],
+      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01362225&bidNtceOrd=000&re=Y",
+      "specUrl": "",
+      "draftUrl": "",
+      "contact": "041-537-3304",
+      "source": "g2b"
+    },
+    {
+      "id": "G2B-R26BK01362328",
+      "stage": "입찰공고",
+      "title": "2026년 아산시보건소 드론 방역소독 민간 대행 용역 (5권역)(재공고)",
+      "agency": "충청남도 아산시 보건소",
+      "demandAgency": "",
+      "budget": "23,313,000원",
+      "deadline": "2026-03-06 15:00:00",
+      "postDate": "2026-02-27",
+      "contractType": "입찰",
+      "category": "AR/XR",
+      "keywords": [
+        "드론"
+      ],
+      "description": "2026년 아산시보건소 드론 방역소독 민간 대행 용역 (5권역)(재공고)",
+      "requirements": [],
+      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01362328&bidNtceOrd=000&re=Y",
+      "specUrl": "",
+      "draftUrl": "",
+      "contact": "041-537-3304",
       "source": "g2b"
     },
     {
@@ -420,6 +464,28 @@
       "specUrl": "",
       "draftUrl": "",
       "contact": "063-282-2603",
+      "source": "g2b"
+    },
+    {
+      "id": "G2B-R26BK01363458",
+      "stage": "입찰공고",
+      "title": "2026년 메타버스 이용자보호 실태조사 용역",
+      "agency": "(사)한국가상융합디지털산업협회",
+      "demandAgency": "",
+      "budget": "100,000,000원",
+      "deadline": "-",
+      "postDate": "2026-03-03",
+      "contractType": "입찰",
+      "category": "AR/XR",
+      "keywords": [
+        "메타버스"
+      ],
+      "description": "2026년 메타버스 이용자보호 실태조사 용역",
+      "requirements": [],
+      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01363458&bidNtceOrd=000&re=Y",
+      "specUrl": "",
+      "draftUrl": "",
+      "contact": "070-8765-8324",
       "source": "g2b"
     },
     {
@@ -464,6 +530,116 @@
       "specUrl": "",
       "draftUrl": "",
       "contact": "055-254-1134",
+      "source": "g2b"
+    },
+    {
+      "id": "G2B-R26BK01349224",
+      "stage": "입찰공고",
+      "title": "2026년 드론인증센터 시험장비 교정 용역",
+      "agency": "항공안전기술원",
+      "demandAgency": "",
+      "budget": "58,778,400원",
+      "deadline": "2026-03-10 10:00:00",
+      "postDate": "2026-02-25",
+      "contractType": "입찰",
+      "category": "AR/XR",
+      "keywords": [
+        "드론"
+      ],
+      "description": "2026년 드론인증센터 시험장비 교정 용역",
+      "requirements": [],
+      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01349224&bidNtceOrd=000&re=Y",
+      "specUrl": "",
+      "draftUrl": "",
+      "contact": "032-727-5625",
+      "source": "g2b"
+    },
+    {
+      "id": "G2B-R26BK01356612",
+      "stage": "입찰공고",
+      "title": "드론을 이용한 환경 항공감시 업무 대행용역",
+      "agency": "기후에너지환경부 낙동강유역환경청",
+      "demandAgency": "",
+      "budget": "72,727,273원",
+      "deadline": "2026-03-09 10:00:00",
+      "postDate": "2026-02-25",
+      "contractType": "입찰",
+      "category": "AR/XR",
+      "keywords": [
+        "드론"
+      ],
+      "description": "드론을 이용한 환경 항공감시 업무 대행용역",
+      "requirements": [],
+      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01356612&bidNtceOrd=000&re=Y",
+      "specUrl": "",
+      "draftUrl": "",
+      "contact": "055-211-1320",
+      "source": "g2b"
+    },
+    {
+      "id": "G2B-R26BK01356660",
+      "stage": "입찰공고",
+      "title": "드론을 이용한 환경 항공감시 업무 대행용역",
+      "agency": "기후에너지환경부 낙동강유역환경청",
+      "demandAgency": "",
+      "budget": "72,727,273원",
+      "deadline": "2026-03-09 10:00:00",
+      "postDate": "2026-02-25",
+      "contractType": "입찰",
+      "category": "AR/XR",
+      "keywords": [
+        "드론"
+      ],
+      "description": "드론을 이용한 환경 항공감시 업무 대행용역",
+      "requirements": [],
+      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01356660&bidNtceOrd=000&re=Y",
+      "specUrl": "",
+      "draftUrl": "",
+      "contact": "055-211-1320",
+      "source": "g2b"
+    },
+    {
+      "id": "G2B-R26BK01361841",
+      "stage": "입찰공고",
+      "title": "2026 대덕물빛축제 드론라이트쇼&불꽃놀이 연출 대행용역(긴급)",
+      "agency": "대전광역시 대덕구",
+      "demandAgency": "",
+      "budget": "72,727,273원",
+      "deadline": "2026-03-10 10:00:00",
+      "postDate": "2026-02-27",
+      "contractType": "입찰",
+      "category": "AR/XR",
+      "keywords": [
+        "드론"
+      ],
+      "description": "2026 대덕물빛축제 드론라이트쇼&불꽃놀이 연출 대행용역(긴급)",
+      "requirements": [],
+      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01361841&bidNtceOrd=000&re=Y",
+      "specUrl": "",
+      "draftUrl": "",
+      "contact": "042-608-6543",
+      "source": "g2b"
+    },
+    {
+      "id": "G2B-R26BK01369072",
+      "stage": "입찰공고",
+      "title": "2026년 청주시 드론영상 공간정보 DB 구축 사업",
+      "agency": "충청북도 청주시",
+      "demandAgency": "",
+      "budget": "27,272,727원",
+      "deadline": "2026-03-10 10:00:00",
+      "postDate": "2026-03-04",
+      "contractType": "입찰",
+      "category": "AR/XR",
+      "keywords": [
+        "드론"
+      ],
+      "description": "2026년 청주시 드론영상 공간정보 DB 구축 사업",
+      "requirements": [],
+      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01369072&bidNtceOrd=000&re=Y",
+      "specUrl": "",
+      "draftUrl": "",
+      "contact": "043-201-1732",
       "source": "g2b"
     },
     {
@@ -530,6 +706,72 @@
       "specUrl": "",
       "draftUrl": "",
       "contact": "042-860-9719",
+      "source": "g2b"
+    },
+    {
+      "id": "G2B-R26BK01352888",
+      "stage": "입찰공고",
+      "title": "드론 위협 분석 및 가상 원자력발전소 모델 개발 연구",
+      "agency": "한국원자력통제기술원",
+      "demandAgency": "",
+      "budget": "72,727,273원",
+      "deadline": "2026-03-16 10:00:00",
+      "postDate": "2026-02-24",
+      "contractType": "입찰",
+      "category": "AR/XR",
+      "keywords": [
+        "드론"
+      ],
+      "description": "드론 위협 분석 및 가상 원자력발전소 모델 개발 연구",
+      "requirements": [],
+      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01352888&bidNtceOrd=000&re=Y",
+      "specUrl": "",
+      "draftUrl": "",
+      "contact": "042-860-9719",
+      "source": "g2b"
+    },
+    {
+      "id": "G2B-R26BK01360171",
+      "stage": "입찰공고",
+      "title": "진단모델의 현장 적용을 위한 초분광 드론 영상처리기술 개발 용역",
+      "agency": "농촌진흥청 국립원예특작과학원",
+      "demandAgency": "",
+      "budget": "45,000,000원",
+      "deadline": "2026-03-13 10:00:00",
+      "postDate": "2026-02-27",
+      "contractType": "입찰",
+      "category": "스마트건설",
+      "keywords": [
+        "드론"
+      ],
+      "description": "진단모델의 현장 적용을 위한 초분광 드론 영상처리기술 개발 용역",
+      "requirements": [],
+      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01360171&bidNtceOrd=000&re=Y",
+      "specUrl": "",
+      "draftUrl": "",
+      "contact": "063-238-0266",
+      "source": "g2b"
+    },
+    {
+      "id": "G2B-R26BK01347850",
+      "stage": "입찰공고",
+      "title": "2026. 드론코더 300 프로젝트 위탁 용역",
+      "agency": "충청북도교육청",
+      "demandAgency": "",
+      "budget": "94,545,455원",
+      "deadline": "2026-03-16 16:00:00",
+      "postDate": "2026-03-03",
+      "contractType": "입찰",
+      "category": "AR/XR",
+      "keywords": [
+        "드론"
+      ],
+      "description": "2026. 드론코더 300 프로젝트 위탁 용역",
+      "requirements": [],
+      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01347850&bidNtceOrd=000&re=Y",
+      "specUrl": "",
+      "draftUrl": "",
+      "contact": "043-290-2585",
       "source": "g2b"
     },
     {
