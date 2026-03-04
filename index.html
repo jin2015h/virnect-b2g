@@ -480,17 +480,21 @@ function renderDetail(bid) {
       <span id="copy-feedback" style="font-size:11px;color:#16a34a;"></span>`;
   }
 
-  // 첨부파일 링크 (files 배열 + 레거시 specUrl)
-  let fileLinks = '';
-  if(bid.files && bid.files.length) {
-    bid.files.forEach(f=>{
-      const icon = f.name.includes('공고문')?'📄':f.name.includes('규격')?'📋':f.name.includes('제안')?'📝':'📎';
-      fileLinks += `<a href="${f.url}" target="_blank" class="open-btn" style="background:#f0fdf4;border-color:#86efac;color:#166534">${icon} ${f.name}</a> `;
-    });
-  }
-  if(bid.specFileUrl) fileLinks += `<a href="${bid.specFileUrl}" target="_blank" class="open-btn" style="background:#f0fdf4;border-color:#86efac;color:#166534">📋 규격서 다운로드</a> `;
-  const fileSection = fileLinks
-    ? `<div class="section-title">📎 첨부 파일</div><div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">${fileLinks}</div>`
+  // 첨부파일 링크 (files 배열 우선, 레거시 specUrl/draftUrl 병합)
+  let allFiles = [...(bid.files || [])];
+  if(bid.specUrl  && !allFiles.find(f=>f.url===bid.specUrl))  allFiles.push({name:'📋 입찰규격서', url:bid.specUrl});
+  if(bid.draftUrl && !allFiles.find(f=>f.url===bid.draftUrl)) allFiles.push({name:'📄 서류', url:bid.draftUrl});
+  const fileSection = allFiles.length
+    ? `<div class="section-title">📎 첨부 파일 (${allFiles.length}건)</div>
+       <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:14px">
+         ${allFiles.map(f=>`<a href="${f.url}" target="_blank"
+           style="display:flex;align-items:center;gap:8px;padding:8px 12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:7px;text-decoration:none;color:#1e293b;font-size:12px;transition:background 0.15s"
+           onmouseover="this.style.background='#f0f9ff'" onmouseout="this.style.background='#f8fafc'">
+           <span style="font-size:16px">${f.name.match(/^[📝📕📊📄🗜️📎]/u)?.[0]||'📎'}</span>
+           <span style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${f.name.replace(/^[📝📕📊📄🗜️📎]\s*/u,'')}</span>
+           <span style="color:#4285f4;font-size:11px;flex-shrink:0">다운로드 ↓</span>
+         </a>`).join('')}
+       </div>`
     : '';
 
   detail.innerHTML=`
@@ -507,13 +511,15 @@ function renderDetail(bid) {
       <div class="detail-title">${bid.title}</div>
       <div class="meta-grid">
         <div class="meta-item"><div class="meta-label">발주기관</div><div class="meta-value">${bid.agency||'-'}</div></div>
-        <div class="meta-item"><div class="meta-label">수요기관</div><div class="meta-value">${bid.demandAgency||bid.agency||'-'}</div></div>
+      <div class="meta-item"><div class="meta-label">수요기관</div><div class="meta-value">${bid.demandAgency||bid.agency||'-'}</div></div>
         <div class="meta-item"><div class="meta-label">예산</div><div class="meta-value" style="color:#4285f4;font-weight:700">${bid.budget}</div></div>
         <div class="meta-item"><div class="meta-label">공고일</div><div class="meta-value">${bid.postDate}</div></div>
         <div class="meta-item"><div class="meta-label">마감일</div><div class="meta-value" style="color:#dc2626;font-weight:700">${bid.deadline}</div></div>
         <div class="meta-item"><div class="meta-label">계약방식</div><div class="meta-value">${bid.contractType||'-'}</div></div>
-        ${bid.manager?`<div class="meta-item"><div class="meta-label">담당자</div><div class="meta-value">${bid.manager}</div></div>`:''}
-        ${bid.tel?`<div class="meta-item"><div class="meta-label">연락처</div><div class="meta-value"><a href="tel:${bid.tel}" style="color:#4285f4">${bid.tel}</a></div></div>`:''}
+        ${bid.openDate?`<div class="meta-item"><div class="meta-label">개찰일시</div><div class="meta-value">${bid.openDate}</div></div>`:''}
+        ${bid.openPlace?`<div class="meta-item"><div class="meta-label">개찰장소</div><div class="meta-value">${bid.openPlace}</div></div>`:''}
+        ${bid.contact?`<div class="meta-item"><div class="meta-label">📞 담당자</div><div class="meta-value"><a href="tel:${bid.contact.replace(/[^0-9\-]/g,'').trim()}" style="color:#4285f4;text-decoration:none">${bid.contact}</a></div></div>`:''}
+        ${bid.qual?`<div class="meta-item" style="grid-column:1/-1"><div class="meta-label">참가자격</div><div class="meta-value" style="font-size:11px">${bid.qual}</div></div>`:''}
       </div>
       <div class="section-title">📊 입찰 진행 단계</div>
       <div class="stage-timeline">${tl}</div>
