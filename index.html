@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIRNECT G2B Intelligence</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f7fa; color: #1a1a2e; font-family: 'Malgun Gothic','Apple SD Gothic Neo',sans-serif; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+
+  /* Header */
+  #header { background: #fff; border-bottom: 1px solid #e2e8f0; padding: 11px 22px; display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  #header-left { display: flex; align-items: center; gap: 11px; }
+  #logo { width: 32px; height: 32px; background: linear-gradient(135deg,#2563eb,#06b6d4); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; }
+  #title { font-size: 15px; font-weight: 700; color: #0f172a; }
+  #subtitle { font-size: 10px; color: #94a3b8; margin-top: 1px; }
+  .header-right { display: flex; align-items: center; gap: 8px; }
+  #status-badge { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 20px; padding: 4px 10px; font-size: 11px; color: #16a34a; display: flex; align-items: center; gap: 5px; }
+  .dot { width: 6px; height: 6px; background: #22c55e; border-radius: 50%; display: inline-block; }
+  .hbtn { border: none; border-radius: 7px; padding: 6px 13px; font-size: 12px; font-weight: 700; cursor: pointer; font-family: 'Malgun Gothic',sans-serif; transition: opacity 0.15s; display: flex; align-items: center; gap: 4px; }
+  .hbtn:hover { opacity: 0.85; } .hbtn:disabled { opacity: 0.45; cursor: not-allowed; }
+  #btn-reload { background: linear-gradient(135deg,#059669,#0284c7); color: #fff; }
+  #btn-batch  { background: linear-gradient(135deg,#7c3aed,#2563eb); color: #fff; }
+
+  /* API Bar */
+  #apibar { background: #fff; border-bottom: 1px solid #e2e8f0; padding: 7px 22px; display: flex; align-items: center; gap: 9px; flex-shrink: 0; }
+  #apibar label { font-size: 11px; color: #64748b; white-space: nowrap; }
+  #apikey { flex: 1; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 11px; color: #0f172a; font-size: 12px; outline: none; font-family: monospace; }
+  #apikey:focus { border-color: #4285f4; }
+  #save-key { background: #4285f4; border: none; border-radius: 6px; padding: 6px 13px; color: #fff; font-size: 12px; font-weight: 600; cursor: pointer; }
+  #save-key:hover { background: #3367d6; }
+  #key-status { font-size: 11px; color: #94a3b8; white-space: nowrap; }
+  .model-badge { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 3px 9px; font-size: 11px; color: #5f6368; white-space: nowrap; }
+
+  /* Stage bar */
+  #stagebar { background: #fff; border-bottom: 1px solid #e2e8f0; padding: 7px 22px; display: flex; align-items: center; gap: 5px; flex-shrink: 0; flex-wrap: wrap; }
+  .stage-label { font-size: 11px; color: #64748b; margin-right: 3px; font-weight: 600; white-space: nowrap; }
+  .stage-btn { padding: 3px 9px; border-radius: 5px; border: 1px solid #e2e8f0; background: #fff; color: #64748b; font-size: 11px; cursor: pointer; font-family: 'Malgun Gothic',sans-serif; transition: all 0.12s; }
+  .stage-btn:hover { border-color: #93c5fd; color: #2563eb; }
+  .stage-btn.active { border-color: #2563eb; background: #2563eb; color: #fff; font-weight: 700; }
+
+  /* Update info bar */
+  #infobar { background: #eff6ff; border-bottom: 1px solid #bfdbfe; padding: 5px 22px; font-size: 11px; color: #1d4ed8; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; }
+
+  /* Batch bar */
+  #batch-bar { display: none; background: #fff; border-bottom: 1px solid #e2e8f0; padding: 7px 22px; flex-shrink: 0; align-items: center; gap: 10px; }
+  #batch-bar.visible { display: flex; }
+  #batch-progress-bg { flex: 1; height: 6px; background: #f1f5f9; border-radius: 3px; overflow: hidden; }
+  #batch-progress-fill { height: 100%; background: linear-gradient(90deg,#7c3aed,#4285f4); border-radius: 3px; transition: width 0.4s; }
+  #batch-text { font-size: 11px; color: #64748b; white-space: nowrap; }
+
+  /* Main */
+  #main { display: flex; flex: 1; overflow: hidden; }
+
+  /* Left */
+  #left { width: 375px; border-right: 1px solid #e2e8f0; display: flex; flex-direction: column; overflow: hidden; flex-shrink: 0; background: #fff; }
+  #search-area { padding: 11px 11px 9px; border-bottom: 1px solid #e2e8f0; flex-shrink: 0; }
+  #search { width: 100%; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 7px; padding: 8px 11px; color: #0f172a; font-size: 13px; outline: none; font-family: 'Malgun Gothic',sans-serif; }
+  #search:focus { border-color: #4285f4; }
+  #cat-filters { display: flex; gap: 4px; margin-top: 7px; flex-wrap: wrap; }
+  .filter-btn { padding: 3px 8px; border-radius: 9px; border: 1px solid #e2e8f0; background: transparent; color: #94a3b8; font-size: 11px; cursor: pointer; font-family: 'Malgun Gothic',sans-serif; transition: all 0.12s; }
+  .filter-btn:hover { border-color: #4285f4; color: #4285f4; }
+  .filter-btn.active { border-color: #4285f4; background: #e8f0fe; color: #4285f4; font-weight: 600; }
+
+  #bid-list { flex: 1; overflow-y: auto; padding: 7px; background: #f8fafc; }
+  #list-count { font-size: 11px; color: #94a3b8; padding: 3px 5px 7px; }
+
+  .bid-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 9px; padding: 11px 12px; margin-bottom: 6px; cursor: pointer; transition: all 0.15s; }
+  .bid-card:hover { border-color: #93c5fd; box-shadow: 0 2px 8px rgba(66,133,244,0.07); }
+  .bid-card.selected { border-color: #4285f4; background: #e8f0fe; }
+  .card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; gap: 5px; }
+  .card-badges { display: flex; gap: 3px; flex-wrap: wrap; }
+  .cat-badge { font-size: 10px; padding: 1px 6px; border-radius: 7px; border: 1px solid; white-space: nowrap; }
+  .stage-badge { font-size: 10px; padding: 1px 6px; border-radius: 7px; border: 1px solid #d1d5db; background: #f9fafb; color: #6b7280; white-space: nowrap; }
+  .src-badge { font-size: 10px; padding: 1px 6px; border-radius: 7px; border: 1px solid #a7f3d0; background: #ecfdf5; color: #065f46; white-space: nowrap; }
+  .bid-prob { font-size: 12px; font-weight: 700; white-space: nowrap; }
+  .card-title { font-size: 12px; font-weight: 600; line-height: 1.4; margin-bottom: 4px; color: #0f172a; }
+  .card-meta { font-size: 11px; color: #64748b; margin-bottom: 2px; }
+  .card-budget { font-size: 11px; color: #4285f4; font-weight: 600; }
+  .card-date { font-size: 10px; color: #94a3b8; margin-top: 2px; }
+  .cached-tag { font-size: 10px; color: #7c3aed; background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 4px; padding: 1px 5px; }
+
+  /* Right */
+  #right { flex: 1; overflow-y: auto; padding: 18px 22px; background: #f5f7fa; }
+  #empty-state { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  #empty-state .eicon { font-size: 44px; margin-bottom: 11px; }
+  #empty-state .emsg { font-size: 14px; font-weight: 600; color: #94a3b8; margin-bottom: 8px; }
+  #empty-state .esub { font-size: 12px; color: #cbd5e1; line-height: 1.8; }
+
+  .panel { background: #fff; border: 1px solid #e2e8f0; border-radius: 11px; padding: 18px; margin-bottom: 11px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .panel-title { font-size: 12px; font-weight: 700; color: #4285f4; margin-bottom: 13px; }
+
+  .detail-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 11px; flex-wrap: wrap; }
+  .detail-badges { display: flex; gap: 5px; flex-wrap: wrap; align-items: center; }
+  .open-btn { display: inline-flex; align-items: center; gap: 4px; background: #f0f9ff; border: 1px solid #7dd3fc; color: #0369a1; border-radius: 7px; padding: 6px 12px; font-size: 11px; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.15s; font-family: 'Malgun Gothic',sans-serif; white-space: nowrap; }
+  .open-btn:hover { background: #e0f2fe; }
+
+  .detail-title { font-size: 16px; font-weight: 700; margin-bottom: 13px; line-height: 1.4; color: #0f172a; }
+  .meta-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 7px; margin-bottom: 9px; }
+  .meta-grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 7px; margin-bottom: 13px; }
+  .meta-item { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 7px; padding: 8px 11px; }
+  .meta-label { font-size: 10px; color: #94a3b8; margin-bottom: 2px; }
+  .meta-value { font-size: 12px; font-weight: 600; color: #0f172a; }
+
+  .section-title { font-size: 11px; font-weight: 700; color: #374151; margin-bottom: 7px; }
+  .desc-text { font-size: 12px; color: #475569; line-height: 1.75; margin-bottom: 11px; }
+  .req-list { display: flex; flex-direction: column; gap: 4px; margin-bottom: 11px; }
+  .req-item { display: flex; align-items: flex-start; gap: 7px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 7px 11px; font-size: 11px; color: #374151; line-height: 1.4; }
+  .tags { display: flex; flex-wrap: wrap; gap: 4px; }
+  .tag { font-size: 10px; padding: 2px 7px; background: #f1f5f9; border-radius: 5px; color: #64748b; border: 1px solid #e2e8f0; }
+
+  /* Stage timeline */
+  .stage-timeline { display: flex; align-items: center; overflow-x: auto; padding: 6px 0; margin-bottom: 13px; }
+  .st-item { display: flex; align-items: center; flex-shrink: 0; }
+  .st-step { padding: 4px 10px; border-radius: 5px; font-size: 10px; font-weight: 600; border: 1px solid #e2e8f0; background: #f8fafc; color: #94a3b8; white-space: nowrap; }
+  .st-step.current { background: #4285f4; border-color: #4285f4; color: #fff; }
+  .st-step.done { background: #e8f0fe; border-color: #93c5fd; color: #1d4ed8; }
+  .st-arrow { color: #cbd5e1; font-size: 11px; margin: 0 2px; flex-shrink: 0; }
+  .st-arrow.done { color: #93c5fd; }
+
+  /* Analysis */
+  .prob-row { display: flex; justify-content: space-between; margin-bottom: 5px; }
+  .prob-label-txt { font-size: 11px; color: #64748b; }
+  .prob-value { font-size: 17px; font-weight: 700; }
+  .prob-bar-bg { height: 8px; background: #f1f5f9; border-radius: 4px; overflow: hidden; border: 1px solid #e2e8f0; }
+  .prob-bar { height: 100%; border-radius: 4px; transition: width 1.2s ease; }
+  .summary-box { background: #e8f0fe; border-left: 3px solid #4285f4; border-radius: 0 7px 7px 0; padding: 9px 13px; margin-top: 12px; font-size: 12px; color: #1a73e8; line-height: 1.6; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 10px; }
+  .strength-box { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 11px; }
+  .risk-box { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 8px; padding: 11px; }
+  .abox-title { font-size: 11px; font-weight: 700; margin-bottom: 7px; }
+  .abox-item { font-size: 11px; line-height: 1.5; margin-bottom: 4px; }
+  .strategy-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 11px; margin-top: 9px; }
+  .strategy-text { font-size: 12px; color: #334155; line-height: 1.7; }
+  .cached-notice { font-size: 11px; color: #7c3aed; background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 5px; padding: 4px 9px; display: inline-flex; align-items: center; gap: 5px; margin-bottom: 10px; }
+  .reanalyze-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 4px; padding: 2px 9px; font-size: 11px; color: #475569; cursor: pointer; font-family: 'Malgun Gothic',sans-serif; }
+  .reanalyze-btn:hover { border-color: #4285f4; color: #4285f4; }
+  .loading-state { text-align: center; padding: 30px; color: #94a3b8; }
+
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: #f1f5f9; }
+  ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<div id="header">
+  <div id="header-left">
+    <div id="logo">🎯</div>
+    <div>
+      <div id="title">VIRNECT G2B Intelligence</div>
+      <div id="subtitle">bizinfo.go.kr 실시간 XR 공고 · AI 수주 확률 분석</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <div id="status-badge"><span class="dot"></span><span id="badge-text">로딩 중...</span></div>
+    <button class="hbtn" id="btn-reload" onclick="loadBids()">🔄 공고 새로고침</button>
+    <button class="hbtn" id="btn-batch" onclick="batchAnalyze()">⚡ 일괄 분석</button>
+  </div>
+</div>
+
+<div id="apibar">
+  <label>🔑 Google API Key</label>
+  <input type="password" id="apikey" placeholder="AIza..." />
+  <button id="save-key" onclick="saveKey()">저장</button>
+  <span class="model-badge">🤖 gemini-1.5-flash</span>
+  <span id="key-status">발급: aistudio.google.com (무료)</span>
+</div>
+
+<div id="stagebar">
+  <span class="stage-label">단계구분</span>
+  <div id="stage-filters" style="display:flex;gap:4px;flex-wrap:wrap;"></div>
+</div>
+
+<div id="infobar">
+  <span id="update-info">공고 업데이트: 매일 오전 10시 자동 갱신 (GitHub Actions)</span>
+  <span id="last-updated" style="color:#64748b;font-size:10px;"></span>
+</div>
+
+<div id="batch-bar">
+  <div id="batch-progress-bg"><div id="batch-progress-fill" style="width:0%"></div></div>
+  <span id="batch-text">분석 중...</span>
+</div>
+
+<div id="main">
+  <div id="left">
+    <div id="search-area">
+      <input type="text" id="search" placeholder="🔍  사업명, 기관, 키워드 검색..." oninput="renderList()" />
+      <div id="cat-filters"></div>
+    </div>
+    <div id="bid-list"><div id="list-count"></div></div>
+  </div>
+  <div id="right">
+    <div id="empty-state">
+      <div class="eicon">📡</div>
+      <div class="emsg">공고를 불러오는 중...</div>
+      <div class="esub">GitHub Actions가 매일 bizinfo.go.kr에서<br>XR 관련 공고를 자동으로 수집합니다.</div>
+    </div>
+    <div id="detail" style="display:none; max-width:720px;"></div>
+  </div>
+</div>
+
+<script>
+const STORAGE_KEY_API   = 'virnect_gemini_apikey';
+const STORAGE_KEY_CACHE = 'virnect_analyses_v4';
+const STAGES = ['전체','발주계획','요청접수','사전규격','입찰공고','개찰결과','계약현황','납품요청','납품요구','검사검수','대금지급'];
+const STAGE_ORDER = STAGES.slice(1);
+const CAT_COLORS = {
+  'AR/XR':    { border:'#93c5fd', text:'#1d4ed8', bg:'#eff6ff' },
+  'MR/군사':  { border:'#fca5a5', text:'#dc2626', bg:'#fef2f2' },
+  'AI/안전':  { border:'#86efac', text:'#16a34a', bg:'#f0fdf4' },
+  '디지털트윈':{ border:'#c4b5fd', text:'#7c3aed', bg:'#f5f3ff' },
+  'AR/물류':  { border:'#fcd34d', text:'#b45309', bg:'#fffbeb' },
+  'VR/의료':  { border:'#f9a8d4', text:'#be185d', bg:'#fdf2f8' },
+  '기타XR':   { border:'#a5b4fc', text:'#4338ca', bg:'#eef2ff' },
+};
+const VIRNECT_PROFILE = `
+VIRNECT는 코스닥 상장 한국 XR/AR 기술 기업으로 다음 제품과 역량을 보유:
+- VisionX: AI 기반 안전 스마트 고글 (CES 2025 혁신상 수상)
+- VIRNECT Remote: 원격 협업 및 AR 가이던스 플랫폼
+- VIRNECT Make: AR 콘텐츠 저작 도구 (노코드 AR 저작)
+- VIRNECT View: AR 뷰어 솔루션
+- VIRNECT Twin: 디지털 트윈 플랫폼
+- VIRNECT Track: 공간 추적·마커리스 AR 솔루션
+주요 납품처: 제조업(현대자동차, LG전자), 국방(한화), 공공기관
+기술 역량: 컴퓨터 비전, 공간 인식, IoT 연동, 엣지 AI, 3D 시각화, 디지털 트윈
+인증/수상: CES 2025 혁신상, ISO 27001, 코스닥 상장
+취약 분야: 의료 전문 콘텐츠, 순수 VR 게임, 의료기기 인증 필요 사업
+`;
+
+let apiKey     = localStorage.getItem(STORAGE_KEY_API) || '';
+let analyses   = JSON.parse(localStorage.getItem(STORAGE_KEY_CACHE) || '{}');
+let BIDS       = [];
+let selectedId = null;
+let activeCat  = '전체';
+let activeStage= '전체';
+
+if (apiKey) { document.getElementById('apikey').value = apiKey; document.getElementById('key-status').textContent = '✅ 저장됨'; }
+
+function saveKey() {
+  const val = document.getElementById('apikey').value.trim();
+  if (!val.startsWith('AIza')) { document.getElementById('key-status').textContent = '❌ AIza...로 시작해야 합니다'; return; }
+  apiKey = val; localStorage.setItem(STORAGE_KEY_API, val);
+  document.getElementById('key-status').textContent = '✅ 저장 완료!';
+}
+function saveAnalyses() { localStorage.setItem(STORAGE_KEY_CACHE, JSON.stringify(analyses)); }
+function updateBadge() {
+  const cached = Object.keys(analyses).length;
+  document.getElementById('badge-text').textContent = BIDS.length + '건 공고' + (cached > 0 ? ' · 분석 ' + cached + '건' : '');
+}
+
+// ─── 공고 로드 (data/bids.json) ──────────────────────────────────────
+async function loadBids() {
+  const btn = document.getElementById('btn-reload');
+  btn.disabled = true; btn.textContent = '⏳ 로딩 중...';
+  try {
+    const res = await fetch('data/bids.json?t=' + Date.now());
+    const data = await res.json();
+    BIDS = data.bids || [];
+    if (data.updatedAt) {
+      document.getElementById('last-updated').textContent = '최종 수집: ' + data.updatedAt;
+    }
+    rebuildCatFilter();
+    renderList();
+    updateBadge();
+    if (BIDS.length > 0) {
+      document.getElementById('empty-state').style.display = 'none';
+    } else {
+      document.getElementById('empty-state').querySelector('.emsg').textContent = '수집된 공고가 없습니다';
+      document.getElementById('empty-state').querySelector('.esub').textContent = 'GitHub Actions가 아직 실행되지 않았거나, XR 관련 공고가 없습니다.';
+    }
+  } catch(e) {
+    document.getElementById('empty-state').querySelector('.emsg').textContent = '공고 로드 실패';
+    document.getElementById('empty-state').querySelector('.esub').textContent = e.message;
+  }
+  btn.disabled = false; btn.textContent = '🔄 공고 새로고침';
+}
+
+// ─── 단계 / 카테고리 필터 ─────────────────────────────────────────────
+const stageFiltersEl = document.getElementById('stage-filters');
+STAGES.forEach(s => {
+  const btn = document.createElement('button');
+  btn.className = 'stage-btn' + (s==='전체'?' active':'');
+  btn.textContent = s;
+  btn.onclick = () => { activeStage=s; document.querySelectorAll('.stage-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); renderList(); };
+  stageFiltersEl.appendChild(btn);
+});
+
+function rebuildCatFilter() {
+  const cats = ['전체', ...new Set(BIDS.map(b=>b.category))];
+  const el = document.getElementById('cat-filters'); el.innerHTML = '';
+  cats.forEach(cat => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn' + (cat===activeCat?' active':'');
+    btn.textContent = cat;
+    btn.onclick = () => { activeCat=cat; document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); renderList(); };
+    el.appendChild(btn);
+  });
+}
+
+// ─── 목록 렌더 ────────────────────────────────────────────────────────
+function renderList() {
+  const q = document.getElementById('search').value.trim();
+  const list = document.getElementById('bid-list'); list.innerHTML='';
+  const countEl = document.createElement('div'); countEl.id='list-count'; list.appendChild(countEl);
+  const filtered = BIDS.filter(b => {
+    const ms = !q || b.title.includes(q) || b.agency.includes(q) || (b.keywords||[]).some(k=>k.includes(q));
+    return ms && (activeCat==='전체'||b.category===activeCat) && (activeStage==='전체'||b.stage===activeStage);
+  });
+  countEl.textContent = '총 '+filtered.length+'건';
+  filtered.forEach(b => {
+    const a = analyses[b.id];
+    const col = CAT_COLORS[b.category]||{border:'#e2e8f0',text:'#64748b',bg:'#f8fafc'};
+    const card = document.createElement('div');
+    card.className = 'bid-card'+(b.id===selectedId?' selected':'');
+    let probHtml='';
+    if (a&&!a.error) { const pc=a.probability>=75?'#16a34a':a.probability>=55?'#d97706':'#dc2626'; probHtml=`<span class="bid-prob" style="color:${pc}">${a.probability}%</span>`; }
+    const srcTag = b.source==='bizinfo' ? `<span class="src-badge">bizinfo</span>` : '';
+    const cachedTag = a&&!a.error ? `<span class="cached-tag">분석됨</span>` : '';
+    card.innerHTML = `
+      <div class="card-top"><div class="card-badges">
+        <span class="cat-badge" style="border-color:${col.border};color:${col.text};background:${col.bg}">${b.category}</span>
+        <span class="stage-badge">${b.stage}</span>${srcTag}${cachedTag}
+      </div>${probHtml}</div>
+      <div class="card-title">${b.title}</div>
+      <div class="card-meta">${b.agency}</div>
+      <div class="card-budget">${b.budget}</div>
+      <div class="card-date">공고 ${b.postDate} · 마감 ${b.deadline}</div>`;
+    card.onclick = ()=>selectBid(b);
+    list.appendChild(card);
+  });
+}
+
+// ─── 상세 ─────────────────────────────────────────────────────────────
+function selectBid(bid) { selectedId=bid.id; renderList(); renderDetail(bid); if(!analyses[bid.id]) analyze(bid); }
+
+function renderDetail(bid) {
+  document.getElementById('empty-state').style.display='none';
+  const detail = document.getElementById('detail'); detail.style.display='block';
+  const col = CAT_COLORS[bid.category]||{border:'#e2e8f0',text:'#64748b',bg:'#f8fafc'};
+  const si = STAGE_ORDER.indexOf(bid.stage);
+  const tl = STAGE_ORDER.map((s,i)=>`<div class="st-item"><span class="st-step ${i<si?'done':i===si?'current':''}">${s}</span>${i<STAGE_ORDER.length-1?`<span class="st-arrow${i<si?' done':''}">›</span>`:''}</div>`).join('');
+  const bizUrl = bid.url || `https://www.bizinfo.go.kr/web/search/searchList.do?searchKeyword=${encodeURIComponent(bid.title)}`;
+
+  detail.innerHTML = `
+    <div class="panel">
+      <div class="detail-header">
+        <div class="detail-badges">
+          <span class="cat-badge" style="border-color:${col.border};color:${col.text};background:${col.bg}">${bid.category}</span>
+          <span class="stage-badge" style="background:#e8f0fe;border-color:#93c5fd;color:#1d4ed8;font-weight:700">📍 ${bid.stage}</span>
+          ${bid.source==='bizinfo'?'<span class="src-badge">📡 bizinfo 실시간</span>':''}
+        </div>
+        <a href="${bizUrl}" target="_blank" class="open-btn">🏛️ bizinfo.go.kr에서 보기</a>
+      </div>
+      <div class="detail-title">${bid.title}</div>
+      <div class="meta-grid">
+        <div class="meta-item"><div class="meta-label">발주기관</div><div class="meta-value">${bid.agency}</div></div>
+        <div class="meta-item"><div class="meta-label">예산</div><div class="meta-value" style="color:#4285f4">${bid.budget}</div></div>
+        <div class="meta-item"><div class="meta-label">공고일</div><div class="meta-value">${bid.postDate}</div></div>
+        <div class="meta-item"><div class="meta-label">마감일</div><div class="meta-value" style="color:#dc2626">${bid.deadline}</div></div>
+      </div>
+      <div class="meta-grid-3">
+        <div class="meta-item"><div class="meta-label">계약 방식</div><div class="meta-value">${bid.contractType||'-'}</div></div>
+        <div class="meta-item"><div class="meta-label">현재 단계</div><div class="meta-value" style="color:#7c3aed">${bid.stage}</div></div>
+        <div class="meta-item"><div class="meta-label">분류</div><div class="meta-value">${bid.category}</div></div>
+      </div>
+      <div class="section-title">📊 입찰 진행 단계</div>
+      <div class="stage-timeline">${tl}</div>
+      <div class="section-title">📋 사업 개요</div>
+      <div class="desc-text">${bid.description||'-'}</div>
+      ${bid.requirements&&bid.requirements.length?`<div class="section-title">✅ 주요 요구사항</div><div class="req-list">${bid.requirements.map(r=>`<div class="req-item"><span style="color:#4285f4;margin-top:1px;flex-shrink:0">▪</span>${r}</div>`).join('')}</div>`:''}
+      <div class="tags">${(bid.keywords||[]).map(k=>`<span class="tag">#${k}</span>`).join('')}</div>
+    </div>
+    <div class="panel" id="analysis-panel">
+      <div class="panel-title">🤖 AI 수주 가능성 분석 — VIRNECT <span style="font-size:10px;font-weight:400;color:#94a3b8">powered by Gemini 1.5 Flash</span></div>
+      ${renderAnalysisContent(bid.id)}
+    </div>`;
+}
+
+function renderAnalysisContent(id) {
+  const a = analyses[id];
+  if (!a) return `<div class="loading-state"><div style="font-size:24px;margin-bottom:9px">⚙️</div><div style="font-size:12px;font-weight:600;color:#64748b">Gemini 분석 중...</div></div>`;
+  if (a.error) return `<div style="color:#dc2626;font-size:12px;padding:11px;background:#fef2f2;border-radius:7px;border:1px solid #fecaca">${a.error}</div>`;
+  const pc = a.probability>=75?'#16a34a':a.probability>=55?'#d97706':a.probability>=35?'#ea580c':'#dc2626';
+  const pbg = a.probability>=75?'linear-gradient(90deg,#86efac,#22c55e)':a.probability>=55?'linear-gradient(90deg,#fcd34d,#f59e0b)':'linear-gradient(90deg,#fca5a5,#ef4444)';
+  const savedAt = a.savedAt ? new Date(a.savedAt).toLocaleString('ko-KR') : '';
+  return `
+    ${savedAt?`<div class="cached-notice">💾 ${savedAt} 저장 <button class="reanalyze-btn" onclick="reanalyze('${id}')">재분석</button></div>`:''}
+    <div class="prob-row"><span class="prob-label-txt">수주 확률</span><span class="prob-value" style="color:${pc}">${a.probability}% <span style="font-size:11px;font-weight:400;color:#94a3b8">(${a.grade}등급)</span></span></div>
+    <div class="prob-bar-bg"><div class="prob-bar" style="width:${a.probability}%;background:${pbg}"></div></div>
+    <div class="summary-box">${a.summary}</div>
+    <div class="two-col">
+      <div class="strength-box"><div class="abox-title" style="color:#16a34a">✅ 강점</div>${(a.strengths||[]).map(s=>`<div class="abox-item" style="color:#166534">· ${s}</div>`).join('')}</div>
+      <div class="risk-box"><div class="abox-title" style="color:#ea580c">⚠️ 리스크</div>${(a.weaknesses||[]).map(w=>`<div class="abox-item" style="color:#9a3412">· ${w}</div>`).join('')}</div>
+    </div>
+    <div class="strategy-box"><div class="abox-title" style="color:#4285f4;margin-bottom:6px">🎯 수주 전략</div><div class="strategy-text">${a.strategy}</div></div>`;
+}
+
+function refreshAnalysisPanel(id) {
+  const panel = document.getElementById('analysis-panel');
+  if (panel&&selectedId===id) panel.innerHTML=`<div class="panel-title">🤖 AI 수주 가능성 분석 — VIRNECT <span style="font-size:10px;font-weight:400;color:#94a3b8">powered by Gemini 1.5 Flash</span></div>`+renderAnalysisContent(id);
+}
+
+// ─── Gemini API ───────────────────────────────────────────────────────
+async function callGemini(bid) {
+  const prompt = `당신은 공공조달 입찰 전문가입니다. VIRNECT의 수주 가능성을 분석하세요.\n\n[VIRNECT 프로필]\n${VIRNECT_PROFILE}\n\n[사업]\n사업명: ${bid.title}\n발주처: ${bid.agency}\n예산: ${bid.budget}\n단계: ${bid.stage}\n계약: ${bid.contractType||'미확인'}\n분류: ${bid.category}\n개요: ${bid.description}\n요구사항: ${(bid.requirements||[]).join(' / ')||'확인 필요'}\n\nJSON만 반환(마크다운 없이):\n{"probability":숫자0-100,"grade":"A/B/C/D","strengths":["강점1","강점2","강점3"],"weaknesses":["약점1","약점2"],"strategy":"수주 전략 2-3문장","summary":"한 줄 종합 평가"}`;
+  const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({contents:[{parts:[{text:prompt}]}],generationConfig:{temperature:0.3,maxOutputTokens:1000}})});
+  const data = await res.json();
+  if (data.error) throw new Error(data.error.message);
+  return JSON.parse(data.candidates[0].content.parts[0].text.replace(/```json|```/g,'').trim());
+}
+
+async function analyze(bid) {
+  if (!apiKey) { analyses[bid.id]={error:'❌ Google API 키를 먼저 입력해주세요 (aistudio.google.com 무료)'}; refreshAnalysisPanel(bid.id); return; }
+  try { const r=await callGemini(bid); r.savedAt=Date.now(); analyses[bid.id]=r; saveAnalyses(); } catch(e) { analyses[bid.id]={error:'분석 실패: '+e.message}; }
+  refreshAnalysisPanel(bid.id); renderList();
+}
+function reanalyze(id) { delete analyses[id]; saveAnalyses(); const b=BIDS.find(b=>b.id===id); if(b){refreshAnalysisPanel(id);analyze(b);} }
+
+async function batchAnalyze() {
+  if (!apiKey) { alert('Google API 키를 먼저 입력해주세요.'); return; }
+  if (!BIDS.length) { alert('공고를 먼저 불러오세요.'); return; }
+  const pending = BIDS.filter(b=>!analyses[b.id]||analyses[b.id].error);
+  if (!pending.length) { alert('모든 공고가 이미 분석되어 있습니다.'); return; }
+  const btn=document.getElementById('btn-batch'), bar=document.getElementById('batch-bar'), fill=document.getElementById('batch-progress-fill'), txt=document.getElementById('batch-text');
+  btn.disabled=true; bar.classList.add('visible');
+  for (let i=0;i<pending.length;i++) {
+    const bid=pending[i]; txt.textContent=`(${i+1}/${pending.length}) "${bid.title.slice(0,18)}..." 분석 중`; fill.style.width=((i/pending.length)*100)+'%';
+    try { const r=await callGemini(bid); r.savedAt=Date.now(); analyses[bid.id]=r; saveAnalyses(); } catch(e) { analyses[bid.id]={error:'실패: '+e.message}; }
+    renderList(); refreshAnalysisPanel(bid.id);
+    if (i<pending.length-1) await new Promise(r=>setTimeout(r,700));
+  }
+  fill.style.width='100%'; txt.textContent='✅ 완료!'; btn.disabled=false;
+  setTimeout(()=>{bar.classList.remove('visible');fill.style.width='0%';},3000);
+}
+
+// 시작
+loadBids();
+</script>
+</body>
+</html>
