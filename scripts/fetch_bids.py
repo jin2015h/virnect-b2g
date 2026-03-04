@@ -112,6 +112,16 @@ def category(title):
     return 'AR/XR'
 
 
+_NOW = datetime.now()
+
+def _is_past(deadline_str):
+    """마감일이 현재 시각보다 이전이면 True"""
+    if not deadline_str or deadline_str == '-': return False
+    try:
+        return datetime.fromisoformat(deadline_str[:16].replace(' ', 'T')) < _NOW
+    except Exception:
+        return False
+
 def parse_items(items):
     if isinstance(items, dict): items = items.get('item', [])
     if isinstance(items, dict): items = [items]
@@ -119,6 +129,12 @@ def parse_items(items):
     for item in (items or []):
         title = clean(item.get('bidNtceNm') or '')
         if not title: continue
+
+        # ── 마감된 공고 즉시 제외 ──────────────────────────
+        deadline_raw = clean(item.get('bidClseDt') or '-')
+        if _is_past(deadline_raw):
+            continue
+
         no     = str(item.get('bidNtceNo')  or abs(hash(title)) % 1000000)
         ord_no = str(item.get('bidNtceOrd') or '00')
         amt    = str(item.get('presmptPrce') or '')
@@ -186,6 +202,10 @@ def parse_prespec_items(items, keyword):
         amt      = str(item.get('asignBdgtAmt')  or '')
         budget   = f"{int(amt):,}원" if amt.isdigit() and int(amt) > 0 else '미정'
         deadline = clean(item.get('opninRcptnEndDt') or item.get('rlOpninRcptnEndDt') or '-')
+
+        # ── 마감된 사전규격 즉시 제외 ──────────────────────
+        if _is_past(deadline):
+            continue
         post_dt  = clean(item.get('rcptDt') or item.get('rgstDt') or datetime.now().strftime('%Y-%m-%d'))
         detail_url = f"https://www.g2b.go.kr:8101/ep/tbid/tbidSpec.do?bfSpecRgstnNo={no}"
         out.append({
