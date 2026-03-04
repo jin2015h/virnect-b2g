@@ -10,23 +10,22 @@ XR_KEYWORDS = [
 ]
 
 HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+    'Accept': 'text/html,application/xhtml+xml,*/*;q=0.8',
     'Accept-Language': 'ko-KR,ko;q=0.9',
     'Referer': 'https://www.bizinfo.go.kr/',
 }
 
 BASE = 'https://www.bizinfo.go.kr'
-LIST = f'{BASE}/web/lay1/bbs/S1T122C128/AS/74/list.do'
 
 def clean(text):
     if not text: return ''
     text = re.sub(r'<[^>]+>', '', str(text))
-    for a, b in [('&amp;','&'),('&lt;','<'),('&gt;','>'),('&nbsp;',' '),('&#39;',"'")]:
+    for a, b in [('&amp;','&'),('&lt;','<'),('&gt;','>'),('&nbsp;',' '),('&#39;',"'"),('&quot;','"')]:
         text = text.replace(a, b)
     return re.sub(r'\s+', ' ', text).strip()
 
-def is_xr_related(title):
+def is_xr(title):
     return any(k in title for k in XR_KEYWORDS)
 
 def guess_category(title):
@@ -37,94 +36,145 @@ def guess_category(title):
     if any(k in title for k in ['트윈', '디지털트윈']): return '디지털트윈'
     return 'AR/XR'
 
-def parse_page(html):
-    items = []
-    seen = set()
+def make_bid(pid, title, agency='', post_date='', deadline=''):
+    if not post_date: post_date = datetime.now().strftime('%Y-%m-%d')
+    return {
+        'id': f'BIZ-{pid}', 'stage': '입찰공고', 'title': title, 'agency': agency,
+        'budget': '미정', 'deadline': deadline or '-', 'postDate': post_date,
+        'contractType': '공모', 'category': guess_category(title),
+        'keywords': [k for k in XR_KEYWORDS if k in title],
+        'description': title, 'requirements': [],
+        'url': f'{BASE}/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId={pid}',
+        'source': 'bizinfo',
+    }
 
-    # HTML 구조 디버깅 - pblancId 패턴 확인
-    pblanc_ids = re.findall(r'pblancId=(\w+)', html)
-    print(f'    pblancId 패턴 수: {len(pblanc_ids)}, 샘플: {pblanc_ids[:3]}')
-
-    # 링크 텍스트 패턴들 시도
-    patterns = [
-        re.compile(r'pblancId=([\w_]+)[^"\']*["\'][^>]*>\s*<[^>]*>\s*([^<]{4,150})', re.DOTALL),
-        re.compile(r'pblancId=([\w_]+)[^"\']*["\'][^>]*>\s*([^<]{4,150})', re.DOTALL),
-        re.compile(r'(PBLN_[\w]+).*?<[^>]+>\s*([가-힣a-zA-Z0-9\s\(\)\[\]\/\-\_\.]{5,100})\s*<', re.DOTALL),
+def fetch_rss(session, keyword):
+    """RSS 피드로 키워드 검색"""
+    results = []
+    urls = [
+        f'{BASE}/uss/rss/bizinfoRss.do?searchKeyword={requests.utils.quote(keyword)}',
+        f'{BASE}/uss/rss/bizinfoRss.do?schKeyword={requests.utils.quote(keyword)}',
     ]
+    for url in urls:
+        try:
+            resp = session.get(url, timeout=15)
+            print(f'  RSS [{keyword}]: {resp.status_code}')
+            if resp.status_code != 200: continue
+            xml = resp.text
+            # RSS item 파싱
+            items = re.findall(r'<item>(.*?)</item>', xml, re.DOTALL)
+            print(f'  RSS items: {len(items)}개')
+            for item in items:
+                title = clean(re.search(r'<title>(.*?)</title>', item, re.DOTALL).group(1) if re.search(r'<title>', item) else '')
+                link  = clean(re.search(r'<link>(.*?)</link>', item, re.DOTALL).group(1) if re.search(r'<link>', item) else '')
+                date  = clean(re.search(r'<pubDate>(.*?)</pubDate>', item, re.DOTALL).group(1) if re.search(r'<pubDate>', item) else '')
+                if not title: continue
+                pid_m = re.search(r'pblancId=([\w_]+)', link)
+                pid = pid_m.group(1) if pid_m else str(abs(hash(title)) % 1000000)
+                results.append(make_bid(pid, title, post_date=date[:10] if date else ''))
+            if results: break
+        except Exception as e:
+            print(f'  RSS 오류: {e}')
+    return results
 
-    for pi, pat in enumerate(patterns):
-        matches = pat.findall(html)
-        print(f'    패턴{pi+1} 매치: {len(matches)}개')
-        if matches:
-            print(f'    샘플: {matches[0]}')
+def fetch_post_search(session, keyword):
+    """POST 방식 키워드 검색"""
+    results = []
+    list_url = f'{BASE}/web/lay1/bbs/S1T122C128/AS/74/list.do'
+    
+    # 여러 파라미터 조합 시도
+    param_sets = [
+        {'schKeyword': keyword, 'pageIndex': 1, 'pageUnit': 20},
+        {'searchNm': keyword, 'pageIndex': 1, 'pageUnit': 20},
+        {'pblancNm': keyword, 'pageIndex': 1, 'pageUnit': 20},
+        {'schText': keyword, 'pageIndex': 1, 'pageUnit': 20},
+    ]
+    
+    for params in param_sets:
+        try:
+            resp = session.post(list_url, data=params,
+                headers={**HEADERS, 'Content-Type': 'application/x-www-form-urlencoded'},
+                timeout=15)
+            if resp.status_code != 200: continue
+            
+            # 패턴2로 추출
+            pat = re.compile(r'pblancId=([\w_]+)[^"\']*["\'][^>]*>\s*([^<]{4,200}?)\s*</a>', re.DOTALL)
+            seen = set()
+            for m in pat.finditer(resp.text):
+                pid = m.group(1)
+                title = clean(m.group(2))
+                if not title or len(title) < 4 or pid in seen: continue
+                if title in ['목록','이전','다음','확인','취소','닫기','스크랩']: continue
+                seen.add(pid)
+                ctx = clean(resp.text[max(0,m.start()-50):min(len(resp.text),m.end()+300)])
+                dates = re.findall(r'(\d{4}[.\-]\d{2}[.\-]\d{2})', ctx)
+                results.append(make_bid(pid, title,
+                    post_date=dates[0].replace('.','-') if dates else '',
+                    deadline=dates[1].replace('.','-') if len(dates)>1 else ''))
+            
+            if results:
+                pname = list(params.keys())[0]
+                print(f'  POST {pname}=[{keyword}]: {len(results)}건')
+                break
+        except Exception as e:
+            print(f'  POST 오류: {e}')
+    return results
 
-    # 실제 추출 시도
-    pat = re.compile(r'pblancId=([\w_]+)[^"\']*["\'][^>]*>\s*([^<]{4,150}?)\s*</a>', re.DOTALL)
-    for m in pat.finditer(html):
+def fetch_default_page(session):
+    """기본 목록에서 패턴2로 추출"""
+    list_url = f'{BASE}/web/lay1/bbs/S1T122C128/AS/74/list.do'
+    resp = session.get(list_url, timeout=15)
+    results = []
+    seen = set()
+    pat = re.compile(r'pblancId=([\w_]+)[^"\']*["\'][^>]*>\s*([^<]{4,200}?)\s*</a>', re.DOTALL)
+    for m in pat.finditer(resp.text):
         pid = m.group(1)
         title = clean(m.group(2))
-        if not title or len(title) < 4 or pid in seen:
-            continue
-        if title in ['목록', '이전', '다음', '확인', '취소', '닫기', '스크랩', '상세보기']:
-            continue
+        if not title or len(title) < 4 or pid in seen: continue
+        if title in ['목록','이전','다음','확인','취소','닫기','스크랩']: continue
         seen.add(pid)
-        ctx = clean(html[max(0,m.start()-100):min(len(html),m.end()+400)])
+        ctx = clean(resp.text[max(0,m.start()-50):min(len(resp.text),m.end()+300)])
         dates = re.findall(r'(\d{4}[.\-]\d{2}[.\-]\d{2})', ctx)
-        items.append({
-            'id': f'BIZ-{pid}', 'stage': '입찰공고', 'title': title, 'agency': '',
-            'budget': '미정',
-            'deadline': dates[1].replace('.','-') if len(dates)>1 else (dates[0].replace('.','-') if dates else '-'),
-            'postDate': dates[0].replace('.','-') if dates else datetime.now().strftime('%Y-%m-%d'),
-            'contractType': '공모', 'category': guess_category(title),
-            'keywords': [k for k in XR_KEYWORDS if k in title],
-            'description': title, 'requirements': [],
-            'url': f'{BASE}/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId={pid}',
-            'source': 'bizinfo',
-        })
-    return items
+        results.append(make_bid(pid, title,
+            post_date=dates[0].replace('.','-') if dates else '',
+            deadline=dates[1].replace('.','-') if len(dates)>1 else ''))
+    print(f'기본 목록: {len(results)}건')
+    return results
 
 def main():
     print(f'[{datetime.now():%Y-%m-%d %H:%M}] bizinfo XR 공고 수집 시작')
     session = requests.Session()
     session.headers.update(HEADERS)
 
-    # 1페이지 가져와서 HTML 구조 확인
-    resp = session.get(LIST, params={'pageIndex': 1}, timeout=20)
-    print(f'응답: {resp.status_code}, 길이: {len(resp.text)}자')
-
-    # HTML 일부 출력 (pblancId 주변)
-    html = resp.text
-    idx = html.find('pblancId')
-    if idx >= 0:
-        print(f'\n=== pblancId 주변 HTML (200자) ===')
-        print(repr(html[idx:idx+200]))
-        print('===')
-    else:
-        print('pblancId 없음! HTML 앞부분 500자:')
-        print(repr(html[:500]))
-
-    all_items = []
+    all_bids = []
     seen_ids = set()
 
-    print(f'\n[1단계] 페이지 순회')
-    for page in range(1, 21):
-        resp = session.get(LIST, params={'pageIndex': page}, timeout=20)
-        if resp.status_code != 200:
-            break
-        items = parse_page(resp.text)
-        new_items = [i for i in items if i['id'] not in seen_ids]
-        if not new_items:
-            print(f'  페이지 {page}: 신규 없음, 중단')
-            break
-        for i in new_items:
-            seen_ids.add(i['id'])
-            all_items.append(i)
-        xr = [i for i in new_items if is_xr_related(i['title'])]
-        print(f'  페이지 {page}: {len(new_items)}건 (XR {len(xr)}건)')
+    def add(bids):
+        for b in bids:
+            if b['id'] not in seen_ids:
+                seen_ids.add(b['id'])
+                all_bids.append(b)
+
+    # 1. RSS 피드로 키워드 검색
+    print('\n[1단계] RSS 키워드 검색')
+    for kw in XR_KEYWORDS:
+        bids = fetch_rss(session, kw)
+        add(bids)
+        time.sleep(0.5)
+
+    # 2. POST 키워드 검색
+    print('\n[2단계] POST 키워드 검색')
+    for kw in ['증강현실', '가상현실', '디지털트윈', '메타버스', 'XR', 'AR', 'VR']:
+        bids = fetch_post_search(session, kw)
+        add(bids)
         time.sleep(0.8)
 
-    xr_bids = [b for b in all_items if is_xr_related(b['title'])]
-    print(f'\n전체: {len(all_items)}건, XR: {len(xr_bids)}건')
+    # 3. 기본 목록 (최신 15건)
+    print('\n[3단계] 기본 목록')
+    add(fetch_default_page(session))
+
+    xr_bids = [b for b in all_bids if is_xr(b['title'])]
+    print(f'\n전체: {len(all_bids)}건, XR: {len(xr_bids)}건')
 
     os.makedirs('data', exist_ok=True)
     if not xr_bids:
