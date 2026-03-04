@@ -292,80 +292,181 @@ def fetch_prespec(keyword, bgn, end):
 
 
 def fetch_bid_detail(session, bid):
-    """나라장터 공고 상세 페이지 스크래핑 — 첨부파일 + 담당자 + 자격 요건"""
+    """나라장터 공고 첨부파일 + 상세정보 수집
+    
+    3가지 방법을 순서대로 시도:
+    1) 공공데이터포털 첨부파일 전용 API  (getBidPblancFileInfo*)
+    2) 나라장터 내부 XHR API             (tbidFwd / conFile JSON)
+    3) 상세 HTML 파싱 (fallback)
+    """
     files  = []
     extra  = {}
-    no     = bid.get('bidNo', bid['id'].replace('G2B-','').replace('SPEC-',''))
+    no     = bid.get('bidNo',  bid['id'].replace('G2B-','').replace('SPEC-',''))
     ord_no = bid.get('bidOrd', '00')
+    seen_u = set()
 
-    # ── 방법 1: 단건 상세 API (첨부파일 URL 포함) ──────────
-    try:
-        api_url = (f'http://apis.data.go.kr/1230000/ad/BidPublicInfoService'
-                   f'/getBidPblancListInfoServc'
-                   f'?ServiceKey={API_KEY}'
-                   f'&numOfRows=1&pageNo=1&type=json'
+    ext_icon = {'hwp':'📝','pdf':'📕','xlsx':'📊','xls':'📊',
+                'docx':'📄','doc':'📄','zip':'🗜️','pptx':'📊','ppt':'📊',
+                'hwpx':'📝'}
+
+    doc_type_label = {
+        '공고서': '📢 공고서', '공고서(원본)': '📢 공고서(원본)',
+        '공고서(변환본)': '📢 공고서(PDF)', '과업지시서': '📋 과업지시서',
+        '제안요청서': '📋 제안요청서', '규격서': '📋 규격서',
+        '설계서': '📐 설계서', '기타': '📎 기타', '청렴': '📎 청렴서류',
+    }
+
+    def make_file_entry(name, url, doc_type=''):
+        if url in seen_u: return None
+        seen_u.add(url)
+        # 아이콘: 문서구분 우선, 없으면 확장자
+        label = doc_type_label.get(doc_type, '')
+        if not label:
+            ext = re.search(r'\.(\w{2,5})(?:[?&#]|$)', url)
+            icon = ext_icon.get(ext.group(1).lower(), '📎') if ext else '📎'
+            label = f'{icon} {name}' if name else f'{icon} 파일'
+        else:
+            label = f'{label}: {name}' if name else label
+        return {'name': label.strip(), 'url': url, 'docType': doc_type}
+
+    # ── 방법 1: 공공데이터포털 첨부파일 전용 API ───────────────
+    # getBidPblancFileInfoServc / Thng / Cnstwk
+    FILE_API = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService'
+    for op in ['Servc', 'Thng', 'Cnstwk']:
+        try:
+            url = (f'{FILE_API}/getBidPblancFileInfo{op}'
+                   f'?ServiceKey={API_KEY}&type=json'
                    f'&bidNtceNo={no}&bidNtceOrd={ord_no}')
-        r = session.get(api_url, timeout=10)
-        if r.status_code == 200:
-            raw = r.json().get('response',{}).get('body',{}).get('items',{})
-            item = raw.get('item', {}) if isinstance(raw, dict) else (raw[0] if raw else {})
-            if isinstance(item, list): item = item[0] if item else {}
-            for key, label in [('ntceSpecDocUrl','📋 입찰규격서'), ('drftDocUrl','📄 서류')]:
-                val = clean(item.get(key) or '')
-                if val:
-                    files.append({'name': label, 'url': val})
-            tel = clean(item.get('ntceInsttOfclTelNo') or '')
-            nm  = clean(item.get('ntceInsttOfclNm')    or '')
-            if tel or nm:
-                extra['contact'] = f"{nm} {tel}".strip()
-    except Exception:
-        pass
+            r = session.get(url, timeout=10)
+            if r.status_code != 200: continue
+            resp = r.json().get('response', {})
+            code = resp.get('header', {}).get('resultCode', '')
+            if code not in ('00', '0'): continue
+            raw_items = resp.get('body', {}).get('items', {})
+            if isinstance(raw_items, dict): raw_items = raw_items.get('item', [])
+            if isinstance(raw_items, dict): raw_items = [raw_items]
+            for fi in (raw_items or []):
+                fname   = clean(fi.get('atchFileNm')   or fi.get('fileNm') or '')
+                furl    = clean(fi.get('atchFileUrl')   or fi.get('fileUrl') or '')
+                fid     = clean(fi.get('atchFileId')    or '')
+                fsn     = clean(fi.get('fileSn')        or '0')
+                doc_tp  = clean(fi.get('docClsfcNm')    or fi.get('fileDstnctNm') or '')
+                fsize   = clean(fi.get('atchFileSz')    or '')
+                # 직접 URL 없으면 fileDown 패턴으로 조합
+                if not furl and fid:
+                    furl = (f'https://www.g2b.go.kr:8101/ep/common/conFile/fileDown.do'
+                            f'?atchFileId={fid}&fileSn={fsn}')
+                if not furl: continue
+                if furl.startswith('/'): furl = 'https://www.g2b.go.kr' + furl
+                entry = make_file_entry(fname, furl, doc_tp)
+                if entry:
+                    if fsize: entry['size'] = fsize
+                    files.append(entry)
+            if files: break  # 한 op에서 성공하면 중단
+        except Exception:
+            pass
 
-    # ── 방법 2: 상세 HTML 스크래핑 ─────────────────────────
-    try:
-        detail_url = bid.get('url', '')
-        if not detail_url: raise ValueError('no url')
-        r = session.get(detail_url, headers={
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-            'Referer':    'https://www.g2b.go.kr/',
-        }, timeout=15)
-        if r.status_code != 200: raise ValueError(f'HTTP {r.status_code}')
-        html = r.text
-
-        # 첨부파일 링크 (나라장터 파일 서버 여러 패턴)
-        seen_u = {f['url'] for f in files}
-        ext_icon = {'hwp':'📝','pdf':'📕','xlsx':'📊','xls':'📊',
-                    'docx':'📄','doc':'📄','zip':'🗜️','pptx':'📊','ppt':'📊'}
-        for pat in [
-            re.compile(r'href="([^"]*(?:FileDown|fileDownload|atchFile)[^"]*)"[^>]*>\s*([^<\n]{2,80})', re.I),
-            re.compile(r'href="([^"]+\.(?:hwp|pdf|xlsx?|docx?|zip|pptx?)(?:[^"]*)?)"[^>]*>\s*([^<\n]{2,80})', re.I),
+    # ── 방법 2: 나라장터 내부 파일목록 XHR API ──────────────────
+    if not files:
+        for xhr_url, data in [
+            # 패턴 A: tbidFwd 계열 JSON
+            (f'https://www.g2b.go.kr:8101/ep/tbid/tbidFileList.do',
+             {'bidNtceNo': no, 'bidNtceOrd': ord_no}),
+            # 패턴 B: conFile JSON API
+            (f'https://www.g2b.go.kr:8101/ep/common/conFile/getConFileList.do',
+             {'bidNtceNo': no, 'bidNtceOrd': ord_no, 'menuNo': '02001'}),
         ]:
-            for m in pat.finditer(html):
-                url  = m.group(1).strip()
-                name = clean(m.group(2))
-                if not url or url in seen_u: continue
-                if url.startswith('/'): url = 'https://www.g2b.go.kr' + url
-                seen_u.add(url)
-                ext  = re.search(r'\.(\w{2,4})(?:[?&#]|$)', url)
-                icon = ext_icon.get(ext.group(1).lower(), '📎') if ext else '📎'
-                files.append({'name': f'{icon} {name}' if name else f'{icon} 첨부파일', 'url': url})
+            try:
+                r = session.post(xhr_url, data=data, headers={
+                    'User-Agent':  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+                    'Referer':     'https://www.g2b.go.kr/',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                }, timeout=10)
+                if r.status_code != 200: continue
+                ct = r.headers.get('Content-Type', '')
+                if 'json' in ct:
+                    rows = r.json()
+                    if isinstance(rows, dict): rows = rows.get('list') or rows.get('fileList') or []
+                    for fi in (rows or []):
+                        fid   = clean(str(fi.get('atchFileId') or ''))
+                        fsn   = clean(str(fi.get('fileSn')     or '0'))
+                        fname = clean(fi.get('atchFileNm') or fi.get('fileNm') or '')
+                        doc_tp= clean(fi.get('fileDstnctNm') or fi.get('docClsfcNm') or '')
+                        fsize = clean(str(fi.get('atchFileSz') or ''))
+                        furl  = (clean(fi.get('fileUrl') or '') or
+                                 f'https://www.g2b.go.kr:8101/ep/common/conFile/fileDown.do?atchFileId={fid}&fileSn={fsn}')
+                        entry = make_file_entry(fname, furl, doc_tp)
+                        if entry:
+                            if fsize: entry['size'] = fsize
+                            files.append(entry)
+                elif 'html' in ct:
+                    # HTML 테이블 파싱
+                    for m in re.finditer(r"fileDown\.do\?[^'\"<>]*atchFileId=([\w]+)[^'\"<>]*fileSn=(\d+)", r.text):
+                        furl = f'https://www.g2b.go.kr:8101/ep/common/conFile/fileDown.do?atchFileId={m.group(1)}&fileSn={m.group(2)}'
+                        ctx  = r.text[max(0,m.start()-200):m.end()+50]
+                        fname_m = re.search(r'>([^<]{2,80}\.(?:hwp|pdf|xlsx?|docx?|zip|pptx?))<', ctx, re.I)
+                        fname   = clean(fname_m.group(1)) if fname_m else ''
+                        entry   = make_file_entry(fname, furl)
+                        if entry: files.append(entry)
+                if files: break
+            except Exception:
+                pass
 
-        # 담당자
-        if not extra.get('contact'):
-            m = re.search(r'담당[자자]?\s*[:：]?\s*([가-힣]{2,6})\s*[(/\s]\s*([\d\-]{9,14})', html)
-            if m: extra['contact'] = f"{m.group(1)} {m.group(2)}"
-            else:
-                m2 = re.search(r'(0\d{1,2}[-\s]\d{3,4}[-\s]\d{4})', html)
-                if m2: extra['contact'] = m2.group(1)
+    # ── 방법 3: 단건 API에서 specUrl / drftUrl ───────────────────
+    if not files:
+        try:
+            api_url = (f'http://apis.data.go.kr/1230000/ad/BidPublicInfoService'
+                       f'/getBidPblancListInfoServc'
+                       f'?ServiceKey={API_KEY}&type=json'
+                       f'&bidNtceNo={no}&bidNtceOrd={ord_no}')
+            r = session.get(api_url, timeout=10)
+            if r.status_code == 200:
+                raw  = r.json().get('response',{}).get('body',{}).get('items',{})
+                item = raw.get('item',{}) if isinstance(raw,dict) else (raw[0] if raw else {})
+                if isinstance(item, list): item = item[0] if item else {}
+                for key, label in [('ntceSpecDocUrl','📋 규격서'), ('drftDocUrl','📄 서류')]:
+                    v = clean(item.get(key) or '')
+                    if v:
+                        entry = make_file_entry(label, v, '')
+                        if entry: files.append(entry)
+                nm  = clean(item.get('ntceInsttOfclNm')    or '')
+                tel = clean(item.get('ntceInsttOfclTelNo') or '')
+                if nm or tel: extra.setdefault('contact', f'{nm} {tel}'.strip())
+        except Exception:
+            pass
 
-        # 입찰참가자격
-        m = re.search(r'(?:입찰참가자격|참가자격)[^:：\n]*[:：]\s*([^<\n]{5,300})', html)
-        if m: extra['qual'] = clean(m.group(1))
-
-        # 사업목적/내용
-        m = re.search(r'(?:사업목적|사업개요|사업내용|구매목적|용역내용)[^:：\n]*[:：]\s*([^<\n]{10,500})', html)
-        if m: extra['description'] = clean(m.group(1))
-
+    # ── 담당자/자격 보완: 상세 URL HTML ─────────────────────────
+    try:
+        r = session.get(bid.get('url',''), headers={
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+            'Referer': 'https://www.g2b.go.kr/',
+        }, timeout=12)
+        if r.status_code == 200:
+            html = r.text
+            # HTML에 파일 링크가 있으면 추가
+            for m in re.finditer(
+                r'fileDown\.do\?[^\'\"<>\s]*atchFileId=([\w]+)[^\'\"<>\s]*fileSn=(\d+)', html):
+                furl = (f'https://www.g2b.go.kr:8101/ep/common/conFile/fileDown.do'
+                        f'?atchFileId={m.group(1)}&fileSn={m.group(2)}')
+                ctx  = html[max(0,m.start()-300):m.end()+100]
+                nm_m = re.search(r'>([^<]{2,80}\.(?:hwp|pdf|xlsx?|docx?|zip|pptx?|hwpx))<', ctx, re.I)
+                nm   = clean(nm_m.group(1)) if nm_m else ''
+                dt_m = re.search(r'<td[^>]*>\s*([가-힣\w\s()]{2,20}?)\s*</td>\s*<td[^>]*>[^<]*'+
+                                  re.escape(nm[:10] if nm else ''), ctx)
+                doc_tp = clean(dt_m.group(1)) if dt_m else ''
+                entry = make_file_entry(nm, furl, doc_tp)
+                if entry: files.append(entry)
+            # 담당자
+            if not extra.get('contact'):
+                m = re.search(r'([가-힣]{2,5})\s*(?:담당)?[^\n<]{0,10}(0\d{1,2}[-\s]\d{3,4}[-\s]\d{4})', html)
+                if m: extra['contact'] = f"{m.group(1)} {m.group(2)}"
+                else:
+                    m2 = re.search(r'(0\d{1,2}[-\s]\d{3,4}[-\s]\d{4})', html)
+                    if m2: extra['contact'] = m2.group(1)
+            # 입찰참가자격
+            m = re.search(r'(?:입찰참가자격|참가자격)[^:：\n]{0,10}[:：]\s*([^<\n]{5,300})', html)
+            if m: extra.setdefault('qual', clean(m.group(1)))
     except Exception:
         pass
 
@@ -484,6 +585,21 @@ def score_bid(b):
 
 def main():
     print(f'[{datetime.now():%Y-%m-%d %H:%M}] XR 공고 수집 (최근 {DAYS}일)')
+
+    # ── keywords.json 오버라이드 (HTML에서 저장한 커스텀 키워드) ──
+    global G2B_KEYWORDS, XR_KEYWORDS
+    kw_path = 'data/keywords.json'
+    if os.path.exists(kw_path):
+        try:
+            kw = json.load(open(kw_path, encoding='utf-8'))
+            if kw.get('g2b') and isinstance(kw['g2b'], list):
+                G2B_KEYWORDS = kw['g2b']
+                print(f'  ✅ keywords.json 로드: G2B={len(G2B_KEYWORDS)}개')
+            if kw.get('xr') and isinstance(kw['xr'], list):
+                XR_KEYWORDS = kw['xr']
+                print(f'  ✅ keywords.json 로드: XR={len(XR_KEYWORDS)}개')
+        except Exception as e:
+            print(f'  ⚠️  keywords.json 로드 실패: {e}')
     sess = requests.Session()
     sess.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
                          'Accept': 'application/json, text/html'})
