@@ -85,19 +85,8 @@ def fetch_g2b(session, keyword):
     ]
     for op in ops:
         try:
-            params = {
-                'ServiceKey': API_KEY,
-                'numOfRows': 20,
-                'pageNo': 1,
-                'type': 'json',
-                'inqryDiv': 1,
-                'bidNtceNm': keyword,
-                'inqryBgnDt': bgnDt,
-                'inqryEndDt': endDt,
-            }
-            url = f'{API_BASE}/{op}'
-            # ServiceKey는 requests가 자동 인코딩하므로 URL에 직접 붙임
-            full_url = f'{url}?ServiceKey={API_KEY}&numOfRows=20&pageNo=1&type=json&inqryDiv=1&bidNtceNm={requests.utils.quote(keyword)}&inqryBgnDt={bgnDt}&inqryEndDt={endDt}'
+            # 날짜 없이 키워드만으로 검색 (inqryDiv 없으면 공고명 검색)
+            full_url = f'{API_BASE}/{op}?ServiceKey={API_KEY}&numOfRows=20&pageNo=1&type=json&bidNtceNm={requests.utils.quote(keyword)}'
             resp = session.get(full_url, timeout=15)
             label = op.replace('getBidPblancListInfo','')
             print(f'  [{keyword}]{label}: {resp.status_code}')
@@ -115,6 +104,8 @@ def fetch_g2b(session, keyword):
             total = body.get('totalCount', 0)
             items = body.get('items', {})
             print(f'    totalCount: {total}')
+            if total == 0:
+                print(f'    응답: {str(data)[:200]}')
             parsed = parse_items(items)
             results.extend(parsed)
             if parsed:
