@@ -130,25 +130,44 @@ def parse_items(items):
         draft_url = clean(item.get('drftDocUrl')     or '')
         rgst_dt   = clean(item.get('bidNtceDt')      or datetime.now().strftime('%Y-%m-%d'))
 
+        # 개찰 정보
+        open_dt   = clean(item.get('opengDt')   or '')
+        open_plce = clean(item.get('opengPlce') or '')
+
+        # 담당자
+        contact_nm  = clean(item.get('ntceInsttOfclNm')    or '')
+        contact_tel = clean(item.get('ntceInsttOfclTelNo') or '')
+        contact     = f"{contact_nm} {contact_tel}".strip() if contact_nm or contact_tel else ''
+
+        # 참가자격 & 계약방식
+        qual        = clean(item.get('bidQlfctRgstDt')     or item.get('bidPrtcptQlfctYn') or '')
+        bsns_div    = clean(item.get('ntceSttsCd')         or '')
+
         out.append({
             'id':           f'G2B-{no}',
+            'bidNo':        no,
+            'bidOrd':       ord_no,
             'stage':        '입찰공고',
             'title':        title,
-            'agency':       clean(item.get('ntceInsttNm') or ''),
-            'demandAgency': clean(item.get('dmndInsttNm') or ''),
+            'agency':       clean(item.get('ntceInsttNm')   or ''),
+            'demandAgency': clean(item.get('dmndInsttNm')   or ''),
             'budget':       budget,
-            'deadline':     clean(item.get('bidClseDt')   or '-'),
+            'deadline':     clean(item.get('bidClseDt')     or '-'),
+            'openDate':     open_dt,
+            'openPlace':    open_plce,
             'postDate':     rgst_dt[:10],
             'contractType': clean(item.get('cntrctMthdNm') or '입찰'),
             'category':     category(title),
             'keywords':     ([k for k in XR_KEYWORDS if _re.search(r'(?<![A-Za-z])'+k+r'(?![A-Za-z])', title) if k in _EN_KW] +
                              [k for k in _KO_KW if k in title]),
-            'description':  clean(item.get('bidPurpsNm') or title),
+            'description':  clean(item.get('bidPurpsNm')   or title),
             'requirements': [],
             'url':          detail_url,
             'specUrl':      spec_url,
             'draftUrl':     draft_url,
-            'contact':      clean(item.get('ntceInsttOfclTelNo') or ''),
+            'files':        [],          # fetch_bid_detail 에서 채워짐
+            'contact':      contact,
+            'qual':         qual,
             'source':       'g2b',
         })
     return out
@@ -270,6 +289,87 @@ def fetch_prespec(keyword, bgn, end):
     return out
 
 
+
+
+def fetch_bid_detail(session, bid):
+    """나라장터 공고 상세 페이지 스크래핑 — 첨부파일 + 담당자 + 자격 요건"""
+    files  = []
+    extra  = {}
+    no     = bid.get('bidNo', bid['id'].replace('G2B-','').replace('SPEC-',''))
+    ord_no = bid.get('bidOrd', '00')
+
+    # ── 방법 1: 단건 상세 API (첨부파일 URL 포함) ──────────
+    try:
+        api_url = (f'http://apis.data.go.kr/1230000/ad/BidPublicInfoService'
+                   f'/getBidPblancListInfoServc'
+                   f'?ServiceKey={API_KEY}'
+                   f'&numOfRows=1&pageNo=1&type=json'
+                   f'&bidNtceNo={no}&bidNtceOrd={ord_no}')
+        r = session.get(api_url, timeout=10)
+        if r.status_code == 200:
+            raw = r.json().get('response',{}).get('body',{}).get('items',{})
+            item = raw.get('item', {}) if isinstance(raw, dict) else (raw[0] if raw else {})
+            if isinstance(item, list): item = item[0] if item else {}
+            for key, label in [('ntceSpecDocUrl','📋 입찰규격서'), ('drftDocUrl','📄 서류')]:
+                val = clean(item.get(key) or '')
+                if val:
+                    files.append({'name': label, 'url': val})
+            tel = clean(item.get('ntceInsttOfclTelNo') or '')
+            nm  = clean(item.get('ntceInsttOfclNm')    or '')
+            if tel or nm:
+                extra['contact'] = f"{nm} {tel}".strip()
+    except Exception:
+        pass
+
+    # ── 방법 2: 상세 HTML 스크래핑 ─────────────────────────
+    try:
+        detail_url = bid.get('url', '')
+        if not detail_url: raise ValueError('no url')
+        r = session.get(detail_url, headers={
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+            'Referer':    'https://www.g2b.go.kr/',
+        }, timeout=15)
+        if r.status_code != 200: raise ValueError(f'HTTP {r.status_code}')
+        html = r.text
+
+        # 첨부파일 링크 (나라장터 파일 서버 여러 패턴)
+        seen_u = {f['url'] for f in files}
+        ext_icon = {'hwp':'📝','pdf':'📕','xlsx':'📊','xls':'📊',
+                    'docx':'📄','doc':'📄','zip':'🗜️','pptx':'📊','ppt':'📊'}
+        for pat in [
+            re.compile(r'href="([^"]*(?:FileDown|fileDownload|atchFile)[^"]*)"[^>]*>\s*([^<\n]{2,80})', re.I),
+            re.compile(r'href="([^"]+\.(?:hwp|pdf|xlsx?|docx?|zip|pptx?)(?:[^"]*)?)"[^>]*>\s*([^<\n]{2,80})', re.I),
+        ]:
+            for m in pat.finditer(html):
+                url  = m.group(1).strip()
+                name = clean(m.group(2))
+                if not url or url in seen_u: continue
+                if url.startswith('/'): url = 'https://www.g2b.go.kr' + url
+                seen_u.add(url)
+                ext  = re.search(r'\.(\w{2,4})(?:[?&#]|$)', url)
+                icon = ext_icon.get(ext.group(1).lower(), '📎') if ext else '📎'
+                files.append({'name': f'{icon} {name}' if name else f'{icon} 첨부파일', 'url': url})
+
+        # 담당자
+        if not extra.get('contact'):
+            m = re.search(r'담당[자자]?\s*[:：]?\s*([가-힣]{2,6})\s*[(/\s]\s*([\d\-]{9,14})', html)
+            if m: extra['contact'] = f"{m.group(1)} {m.group(2)}"
+            else:
+                m2 = re.search(r'(0\d{1,2}[-\s]\d{3,4}[-\s]\d{4})', html)
+                if m2: extra['contact'] = m2.group(1)
+
+        # 입찰참가자격
+        m = re.search(r'(?:입찰참가자격|참가자격)[^:：\n]*[:：]\s*([^<\n]{5,300})', html)
+        if m: extra['qual'] = clean(m.group(1))
+
+        # 사업목적/내용
+        m = re.search(r'(?:사업목적|사업개요|사업내용|구매목적|용역내용)[^:：\n]*[:：]\s*([^<\n]{10,500})', html)
+        if m: extra['description'] = clean(m.group(1))
+
+    except Exception:
+        pass
+
+    return files, extra
 
 def fetch_bizinfo_keyword(session, keyword):
     """bizinfo 정부지원사업 수집 — RSS API → HTML 스크래핑 순서로 시도"""
@@ -456,6 +556,27 @@ def main():
             matched = title_to_biz_url.get(b['title'])
             if matched: b['url'] = matched
     add(bizinfo_all)
+
+    # ── 3단계: 나라장터 공고 상세 스크래핑 (첨부파일) ──────
+    g2b_bids = [b for b in all_bids if b['source'] == 'g2b' and b['stage'] == '입찰공고']
+    print(f'\n[3단계] 공고 상세 스크래핑 ({len(g2b_bids)}건)')
+    t0 = time.time()
+    detail_lock = __import__('threading').Lock()
+    done = [0]
+
+    def enrich(bid):
+        files, extra = fetch_bid_detail(sess, bid)
+        with detail_lock:
+            if files: bid['files'] = files
+            for k, v in extra.items():
+                if v and not bid.get(k): bid[k] = v
+            done[0] += 1
+            if done[0] % 5 == 0:
+                print(f'  상세 {done[0]}/{len(g2b_bids)}건...')
+
+    with ThreadPoolExecutor(max_workers=6) as ex:
+        list(ex.map(enrich, g2b_bids))
+    print(f'  → 완료 ({time.time()-t0:.1f}초)')
 
     # ── 최종 필터 + 정렬 ────────────────────────────────
     xr = [b for b in all_bids if is_xr(b['title'])]
