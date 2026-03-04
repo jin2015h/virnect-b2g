@@ -1,7 +1,25 @@
 {
-  "updatedAt": "2026-03-04 08:11",
-  "total": 85,
+  "updatedAt": "2026-03-04 12:39",
+  "total": 26,
   "bids": [
+    {
+      "id": "G2B-R26BK01342794",
+      "stage": "입찰공고",
+      "title": "2026년 가상현실 스포츠실 통합 관리 및 유지보수 용역",
+      "agency": "서울올림픽기념국민체육진흥공단",
+      "budget": "2,272,727,273원",
+      "deadline": "2026-03-06 10:00:00",
+      "postDate": "2026-02-19 17:34:49",
+      "contractType": "입찰",
+      "category": "스마트팩토리",
+      "keywords": [
+        "가상현실"
+      ],
+      "description": "2026년 가상현실 스포츠실 통합 관리 및 유지보수 용역",
+      "requirements": [],
+      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01342794&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
+      "source": "g2b"
+    },
     {
       "id": "G2B-R26BK01349119",
       "stage": "입찰공고",
@@ -58,21 +76,21 @@
       "source": "g2b"
     },
     {
-      "id": "G2B-R26BK01342794",
+      "id": "G2B-R26BK01368861",
       "stage": "입찰공고",
-      "title": "2026년 가상현실 스포츠실 통합 관리 및 유지보수 용역",
-      "agency": "서울올림픽기념국민체육진흥공단",
-      "budget": "2,272,727,273원",
-      "deadline": "2026-03-06 10:00:00",
-      "postDate": "2026-02-19 17:34:49",
+      "title": "2026년 체험실습형 VR 콘텐츠 제작",
+      "agency": "조달청 부산지방조달청",
+      "budget": "863,636,364원",
+      "deadline": "2026-03-19 10:00:00",
+      "postDate": "2026-03-04 17:56:44",
       "contractType": "입찰",
-      "category": "스마트팩토리",
+      "category": "XR/교육훈련",
       "keywords": [
-        "가상현실"
+        "VR"
       ],
-      "description": "2026년 가상현실 스포츠실 통합 관리 및 유지보수 용역",
+      "description": "2026년 체험실습형 VR 콘텐츠 제작",
       "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01342794&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
+      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01368861&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
       "source": "g2b"
     },
     {
@@ -184,186 +202,6 @@
       "source": "g2b"
     },
     {
-      "id": "G2B-R26BK01331281",
-      "stage": "입찰공고",
-      "title": "산업안전(위험성평가) 관리 지원 사업",
-      "agency": "경기 시흥상공회의소",
-      "budget": "49,909,091원",
-      "deadline": "-",
-      "postDate": "2026-02-19 11:04:44",
-      "contractType": "입찰",
-      "category": "AI/안전",
-      "keywords": [
-        "산업안전"
-      ],
-      "description": "산업안전(위험성평가) 관리 지원 사업",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01331281&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01345890",
-      "stage": "입찰공고",
-      "title": "2026년 학교(기관) 산업안전보건 업무 지원 용역(2권역)",
-      "agency": "충청남도교육청",
-      "budget": "269,492,000원",
-      "deadline": "2026-03-03 10:00:00",
-      "postDate": "2026-02-20 14:21:11",
-      "contractType": "입찰",
-      "category": "AI/안전",
-      "keywords": [
-        "산업안전"
-      ],
-      "description": "2026년 학교(기관) 산업안전보건 업무 지원 용역(2권역)",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01345890&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01346191",
-      "stage": "입찰공고",
-      "title": "2026년 학교(기관) 산업안전보건 업무 지원 용역(3권역)",
-      "agency": "충청남도교육청",
-      "budget": "231,642,000원",
-      "deadline": "2026-03-03 10:00:00",
-      "postDate": "2026-02-20 14:21:30",
-      "contractType": "입찰",
-      "category": "AI/안전",
-      "keywords": [
-        "산업안전"
-      ],
-      "description": "2026년 학교(기관) 산업안전보건 업무 지원 용역(3권역)",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01346191&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01346251",
-      "stage": "입찰공고",
-      "title": "2026년 학교(기관) 산업안전보건 업무 지원 용역(4권역)",
-      "agency": "충청남도교육청",
-      "budget": "242,240,000원",
-      "deadline": "2026-03-03 10:00:00",
-      "postDate": "2026-02-20 14:22:21",
-      "contractType": "입찰",
-      "category": "AI/안전",
-      "keywords": [
-        "산업안전"
-      ],
-      "description": "2026년 학교(기관) 산업안전보건 업무 지원 용역(4권역)",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01346251&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01349617",
-      "stage": "입찰공고",
-      "title": "산업안전보건 정책 수립을 위한 DB 통합 분석 용역",
-      "agency": "한국산업안전보건공단 산업안전보건연구원",
-      "budget": "27,272,727원",
-      "deadline": "2026-03-06 10:00:00",
-      "postDate": "2026-02-23 14:47:14",
-      "contractType": "입찰",
-      "category": "AI/안전",
-      "keywords": [
-        "산업안전"
-      ],
-      "description": "산업안전보건 정책 수립을 위한 DB 통합 분석 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01349617&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01346029",
-      "stage": "입찰공고",
-      "title": "2026년 산업안전보건조사용역",
-      "agency": "조달청 대전지방조달청",
-      "budget": "227,805,782원",
-      "deadline": "2026-03-17 10:00:00",
-      "postDate": "2026-02-23 16:58:55",
-      "contractType": "입찰",
-      "category": "AI/안전",
-      "keywords": [
-        "산업안전"
-      ],
-      "description": "2026년 산업안전보건조사용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01346029&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01351184",
-      "stage": "입찰공고",
-      "title": "2026년 산업안전지킴이 운영 차량 임차(새로공고)",
-      "agency": "화성산업진흥원",
-      "budget": "105,300,000원",
-      "deadline": "2026-03-03 15:00:00",
-      "postDate": "2026-02-24 11:37:25",
-      "contractType": "입찰",
-      "category": "AI/안전",
-      "keywords": [
-        "산업안전"
-      ],
-      "description": "2026년 산업안전지킴이 운영 차량 임차(새로공고)",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01351184&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01358624",
-      "stage": "입찰공고",
-      "title": "2026년 산업안전보건인증원 시험장비 검교정 용역",
-      "agency": "한국산업안전보건공단 산업안전보건인증원",
-      "budget": "46,363,636원",
-      "deadline": "2026-02-27 12:00:00",
-      "postDate": "2026-02-26 17:58:07",
-      "contractType": "입찰",
-      "category": "AI/안전",
-      "keywords": [
-        "산업안전"
-      ],
-      "description": "2026년 산업안전보건인증원 시험장비 검교정 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01358624&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01361329",
-      "stage": "입찰공고",
-      "title": "2026년 산업안전 전광판 운영 및 유지보수 관리 용역",
-      "agency": "한국산업안전보건공단",
-      "budget": "272,727,273원",
-      "deadline": "2026-03-11 10:00:00",
-      "postDate": "2026-02-27 14:25:46",
-      "contractType": "입찰",
-      "category": "AI/안전",
-      "keywords": [
-        "산업안전"
-      ],
-      "description": "2026년 산업안전 전광판 운영 및 유지보수 관리 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01361329&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01364452",
-      "stage": "입찰공고",
-      "title": "산업안전보건관리비 계상 의무 적용 업종 확대 방안 마련 연구 용역",
-      "agency": "한국산업안전보건공단 산업안전보건연구원",
-      "budget": "50,000,000원",
-      "deadline": "2026-03-16 10:00:00",
-      "postDate": "2026-03-03 14:37:20",
-      "contractType": "입찰",
-      "category": "AI/안전",
-      "keywords": [
-        "산업안전"
-      ],
-      "description": "산업안전보건관리비 계상 의무 적용 업종 확대 방안 마련 연구 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01364452&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
       "id": "G2B-R26BK01364740",
       "stage": "입찰공고",
       "title": "글로벌 GMP기반 제약혁신기술 도입 - 제약 스마트공장 혁신기술 교육·컨설팅",
@@ -379,115 +217,6 @@
       "description": "글로벌 GMP기반 제약혁신기술 도입 - 제약 스마트공장 혁신기술 교육·컨설팅",
       "requirements": [],
       "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01364740&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01341212",
-      "stage": "입찰공고",
-      "title": "NFL FLAG Championship 예약발권 및 현장지원 위탁 운영 용역",
-      "agency": "사단법인대한미식축구협회",
-      "budget": "40,909,091원",
-      "deadline": "2026-02-26 10:00:00",
-      "postDate": "2026-02-19 12:32:36",
-      "contractType": "입찰",
-      "category": "스마트건설",
-      "keywords": [
-        "현장지원"
-      ],
-      "description": "NFL FLAG Championship 예약발권 및 현장지원 위탁 운영 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01341212&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01341487",
-      "stage": "입찰공고",
-      "title": "2026년 귀농귀촌교육 현장지원단 운영",
-      "agency": "농림수산식품교육문화정보원",
-      "budget": "209,090,909원",
-      "deadline": "2026-03-03 11:00:00",
-      "postDate": "2026-02-19 13:42:37",
-      "contractType": "입찰",
-      "category": "스마트건설",
-      "keywords": [
-        "현장지원"
-      ],
-      "description": "2026년 귀농귀촌교육 현장지원단 운영",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01341487&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01366591",
-      "stage": "입찰공고",
-      "title": "장애영아 교육활동 현장지원 자료 개발",
-      "agency": "조달청 대전지방조달청",
-      "budget": "162,727,273원",
-      "deadline": "2026-03-17 10:00:00",
-      "postDate": "2026-03-04 10:50:09",
-      "contractType": "입찰",
-      "category": "스마트건설",
-      "keywords": [
-        "현장지원"
-      ],
-      "description": "장애영아 교육활동 현장지원 자료 개발",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01366591&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01356832",
-      "stage": "입찰공고",
-      "title": "2026년 무인비행장치(UAV)를 활용한 간척농지 영농현황조사 및 영상분석 용역",
-      "agency": "한국농어촌공사 안전기술본부",
-      "budget": "412,818,181원",
-      "deadline": "2026-04-07 10:00:00",
-      "postDate": "2026-02-25 17:51:37",
-      "contractType": "입찰",
-      "category": "로봇/자율화",
-      "keywords": [
-        "UAV",
-        "영상분석"
-      ],
-      "description": "2026년 무인비행장치(UAV)를 활용한 간척농지 영농현황조사 및 영상분석 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01356832&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01362511",
-      "stage": "입찰공고",
-      "title": "(용역)영상분석 기반 낙엽송 체세포배 품질특성 탐색 프로그램 개발",
-      "agency": "산림청 국립산림과학원 산림생명자원연구부",
-      "budget": "17,190,000원",
-      "deadline": "2026-03-11 10:00:00",
-      "postDate": "2026-02-27 18:26:28",
-      "contractType": "입찰",
-      "category": "AR/XR",
-      "keywords": [
-        "영상분석"
-      ],
-      "description": "(용역)영상분석 기반 낙엽송 체세포배 품질특성 탐색 프로그램 개발",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01362511&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01365231",
-      "stage": "입찰공고",
-      "title": "2026년도 위성영상분석시스템 유지보수 용역(고시금액미만)",
-      "agency": "통일부",
-      "budget": "41,127,273원",
-      "deadline": "2026-03-16 10:00:00",
-      "postDate": "2026-03-03 16:22:15",
-      "contractType": "입찰",
-      "category": "스마트팩토리",
-      "keywords": [
-        "영상분석"
-      ],
-      "description": "2026년도 위성영상분석시스템 유지보수 용역(고시금액미만)",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01365231&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
       "source": "g2b"
     },
     {
@@ -527,384 +256,6 @@
       "source": "g2b"
     },
     {
-      "id": "G2B-R26BK01355482",
-      "stage": "입찰공고",
-      "title": "2026년 스마트건설 공사비산정기준 연구 용역",
-      "agency": "한국건설기술연구원",
-      "budget": "60,000,000원",
-      "deadline": "2026-03-09 12:00:00",
-      "postDate": "2026-02-25 14:15:02",
-      "contractType": "입찰",
-      "category": "스마트건설",
-      "keywords": [
-        "스마트건설"
-      ],
-      "description": "2026년 스마트건설 공사비산정기준 연구 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01355482&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01356417",
-      "stage": "입찰공고",
-      "title": "스마트건설 측량 표준시방서 개발(시설물편 2차)",
-      "agency": "국토교통부 국토지리정보원",
-      "budget": "90,909,091원",
-      "deadline": "2026-03-09 10:00:00",
-      "postDate": "2026-02-25 16:20:25",
-      "contractType": "입찰",
-      "category": "스마트건설",
-      "keywords": [
-        "스마트건설"
-      ],
-      "description": "스마트건설 측량 표준시방서 개발(시설물편 2차)",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01356417&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01341387",
-      "stage": "입찰공고",
-      "title": "2026년 계룡시 스마트시티 유지관리 용역",
-      "agency": "충청남도 계룡시",
-      "budget": "83,356,364원",
-      "deadline": "2026-02-25 10:00:00",
-      "postDate": "2026-02-19 10:37:59",
-      "contractType": "입찰",
-      "category": "스마트건설",
-      "keywords": [
-        "스마트시티"
-      ],
-      "description": "2026년 계룡시 스마트시티 유지관리 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01341387&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01330089",
-      "stage": "입찰공고",
-      "title": "울산 거점형 스마트시티 조성사업_시니어홈케어 비대면 전문가 상담 운영 용역",
-      "agency": "헬스커넥트",
-      "budget": "19,800,000원",
-      "deadline": "2026-02-19 11:00:00",
-      "postDate": "2026-02-20 11:10:58",
-      "contractType": "입찰",
-      "category": "스마트건설",
-      "keywords": [
-        "스마트시티"
-      ],
-      "description": "울산 거점형 스마트시티 조성사업_시니어홈케어 비대면 전문가 상담 운영 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01330089&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01345612",
-      "stage": "입찰공고",
-      "title": "울산 거점형 스마트시티 조성사업_스마트 헬스케어 시니어 홈케어 비대면 전문가 상담 운영 용역",
-      "agency": "헬스커넥트",
-      "budget": "19,800,000원",
-      "deadline": "2026-02-24 11:00:00",
-      "postDate": "2026-02-20 13:09:20",
-      "contractType": "입찰",
-      "category": "스마트건설",
-      "keywords": [
-        "스마트시티"
-      ],
-      "description": "울산 거점형 스마트시티 조성사업_스마트 헬스케어 시니어 홈케어 비대면 전문가 상담 운영 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01345612&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01347883",
-      "stage": "입찰공고",
-      "title": "2026 스마트시티 체감도 증진사업",
-      "agency": "국토교통부",
-      "budget": "180,000,000원",
-      "deadline": "2026-02-24 10:30:00",
-      "postDate": "2026-02-22 12:55:47",
-      "contractType": "입찰",
-      "category": "스마트건설",
-      "keywords": [
-        "스마트시티"
-      ],
-      "description": "2026 스마트시티 체감도 증진사업",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01347883&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01349428",
-      "stage": "입찰공고",
-      "title": "2026년 스마트시티 데이터허브 네트워크 강화 사업관리 및 운영지원 위탁",
-      "agency": "국토교통부",
-      "budget": "227,272,727원",
-      "deadline": "2026-02-24 10:30:00",
-      "postDate": "2026-02-23 14:11:23",
-      "contractType": "입찰",
-      "category": "스마트건설",
-      "keywords": [
-        "스마트시티"
-      ],
-      "description": "2026년 스마트시티 데이터허브 네트워크 강화 사업관리 및 운영지원 위탁",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01349428&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01349518",
-      "stage": "입찰공고",
-      "title": "폴란드 루블린 스마트시티 마스터플랜 수립 및 통합관제센터 구축계획",
-      "agency": "한국해외인프라도시개발지원공사",
-      "budget": "636,363,636원",
-      "deadline": "2026-03-09 10:00:00",
-      "postDate": "2026-02-23 15:18:36",
-      "contractType": "입찰",
-      "category": "스마트건설",
-      "keywords": [
-        "스마트시티"
-      ],
-      "description": "폴란드 루블린 스마트시티 마스터플랜 수립 및 통합관제센터 구축계획",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01349518&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01347581",
-      "stage": "입찰공고",
-      "title": "울산 거점형 스마트시티 조성사업_체감형 스마트 헬스케어 시니어 홈케어 운영 용역",
-      "agency": "헬스커넥트",
-      "budget": "49,859,000원",
-      "deadline": "2026-02-24 15:00:00",
-      "postDate": "2026-02-23 16:28:29",
-      "contractType": "입찰",
-      "category": "스마트건설",
-      "keywords": [
-        "스마트시티"
-      ],
-      "description": "울산 거점형 스마트시티 조성사업_체감형 스마트 헬스케어 시니어 홈케어 운영 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01347581&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01362555",
-      "stage": "입찰공고",
-      "title": "2026년 스마트시티 혁신기술 발굴 사업관리 및 운영지원",
-      "agency": "국토교통부",
-      "budget": "3,130,000,000원",
-      "deadline": "2026-03-03 11:00:00",
-      "postDate": "2026-02-27 19:07:23",
-      "contractType": "입찰",
-      "category": "스마트건설",
-      "keywords": [
-        "스마트시티"
-      ],
-      "description": "2026년 스마트시티 혁신기술 발굴 사업관리 및 운영지원",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01362555&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01362558",
-      "stage": "입찰공고",
-      "title": "2026년 스마트시티 규제샌드박스 활성화 사업관리 및 운영지원",
-      "agency": "국토교통부",
-      "budget": "180,000,000원",
-      "deadline": "2026-03-03 11:00:00",
-      "postDate": "2026-02-27 19:18:15",
-      "contractType": "입찰",
-      "category": "스마트건설",
-      "keywords": [
-        "스마트시티"
-      ],
-      "description": "2026년 스마트시티 규제샌드박스 활성화 사업관리 및 운영지원",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01362558&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01363234",
-      "stage": "입찰공고",
-      "title": "2026년 서울AI스마트시티센터 주말 운영 용역",
-      "agency": "재단법인서울에이아이재단",
-      "budget": "100,000,000원",
-      "deadline": "2026-03-16 10:00:00",
-      "postDate": "2026-03-03 10:35:36",
-      "contractType": "입찰",
-      "category": "스마트건설",
-      "keywords": [
-        "스마트시티"
-      ],
-      "description": "2026년 서울AI스마트시티센터 주말 운영 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01363234&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01340990",
-      "stage": "입찰공고",
-      "title": "2026년 이차전지 육성 거점센터 시설관리 용역",
-      "agency": "(재)구미전자정보기술원",
-      "budget": "102,492,291원",
-      "deadline": "2026-02-25 10:00:00",
-      "postDate": "2026-02-19 17:36:58",
-      "contractType": "입찰",
-      "category": "디지털트윈",
-      "keywords": [
-        "시설관리"
-      ],
-      "description": "2026년 이차전지 육성 거점센터 시설관리 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01340990&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01344154",
-      "stage": "입찰공고",
-      "title": "순천일반산업단지 완충저류시설 시설관리 대행 용역",
-      "agency": "전라남도 순천시",
-      "budget": "149,102,727원",
-      "deadline": "2026-02-27 12:00:00",
-      "postDate": "2026-02-19 17:56:26",
-      "contractType": "입찰",
-      "category": "디지털트윈",
-      "keywords": [
-        "시설관리"
-      ],
-      "description": "순천일반산업단지 완충저류시설 시설관리 대행 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01344154&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01348873",
-      "stage": "입찰공고",
-      "title": "시설관리(기계분야) 위탁 용역",
-      "agency": "근로복지공단 정선병원",
-      "budget": "109,517,436원",
-      "deadline": "2026-03-03 10:00:00",
-      "postDate": "2026-02-23 11:47:37",
-      "contractType": "입찰",
-      "category": "디지털트윈",
-      "keywords": [
-        "시설관리"
-      ],
-      "description": "시설관리(기계분야) 위탁 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01348873&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01342561",
-      "stage": "입찰공고",
-      "title": "국방신속획득기술연구원 시설관리(환경미화) 용역",
-      "agency": "국방과학연구소 부설 국방신속획득기술연구원",
-      "budget": "88,272,727원",
-      "deadline": "2026-03-03 14:00:00",
-      "postDate": "2026-02-23 13:54:46",
-      "contractType": "입찰",
-      "category": "MR/군사",
-      "keywords": [
-        "시설관리"
-      ],
-      "description": "국방신속획득기술연구원 시설관리(환경미화) 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01342561&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01349822",
-      "stage": "입찰공고",
-      "title": "2026학년도 선학유피대학원대학교 시설관리 및 제설 위탁용역 입찰공고",
-      "agency": "선학유피대학원대학교",
-      "budget": "16,363,636원",
-      "deadline": "-",
-      "postDate": "2026-02-23 15:24:40",
-      "contractType": "입찰",
-      "category": "디지털트윈",
-      "keywords": [
-        "시설관리"
-      ],
-      "description": "2026학년도 선학유피대학원대학교 시설관리 및 제설 위탁용역 입찰공고",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01349822&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01350603",
-      "stage": "입찰공고",
-      "title": "2026년 포항시시설관리공단 교통약자특별교통수단 자동차보험 견적제출 공고",
-      "agency": "포항시시설관리공단",
-      "budget": "34,857,590원",
-      "deadline": "2026-02-27 10:00:00",
-      "postDate": "2026-02-23 17:58:40",
-      "contractType": "입찰",
-      "category": "디지털트윈",
-      "keywords": [
-        "시설관리"
-      ],
-      "description": "2026년 포항시시설관리공단 교통약자특별교통수단 자동차보험 견적제출 공고",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01350603&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01338186",
-      "stage": "입찰공고",
-      "title": "2026년 부산항 건설현장 및 항만시설물 안전컨설팅용역",
-      "agency": "해양수산부 부산지방해양수산청 부산항건설사무소",
-      "budget": "412,700,000원",
-      "deadline": "2026-03-03 15:00:00",
-      "postDate": "2026-02-19 09:41:25",
-      "contractType": "입찰",
-      "category": "AI/안전",
-      "keywords": [
-        "건설현장"
-      ],
-      "description": "2026년 부산항 건설현장 및 항만시설물 안전컨설팅용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01338186&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01334646",
-      "stage": "입찰공고",
-      "title": "2026년 건설현장 및 항만시설물 재해예방 안전점검 컨설팅 용역",
-      "agency": "인천항만공사",
-      "budget": "38,800,000원",
-      "deadline": "2026-02-27 10:00:00",
-      "postDate": "2026-02-19 10:49:52",
-      "contractType": "입찰",
-      "category": "AI/안전",
-      "keywords": [
-        "건설현장"
-      ],
-      "description": "2026년 건설현장 및 항만시설물 재해예방 안전점검 컨설팅 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01334646&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01350478",
-      "stage": "입찰공고",
-      "title": "인천항 등 항만시설물 및 건설현장 중대재해 예방 안전컨설팅용역",
-      "agency": "해양수산부 인천지방해양수산청",
-      "budget": "722,727,273원",
-      "deadline": "2026-04-06 15:00:00",
-      "postDate": "2026-02-23 17:11:42",
-      "contractType": "입찰",
-      "category": "AI/안전",
-      "keywords": [
-        "건설현장"
-      ],
-      "description": "인천항 등 항만시설물 및 건설현장 중대재해 예방 안전컨설팅용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01350478&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
       "id": "G2B-R26BK01364481",
       "stage": "입찰공고",
       "title": "발사체 비행 시뮬레이션용 고충실도 슬로시(Slosh) 동특성 모델 개발 용역",
@@ -923,183 +274,22 @@
       "source": "g2b"
     },
     {
-      "id": "G2B-R26BK01340901",
+      "id": "G2B-R26BK01364696",
       "stage": "입찰공고",
-      "title": "2026년도 KEITI 로봇자동화(RPA) 운영",
-      "agency": "한국환경산업기술원",
+      "title": "AI 자율제조 이송공정용 AMR",
+      "agency": "한국생산기술연구원",
       "budget": "90,000,000원",
-      "deadline": "2026-03-04 10:00:00",
-      "postDate": "2026-02-19 09:24:21",
+      "deadline": "2026-03-11 12:00:00",
+      "postDate": "2026-03-03 15:25:23",
       "contractType": "입찰",
-      "category": "로봇/자율화",
+      "category": "스마트팩토리",
       "keywords": [
-        "로봇"
+        "AMR",
+        "자율제조"
       ],
-      "description": "2026년도 KEITI 로봇자동화(RPA) 운영",
+      "description": "AI 자율제조 이송공정용 AMR",
       "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01340901&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01345430",
-      "stage": "입찰공고",
-      "title": "2026년 동작구 로봇체험캠퍼스 운영(긴급)",
-      "agency": "서울특별시 동작구",
-      "budget": "70,712,727원",
-      "deadline": "2026-03-04 17:00:00",
-      "postDate": "2026-02-20 14:23:22",
-      "contractType": "입찰",
-      "category": "XR/교육훈련",
-      "keywords": [
-        "로봇"
-      ],
-      "description": "2026년 동작구 로봇체험캠퍼스 운영(긴급)",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01345430&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01348082",
-      "stage": "입찰공고",
-      "title": "[중개] 부분 체중지지 및 하지보조가 가능한 케이블 구동형 보행재활로봇 시스템 중개연구 및 인허가",
-      "agency": "조달청 서울지방조달청",
-      "budget": "454,545,455원",
-      "deadline": "2026-03-17 10:00:00",
-      "postDate": "2026-02-23 10:21:27",
-      "contractType": "입찰",
-      "category": "VR/의료",
-      "keywords": [
-        "로봇"
-      ],
-      "description": "[중개] 부분 체중지지 및 하지보조가 가능한 케이블 구동형 보행재활로봇 시스템 중개연구 및 인허가",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01348082&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01349776",
-      "stage": "입찰공고",
-      "title": "2026년 동행로봇 발명프로그램 개발 및 운영 용역",
-      "agency": "서울특별시",
-      "budget": "120,436,364원",
-      "deadline": "2026-03-06 16:00:00",
-      "postDate": "2026-02-23 15:18:40",
-      "contractType": "입찰",
-      "category": "로봇/자율화",
-      "keywords": [
-        "로봇"
-      ],
-      "description": "2026년 동행로봇 발명프로그램 개발 및 운영 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01349776&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01352644",
-      "stage": "입찰공고",
-      "title": "2026~2027년 한국로봇산업진흥원 소모성 물품 납품업체 선정 재공고",
-      "agency": "한국로봇산업진흥원",
-      "budget": "254,545,454원",
-      "deadline": "2026-03-10 10:00:00",
-      "postDate": "2026-02-24 14:12:34",
-      "contractType": "입찰",
-      "category": "로봇/자율화",
-      "keywords": [
-        "로봇"
-      ],
-      "description": "2026~2027년 한국로봇산업진흥원 소모성 물품 납품업체 선정 재공고",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01352644&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01353231",
-      "stage": "입찰공고",
-      "title": "AI로봇 창의교실 체험관『AI 기능 감수 및 활용 콘텐츠 기획』 용역",
-      "agency": "한국로봇산업진흥원",
-      "budget": "20,136,952원",
-      "deadline": "2026-03-10 10:00:00",
-      "postDate": "2026-02-24 15:54:01",
-      "contractType": "입찰",
-      "category": "XR/교육훈련",
-      "keywords": [
-        "로봇"
-      ],
-      "description": "AI로봇 창의교실 체험관『AI 기능 감수 및 활용 콘텐츠 기획』 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01353231&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01355143",
-      "stage": "입찰공고",
-      "title": "[중개] 상지 또는 체간 재활을 위한 지능형 전기자극 및 로봇 연동이 가능한 멀티 모달 중재시스템 중개연구 및 인허가",
-      "agency": "조달청 서울지방조달청",
-      "budget": "399,090,909원",
-      "deadline": "2026-03-19 10:00:00",
-      "postDate": "2026-02-25 15:19:29",
-      "contractType": "입찰",
-      "category": "VR/의료",
-      "keywords": [
-        "로봇"
-      ],
-      "description": "[중개] 상지 또는 체간 재활을 위한 지능형 전기자극 및 로봇 연동이 가능한 멀티 모달 중재시스템 중개연구 및 인허가",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01355143&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01355816",
-      "stage": "입찰공고",
-      "title": "지능형로봇 보급 및 확산사업(22-24) 종합성과분석 용역",
-      "agency": "한국로봇산업진흥원",
-      "budget": "45,236,725원",
-      "deadline": "2026-03-10 10:00:00",
-      "postDate": "2026-02-25 16:04:26",
-      "contractType": "입찰",
-      "category": "로봇/자율화",
-      "keywords": [
-        "로봇"
-      ],
-      "description": "지능형로봇 보급 및 확산사업(22-24) 종합성과분석 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01355816&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01356487",
-      "stage": "입찰공고",
-      "title": "2026년 그린워싱 위반 조사업무 로봇자동화(RPA) 운영",
-      "agency": "한국환경산업기술원",
-      "budget": "40,909,091원",
-      "deadline": "2026-03-10 10:00:00",
-      "postDate": "2026-02-25 16:34:32",
-      "contractType": "입찰",
-      "category": "로봇/자율화",
-      "keywords": [
-        "로봇"
-      ],
-      "description": "2026년 그린워싱 위반 조사업무 로봇자동화(RPA) 운영",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01356487&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01358595",
-      "stage": "입찰공고",
-      "title": "2026년 한국로봇산업진흥원 재산종합보험 가입",
-      "agency": "한국로봇산업진흥원",
-      "budget": "30,000,000원",
-      "deadline": "2026-03-06 10:00:00",
-      "postDate": "2026-02-26 15:35:28",
-      "contractType": "입찰",
-      "category": "로봇/자율화",
-      "keywords": [
-        "로봇"
-      ],
-      "description": "2026년 한국로봇산업진흥원 재산종합보험 가입",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01358595&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
+      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01364696&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
       "source": "g2b"
     },
     {
@@ -1111,69 +301,13 @@
       "deadline": "2026-03-10 12:00:00",
       "postDate": "2026-03-04 12:49:57",
       "contractType": "입찰",
-      "category": "로봇/자율화",
+      "category": "AR/XR",
       "keywords": [
-        "로봇",
         "협동로봇"
       ],
       "description": "농업용 협동로봇 시스템 구입",
       "requirements": [],
       "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01367283&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01351663",
-      "stage": "입찰공고",
-      "title": "2026년 국립부경대학교 공과대학 실험실습기자재(산업용 로봇 등 3종) 소액수의 구입(교체)",
-      "agency": "부경대학교",
-      "budget": "49,559,091원",
-      "deadline": "2026-03-06 14:00:00",
-      "postDate": "2026-02-25 13:56:00",
-      "contractType": "입찰",
-      "category": "로봇/자율화",
-      "keywords": [
-        "로봇"
-      ],
-      "description": "2026년 국립부경대학교 공과대학 실험실습기자재(산업용 로봇 등 3종) 소액수의 구입(교체)",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01351663&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01364696",
-      "stage": "입찰공고",
-      "title": "AI 자율제조 이송공정용 AMR",
-      "agency": "한국생산기술연구원",
-      "budget": "90,000,000원",
-      "deadline": "2026-03-11 12:00:00",
-      "postDate": "2026-03-03 15:25:23",
-      "contractType": "입찰",
-      "category": "스마트팩토리",
-      "keywords": [
-        "AMR"
-      ],
-      "description": "AI 자율제조 이송공정용 AMR",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01364696&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01354739",
-      "stage": "입찰공고",
-      "title": "[중개] 실내 재활을 위한 이동식(portable) 발목재활로봇시스템 중개연구 및 인허가",
-      "agency": "조달청 서울지방조달청",
-      "budget": "248,181,818원",
-      "deadline": "2026-03-20 10:00:00",
-      "postDate": "2026-02-27 18:17:45",
-      "contractType": "입찰",
-      "category": "VR/의료",
-      "keywords": [
-        "로봇시스템",
-        "로봇"
-      ],
-      "description": "[중개] 실내 재활을 위한 이동식(portable) 발목재활로봇시스템 중개연구 및 인허가",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01354739&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
       "source": "g2b"
     },
     {
@@ -1185,7 +319,7 @@
       "deadline": "2026-02-25 15:00:00",
       "postDate": "2026-02-19 17:07:26",
       "contractType": "입찰",
-      "category": "로봇/자율화",
+      "category": "AR/XR",
       "keywords": [
         "드론"
       ],
@@ -1221,7 +355,7 @@
       "deadline": "2026-03-06 10:00:00",
       "postDate": "2026-02-23 10:07:36",
       "contractType": "입찰",
-      "category": "로봇/자율화",
+      "category": "AR/XR",
       "keywords": [
         "드론"
       ],
@@ -1293,7 +427,7 @@
       "deadline": "2026-03-05 10:00:00",
       "postDate": "2026-02-24 08:46:42",
       "contractType": "입찰",
-      "category": "로봇/자율화",
+      "category": "AR/XR",
       "keywords": [
         "드론"
       ],
@@ -1311,7 +445,7 @@
       "deadline": "2026-03-03 11:00:00",
       "postDate": "2026-02-24 09:37:07",
       "contractType": "입찰",
-      "category": "로봇/자율화",
+      "category": "AR/XR",
       "keywords": [
         "드론"
       ],
@@ -1329,214 +463,13 @@
       "deadline": "2026-03-16 10:00:00",
       "postDate": "2026-02-24 14:30:08",
       "contractType": "입찰",
-      "category": "로봇/자율화",
+      "category": "AR/XR",
       "keywords": [
         "드론"
       ],
       "description": "드론 위협 분석 및 가상 원자력발전소 모델 개발 연구",
       "requirements": [],
       "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01352783&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01347224",
-      "stage": "입찰공고",
-      "title": "2026년 청사(서면사무소 외 55개소) 무인기계경비 및 CCTV 용역",
-      "agency": "강원특별자치도 홍천군",
-      "budget": "92,622,655원",
-      "deadline": "2026-02-26 17:30:00",
-      "postDate": "2026-02-20 17:27:55",
-      "contractType": "입찰",
-      "category": "로봇/자율화",
-      "keywords": [
-        "무인기"
-      ],
-      "description": "2026년 청사(서면사무소 외 55개소) 무인기계경비 및 CCTV 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01347224&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01347194",
-      "stage": "입찰공고",
-      "title": "2026년 청사(본청 외 31개소) 무인기계경비 및 CCTV 용역",
-      "agency": "강원특별자치도 홍천군",
-      "budget": "91,590,909원",
-      "deadline": "2026-02-26 17:30:00",
-      "postDate": "2026-02-20 17:28:14",
-      "contractType": "입찰",
-      "category": "로봇/자율화",
-      "keywords": [
-        "무인기"
-      ],
-      "description": "2026년 청사(본청 외 31개소) 무인기계경비 및 CCTV 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01347194&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01363519",
-      "stage": "입찰공고",
-      "title": "2026년 청사(서면사무소 외 55개소) 무인기계경비 및 CCTV 용역",
-      "agency": "강원특별자치도 홍천군",
-      "budget": "92,622,655원",
-      "deadline": "2026-03-09 12:00:00",
-      "postDate": "2026-03-03 10:14:29",
-      "contractType": "입찰",
-      "category": "로봇/자율화",
-      "keywords": [
-        "무인기"
-      ],
-      "description": "2026년 청사(서면사무소 외 55개소) 무인기계경비 및 CCTV 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01363519&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01363478",
-      "stage": "입찰공고",
-      "title": "2026년 청사(본청 외 31개소) 무인기계경비 및 CCTV 용역",
-      "agency": "강원특별자치도 홍천군",
-      "budget": "91,590,909원",
-      "deadline": "2026-03-09 12:00:00",
-      "postDate": "2026-03-03 10:15:04",
-      "contractType": "입찰",
-      "category": "로봇/자율화",
-      "keywords": [
-        "무인기"
-      ],
-      "description": "2026년 청사(본청 외 31개소) 무인기계경비 및 CCTV 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01363478&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01368986",
-      "stage": "입찰공고",
-      "title": "예측 레이더 표적 신호 생성 기술 및 실측 소형 무인기 운용",
-      "agency": "국방과학연구소",
-      "budget": "612,181,818원",
-      "deadline": "2026-04-14 10:00:00",
-      "postDate": "2026-03-04 16:25:52",
-      "contractType": "입찰",
-      "category": "로봇/자율화",
-      "keywords": [
-        "무인기"
-      ],
-      "description": "예측 레이더 표적 신호 생성 기술 및 실측 소형 무인기 운용",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01368986&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01350261",
-      "stage": "입찰공고",
-      "title": "비파괴검사 노동자의 작업공정별 방사선 측정 용역",
-      "agency": "한국산업안전보건공단 산업안전보건연구원",
-      "budget": "90,909,091원",
-      "deadline": "2026-03-06 10:00:00",
-      "postDate": "2026-02-23 16:23:00",
-      "contractType": "입찰",
-      "category": "AI/비전검사",
-      "keywords": [
-        "비파괴검사"
-      ],
-      "description": "비파괴검사 노동자의 작업공정별 방사선 측정 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01350261&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01367051",
-      "stage": "입찰공고",
-      "title": "비파괴검사 노동자의 작업공정별 방사선 측정 용역",
-      "agency": "한국산업안전보건공단 산업안전보건연구원",
-      "budget": "90,909,091원",
-      "deadline": "2026-03-16 10:00:00",
-      "postDate": "2026-03-04 10:53:36",
-      "contractType": "입찰",
-      "category": "AI/비전검사",
-      "keywords": [
-        "비파괴검사"
-      ],
-      "description": "비파괴검사 노동자의 작업공정별 방사선 측정 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01367051&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01358733",
-      "stage": "입찰공고",
-      "title": "고덕산단 2차 용수공급시설공사(1공구) 비파괴검사용역(잔여)",
-      "agency": "경기도 평택시 상하수도사업소",
-      "budget": "43,445,455원",
-      "deadline": "2026-03-05 10:00:00",
-      "postDate": "2026-02-26 16:48:43",
-      "contractType": "입찰",
-      "category": "AI/비전검사",
-      "keywords": [
-        "비파괴검사"
-      ],
-      "description": "고덕산단 2차 용수공급시설공사(1공구) 비파괴검사용역(잔여)",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01358733&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01343726",
-      "stage": "입찰공고",
-      "title": "로봇 가상환경 시뮬레이션 시스템 구매",
-      "agency": "한국로봇산업진흥원",
-      "budget": "27,045,455원",
-      "deadline": "2026-02-27 10:00:00",
-      "postDate": "2026-02-19 16:44:27",
-      "contractType": "입찰",
-      "category": "XR/교육훈련",
-      "keywords": [
-        "가상환경",
-        "로봇",
-        "시뮬레이션"
-      ],
-      "description": "로봇 가상환경 시뮬레이션 시스템 구매",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01343726&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01340696",
-      "stage": "입찰공고",
-      "title": "AI솔루션 개발실증 사업 인프라 장비구매",
-      "agency": "주식회사 태진시스템",
-      "budget": "83,600,000원",
-      "deadline": "-",
-      "postDate": "2026-02-20 09:37:35",
-      "contractType": "입찰",
-      "category": "AR/XR",
-      "keywords": [
-        "AI솔루션"
-      ],
-      "description": "AI솔루션 개발실증 사업 인프라 장비구매",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01340696&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01351424",
-      "stage": "입찰공고",
-      "title": "흉부 및 유방 영상분석 AI솔루션",
-      "agency": "분당서울대학교병원",
-      "budget": "미정",
-      "deadline": "-",
-      "postDate": "2026-02-24 09:24:22",
-      "contractType": "입찰",
-      "category": "AR/XR",
-      "keywords": [
-        "영상분석",
-        "AI솔루션"
-      ],
-      "description": "흉부 및 유방 영상분석 AI솔루션",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidList.do?bidNm=R26BK01351424&searchDtType=1&radOrgan=1&regYn=Y&bidSearchType=1&searchType=1",
       "source": "g2b"
     }
   ]
