@@ -506,23 +506,26 @@ function refreshAnalysisPanel(id) {
 }
 
 async function callGemini(bid) {
-  const prompt=`공공조달 입찰 전문가로서 VIRNECT 수주 가능성을 분석하세요.\n\n[VIRNECT]\n${VIRNECT_PROFILE}\n\n[사업]\n사업명: ${bid.title}\n발주처: ${bid.agency}\n예산: ${bid.budget}\n단계: ${bid.stage}\n분류: ${bid.category}\n\n아래 JSON을 한 줄로 반환 (마크다운 없이, 각 문자열은 50자 이내로 간결하게):\n{"probability":숫자,"grade":"A/B/C/D","strengths":["강점1","강점2","강점3"],"weaknesses":["약점1","약점2"],"strategy":"전략요약","summary":"한줄평가"}`;
-  const res=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${geminiModel}:generateContent?key=${apiKey}`,
-    {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
-      contents:[{parts:[{text:prompt}]}],
-      generationConfig:{temperature:0.3,maxOutputTokens:2048,responseMimeType:'application/json'}
-    })});
-  const data=await res.json();
-  if(data.error) throw new Error(data.error.message);
+  const prompt = `VIRNECT(코스닥 AR/XR기업, 제품:VisionX스마트고글/Remote원격협업/Twin디지털트윈/Track마커리스AR) 수주가능성 분석.
+사업:${bid.title} / 발주:${bid.agency} / 예산:${bid.budget} / 분류:${bid.category}
+규칙: 모든 문자열 값은 반드시 20자 이내. 다음 JSON만 출력(줄바꿈없이):
+{"probability":숫자0-100,"grade":"A또는B또는C또는D","strengths":["s1","s2","s3"],"weaknesses":["w1","w2"],"strategy":"전략","summary":"한줄평"}`;
+  const res = await fetch(
+    `https://generativelanguage.googleapis.com/v1beta/models/${geminiModel}:generateContent?key=${apiKey}`,
+    { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({
+        contents: [{ parts: [{ text: prompt }] }],
+        generationConfig: { temperature: 0.2, maxOutputTokens: 4096, responseMimeType: 'application/json' }
+      })
+    }
+  );
+  const data = await res.json();
+  if (data.error) throw new Error(data.error.message);
   let raw = data.candidates[0].content.parts[0].text;
-  // JSON 블록 추출 시도
   raw = raw.replace(/```json\s*/gi,'').replace(/```\s*/g,'').trim();
-  const start = raw.indexOf('{');
-  const end   = raw.lastIndexOf('}');
-  if(start === -1 || end === -1) throw new Error('JSON 없음: ' + raw.slice(0,100));
-  raw = raw.slice(start, end+1);
-  // 제어문자 제거
-  raw = raw.replace(/[\x00-\x1F\x7F]/g, s => s==='\n'||s==='\r'||s==='\t' ? ' ' : '');
+  const s = raw.indexOf('{'), e = raw.lastIndexOf('}');
+  if (s === -1 || e === -1 || e <= s) throw new Error('JSON 없음: ' + raw.slice(0,120));
+  raw = raw.slice(s, e+1).replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g,'');
   return JSON.parse(raw);
 }
 
