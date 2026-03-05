@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-05 00:16",
+  "updatedAt": "2026-03-05 00:53",
   "status": "done",
   "stage": "✅ 완료 — 32건",
   "total": 32,
@@ -117,34 +117,6 @@
       "source": "g2b"
     },
     {
-      "id": "G2B-R26BK01364740",
-      "bidNo": "R26BK01364740",
-      "bidOrd": "000",
-      "stage": "입찰공고",
-      "title": "글로벌 GMP기반 제약혁신기술 도입 - 제약 스마트공장 혁신기술 교육·컨설팅",
-      "agency": "조달청",
-      "demandAgency": "",
-      "budget": "580,000,000원",
-      "deadline": "2026-03-06 11:00:00",
-      "openDate": "2026-03-06 12:00:00",
-      "openPlace": "",
-      "postDate": "2026-03-04",
-      "contractType": "입찰",
-      "category": "스마트팩토리",
-      "keywords": [
-        "스마트공장"
-      ],
-      "description": "글로벌 GMP기반 제약혁신기술 도입 - 제약 스마트공장 혁신기술 교육·컨설팅",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01364740&bidNtceOrd=000&re=Y",
-      "specUrl": "",
-      "draftUrl": "",
-      "files": [],
-      "contact": "정지혜 070-4056-7426",
-      "qual": "2026-03-05 18:00",
-      "source": "g2b"
-    },
-    {
       "id": "G2B-R26BK01370047",
       "bidNo": "R26BK01370047",
       "bidOrd": "000",
@@ -171,6 +143,34 @@
       "files": [],
       "contact": "박주영 031-460-5449",
       "qual": "2026-03-12 18:00",
+      "source": "g2b"
+    },
+    {
+      "id": "G2B-R26BK01364740",
+      "bidNo": "R26BK01364740",
+      "bidOrd": "000",
+      "stage": "입찰공고",
+      "title": "글로벌 GMP기반 제약혁신기술 도입 - 제약 스마트공장 혁신기술 교육·컨설팅",
+      "agency": "조달청",
+      "demandAgency": "",
+      "budget": "580,000,000원",
+      "deadline": "2026-03-06 11:00:00",
+      "openDate": "2026-03-06 12:00:00",
+      "openPlace": "",
+      "postDate": "2026-03-04",
+      "contractType": "입찰",
+      "category": "스마트팩토리",
+      "keywords": [
+        "스마트공장"
+      ],
+      "description": "글로벌 GMP기반 제약혁신기술 도입 - 제약 스마트공장 혁신기술 교육·컨설팅",
+      "requirements": [],
+      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01364740&bidNtceOrd=000&re=Y",
+      "specUrl": "",
+      "draftUrl": "",
+      "files": [],
+      "contact": "정지혜 070-4056-7426",
+      "qual": "2026-03-05 18:00",
       "source": "g2b"
     },
     {
