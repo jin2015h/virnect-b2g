@@ -59,9 +59,8 @@ XR_KEYWORDS = [
     # 로봇시뮬레이션
     '로봇시뮬레이션', '공정시뮬레이션', '가상환경',
 
-    # 에지AI / 플랫폼 / AI 솔루션
-    '엣지AI', 'AI플랫폼', 'AI솔루션', '인공지능',
-    '딥러닝', '영상분석', '비전AI', '영상인식',
+    # 에지AI / 플랫폼
+    '엣지AI', 'AI플랫폼',
 ]
 
 # g2b API 검색용: 결과가 많은 핵심 키워드만 (나머지는 is_xr 필터로 걸림)
@@ -76,9 +75,6 @@ G2B_KEYWORDS = [
     '스마트안전', '협동로봇', 'AMR', 'AGV', '드론',
     '피지컬AI', '컴퓨터비전', 'AI검사',
     '스마트글래스', '원격협업', '공정모니터링',
-    # AI 솔루션/플랫폼
-    '인공지능', 'AI플랫폼', 'AI솔루션', '엣지AI',
-    '영상인식', '영상분석', '비전AI', '딥러닝',
 ]
 
 def clean(v):
@@ -94,76 +90,27 @@ _EN_KW = {'AR', 'VR', 'XR', 'MR', 'HMD', 'BIM', 'AMR', 'AGV', 'UAV', 'AOI'}
 _KO_KW = set(XR_KEYWORDS) - _EN_KW | {'디지털 트윈'}
 
 def is_xr(t):
-    # ── 명확히 무관한 사업 제외 ──────────────────────────
-    EXCLUDE = [
-        # 이벤트·행사 운영 (기술 납품 아님)
-        '행사 위탁', '행사위탁', '행사 운영', '행사운영', '행사 기획', '박람회 운영',
-        '박람회 위탁', '축제', '공연', '전시 운영', '홍보 대행', '홍보대행',
-        # 드론 서비스 (촬영·방제·택배 등 하드웨어 운용)
-        '드론 방제', '드론방제', '드론 촬영', '드론촬영', '드론 배송', '드론배송',
-        '드론 순찰', '드론순찰', '드론 항공감시', '항공감시', '드론 대행',
-        # 스포츠·게임 콘텐츠 운영
-        '슈퍼리그', '스포츠 리그', '스포츠리그', 'e스포츠', '게임 대회', '게임대회',
-        # 단순 구매·임차 (기술 납품 아님)
-        '임차', '임대', '리스', '차량 구입', '장비 구입',
-        # 조사·연구 (소프트웨어 개발 아님)
-        '실태조사', '이용자보호', '인식조사', '설문조사',
-        # 시설·청소·관리 용역
-        '청소', '시설 관리', '시설관리', '건물 관리', '경비',
-    ]
-    if any(ex in t for ex in EXCLUDE):
-        return False
-
     for k in _EN_KW:
         if _re.search(r'(?<![A-Za-z])' + k + r'(?![A-Za-z])', t):
             return True
     return any(k in t for k in _KO_KW)
 
 def category(title):
-    t = title
+    if any(k in title for k in ['군','국방','방위','전술','함정']): return 'MR/군사'
+    if any(k in title for k in ['안전','재해','사고','소방','구조','안전모','헬멧']): return 'AI/안전'
+    if any(k in title for k in ['물류','창고','배송','피킹']): return 'AR/물류'
+    if any(k in title for k in ['의료','수술','병원','해부','재활']): return 'VR/의료'
+    if any(k in title for k in ['트윈','디지털트윈','디지털 트윈','BIM','시설관리']): return '디지털트윈'
+    if any(k in title for k in ['스마트팩토리','스마트공장','제조','작업지시','설비점검','유지보수']): return '스마트팩토리'
+    if any(k in title for k in ['건설','스마트건설','현장','스마트시티']): return '스마트건설'
+    if any(k in title for k in ['교육','훈련','시뮬레이션','체험','학습']): return 'XR/교육훈련'
+    if any(k in title for k in ['피지컬AI','피지컬 AI','Physical AI','PhysicalAI','지능형로봇','지능형제조','자율제조']): return '피지컬AI'
+    if any(k in title for k in ['육안검사','검사자동화','표면검사','외관불량','인라인검사','스마트검사','무인검사']): return 'AI/비전검사'
+    if any(k in title for k in ['가상공장','가상플랜트','공장디지털화','제조디지털화','디지털전환','CPS','사이버물리','공정모니터링','설비모니터링']): return '디지털트윈'
+    if any(k in title for k in ['비전검사','외관검사','불량검출','결함검출','품질검사','머신비전','AOI','비파괴']): return 'AI/비전검사'
+    if any(k in title for k in ['시뮬레이션','가상시뮬레이션','로봇시뮬레이션','공정시뮬레이션','가상환경']): return 'XR/시뮬레이션'
+    return 'AR/XR'
 
-    # ── XR/AR ────────────────────────────────────────────
-    if any(k in t for k in ['증강현실','AR글래스','AR고글','스마트글래스','스마트안경',
-                             '홀로그램','HMD','헤드마운트','혼합현실','공간컴퓨팅']): return 'XR/AR'
-    if any(k in t for k in ['가상현실','VR']): return 'XR/AR'
-    if _re.search(r'(?<![A-Za-z])(?:AR|XR|MR)(?![A-Za-z])', t): return 'XR/AR'
-
-    # ── 로봇 ─────────────────────────────────────────────
-    if any(k in t for k in ['협동로봇','자율주행로봇','서비스로봇','지능형로봇',
-                             '로봇시스템','로봇솔루션','로봇구축']): return '로봇'
-    if _re.search(r'(?<![A-Za-z])(?:AMR|AGV)(?![A-Za-z])', t): return '로봇'
-    if any(k in t for k in ['드론','UAV']) and not any(k in t for k in [
-        '드론 방제','드론방제','드론 촬영','드론촬영','드론 배송','드론배송',
-        '드론 순찰','항공감시','드론 대행','드론 행사','드론박람회']): return '로봇'
-
-    # ── AI ───────────────────────────────────────────────
-    if any(k in t for k in ['육안검사','검사자동화','표면검사','외관불량','인라인검사',
-                             '비전검사','외관검사','불량검출','결함검출','품질검사',
-                             '머신비전','AOI','비파괴']): return 'AI'
-    if any(k in t for k in ['스마트안전','안전관제','스마트헬멧','산업안전',
-                             '안전모니터링']): return 'AI'
-    if any(k in t for k in ['피지컬AI','피지컬 AI','Physical AI','PhysicalAI',
-                             '지능형제조','자율제조']): return 'AI'
-    if any(k in t for k in ['AI플랫폼','AI 플랫폼','엣지AI','엣지 AI','컴퓨터비전',
-                             '비전AI','영상인식','영상분석','AI솔루션','AI시스템',
-                             '인공지능','머신러닝','딥러닝']): return 'AI'
-
-    # ── 디지털트윈 ────────────────────────────────────────
-    if any(k in t for k in ['디지털트윈','디지털 트윈','BIM','가상공장','가상플랜트',
-                             '공장디지털화','CPS','사이버물리','공정모니터링',
-                             '설비모니터링']): return '디지털트윈'
-
-    # ── 스마트팩토리 ──────────────────────────────────────
-    if any(k in t for k in ['스마트팩토리','스마트공장','스마트제조','작업지시',
-                             '설비점검','유지보수','공정관리']): return '스마트팩토리'
-
-    # ── 시뮬레이션 ────────────────────────────────────────
-    if any(k in t for k in ['시뮬레이션','가상시뮬레이션','로봇시뮬레이션',
-                             '공정시뮬레이션','가상환경','가상훈련','교육훈련',
-                             '훈련','체험','실감교육']): return '시뮬레이션'
-
-    # ── fallback ─────────────────────────────────────────
-    return '기타'
 
 _NOW = datetime.now()
 
@@ -659,7 +606,7 @@ def score_bid(b):
 def main():
     print(f'[{datetime.now():%Y-%m-%d %H:%M}] XR 공고 수집 (최근 {DAYS}일)')
 
-    # ── keywords.json 오버라이드 ───────────────────────────
+    # ── keywords.json 오버라이드 (HTML에서 저장한 커스텀 키워드) ──
     global G2B_KEYWORDS, XR_KEYWORDS
     kw_path = 'data/keywords.json'
     if os.path.exists(kw_path):
@@ -673,35 +620,12 @@ def main():
                 print(f'  ✅ keywords.json 로드: XR={len(XR_KEYWORDS)}개')
         except Exception as e:
             print(f'  ⚠️  keywords.json 로드 실패: {e}')
-
     sess = requests.Session()
     sess.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
                          'Accept': 'application/json, text/html'})
 
     all_bids, seen = [], set()
     lock_seen = __import__('threading').Lock()
-    save_lock  = __import__('threading').Lock()
-    last_saved = [0]  # 마지막 저장 시점의 건수
-
-    os.makedirs('data', exist_ok=True)
-
-    def save_partial(stage_label, status='running'):
-        """단계별 중간 결과를 bids.json에 저장 — HTML 폴링으로 실시간 표시"""
-        with save_lock:
-            xr_now = sorted(
-                [b for b in all_bids if is_xr(b['title'])],
-                key=score_bid, reverse=True
-            )
-            payload = {
-                'updatedAt': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-                'status':    status,       # 'running' | 'done'
-                'stage':     stage_label,  # 진행 단계 메시지
-                'total':     len(xr_now),
-                'bids':      xr_now,
-            }
-            json.dump(payload, open('data/bids.json', 'w', encoding='utf-8'),
-                      ensure_ascii=False, indent=2)
-            last_saved[0] = len(all_bids)
 
     def add(bids):
         n = 0
@@ -709,20 +633,14 @@ def main():
             for b in bids:
                 if b['id'] not in seen:
                     seen.add(b['id']); all_bids.append(b); n += 1
-        # 3건 이상 쌓이면 중간 저장
-        if n and (len(all_bids) - last_saved[0]) >= 3:
-            save_partial('① 나라장터 수집 중...')
         return n
-
-    # 수집 시작 알림
-    save_partial('⏳ 수집 시작...', status='running')
 
     now   = datetime.now()
     start = now - timedelta(days=DAYS)
     bgn   = start.strftime('%Y%m%d') + '0000'
     end   = now.strftime('%Y%m%d')   + '2359'
 
-    # ── 1단계: 나라장터 입찰공고 ─────────────────────────
+    # ── 1단계: 나라장터 입찰공고 병렬 ──────────────────
     print(f'\n[1단계] 나라장터 API (병렬, {len(G2B_KEYWORDS)}개 키워드)')
     t0 = time.time()
     with ThreadPoolExecutor(max_workers=8) as ex:
@@ -734,9 +652,8 @@ def main():
             except Exception as e:
                 print(f'  ⚠️  [{futs[f]}] {e}')
     print(f'  → {len(all_bids)}건 ({time.time()-t0:.1f}초)')
-    save_partial(f'② 사전규격 수집 중... (나라장터 {len(all_bids)}건 완료)')
 
-    # ── 1.5단계: 사전규격 ────────────────────────────────
+    # ── 1.5단계: 사전규격 병렬 ──────────────────────────
     print(f'\n[1.5단계] 사전규격 API (병렬, {len(G2B_KEYWORDS)}개 키워드)')
     t0 = time.time()
     ps_count = 0
@@ -750,9 +667,8 @@ def main():
             except Exception as e:
                 print(f'  ⚠️  사전규격[{futs[f]}] {e}')
     print(f'  → 사전규격 {ps_count}건 ({time.time()-t0:.1f}초)')
-    save_partial(f'③ bizinfo 수집 중... (총 {len(all_bids)}건)')
 
-    # ── 2단계: bizinfo ───────────────────────────────────
+    # ── 2단계: bizinfo 병렬 ──────────────────────────────
     print(f'\n[2단계] bizinfo 검색 (병렬, {len(XR_KEYWORDS)}개 키워드)')
     t0 = time.time()
     bizinfo_all, biz_seen = [], set()
@@ -769,15 +685,15 @@ def main():
             except Exception: pass
     print(f'  → bizinfo {len(bizinfo_all)}건 ({time.time()-t0:.1f}초)')
 
+    # bizinfo URL로 g2b URL 보완
     title_to_biz_url = {b['title']: b['url'] for b in bizinfo_all}
     for b in all_bids:
         if b['source'] == 'g2b':
             matched = title_to_biz_url.get(b['title'])
             if matched: b['url'] = matched
     add(bizinfo_all)
-    save_partial(f'④ 첨부파일 수집 중... (총 {len(all_bids)}건)')
 
-    # ── 3단계: 상세 스크래핑 ────────────────────────────
+    # ── 3단계: 나라장터 공고 상세 스크래핑 (첨부파일) ──────
     g2b_bids = [b for b in all_bids if b['source'] == 'g2b' and b['stage'] == '입찰공고']
     print(f'\n[3단계] 공고 상세 스크래핑 ({len(g2b_bids)}건)')
     t0 = time.time()
@@ -793,36 +709,30 @@ def main():
             done[0] += 1
             if done[0] % 5 == 0:
                 print(f'  상세 {done[0]}/{len(g2b_bids)}건...')
-                save_partial(f'④ 첨부파일 수집 중... ({done[0]}/{len(g2b_bids)}건)')
 
     with ThreadPoolExecutor(max_workers=6) as ex:
         list(ex.map(enrich, g2b_bids))
     print(f'  → 완료 ({time.time()-t0:.1f}초)')
 
-    # ── 최종 저장 ────────────────────────────────────────
+    # ── 최종 필터 + 정렬 ────────────────────────────────
     xr = [b for b in all_bids if is_xr(b['title'])]
     if not xr and all_bids: xr = all_bids
+
+    # 점수 기준 내림차순 정렬
     xr.sort(key=score_bid, reverse=True)
+
     print(f'\n전체: {len(all_bids)}건, XR: {len(xr)}건')
 
+    os.makedirs('data', exist_ok=True)
     if not xr:
         if os.path.exists('data/bids.json'):
             cached = json.load(open('data/bids.json', encoding='utf-8'))
             if cached.get('total', 0) > 0:
-                cached['updatedAt'] = datetime.now().strftime('%Y-%m-%d %H:%M')
-                cached['status'] = 'done'
-                cached['stage']  = '완료 (캐시)'
+                cached['updatedAt'] = datetime.now().strftime('%Y-%m-%d %H:%M') + ' (캐시)'
                 json.dump(cached, open('data/bids.json','w',encoding='utf-8'), ensure_ascii=False, indent=2)
                 print('0건 — 기존 캐시 유지'); return
-
-    out = {
-        'updatedAt': datetime.now().strftime('%Y-%m-%d %H:%M'),
-        'status':    'done',
-        'stage':     f'✅ 완료 — {len(xr)}건',
-        'total':     len(xr),
-        'bids':      xr,
-    }
-    json.dump(out, open('data/bids.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
+    out = {'updatedAt': datetime.now().strftime('%Y-%m-%d %H:%M'), 'total': len(xr), 'bids': xr}
+    json.dump(out, open('data/bids.json','w',encoding='utf-8'), ensure_ascii=False, indent=2)
     print(f'✅ 저장: {len(xr)}건')
 
 if __name__ == '__main__':
