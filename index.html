@@ -504,12 +504,26 @@ function updateBadge() {
 
 async function triggerAndReload() {
   const btn = document.getElementById('btn-reload');
+
+  // 토큰 없으면 그냥 reload
   if (!ghToken || !ghRepo) {
     btn.disabled = true; btn.textContent = '⏳ 로딩...';
     await loadBids();
     btn.disabled = false; btn.textContent = '🔄 새로고침';
     return;
   }
+
+  // ── 목록 즉시 초기화 ────────────────────────────────
+  BIDS = [];
+  selectedId = null;
+  renderList();
+  rebuildCatFilter();
+  updateBadge();
+  document.getElementById('detail').style.display = 'none';
+  document.getElementById('empty-state').style.display = 'block';
+  document.querySelector('.emsg').textContent = '🔄 공고 수집 중...';
+  document.querySelector('.esub').innerHTML = 'GitHub Actions가 단계별로 수집합니다.<br>결과가 나오는 대로 실시간으로 표시됩니다.';
+
   btn.disabled = true; btn.textContent = '⏳ 실행 중...';
   const bar  = document.getElementById('action-bar');
   const fill = document.getElementById('action-progress-fill');
@@ -525,57 +539,81 @@ async function triggerAndReload() {
       { method:'POST', headers:{'Authorization':`Bearer ${ghToken}`,'Accept':'application/vnd.github+json','Content-Type':'application/json'}, body:JSON.stringify({ref:'main'}) }
     );
     if (!trigRes.ok) { const e=await trigRes.json().catch(()=>({message:trigRes.statusText})); throw new Error(e.message||trigRes.statusText); }
+
     fill.style.width='12%'; txt.textContent='② 워크플로우 시작 대기 중...';
     await sleep(4000);
 
+    // runId 획득
     let runId = null;
-    for (let i=0;i<12;i++) {
-      const rd = await (await fetch(`https://api.github.com/repos/${ghRepo}/actions/workflows/${WORKFLOW_FILE}/runs?per_page=1`,{headers:{'Authorization':`Bearer ${ghToken}`,'Accept':'application/vnd.github+json'}})).json();
-      const l  = rd.workflow_runs?.[0];
-      if (l&&(l.status==='queued'||l.status==='in_progress')) { runId=l.id; break; }
+    for (let i=0; i<12; i++) {
+      const rd = await (await fetch(
+        `https://api.github.com/repos/${ghRepo}/actions/workflows/${WORKFLOW_FILE}/runs?per_page=1`,
+        {headers:{'Authorization':`Bearer ${ghToken}`,'Accept':'application/vnd.github+json'}}
+      )).json();
+      const l = rd.workflow_runs?.[0];
+      if (l && (l.status==='queued' || l.status==='in_progress')) { runId=l.id; break; }
       await sleep(2000);
     }
     if (!runId) throw new Error('워크플로우 실행을 찾을 수 없습니다');
 
     fill.style.width='20%';
-    const started = Date.now(), MAX_WAIT = 6*60*1000;
-    let lastUpdatedAt = '';
-    let checkCount = 0;
+    const started   = Date.now();
+    const MAX_WAIT  = 6 * 60 * 1000;
+    let lastUpdatedAt = 'INIT';  // 첫 폴링에서 반드시 갱신되도록
+    let checkCount  = 0;
+    let prevCount   = 0;
 
-    while (Date.now()-started < MAX_WAIT) {
-      const elapsed = Math.round((Date.now()-started)/1000);
+    while (Date.now() - started < MAX_WAIT) {
+      const elapsed = Math.round((Date.now()-started) / 1000);
 
       // 18초마다 Actions 완료 여부 확인
       checkCount++;
       if (checkCount % 6 === 0) {
-        const rd = await (await fetch(`https://api.github.com/repos/${ghRepo}/actions/runs/${runId}`,{headers:{'Authorization':`Bearer ${ghToken}`,'Accept':'application/vnd.github+json'}})).json();
+        const rd = await (await fetch(
+          `https://api.github.com/repos/${ghRepo}/actions/runs/${runId}`,
+          {headers:{'Authorization':`Bearer ${ghToken}`,'Accept':'application/vnd.github+json'}}
+        )).json();
         if (rd.status === 'completed') {
-          if (rd.conclusion === 'success') {
-            await loadBids();
-            fill.style.width='100%';
-            txt.textContent=`✅ 수집 완료! ${BIDS.length}건`;
-          } else { throw new Error(`워크플로우 실패: ${rd.conclusion}`); }
+          await loadBids();
+          fill.style.width='100%';
+          txt.textContent=`✅ 수집 완료! ${BIDS.length}건`;
           break;
         }
       }
 
-      // 3초마다 raw JSON 폴링 → 중간 결과 즉시 반영
+      // 3초마다 raw JSON 폴링
       try {
         const res = await fetch(rawUrl + '?t=' + Date.now());
         if (res.ok) {
           const data = await res.json();
-          if (data.updatedAt !== lastUpdatedAt && data.bids?.length) {
+
+          // updatedAt이 바뀔 때마다 (= Python이 중간 저장할 때마다) 갱신
+          if (data.updatedAt && data.updatedAt !== lastUpdatedAt) {
             lastUpdatedAt = data.updatedAt;
             const newBids = data.bids || [];
-            const added   = newBids.length - BIDS.length;
-            BIDS = newBids;
-            renderList(); updateBadge();
+            const added   = newBids.length - prevCount;
 
+            // BIDS 교체 + 화면 갱신
+            BIDS = newBids;
+            rebuildCatFilter();
+            renderList();
+            updateBadge();
+
+            // empty-state 숨기기 (첫 공고 들어오는 순간)
+            if (BIDS.length > 0) {
+              document.getElementById('empty-state').style.display = 'none';
+            }
+
+            // 진행 바 업데이트
             const progress = Math.min(88, 20 + (elapsed / (MAX_WAIT/1000)) * 70);
             fill.style.width = progress + '%';
-            txt.innerHTML = `<b>${data.stage||'수집 중...'}</b>` +
-              (added > 0 ? ` &nbsp;<span style="color:#16a34a;font-weight:700">+${added}건 추가</span>` : '') +
-              ` &nbsp;<span style="opacity:.6">${elapsed}초</span>`;
+            txt.innerHTML = `<b>${data.stage || '수집 중...'}</b>` +
+              (added > 0
+                ? ` &nbsp;<span style="color:#16a34a;font-weight:700">+${added}건 ↑</span>`
+                : '') +
+              ` &nbsp;<span style="opacity:.5">${elapsed}초</span>`;
+
+            prevCount = newBids.length;
 
             if (data.status === 'done') {
               fill.style.width='100%';
@@ -589,9 +627,11 @@ async function triggerAndReload() {
       await sleep(3000);
     }
   } catch(e) {
-    txt.textContent='❌ 오류: '+e.message;
+    txt.textContent = '❌ 오류: ' + e.message;
+    // 오류 시 기존 데이터 복구
     await loadBids();
   }
+
   setTimeout(()=>{ bar.classList.remove('visible'); fill.style.width='0%'; }, 5000);
   btn.disabled=false; btn.textContent='🔄 새로고침';
 }
