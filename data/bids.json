@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-05 22:08",
+  "updatedAt": "2026-03-05 22:38",
   "total": 34,
   "bids": [
     {
@@ -115,35 +115,6 @@
       "source": "g2b"
     },
     {
-      "id": "G2B-R26BK01370047",
-      "bidNo": "R26BK01370047",
-      "bidOrd": "000",
-      "stage": "입찰공고",
-      "title": "실내측위 시스템 및 디지털트윈 연계 시작품 제작",
-      "agency": "한국철도기술연구원",
-      "demandAgency": "",
-      "budget": "86,363,636원",
-      "deadline": "2026-03-13 11:00:00",
-      "openDate": "2026-03-13 12:00:00",
-      "openPlace": "국가종합전자조달시스템(나라장터)",
-      "postDate": "2026-03-05",
-      "contractType": "입찰",
-      "category": "디지털트윈",
-      "keywords": [
-        "디지털트윈",
-        "실내측위"
-      ],
-      "description": "실내측위 시스템 및 디지털트윈 연계 시작품 제작",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01370047&bidNtceOrd=000&re=Y",
-      "specUrl": "",
-      "draftUrl": "",
-      "files": [],
-      "contact": "박주영 031-460-5449",
-      "qual": "2026-03-12 18:00",
-      "source": "g2b"
-    },
-    {
       "id": "G2B-R26BK01364740",
       "bidNo": "R26BK01364740",
       "bidOrd": "000",
@@ -169,6 +140,35 @@
       "files": [],
       "contact": "정지혜 070-4056-7426",
       "qual": "2026-03-05 18:00",
+      "source": "g2b"
+    },
+    {
+      "id": "G2B-R26BK01370047",
+      "bidNo": "R26BK01370047",
+      "bidOrd": "000",
+      "stage": "입찰공고",
+      "title": "실내측위 시스템 및 디지털트윈 연계 시작품 제작",
+      "agency": "한국철도기술연구원",
+      "demandAgency": "",
+      "budget": "86,363,636원",
+      "deadline": "2026-03-13 11:00:00",
+      "openDate": "2026-03-13 12:00:00",
+      "openPlace": "국가종합전자조달시스템(나라장터)",
+      "postDate": "2026-03-05",
+      "contractType": "입찰",
+      "category": "디지털트윈",
+      "keywords": [
+        "실내측위",
+        "디지털트윈"
+      ],
+      "description": "실내측위 시스템 및 디지털트윈 연계 시작품 제작",
+      "requirements": [],
+      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01370047&bidNtceOrd=000&re=Y",
+      "specUrl": "",
+      "draftUrl": "",
+      "files": [],
+      "contact": "박주영 031-460-5449",
+      "qual": "2026-03-12 18:00",
       "source": "g2b"
     },
     {
@@ -425,6 +425,34 @@
       "source": "g2b"
     },
     {
+      "id": "G2B-R26BK01355132",
+      "bidNo": "R26BK01355132",
+      "bidOrd": "000",
+      "stage": "입찰공고",
+      "title": "2026 익산 홀로그램 체험관 운영",
+      "agency": "재단법인전북특별자치도콘텐츠융합진흥원",
+      "demandAgency": "",
+      "budget": "68,181,818원",
+      "deadline": "2026-03-10 15:00:00",
+      "openDate": "2026-03-10 16:00:00",
+      "openPlace": "국가종합전자조달시스템(나라장터)",
+      "postDate": "2026-02-26",
+      "contractType": "입찰",
+      "category": "XR/교육훈련",
+      "keywords": [
+        "홀로그램"
+      ],
+      "description": "2026 익산 홀로그램 체험관 운영",
+      "requirements": [],
+      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01355132&bidNtceOrd=000&re=Y",
+      "specUrl": "",
+      "draftUrl": "",
+      "files": [],
+      "contact": "최병학 063-282-2603",
+      "qual": "2026-03-09 18:00",
+      "source": "g2b"
+    },
+    {
       "id": "G2B-R26BK01363458",
       "bidNo": "R26BK01363458",
       "bidOrd": "000",
@@ -478,34 +506,6 @@
       "files": [],
       "contact": "임동수 042-860-9129",
       "qual": "2026-03-10 18:00",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01355132",
-      "bidNo": "R26BK01355132",
-      "bidOrd": "000",
-      "stage": "입찰공고",
-      "title": "2026 익산 홀로그램 체험관 운영",
-      "agency": "재단법인전북특별자치도콘텐츠융합진흥원",
-      "demandAgency": "",
-      "budget": "68,181,818원",
-      "deadline": "2026-03-10 15:00:00",
-      "openDate": "2026-03-10 16:00:00",
-      "openPlace": "국가종합전자조달시스템(나라장터)",
-      "postDate": "2026-02-26",
-      "contractType": "입찰",
-      "category": "XR/교육훈련",
-      "keywords": [
-        "홀로그램"
-      ],
-      "description": "2026 익산 홀로그램 체험관 운영",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01355132&bidNtceOrd=000&re=Y",
-      "specUrl": "",
-      "draftUrl": "",
-      "files": [],
-      "contact": "최병학 063-282-2603",
-      "qual": "2026-03-09 18:00",
       "source": "g2b"
     },
     {
@@ -677,34 +677,6 @@
       "source": "g2b"
     },
     {
-      "id": "G2B-R26BK01368261",
-      "bidNo": "R26BK01368261",
-      "bidOrd": "000",
-      "stage": "입찰공고",
-      "title": "26-N-무인전력 원격통제 디지털트윈 요구조건 도출 연구",
-      "agency": "국방부 국군재정관리단",
-      "demandAgency": "",
-      "budget": "36,363,636원",
-      "deadline": "2026-03-25 11:00:00",
-      "openDate": "2026-03-30 11:00:00",
-      "openPlace": "국가종합전자조달시스템(나라장터)",
-      "postDate": "2026-03-04",
-      "contractType": "입찰",
-      "category": "AI/안전",
-      "keywords": [
-        "디지털트윈"
-      ],
-      "description": "26-N-무인전력 원격통제 디지털트윈 요구조건 도출 연구",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01368261&bidNtceOrd=000&re=Y",
-      "specUrl": "",
-      "draftUrl": "",
-      "files": [],
-      "contact": "박지은 02-3146-6680",
-      "qual": "2026-03-24 18:00",
-      "source": "g2b"
-    },
-    {
       "id": "G2B-R26BK01369908",
       "bidNo": "R26BK01369908",
       "bidOrd": "000",
@@ -758,6 +730,34 @@
       "files": [],
       "contact": "최세은 070-4056-8326",
       "qual": "2026-03-16 18:00",
+      "source": "g2b"
+    },
+    {
+      "id": "G2B-R26BK01368261",
+      "bidNo": "R26BK01368261",
+      "bidOrd": "000",
+      "stage": "입찰공고",
+      "title": "26-N-무인전력 원격통제 디지털트윈 요구조건 도출 연구",
+      "agency": "국방부 국군재정관리단",
+      "demandAgency": "",
+      "budget": "36,363,636원",
+      "deadline": "2026-03-25 11:00:00",
+      "openDate": "2026-03-30 11:00:00",
+      "openPlace": "국가종합전자조달시스템(나라장터)",
+      "postDate": "2026-03-04",
+      "contractType": "입찰",
+      "category": "AI/안전",
+      "keywords": [
+        "디지털트윈"
+      ],
+      "description": "26-N-무인전력 원격통제 디지털트윈 요구조건 도출 연구",
+      "requirements": [],
+      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01368261&bidNtceOrd=000&re=Y",
+      "specUrl": "",
+      "draftUrl": "",
+      "files": [],
+      "contact": "박지은 02-3146-6680",
+      "qual": "2026-03-24 18:00",
       "source": "g2b"
     },
     {
