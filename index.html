@@ -661,14 +661,40 @@ STAGES.forEach(s => {
   stageFiltersEl.appendChild(btn);
 });
 
+// VIRNECT 핵심 카테고리 우선순위 (항상 앞에 표시)
+const PINNED_CATS = ['AR/XR','AI/안전','디지털트윈','스마트팩토리','XR/교육훈련','AI/비전검사'];
+
 function rebuildCatFilter() {
-  const cats = ['전체',...new Set(BIDS.map(b=>b.category))];
-  const el=document.getElementById('cat-filters'); el.innerHTML='';
-  cats.forEach(cat => {
-    const btn=document.createElement('button');
-    btn.className='filter-btn'+(cat===activeCat?' active':'');
-    btn.textContent=cat;
-    btn.onclick=()=>{ activeCat=cat; document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); renderList(); };
+  const el = document.getElementById('cat-filters');
+  el.innerHTML = '';
+
+  // 카테고리별 건수 집계
+  const counts = {};
+  BIDS.forEach(b => { counts[b.category] = (counts[b.category]||0) + 1; });
+
+  // 핵심 카테고리 (건수 있는 것만) + 나머지 (건수 있는 것, 건수 내림차순)
+  const pinned = PINNED_CATS.filter(c => counts[c]);
+  const others = Object.entries(counts)
+    .filter(([c]) => !PINNED_CATS.includes(c))
+    .sort((a,b) => b[1]-a[1])
+    .map(([c]) => c);
+
+  const allCats = ['전체', ...pinned, ...others];
+
+  allCats.forEach(cat => {
+    const btn = document.createElement('button');
+    const isActive = cat === activeCat;
+    btn.className = 'filter-btn' + (isActive ? ' active' : '');
+    const cnt = counts[cat];
+    btn.innerHTML = cnt
+      ? `${cat} <span style="opacity:.6;font-size:10px">${cnt}</span>`
+      : cat;
+    btn.onclick = () => {
+      activeCat = cat;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderList();
+    };
     el.appendChild(btn);
   });
 }
