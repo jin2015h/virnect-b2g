@@ -559,7 +559,13 @@ async function triggerAndReload() {
     fill.style.width='20%';
     const started   = Date.now();
     const MAX_WAIT  = 6 * 60 * 1000;
-    let lastUpdatedAt = 'INIT';  // 첫 폴링에서 반드시 갱신되도록
+    // Actions 실행 전의 타임스탬프를 기억 — 이보다 새로운 데이터만 반영
+  let baseUpdatedAt = '';
+  try {
+    const cur = await fetch(rawUrl + '?t=' + Date.now());
+    if (cur.ok) { const d = await cur.json(); baseUpdatedAt = d.updatedAt || ''; }
+  } catch(e) {}
+  let lastUpdatedAt = baseUpdatedAt;
     let checkCount  = 0;
     let prevCount   = 0;
 
