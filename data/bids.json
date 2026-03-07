@@ -1,35 +1,7 @@
 {
-  "updatedAt": "2026-03-06 21:32",
+  "updatedAt": "2026-03-07 10:00",
   "total": 32,
   "bids": [
-    {
-      "id": "G2B-R26BK01359980",
-      "bidNo": "R26BK01359980",
-      "bidOrd": "000",
-      "stage": "입찰공고",
-      "title": "2026년 찾아가는 VR 체험 운영 및 관리 용역",
-      "agency": "한국산업안전보건공단",
-      "demandAgency": "",
-      "budget": "272,727,273원",
-      "deadline": "2026-03-10 10:00:00",
-      "openDate": "2026-03-12 13:00:00",
-      "openPlace": "국가종합전자조달시스템(나라장터)",
-      "postDate": "2026-02-26",
-      "contractType": "입찰",
-      "category": "XR/교육훈련",
-      "keywords": [
-        "VR"
-      ],
-      "description": "2026년 찾아가는 VR 체험 운영 및 관리 용역",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01359980&bidNtceOrd=000&re=Y",
-      "specUrl": "",
-      "draftUrl": "",
-      "files": [],
-      "contact": "김철민 052-703-0557",
-      "qual": "2026-03-09 18:00",
-      "source": "g2b"
-    },
     {
       "id": "G2B-R26BK01353306",
       "bidNo": "R26BK01353306",
@@ -56,6 +28,34 @@
       "files": [],
       "contact": "곽한나 02-410-1213",
       "qual": "2026-03-10 18:00",
+      "source": "g2b"
+    },
+    {
+      "id": "G2B-R26BK01359980",
+      "bidNo": "R26BK01359980",
+      "bidOrd": "000",
+      "stage": "입찰공고",
+      "title": "2026년 찾아가는 VR 체험 운영 및 관리 용역",
+      "agency": "한국산업안전보건공단",
+      "demandAgency": "",
+      "budget": "272,727,273원",
+      "deadline": "2026-03-10 10:00:00",
+      "openDate": "2026-03-12 13:00:00",
+      "openPlace": "국가종합전자조달시스템(나라장터)",
+      "postDate": "2026-02-26",
+      "contractType": "입찰",
+      "category": "XR/교육훈련",
+      "keywords": [
+        "VR"
+      ],
+      "description": "2026년 찾아가는 VR 체험 운영 및 관리 용역",
+      "requirements": [],
+      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01359980&bidNtceOrd=000&re=Y",
+      "specUrl": "",
+      "draftUrl": "",
+      "files": [],
+      "contact": "김철민 052-703-0557",
+      "qual": "2026-03-09 18:00",
       "source": "g2b"
     },
     {
@@ -112,6 +112,35 @@
       "files": [],
       "contact": "신용헌 044-205-7051",
       "qual": "2026-03-09 09:00",
+      "source": "g2b"
+    },
+    {
+      "id": "G2B-R26BK01364696",
+      "bidNo": "R26BK01364696",
+      "bidOrd": "000",
+      "stage": "입찰공고",
+      "title": "AI 자율제조 이송공정용 AMR",
+      "agency": "한국생산기술연구원",
+      "demandAgency": "",
+      "budget": "90,000,000원",
+      "deadline": "2026-03-11 12:00:00",
+      "openDate": "2026-03-11 13:00:00",
+      "openPlace": "우리 원 구매자산실 입찰집행관 PC",
+      "postDate": "2026-03-03",
+      "contractType": "입찰",
+      "category": "스마트팩토리",
+      "keywords": [
+        "AMR",
+        "자율제조"
+      ],
+      "description": "AI 자율제조 이송공정용 AMR",
+      "requirements": [],
+      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01364696&bidNtceOrd=000&re=Y",
+      "specUrl": "",
+      "draftUrl": "",
+      "files": [],
+      "contact": "김훈 041-589-8573",
+      "qual": "2026-03-10 18:00",
       "source": "g2b"
     },
     {
@@ -200,35 +229,6 @@
       "source": "g2b"
     },
     {
-      "id": "G2B-R26BK01364696",
-      "bidNo": "R26BK01364696",
-      "bidOrd": "000",
-      "stage": "입찰공고",
-      "title": "AI 자율제조 이송공정용 AMR",
-      "agency": "한국생산기술연구원",
-      "demandAgency": "",
-      "budget": "90,000,000원",
-      "deadline": "2026-03-11 12:00:00",
-      "openDate": "2026-03-11 13:00:00",
-      "openPlace": "우리 원 구매자산실 입찰집행관 PC",
-      "postDate": "2026-03-03",
-      "contractType": "입찰",
-      "category": "스마트팩토리",
-      "keywords": [
-        "AMR",
-        "자율제조"
-      ],
-      "description": "AI 자율제조 이송공정용 AMR",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01364696&bidNtceOrd=000&re=Y",
-      "specUrl": "",
-      "draftUrl": "",
-      "files": [],
-      "contact": "김훈 041-589-8573",
-      "qual": "2026-03-10 18:00",
-      "source": "g2b"
-    },
-    {
       "id": "G2B-R26BK01374093",
       "bidNo": "R26BK01374093",
       "bidOrd": "000",
@@ -282,6 +282,34 @@
       "files": [],
       "contact": "최병학 063-282-2603",
       "qual": "2026-03-09 18:00",
+      "source": "g2b"
+    },
+    {
+      "id": "G2B-R26BK01350022",
+      "bidNo": "R26BK01350022",
+      "bidOrd": "000",
+      "stage": "입찰공고",
+      "title": "황룡사 강당 기본 및 BIM 설계",
+      "agency": "국가유산청 국립문화유산연구원",
+      "demandAgency": "",
+      "budget": "89,090,909원",
+      "deadline": "2026-03-11 10:00:00",
+      "openDate": "2026-03-11 11:00:00",
+      "openPlace": "국가종합전자조달시스템(나라장터)",
+      "postDate": "2026-02-26",
+      "contractType": "입찰",
+      "category": "디지털트윈",
+      "keywords": [
+        "BIM"
+      ],
+      "description": "황룡사 강당 기본 및 BIM 설계",
+      "requirements": [],
+      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01350022&bidNtceOrd=000&re=Y",
+      "specUrl": "",
+      "draftUrl": "",
+      "files": [],
+      "contact": "임동수 042-860-9129",
+      "qual": "2026-03-10 18:00",
       "source": "g2b"
     },
     {
@@ -478,34 +506,6 @@
       "files": [],
       "contact": "고민준 070-8765-8324",
       "qual": "",
-      "source": "g2b"
-    },
-    {
-      "id": "G2B-R26BK01350022",
-      "bidNo": "R26BK01350022",
-      "bidOrd": "000",
-      "stage": "입찰공고",
-      "title": "황룡사 강당 기본 및 BIM 설계",
-      "agency": "국가유산청 국립문화유산연구원",
-      "demandAgency": "",
-      "budget": "89,090,909원",
-      "deadline": "2026-03-11 10:00:00",
-      "openDate": "2026-03-11 11:00:00",
-      "openPlace": "국가종합전자조달시스템(나라장터)",
-      "postDate": "2026-02-26",
-      "contractType": "입찰",
-      "category": "디지털트윈",
-      "keywords": [
-        "BIM"
-      ],
-      "description": "황룡사 강당 기본 및 BIM 설계",
-      "requirements": [],
-      "url": "https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do?bidNtceNo=R26BK01350022&bidNtceOrd=000&re=Y",
-      "specUrl": "",
-      "draftUrl": "",
-      "files": [],
-      "contact": "임동수 042-860-9129",
-      "qual": "2026-03-10 18:00",
       "source": "g2b"
     },
     {
