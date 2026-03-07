@@ -1,5 +1,11 @@
 import json, time, re, os, requests
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
+
+KST = timezone(timedelta(hours=9))
+
+def now_kst():
+    """KST 현재 시각 (UTC+9)"""
+    return datetime.now(KST).replace(tzinfo=None)
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 API_KEY  = 'fb382c284306f27f3c44e28cf6718dd7208691a64314f00df3dabf9008133b07'
@@ -7,63 +13,7 @@ API_BASE      = 'http://apis.data.go.kr/1230000/ad/BidPublicInfoService'
 BFSPEC_BASE   = 'https://apis.data.go.kr/1230000/ao/HrcspSsstndrdInfoService'  # 사전규격정보서비스
 DAYS          = 14  # 조회 범위 (일) — API 최대 허용 범위
 
-XR_KEYWORDS = [
-    # 핵심 XR
-    'AR', 'VR', 'XR', 'MR', 'HMD',
-    '증강현실', '가상현실', '혼합현실', '확장현실',
-    '메타버스', '홀로그램', '실감콘텐츠', '실감기술',
-    '몰입형', '공간컴퓨팅',
-
-    # VIRNECT 제품 연관
-    '스마트글래스', '스마트안경', '웨어러블', '헤드셋',
-    '디지털트윈',
-    '원격협업', '원격지원', '원격점검',
-    '가상훈련',
-
-    # 산업 안전 (VisionX)
-    '스마트안전', '산업안전', '안전관제', '스마트헬멧',
-
-    # 스마트팩토리 / 제조
-    '스마트팩토리', '스마트공장', '스마트제조',
-    '작업지시', '설비점검',
-
-    # 공간인식 / 컴퓨터비전
-    '컴퓨터비전', '비전AI', '영상인식',
-    '포인트클라우드', '실내측위',
-
-    # 건설 / 시설
-    'BIM', '스마트건설', '스마트시티',
-
-    # 교육 / 훈련 시뮬레이션
-    '시뮬레이션', '실감교육',
-
-    # 피지컬 AI
-    '피지컬AI', '피지컬 AI', 'Physical AI',
-    '지능형로봇', '지능형제조', '자율제조',
-
-    # 육안검사 / 검사 자동화
-    '육안검사', '검사자동화', '표면검사', '머신비전', 'AOI',
-
-    # 디지털트윈 확장
-    '가상공장', '공장디지털화', '디지털전환',
-    'CPS', '공정모니터링', '설비모니터링',
-
-    # 로봇 / 자율이동
-    '협동로봇', '자율주행로봇', '서비스로봇',
-    'AMR', 'AGV', '드론', 'UAV',
-
-    # 비전 검사 / 품질
-    '비전검사', '외관검사', '불량검출', '결함검출', '품질검사',
-    '비파괴검사', 'AI검사',
-
-    # 로봇시뮬레이션
-    '로봇시뮬레이션', '공정시뮬레이션', '가상환경',
-
-    # 에지AI / 플랫폼
-    '엣지AI', 'AI플랫폼',
-]
-
-# g2b API 검색용: 결과가 많은 핵심 키워드만 (나머지는 is_xr 필터로 걸림)
+# G2B API 검색 키워드
 G2B_KEYWORDS = [
     'AR', 'VR', 'XR', 'MR', 'HMD',
     '증강현실', '가상현실', '혼합현실', '확장현실',
@@ -75,6 +25,11 @@ G2B_KEYWORDS = [
     '스마트안전', '협동로봇', 'AMR', 'AGV', '드론',
     '피지컬AI', '컴퓨터비전', 'AI검사',
     '스마트글래스', '원격협업', '공정모니터링',
+    # AI 솔루션/플랫폼
+    '인공지능', 'AI플랫폼', 'AI솔루션', '엣지AI',
+    '영상인식', '영상분석', '비전AI', '딥러닝',
+    'AI기반', 'AI융합', 'AI시스템',
+    'AI', '지능형',
 ]
 
 def clean(v):
@@ -86,33 +41,55 @@ def clean(v):
 
 import re as _re
 # 영문 단독 키워드는 단어경계로 매칭, 한글은 포함 여부로 매칭
-_EN_KW = {'AR', 'VR', 'XR', 'MR', 'HMD', 'BIM', 'AMR', 'AGV', 'UAV', 'AOI'}
-_KO_KW = set(XR_KEYWORDS) - _EN_KW | {'디지털 트윈'}
 
-def is_xr(t):
-    for k in _EN_KW:
-        if _re.search(r'(?<![A-Za-z])' + k + r'(?![A-Za-z])', t):
-            return True
-    return any(k in t for k in _KO_KW)
 
 def category(title):
-    if any(k in title for k in ['군','국방','방위','전술','함정']): return 'MR/군사'
-    if any(k in title for k in ['안전','재해','사고','소방','구조','안전모','헬멧']): return 'AI/안전'
-    if any(k in title for k in ['물류','창고','배송','피킹']): return 'AR/물류'
-    if any(k in title for k in ['의료','수술','병원','해부','재활']): return 'VR/의료'
-    if any(k in title for k in ['트윈','디지털트윈','디지털 트윈','BIM','시설관리']): return '디지털트윈'
-    if any(k in title for k in ['스마트팩토리','스마트공장','제조','작업지시','설비점검','유지보수']): return '스마트팩토리'
-    if any(k in title for k in ['건설','스마트건설','현장','스마트시티']): return '스마트건설'
-    if any(k in title for k in ['교육','훈련','시뮬레이션','체험','학습']): return 'XR/교육훈련'
-    if any(k in title for k in ['피지컬AI','피지컬 AI','Physical AI','PhysicalAI','지능형로봇','지능형제조','자율제조']): return '피지컬AI'
-    if any(k in title for k in ['육안검사','검사자동화','표면검사','외관불량','인라인검사','스마트검사','무인검사']): return 'AI/비전검사'
-    if any(k in title for k in ['가상공장','가상플랜트','공장디지털화','제조디지털화','디지털전환','CPS','사이버물리','공정모니터링','설비모니터링']): return '디지털트윈'
-    if any(k in title for k in ['비전검사','외관검사','불량검출','결함검출','품질검사','머신비전','AOI','비파괴']): return 'AI/비전검사'
-    if any(k in title for k in ['시뮬레이션','가상시뮬레이션','로봇시뮬레이션','공정시뮬레이션','가상환경']): return 'XR/시뮬레이션'
-    return 'AR/XR'
+    t = title
 
+    # ── XR/AR ────────────────────────────────────────────
+    if any(k in t for k in ['증강현실','AR글래스','AR고글','스마트글래스','스마트안경',
+                             '홀로그램','HMD','헤드마운트','혼합현실','공간컴퓨팅']): return 'XR/AR'
+    if any(k in t for k in ['가상현실','VR']): return 'XR/AR'
+    if _re.search(r'(?<![A-Za-z])(?:AR|XR|MR)(?![A-Za-z])', t): return 'XR/AR'
 
-_NOW = datetime.now()
+    # ── 로봇 ─────────────────────────────────────────────
+    if any(k in t for k in ['협동로봇','자율주행로봇','서비스로봇','지능형로봇',
+                             '로봇시스템','로봇솔루션','로봇구축']): return '로봇'
+    if _re.search(r'(?<![A-Za-z])(?:AMR|AGV)(?![A-Za-z])', t): return '로봇'
+    if any(k in t for k in ['드론','UAV']) and not any(k in t for k in [
+        '드론 방제','드론방제','드론 촬영','드론촬영','드론 배송','드론배송',
+        '드론 순찰','항공감시','드론 대행','드론 행사','드론박람회']): return '로봇'
+
+    # ── AI ───────────────────────────────────────────────
+    if any(k in t for k in ['육안검사','검사자동화','표면검사','외관불량','인라인검사',
+                             '비전검사','외관검사','불량검출','결함검출','품질검사',
+                             '머신비전','AOI','비파괴']): return 'AI'
+    if any(k in t for k in ['스마트안전','안전관제','스마트헬멧','산업안전',
+                             '안전모니터링']): return 'AI'
+    if any(k in t for k in ['피지컬AI','피지컬 AI','Physical AI','PhysicalAI',
+                             '지능형제조','자율제조']): return 'AI'
+    if any(k in t for k in ['AI플랫폼','AI 플랫폼','엣지AI','엣지 AI','컴퓨터비전',
+                             '비전AI','영상인식','영상분석','AI솔루션','AI시스템',
+                             '인공지능','머신러닝','딥러닝']): return 'AI'
+
+    # ── 디지털트윈 ────────────────────────────────────────
+    if any(k in t for k in ['디지털트윈','디지털 트윈','BIM','가상공장','가상플랜트',
+                             '공장디지털화','CPS','사이버물리','공정모니터링',
+                             '설비모니터링']): return '디지털트윈'
+
+    # ── 스마트팩토리 ──────────────────────────────────────
+    if any(k in t for k in ['스마트팩토리','스마트공장','스마트제조','작업지시',
+                             '설비점검','유지보수','공정관리']): return '스마트팩토리'
+
+    # ── 시뮬레이션 ────────────────────────────────────────
+    if any(k in t for k in ['시뮬레이션','가상시뮬레이션','로봇시뮬레이션',
+                             '공정시뮬레이션','가상환경','가상훈련','교육훈련',
+                             '훈련','체험','실감교육']): return '시뮬레이션'
+
+    # ── fallback ─────────────────────────────────────────
+    return '기타'
+
+_NOW = now_kst()
 
 def _is_past(deadline_str):
     """마감일이 현재 시각보다 이전이면 True"""
@@ -144,7 +121,7 @@ def parse_items(items):
                       f"?bidNtceNo={no}&bidNtceOrd={ord_no}&re=Y")
         spec_url  = clean(item.get('ntceSpecDocUrl') or '')
         draft_url = clean(item.get('drftDocUrl')     or '')
-        rgst_dt   = clean(item.get('bidNtceDt')      or datetime.now().strftime('%Y-%m-%d'))
+        rgst_dt   = clean(item.get('bidNtceDt')      or now_kst().strftime('%Y-%m-%d'))
 
         # 개찰 정보
         open_dt   = clean(item.get('opengDt')   or '')
@@ -174,8 +151,7 @@ def parse_items(items):
             'postDate':     rgst_dt[:10],
             'contractType': clean(item.get('cntrctMthdNm') or '입찰'),
             'category':     category(title),
-            'keywords':     ([k for k in XR_KEYWORDS if _re.search(r'(?<![A-Za-z])'+k+r'(?![A-Za-z])', title) if k in _EN_KW] +
-                             [k for k in _KO_KW if k in title]),
+            'keywords':     [],
             'description':  clean(item.get('bidPurpsNm')   or title),
             'requirements': [],
             'url':          detail_url,
@@ -206,7 +182,7 @@ def parse_prespec_items(items, keyword):
         # ── 마감된 사전규격 즉시 제외 ──────────────────────
         if _is_past(deadline):
             continue
-        post_dt  = clean(item.get('rcptDt') or item.get('rgstDt') or datetime.now().strftime('%Y-%m-%d'))
+        post_dt  = clean(item.get('rcptDt') or item.get('rgstDt') or now_kst().strftime('%Y-%m-%d'))
         detail_url = f"https://www.g2b.go.kr:8101/ep/tbid/tbidSpec.do?bfSpecRgstnNo={no}"
         out.append({
             'id':           f'SPEC-{no}',
@@ -231,7 +207,7 @@ def parse_prespec_items(items, keyword):
     return out
 
 def fetch_g2b(session, keyword):
-    now   = datetime.now()
+    now   = now_kst()
     start = now - timedelta(days=DAYS)
     bgn   = start.strftime('%Y%m%d') + '0000'
     end   = now.strftime('%Y%m%d')   + '2359'
@@ -509,7 +485,7 @@ def fetch_bizinfo_keyword(session, keyword):
             for item in items:
                 title = clean(item.get('pblancNm') or item.get('title') or '')
                 pid   = str(item.get('pblancId') or item.get('id') or '')
-                if not title or not pid or pid in seen or not is_xr(title): continue
+                if not title or not pid or pid in seen: continue
                 seen.add(pid)
                 out.append({
                     'id': f'BIZ-{pid}', 'stage': '지원사업', 'title': title,
@@ -517,9 +493,9 @@ def fetch_bizinfo_keyword(session, keyword):
                     'demandAgency': '',
                     'budget':       clean(item.get('totPbancBdgt') or '미정'),
                     'deadline':     clean(item.get('reqstEndDt') or '-').replace('.', '-'),
-                    'postDate':     clean(item.get('pblancBgngDt') or datetime.now().strftime('%Y-%m-%d')).replace('.', '-'),
+                    'postDate':     clean(item.get('pblancBgngDt') or now_kst().strftime('%Y-%m-%d')).replace('.', '-'),
                     'contractType': '공모/지원', 'category': category(title),
-                    'keywords':     [k for k in XR_KEYWORDS if k in title],
+                    'keywords':     [],
                     'description':  clean(item.get('bsnsSumryCn') or title),
                     'requirements': [], 'specUrl': '', 'draftUrl': '', 'contact': '',
                     'url': f'https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId={pid}',
@@ -552,7 +528,7 @@ def fetch_bizinfo_keyword(session, keyword):
                 title = max((c for c in candidates if len(c) > 5
                              and c not in ['목록','이전','다음','확인','취소','닫기','스크랩','검색','공고명','접수마감']),
                             key=len, default='')
-                if not title or not is_xr(title): continue
+                if not title: continue
                 seen.add(pid)
                 dates = re.findall(r'(\d{4}[.\-]\d{2}[.\-]\d{2})', ctx)
                 bm = re.search(r'([\d,]+)\s*원', ctx)
@@ -561,9 +537,9 @@ def fetch_bizinfo_keyword(session, keyword):
                     'agency': '', 'demandAgency': '',
                     'budget': bm.group(0) if bm else '미정',
                     'deadline': dates[1].replace('.', '-') if len(dates) > 1 else '-',
-                    'postDate': dates[0].replace('.', '-') if dates else datetime.now().strftime('%Y-%m-%d'),
+                    'postDate': dates[0].replace('.', '-') if dates else now_kst().strftime('%Y-%m-%d'),
                     'contractType': '공모/지원', 'category': category(title),
-                    'keywords': [k for k in XR_KEYWORDS if k in title],
+                    'keywords': [],
                     'description': title, 'requirements': [],
                     'specUrl': '', 'draftUrl': '', 'contact': '',
                     'url': f'https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId={pid}',
@@ -581,7 +557,7 @@ def score_bid(b):
         dl = b.get('deadline', '-')
         if dl and dl != '-':
             dl_clean = dl[:10].replace('/', '-').replace('.', '-')
-            days_left = (datetime.strptime(dl_clean, '%Y-%m-%d') - datetime.now()).days
+            days_left = (datetime.strptime(dl_clean, '%Y-%m-%d') - now_kst()).days
             if   days_left <= 3:  score += 50
             elif days_left <= 7:  score += 40
             elif days_left <= 14: score += 20
@@ -604,10 +580,10 @@ def score_bid(b):
 
 
 def main():
-    print(f'[{datetime.now():%Y-%m-%d %H:%M}] XR 공고 수집 (최근 {DAYS}일)')
+    print(f'[{now_kst():%Y-%m-%d %H:%M}] XR 공고 수집 (최근 {DAYS}일)')
 
-    # ── keywords.json 오버라이드 (HTML에서 저장한 커스텀 키워드) ──
-    global G2B_KEYWORDS, XR_KEYWORDS
+    # ── keywords.json 오버라이드 ───────────────────────────
+    global G2B_KEYWORDS
     kw_path = 'data/keywords.json'
     if os.path.exists(kw_path):
         try:
@@ -615,17 +591,37 @@ def main():
             if kw.get('g2b') and isinstance(kw['g2b'], list):
                 G2B_KEYWORDS = kw['g2b']
                 print(f'  ✅ keywords.json 로드: G2B={len(G2B_KEYWORDS)}개')
-            if kw.get('xr') and isinstance(kw['xr'], list):
-                XR_KEYWORDS = kw['xr']
-                print(f'  ✅ keywords.json 로드: XR={len(XR_KEYWORDS)}개')
         except Exception as e:
             print(f'  ⚠️  keywords.json 로드 실패: {e}')
+
     sess = requests.Session()
     sess.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
                          'Accept': 'application/json, text/html'})
 
     all_bids, seen = [], set()
     lock_seen = __import__('threading').Lock()
+    save_lock  = __import__('threading').Lock()
+    last_saved = [0]  # 마지막 저장 시점의 건수
+
+    os.makedirs('data', exist_ok=True)
+
+    def save_partial(stage_label, status='running'):
+        """단계별 중간 결과를 bids.json에 저장 — HTML 폴링으로 실시간 표시"""
+        with save_lock:
+            xr_now = sorted(
+                list(all_bids),
+                key=score_bid, reverse=True
+            )
+            payload = {
+                'updatedAt': now_kst().strftime('%Y-%m-%d %H:%M:%S'),
+                'status':    status,       # 'running' | 'done'
+                'stage':     stage_label,  # 진행 단계 메시지
+                'total':     len(xr_now),
+                'bids':      xr_now,
+            }
+            json.dump(payload, open('data/bids.json', 'w', encoding='utf-8'),
+                      ensure_ascii=False, indent=2)
+            last_saved[0] = len(all_bids)
 
     def add(bids):
         n = 0
@@ -633,14 +629,20 @@ def main():
             for b in bids:
                 if b['id'] not in seen:
                     seen.add(b['id']); all_bids.append(b); n += 1
+        # 3건 이상 쌓이면 중간 저장
+        if n and (len(all_bids) - last_saved[0]) >= 3:
+            save_partial('① 나라장터 수집 중...')
         return n
 
-    now   = datetime.now()
+    # 수집 시작 알림
+    save_partial('⏳ 수집 시작...', status='running')
+
+    now   = now_kst()
     start = now - timedelta(days=DAYS)
     bgn   = start.strftime('%Y%m%d') + '0000'
     end   = now.strftime('%Y%m%d')   + '2359'
 
-    # ── 1단계: 나라장터 입찰공고 병렬 ──────────────────
+    # ── 1단계: 나라장터 입찰공고 ─────────────────────────
     print(f'\n[1단계] 나라장터 API (병렬, {len(G2B_KEYWORDS)}개 키워드)')
     t0 = time.time()
     with ThreadPoolExecutor(max_workers=8) as ex:
@@ -652,8 +654,9 @@ def main():
             except Exception as e:
                 print(f'  ⚠️  [{futs[f]}] {e}')
     print(f'  → {len(all_bids)}건 ({time.time()-t0:.1f}초)')
+    save_partial(f'② 사전규격 수집 중... (나라장터 {len(all_bids)}건 완료)')
 
-    # ── 1.5단계: 사전규격 병렬 ──────────────────────────
+    # ── 1.5단계: 사전규격 ────────────────────────────────
     print(f'\n[1.5단계] 사전규격 API (병렬, {len(G2B_KEYWORDS)}개 키워드)')
     t0 = time.time()
     ps_count = 0
@@ -667,14 +670,15 @@ def main():
             except Exception as e:
                 print(f'  ⚠️  사전규격[{futs[f]}] {e}')
     print(f'  → 사전규격 {ps_count}건 ({time.time()-t0:.1f}초)')
+    save_partial(f'③ bizinfo 수집 중... (총 {len(all_bids)}건)')
 
-    # ── 2단계: bizinfo 병렬 ──────────────────────────────
-    print(f'\n[2단계] bizinfo 검색 (병렬, {len(XR_KEYWORDS)}개 키워드)')
+    # ── 2단계: bizinfo ───────────────────────────────────
+    print(f'\n[2단계] bizinfo 검색 (병렬, {len(G2B_KEYWORDS)}개 키워드)')
     t0 = time.time()
     bizinfo_all, biz_seen = [], set()
     biz_lock = __import__('threading').Lock()
     with ThreadPoolExecutor(max_workers=4) as ex:
-        futs = {ex.submit(fetch_bizinfo_keyword, sess, kw): kw for kw in XR_KEYWORDS}
+        futs = {ex.submit(fetch_bizinfo_keyword, sess, kw): kw for kw in G2B_KEYWORDS}
         for f in as_completed(futs):
             try:
                 bids = f.result()
@@ -685,15 +689,15 @@ def main():
             except Exception: pass
     print(f'  → bizinfo {len(bizinfo_all)}건 ({time.time()-t0:.1f}초)')
 
-    # bizinfo URL로 g2b URL 보완
     title_to_biz_url = {b['title']: b['url'] for b in bizinfo_all}
     for b in all_bids:
         if b['source'] == 'g2b':
             matched = title_to_biz_url.get(b['title'])
             if matched: b['url'] = matched
     add(bizinfo_all)
+    save_partial(f'④ 첨부파일 수집 중... (총 {len(all_bids)}건)')
 
-    # ── 3단계: 나라장터 공고 상세 스크래핑 (첨부파일) ──────
+    # ── 3단계: 상세 스크래핑 ────────────────────────────
     g2b_bids = [b for b in all_bids if b['source'] == 'g2b' and b['stage'] == '입찰공고']
     print(f'\n[3단계] 공고 상세 스크래핑 ({len(g2b_bids)}건)')
     t0 = time.time()
@@ -709,30 +713,35 @@ def main():
             done[0] += 1
             if done[0] % 5 == 0:
                 print(f'  상세 {done[0]}/{len(g2b_bids)}건...')
+                save_partial(f'④ 첨부파일 수집 중... ({done[0]}/{len(g2b_bids)}건)')
 
     with ThreadPoolExecutor(max_workers=6) as ex:
         list(ex.map(enrich, g2b_bids))
     print(f'  → 완료 ({time.time()-t0:.1f}초)')
 
-    # ── 최종 필터 + 정렬 ────────────────────────────────
-    xr = [b for b in all_bids if is_xr(b['title'])]
-    if not xr and all_bids: xr = all_bids
-
-    # 점수 기준 내림차순 정렬
+    # ── 최종 저장 ────────────────────────────────────────
+    xr = list(all_bids)
     xr.sort(key=score_bid, reverse=True)
-
     print(f'\n전체: {len(all_bids)}건, XR: {len(xr)}건')
 
-    os.makedirs('data', exist_ok=True)
     if not xr:
         if os.path.exists('data/bids.json'):
             cached = json.load(open('data/bids.json', encoding='utf-8'))
             if cached.get('total', 0) > 0:
-                cached['updatedAt'] = datetime.now().strftime('%Y-%m-%d %H:%M') + ' (캐시)'
+                cached['updatedAt'] = now_kst().strftime('%Y-%m-%d %H:%M')
+                cached['status'] = 'done'
+                cached['stage']  = '완료 (캐시)'
                 json.dump(cached, open('data/bids.json','w',encoding='utf-8'), ensure_ascii=False, indent=2)
                 print('0건 — 기존 캐시 유지'); return
-    out = {'updatedAt': datetime.now().strftime('%Y-%m-%d %H:%M'), 'total': len(xr), 'bids': xr}
-    json.dump(out, open('data/bids.json','w',encoding='utf-8'), ensure_ascii=False, indent=2)
+
+    out = {
+        'updatedAt': now_kst().strftime('%Y-%m-%d %H:%M'),
+        'status':    'done',
+        'stage':     f'✅ 완료 — {len(xr)}건',
+        'total':     len(xr),
+        'bids':      xr,
+    }
+    json.dump(out, open('data/bids.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
     print(f'✅ 저장: {len(xr)}건')
 
 if __name__ == '__main__':
