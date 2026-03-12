@@ -117,8 +117,10 @@ def parse_items(items):
         amt    = str(item.get('presmptPrce') or '')
         budget = f"{int(amt):,}원" if amt.isdigit() and int(amt) > 0 else '미정'
 
-        detail_url = (f"https://www.g2b.go.kr:8101/ep/tbid/tbidFwd.do"
-                      f"?bidNtceNo={no}&bidNtceOrd={ord_no}&re=Y")
+        # 새 G2B 공고 URL 형식
+        ord_pad    = ord_no.zfill(3)
+        detail_url = (f"https://www.g2b.go.kr/link/PNPE027_01/single/"
+                      f"?bidPbancNo={no}&bidPbancOrd={ord_pad}")
         spec_url  = clean(item.get('ntceSpecDocUrl') or '')
         draft_url = clean(item.get('drftDocUrl')     or '')
         rgst_dt   = clean(item.get('bidNtceDt')      or now_kst().strftime('%Y-%m-%d'))
