@@ -383,7 +383,47 @@ function saveGhRepo() {
   ghRepo = val; localStorage.setItem(STORAGE_KEY_REPO, val);
   document.getElementById('repo-status').textContent = '✅ ' + val;
 }
-function saveAnalyses() { localStorage.setItem(STORAGE_KEY_CACHE, JSON.stringify(analyses)); }
+function saveAnalyses() {
+  localStorage.setItem(STORAGE_KEY_CACHE, JSON.stringify(analyses));
+  pushAnalysesToGitHub().catch(()=>{});
+}
+
+async function pushAnalysesToGitHub() {
+  if (!ghToken || !ghRepo) return;
+  const path    = 'data/analyses.json';
+  const apiBase = `https://api.github.com/repos/${ghRepo}/contents/${path}`;
+  const headers = {
+    'Authorization': `Bearer ${ghToken}`,
+    'Accept':        'application/vnd.github+json',
+    'Content-Type':  'application/json'
+  };
+  const payload = { updatedAt: new Date().toISOString(), analyses };
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(payload, null, 2))));
+  let sha = '';
+  try { const r = await fetch(apiBase, {headers}); if(r.ok) sha = (await r.json()).sha; } catch(e){}
+  const body = { message:`분석 저장 (${new Date().toLocaleDateString('ko-KR')})`, content, ...(sha?{sha}:{}) };
+  await fetch(apiBase, {method:'PUT', headers, body:JSON.stringify(body)});
+}
+
+async function loadAnalysesFromGitHub() {
+  if (!ghRepo) return;
+  try {
+    const rawUrl = `https://raw.githubusercontent.com/${ghRepo}/main/data/analyses.json`;
+    const res = await fetch(rawUrl + '?t=' + Date.now());
+    if (!res.ok) return;
+    const data = await res.json();
+    if (data.analyses && typeof data.analyses === 'object') {
+      for (const [id, val] of Object.entries(data.analyses)) {
+        if (!analyses[id] || (val.savedAt && (!analyses[id].savedAt || val.savedAt > analyses[id].savedAt))) {
+          analyses[id] = val;
+        }
+      }
+      localStorage.setItem(STORAGE_KEY_CACHE, JSON.stringify(analyses));
+      updateBadge();
+      if (selectedId) refreshAnalysisPanel(selectedId);
+    }
+  } catch(e) {}
+}
 
 // ── 키워드 관리 함수들 ─────────────────────────────────────
 function updateKwBadge() {
@@ -641,6 +681,8 @@ async function loadBids() {
     if (data.updatedAt) document.getElementById('last-updated').textContent='최종 수집: '+data.updatedAt;
     rebuildCatFilter(); renderList(); updateBadge();
     if (BIDS.length>0) document.getElementById('empty-state').style.display='none';
+    // 서버 분석 결과 병합 로드
+    loadAnalysesFromGitHub();
   } catch(e) { console.error('bids.json 로드 실패:',e); }
 }
 
