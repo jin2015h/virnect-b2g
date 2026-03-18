@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T09:15:27.708Z",
+  "updatedAt": "2026-03-18T09:15:40.702Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -4774,6 +4774,23 @@
       "strategy": "AR/XR 접목 방안",
       "summary": "AR/XR 기여 가능, 연관성 강조 필요.",
       "savedAt": 1773825327705
+    },
+    "G2B-R26BK01401569": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "스마트고글 제품",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "백신사업 경험 부족",
+        "사업계획 전문성 부족",
+        "산업분야 불일치"
+      ],
+      "strategy": "컨소시엄 구성",
+      "summary": "AR/XR과 무관, 백신 사업계획 전문성 부족.",
+      "savedAt": 1773825340700
     }
   }
 }
