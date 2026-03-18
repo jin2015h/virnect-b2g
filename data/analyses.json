@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T09:15:15.634Z",
+  "updatedAt": "2026-03-18T09:15:27.708Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -4758,6 +4758,22 @@
       "strategy": "파트너십 구축, AR/XR 활용 제안, 운영 역량 강조",
       "summary": "AR/XR 기업으로 AI 경진대회 운영은 핵심 사업과 불일치하여 수주 가능성이 낮음.",
       "savedAt": 1773825315632
+    },
+    "G2B-R26BK01382331": {
+      "probability": 60,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술력",
+        "공간인식 기술",
+        "디지털트윈 활용"
+      ],
+      "weaknesses": [
+        "핵심기술 불일치",
+        "직접 연관성 부족"
+      ],
+      "strategy": "AR/XR 접목 방안",
+      "summary": "AR/XR 기여 가능, 연관성 강조 필요.",
+      "savedAt": 1773825327705
     }
   }
 }
