@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T09:16:20.866Z",
+  "updatedAt": "2026-03-18T09:16:29.124Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -4858,6 +4858,23 @@
       "strategy": "Twin 활용, AR/XR 시뮬 강화, 도메인 협력 고려",
       "summary": "디지털 트윈 적합, 주행 시뮬 특화 역량 강조 필요.",
       "savedAt": 1773825380862
+    },
+    "G2B-R26BK01397894": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "원격협업 솔루션",
+        "디지털트윈"
+      ],
+      "weaknesses": [
+        "AGV 직접 공급X",
+        "사업영역 불일치",
+        "하드웨어 미보유"
+      ],
+      "strategy": "AGV 협력사 모색",
+      "summary": "AGV 구매 건으로 VIRNECT 사업영역과 불일치하여 수주 가능성 매우 낮음.",
+      "savedAt": 1773825389121
     }
   }
 }
