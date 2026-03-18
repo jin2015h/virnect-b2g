@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T09:21:06.002Z",
+  "updatedAt": "2026-03-18T09:21:16.191Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5315,6 +5315,22 @@
       "strategy": "해외진출 계획 구체화",
       "summary": "해외진출 지원 적합, 선정 가능성 높음",
       "savedAt": 1773825666002
+    },
+    "BIZ-PBLN_000000000119677": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술력 우수",
+        "제품 혁신성 높음",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "직접 수주 아님",
+        "예산 미정 불확실"
+      ],
+      "strategy": "AR/XR 혁신 제안",
+      "summary": "AR/XR 기술 적합, 컨설팅 참여 기여 가능성 높음.",
+      "savedAt": 1773825676190
     }
   }
 }
