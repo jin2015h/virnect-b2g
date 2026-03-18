@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T09:21:16.191Z",
+  "updatedAt": "2026-03-18T09:21:28.106Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5331,6 +5331,22 @@
       "strategy": "AR/XR 혁신 제안",
       "summary": "AR/XR 기술 적합, 컨설팅 참여 기여 가능성 높음.",
       "savedAt": 1773825676190
+    },
+    "BIZ-PBLN_000000000119675": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "첨단 AR/XR 기술",
+        "상장사 높은 신뢰",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "사업목적 불일치",
+        "로컬창업과 거리"
+      ],
+      "strategy": "기술 멘토링 제안",
+      "summary": "직접 연관성 부족, 간접 참여 모색",
+      "savedAt": 1773825688106
     }
   }
 }
