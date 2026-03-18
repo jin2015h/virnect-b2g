@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T09:20:13.700Z",
+  "updatedAt": "2026-03-18T09:20:24.319Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5226,6 +5226,24 @@
       "strategy": "AR/XR 접목 제안, 혁신 학습 강조, 기술력 기반 접근",
       "summary": "AI 교육 AR/XR 접목 기회",
       "savedAt": 1773825613699
+    },
+    "G2B-R26BK01370373": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "KAIST 혁신성 부합",
+        "원격협업 솔루션",
+        "스마트글래스 활용",
+        "재공고 기회 활용"
+      ],
+      "weaknesses": [
+        "핵심 SI와 거리",
+        "의료 IT 경험 부족",
+        "경쟁사 우위 가능"
+      ],
+      "strategy": "AR/XR 혁신 제안, SI 연계 가치 강조.",
+      "summary": "KAIST 혁신성 부각, AR/XR 연계 제안.",
+      "savedAt": 1773825624319
     }
   }
 }
