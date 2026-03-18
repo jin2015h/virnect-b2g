@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T09:17:47.358Z",
+  "updatedAt": "2026-03-18T09:17:57.503Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -4993,6 +4993,23 @@
       "strategy": "AI 전문기업 협력",
       "summary": "AI 인프라 연관성 낮음",
       "savedAt": 1773825467357
+    },
+    "G2B-R26BK01401718": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "엣지 컴퓨팅",
+        "AI 활용 경험"
+      ],
+      "weaknesses": [
+        "위성영상 전문성 부족",
+        "빅데이터 검색",
+        "AI 연구 분야 불일치"
+      ],
+      "strategy": "협력사 발굴",
+      "summary": "AR/XR 기업으로 위성영상 AI 연구와 직접 연관성 낮음.",
+      "savedAt": 1773825477501
     }
   }
 }
