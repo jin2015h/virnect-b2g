@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T09:18:32.034Z",
+  "updatedAt": "2026-03-18T09:18:44.707Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5058,6 +5058,23 @@
       "strategy": "IT 감리 역량 부각",
       "summary": "핵심 사업과 괴리",
       "savedAt": 1773825512034
+    },
+    "G2B-R26BK01401778": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "원격협업 효율성",
+        "디지털트윈 활용",
+        "현장조사 지원",
+        "AR/XR 기술력"
+      ],
+      "weaknesses": [
+        "ITS 도메인 지식",
+        "타당성조사 경험"
+      ],
+      "strategy": "ITS 전문기업 협력",
+      "summary": "원격협업 강점, ITS 전문성 보완.",
+      "savedAt": 1773825524706
     }
   }
 }
