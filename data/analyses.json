@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T09:14:13.634Z",
+  "updatedAt": "2026-03-18T09:14:26.798Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -4673,6 +4673,23 @@
       "strategy": "AR/XR로 GMP 혁신 제안",
       "summary": "AR/XR로 GMP 관리 혁신",
       "savedAt": 1773825253633
+    },
+    "G2B-R26BK01399310": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술 적합",
+        "실습 교육 가능",
+        "혁신적 교육 방식",
+        "산업 전문성 보유"
+      ],
+      "weaknesses": [
+        "교육 운영 경험 부족",
+        "커리큘럼 개발 필요"
+      ],
+      "strategy": "AR/XR 활용, 실습 강조, 교육 협력",
+      "summary": "AR/XR 기술로 스마트공장 교육에 최적, 수주 유력.",
+      "savedAt": 1773825266797
     }
   }
 }
