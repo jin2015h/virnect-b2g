@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T09:17:57.503Z",
+  "updatedAt": "2026-03-18T09:18:08.356Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5010,6 +5010,22 @@
       "strategy": "협력사 발굴",
       "summary": "AR/XR 기업으로 위성영상 AI 연구와 직접 연관성 낮음.",
       "savedAt": 1773825477501
+    },
+    "G2B-R26BK01402541": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 전문기업",
+        "상장사 신뢰도",
+        "산업용 솔루션"
+      ],
+      "weaknesses": [
+        "AGI 원천기술↓",
+        "기초연구 경험↓"
+      ],
+      "strategy": "AGI 연구기관 협력",
+      "summary": "AR/XR 전문, AGI 연구와 분야 불일치.",
+      "savedAt": 1773825488354
     }
   }
 }
