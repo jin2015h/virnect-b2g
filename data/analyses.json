@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T09:20:43.785Z",
+  "updatedAt": "2026-03-18T09:20:53.314Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5282,6 +5282,22 @@
       "strategy": "참여 재고",
       "summary": "핵심 역량과 발주처 요구사항 불일치.",
       "savedAt": 1773825643784
+    },
+    "G2B-R26BK01394637": {
+      "probability": 40,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 선도기업",
+        "AI 기술력 보유",
+        "디지털트윈 활용"
+      ],
+      "weaknesses": [
+        "직접 연관성 낮음",
+        "CCTV 전문성 부족"
+      ],
+      "strategy": "디지털트윈 연계",
+      "summary": "기술 활용 가능성",
+      "savedAt": 1773825653313
     }
   }
 }
