@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T09:21:45.094Z",
+  "updatedAt": "2026-03-18T09:21:54.699Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5381,6 +5381,23 @@
       "strategy": "참여 부적합",
       "summary": "AR/XR과 사업 불일치. 수주 가능성 낮음.",
       "savedAt": 1773825705093
+    },
+    "BIZ-PBLN_000000000119668": {
+      "probability": 0,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "산업용 솔루션",
+        "원격협업 특화"
+      ],
+      "weaknesses": [
+        "사업 연관성 전무",
+        "제품군 부적합",
+        "B2C/소상공인 無"
+      ],
+      "strategy": "입찰 불참 권고",
+      "summary": "사업 연관성 전무, 입찰 부적합",
+      "savedAt": 1773825714697
     }
   }
 }
