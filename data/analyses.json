@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T09:16:58.138Z",
+  "updatedAt": "2026-03-18T09:17:08.235Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -4910,6 +4910,23 @@
       "strategy": "드론업체와 협력",
       "summary": "AR/XR-드론 불일치. 드론업체 협력 필수.",
       "savedAt": 1773825418135
+    },
+    "G2B-R26BK01398738": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "첨단 AR/XR 기술",
+        "디지털트윈 역량",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "컨설팅 경험 부족",
+        "드론산업 기획↓"
+      ],
+      "strategy": "기획사 협력 제안",
+      "summary": "AR/XR-드론 기획 불일치",
+      "savedAt": 1773825428234
     }
   }
 }
