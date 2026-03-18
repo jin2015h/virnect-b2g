@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T09:18:08.356Z",
+  "updatedAt": "2026-03-18T09:18:20.858Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5026,6 +5026,22 @@
       "strategy": "AGI 연구기관 협력",
       "summary": "AR/XR 전문, AGI 연구와 분야 불일치.",
       "savedAt": 1773825488354
+    },
+    "G2B-R26BK01395949": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "시각 데이터 처리 강점",
+        "디지털트윈 연관성",
+        "AR/XR 기술 활용"
+      ],
+      "weaknesses": [
+        "AI 데이터 전문성 부족",
+        "예산 규모 상대적 소액"
+      ],
+      "strategy": "AR/XR 기반 영상DB 제안",
+      "summary": "AR/XR 기술로 영상DB 구축",
+      "savedAt": 1773825500856
     }
   }
 }
