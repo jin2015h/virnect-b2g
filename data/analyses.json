@@ -1,0 +1,4629 @@
+{
+  "updatedAt": "2026-03-18T09:13:44.680Z",
+  "analyses": {
+    "G2B-R26BK01343615": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 전문성",
+        "메타버스 기술",
+        "군사 분야 적합",
+        "다양한 제품군"
+      ],
+      "weaknesses": [
+        "경쟁 심화 우려",
+        "군사 경험 미확인"
+      ],
+      "strategy": "기술력 및 맞춤 제안",
+      "summary": "메타버스 사업에 최적",
+      "savedAt": 1772661825233
+    },
+    "G2B-R26BK01360171": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 시각화 강점",
+        "디지털트윈 연계",
+        "스마트건설 분류"
+      ],
+      "weaknesses": [
+        "초분광 기술 부재",
+        "농업 전문성 부족",
+        "드론 영상처리 미흡",
+        "예산 규모 소액"
+      ],
+      "strategy": "AR/DT 시각화 제안, 전문기업과 협력, 스마트건설 확장",
+      "summary": "핵심기술 불일치, 수주난",
+      "savedAt": 1772662916518
+    },
+    "G2B-R26BK01349119": {
+      "probability": 40,
+      "grade": "C",
+      "strengths": [
+        "XR 기술력 보유",
+        "AR/VR 교육 적합",
+        "스마트고글 활용"
+      ],
+      "weaknesses": [
+        "소규모 예산",
+        "산업용 솔루션",
+        "교육 콘텐츠 경험↓"
+      ],
+      "strategy": "기술력 기반 맞춤 제안",
+      "summary": "XR 강점, 예산/교육 약점",
+      "savedAt": 1772662957965
+    },
+    "G2B-R26BK01342794": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 전문성",
+        "스마트고글 보유",
+        "원격협업 솔루션",
+        "디지털트윈 기술",
+        "통합관리 역량"
+      ],
+      "weaknesses": [
+        "분류 불일치 우려",
+        "스포츠 특화 경험",
+        "경쟁사 출현 가능"
+      ],
+      "strategy": "AR/XR 강점 부각 및 분류 연계",
+      "summary": "AR/XR 기술로 스포츠실 관리 강점. 분류 극복.",
+      "savedAt": 1772663434145
+    },
+    "G2B-R26BK01353306": {
+      "probability": 80,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 전문기업",
+        "코스닥 상장사",
+        "다양한 솔루션",
+        "대회 운영 지원",
+        "디지털트윈 활용"
+      ],
+      "weaknesses": [
+        "VR 직접 경험 부족",
+        "운영 용역 경험",
+        "경쟁 심화"
+      ],
+      "strategy": "AR/XR 강점 부각, VR 연계성 강조, 맞춤형 솔루션 제안, 기술력 및 안정성",
+      "summary": "AR/XR 전문성 강점, VR 연계 솔루션 제시 중요.",
+      "savedAt": 1772663443438
+    },
+    "G2B-R26BK01359980": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "XR 기술력 우수",
+        "산업안전 연관성",
+        "교육훈련 분야 적합"
+      ],
+      "weaknesses": [
+        "운영관리 경험 부족",
+        "VR 체험 특화 부족"
+      ],
+      "strategy": "XR 강점, 안전 교육 특화, 운영 파트너십",
+      "summary": "XR 강점, 운영 보완 시 수주",
+      "savedAt": 1772663452914
+    },
+    "G2B-R26BK01368861": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "XR 전문성 보유",
+        "교육훈련 분야 강점",
+        "디지털트윈 활용"
+      ],
+      "weaknesses": [
+        "VR 콘텐츠 제작",
+        "AR 중심 제품군"
+      ],
+      "strategy": "VR 콘텐츠 역량 강화",
+      "summary": "XR 강점, VR 제작 보완 필요",
+      "savedAt": 1772663461991
+    },
+    "G2B-R26BK01364740": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "제품 적합성 우수",
+        "AR/XR 기술력",
+        "스마트팩토리 부합"
+      ],
+      "weaknesses": [
+        "경쟁 심화 우려",
+        "교육/컨설팅 경험"
+      ],
+      "strategy": "GMP 특화 솔루션 제안",
+      "summary": "제품 적합성 높아 수주 유력",
+      "savedAt": 1772663471824
+    },
+    "G2B-R26BK01364696": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술력",
+        "스마트팩토리 적합",
+        "디지털트윈 연계",
+        "원격협업 솔루션",
+        "연구기관 발주"
+      ],
+      "weaknesses": [
+        "AMR 직접 제조X",
+        "경쟁사 존재"
+      ],
+      "strategy": "AMR 연동 강점 부각",
+      "summary": "VIRNECT AR/XR, AMR 공정 최적화",
+      "savedAt": 1772663482880
+    },
+    "G2B-R26BK01351889": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "디지털트윈 제품",
+        "AR/XR 전문 기술",
+        "코스닥 상장사",
+        "관련 제품 시너지"
+      ],
+      "weaknesses": [
+        "경쟁사 존재",
+        "공공사업 특수성",
+        "대규모 통합 난이도"
+      ],
+      "strategy": "Twin 강조, AR/XR 시너지, 공공 경험",
+      "summary": "VIRNECT, 디지털트윈/AR 기술력으로 수주 유력",
+      "savedAt": 1772663491386
+    },
+    "G2B-R26BK01343935": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 전문성",
+        "디지털트윈 강점",
+        "원격협업 솔루션",
+        "물류/AR 분류 일치",
+        "공공기관 발주"
+      ],
+      "weaknesses": [
+        "드론 전문성 부족",
+        "경쟁사 존재",
+        "기술 통합 난이도"
+      ],
+      "strategy": "DT/AR 기술 활용 및 협력",
+      "summary": "VIRNECT DT/AR, 드론 배송 적합, 수주 유력",
+      "savedAt": 1772663501730
+    },
+    "G2B-R26BK01348415": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 전문 기업",
+        "제품 활용성 우수",
+        "발주처 기술 관심"
+      ],
+      "weaknesses": [
+        "행사 위탁 경험?",
+        "경쟁 심화 가능"
+      ],
+      "strategy": "AR/XR 특화 제안",
+      "summary": "AR/XR 전문성으로 유리",
+      "savedAt": 1772663511112
+    },
+    "G2B-R26BK01350963": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "Twin 제품 적합성",
+        "AR/XR 기술력",
+        "코스닥 상장사",
+        "BIM 연계 강점"
+      ],
+      "weaknesses": [
+        "예산 규모 보통",
+        "BIM 전문성 확인"
+      ],
+      "strategy": "Twin 강조, AR/XR 시너지",
+      "summary": "VIRNECT는 BIM-디지털트윈 사업에 매우 적합, 수주 가능성 높음.",
+      "savedAt": 1772663519999
+    },
+    "G2B-R26BK01348570": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술력",
+        "원격 협업 솔루션",
+        "디지털 트윈 활용"
+      ],
+      "weaknesses": [
+        "행사 위탁 경험 부족",
+        "경쟁 심화 가능성"
+      ],
+      "strategy": "AR/XR 안전성 강조",
+      "summary": "AR/XR 드론 안전 최적",
+      "savedAt": 1772663528154
+    },
+    "G2B-R26BK01351219": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 전문성",
+        "제품 적합성",
+        "정부기관 경험",
+        "분류 일치"
+      ],
+      "weaknesses": [
+        "드론 직접 연관성 부족",
+        "경쟁사 존재"
+      ],
+      "strategy": "AR/XR로 드론감시 효율 증대, 원격협업 강조",
+      "summary": "AR/XR 전문성, 원격협업 솔루션으로 드론 환경감시 효율 증대. 발주처 분류 일치.",
+      "savedAt": 1772663545196
+    },
+    "G2B-R26BK01362225": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 전문기업",
+        "다양한 제품군",
+        "계약분류와 일치",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "드론 운영 경험 부족",
+        "예산 제약 가능성"
+      ],
+      "strategy": "AR/XR 강점 부각 및 드론 협력 제안",
+      "summary": "AR/XR 계약에 버넥트 기술 활용 가능성 높음",
+      "savedAt": 1772663556165
+    },
+    "G2B-R26BK01362328": {
+      "probability": 55,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 전문기업",
+        "원격협업 솔루션",
+        "다양한 제품군",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "드론방역 경험 부족",
+        "직접 연관성 낮음",
+        "예산 규모 소액"
+      ],
+      "strategy": "AR/XR 효율성 강조, 원격 모니터링 제안, 드론업체와 협력",
+      "summary": "AR/XR로 드론방역 혁신 제안, 경험 보완 필요.",
+      "savedAt": 1772663567667
+    },
+    "G2B-R26BK01363458": {
+      "probability": 25,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 전문성",
+        "산업 인지도 높음",
+        "메타버스 이해도"
+      ],
+      "weaknesses": [
+        "용역 성격 불일치",
+        "주력 사업과 상이",
+        "조사 역량 부족"
+      ],
+      "strategy": "조사 전문기관 협력",
+      "summary": "AR/XR 기업, 조사 용역과 불일치.",
+      "savedAt": 1772663576961
+    },
+    "G2B-R26BK01355132": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "XR 전문기업",
+        "제품군 다양",
+        "기술력 우수"
+      ],
+      "weaknesses": [
+        "운영 경험 부족",
+        "예산 규모"
+      ],
+      "strategy": "운영 파트너십 및 맞춤형 솔루션으로 예산 효율성 강조",
+      "summary": "VIRNECT, XR 적합. 운영 경험 보완 및 예산 전략 필요.",
+      "savedAt": 1772663588602
+    },
+    "G2B-R26BK01350022": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "Twin 솔루션 보유",
+        "디지털트윈 일치",
+        "AR/XR 기술력"
+      ],
+      "weaknesses": [
+        "설계 전문성 부족",
+        "예산 규모 보통",
+        "경쟁사 존재"
+      ],
+      "strategy": "BIM 연동 및 협력",
+      "summary": "Twin 솔루션 강점, 설계 보완",
+      "savedAt": 1772663595208
+    },
+    "G2B-R26BK01367283": {
+      "probability": 55,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 전문성",
+        "원격협업 강점",
+        "디지털트윈 기술",
+        "다양한 제품군",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "로봇 직접 공급X",
+        "농업 경험 부족",
+        "사업 범위 불확실",
+        "예산 규모 제한"
+      ],
+      "strategy": "사업범위 명확화, AR/XR 제안",
+      "summary": "AR/XR 접목 가능. 로봇/농업 특화.",
+      "savedAt": 1772663615424
+    },
+    "G2B-R26BK01349224": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 전문기업",
+        "제품군 적합성",
+        "정부기관 발주",
+        "미래 사업 기회"
+      ],
+      "weaknesses": [
+        "교정 전문성 필요",
+        "경쟁사 존재"
+      ],
+      "strategy": "AR/XR 활용 강조",
+      "summary": "높은 수주 가능성",
+      "savedAt": 1772663623559
+    },
+    "G2B-R26BK01356612": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 전문성",
+        "원격협업 솔루션",
+        "스마트고글 활용",
+        "디지털트윈 연계",
+        "정부기관 발주"
+      ],
+      "weaknesses": [
+        "드론 직접운영X",
+        "예산 규모 보통",
+        "경쟁사 존재"
+      ],
+      "strategy": "드론업체와 협력, AR/XR 가치 강조, 실시간 협업 시연, 환경감시 특화 제안",
+      "summary": "AR/XR 기술로 드론 감시 효율 증대, 협력 시 수주 유력.",
+      "savedAt": 1772663633689
+    },
+    "G2B-R26BK01356660": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 전문성",
+        "제품군 다양",
+        "원격협업 가능",
+        "디지털트윈 연계",
+        "상장사 신뢰도"
+      ],
+      "weaknesses": [
+        "드론 운영 경험 부족",
+        "예산 규모 경쟁",
+        "경쟁 심화"
+      ],
+      "strategy": "AR/XR 활용 강조, 파트너십 제안, 유사 사례 제시, 비용 효율성",
+      "summary": "VIRNECT AR/XR, 드론 감시 효율 증대, 수주 유력.",
+      "savedAt": 1772663642782
+    },
+    "G2B-R26BK01361841": {
+      "probability": 55,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 전문기업",
+        "기술력 우수",
+        "사업분류 일치"
+      ],
+      "weaknesses": [
+        "연출 경험 부족",
+        "예산 규모 작음",
+        "주력 사업 불일치"
+      ],
+      "strategy": "파트너십 제안, AR/XR 활용 강조, 기술 차별화, 긴급 대응력 어필",
+      "summary": "AR/XR 기술 강점, 연출 경험 약점. 파트너십 통한 수주 전략 필요.",
+      "savedAt": 1772663654256
+    },
+    "G2B-R26BK01369072": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 전문성",
+        "디지털트윈 기술",
+        "공간정보 활용"
+      ],
+      "weaknesses": [
+        "DB 구축 역량 부족",
+        "소규모 예산"
+      ],
+      "strategy": "DB 활용 AR/XR 제안 및 파트너십 구축",
+      "summary": "AR/XR 적합, 예산/DB 구축 보완",
+      "savedAt": 1772663664799
+    },
+    "G2B-R26BK01368261": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "디지털트윈 전문성",
+        "AR/XR 기술력",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "예산 규모 작음",
+        "AI 직접 전문성"
+      ],
+      "strategy": "디지털트윈 역량 강조",
+      "summary": "VIRNECT 디지털트윈, 국방부 연구 적합, AR/XR 시너지로 수주 가능성 높음.",
+      "savedAt": 1772663673551
+    },
+    "G2B-R26BK01364481": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "XR/교육훈련 분류",
+        "디지털트윈 연계",
+        "시뮬레이션 시각화"
+      ],
+      "weaknesses": [
+        "모델개발 전문성",
+        "예산 규모"
+      ],
+      "strategy": "XR 시각화 강조, Twin 플랫폼 활용, 전문기업과 협력",
+      "summary": "XR 분류 기회, Twin 활용",
+      "savedAt": 1772663683272
+    },
+    "G2B-R26BK01352783": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 전문기업",
+        "디지털트윈 기술",
+        "다양한 제품군",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "예산 규모 작음",
+        "원자력 특수성",
+        "경쟁사 존재"
+      ],
+      "strategy": "디지털트윈 기술 강조",
+      "summary": "기술 적합성 높아 수주 유력",
+      "savedAt": 1772663693693
+    },
+    "G2B-R26BK01352888": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 핵심 기술",
+        "Twin 제품 적합성",
+        "코스닥 상장사",
+        "산업용 AR 경험"
+      ],
+      "weaknesses": [
+        "원자력 특화 경험",
+        "경쟁사 존재"
+      ],
+      "strategy": "Twin 활용 강조, AR 시각화 제안, 산업 신뢰성 부각, 단계별 접근 제안",
+      "summary": "VIRNECT 기술이 연구 과제에 매우 적합하여 수주 가능성 높음.",
+      "savedAt": 1772663701692
+    },
+    "G2B-R26BK01347850": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 전문성",
+        "다양한 제품군",
+        "교육청 수요 부합",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "드론코더 특화",
+        "경쟁사 존재"
+      ],
+      "strategy": "드론 교육 특화 제안",
+      "summary": "VIRNECT AR/XR, 드론 교육 적합. 수주 유력.",
+      "savedAt": 1772663710320
+    },
+    "G2B-R26BK01358044": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "디지털트윈 제품",
+        "AR/XR 기술력",
+        "혁신 솔루션"
+      ],
+      "weaknesses": [
+        "우주항공 전문성",
+        "경쟁사 존재"
+      ],
+      "strategy": "우주항공 맞춤 제안",
+      "summary": "DT기술력 기반 수주 유력",
+      "savedAt": 1772663718725
+    },
+    "G2B-R26BK01351039": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "XR/교육훈련 분류",
+        "원격협업/디지털트윈",
+        "기술력 우수"
+      ],
+      "weaknesses": [
+        "핵심사업 불일치",
+        "드론교육 경험 부족",
+        "시설운영 경험 부족"
+      ],
+      "strategy": "전문업체 협력, XR강조",
+      "summary": "핵심사업 불일치, 협력필요",
+      "savedAt": 1772663728676
+    },
+    "G2B-R26BK01374849": {
+      "probability": 90,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 전문성",
+        "제품군 다양성",
+        "공공기관 경험",
+        "기술 적합성"
+      ],
+      "weaknesses": [
+        "경쟁 심화",
+        "보고서 연계 필요"
+      ],
+      "strategy": "보고서 시각화, 협업",
+      "summary": "VIRNECT, AR/XR 전문성, 수주 유리.",
+      "savedAt": 1772877946013
+    },
+    "G2B-R26BK01375145": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 핵심 기술",
+        "스마트고글 활용",
+        "디지털트윈 연계",
+        "안전 분야 적합"
+      ],
+      "weaknesses": [
+        "예산 규모 작음",
+        "AI 직접 연관 부족"
+      ],
+      "strategy": "AR/XR 유지보수 제안",
+      "summary": "AR/XR 기술로 수주 유력",
+      "savedAt": 1772877956042
+    },
+    "G2B-R26BK01370047": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "디지털트윈 제품",
+        "AR/XR 전문성",
+        "철도 분야 확장"
+      ],
+      "weaknesses": [
+        "예산 규모 보통",
+        "경쟁사 존재"
+      ],
+      "strategy": "기술력 강조, 협력 제안",
+      "summary": "핵심기술 일치, 수주 유력",
+      "savedAt": 1772877962133
+    },
+    "G2B-R26BK01374093": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "XR 전문 기업",
+        "제품군 적합성",
+        "디지털트윈 강점"
+      ],
+      "weaknesses": [
+        "경쟁사 존재",
+        "교육 특화 경험"
+      ],
+      "strategy": "Twin 활용 제안",
+      "summary": "XR 기술력/제품 적합, 수주 높음.",
+      "savedAt": 1772877971140
+    },
+    "G2B-R26BK01370232": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 전문성",
+        "제품군 적합성",
+        "산업용 AR/XR 경험"
+      ],
+      "weaknesses": [
+        "예산 규모 작음",
+        "경쟁사 존재"
+      ],
+      "strategy": "제품 활용, 예산 맞춤",
+      "summary": "AR/XR 강점, 예산 고려",
+      "savedAt": 1772877980248
+    },
+    "G2B-R26BK01369908": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술력",
+        "스마트팩토리 적합",
+        "디지털트윈 역량",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "연구분석 전문성",
+        "경쟁사 존재"
+      ],
+      "strategy": "기술 활용 연구 제안",
+      "summary": "AR/XR 기술로 스마트팩토리 연구사업 수주 가능성 높음.",
+      "savedAt": 1772877989514
+    },
+    "G2B-R26BK01369891": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "XR 핵심기술 보유",
+        "디지털트윈 적합",
+        "교육훈련 전문성"
+      ],
+      "weaknesses": [
+        "경쟁사 존재",
+        "문화유산 전문성"
+      ],
+      "strategy": "디지털트윈 강조",
+      "summary": "VIRNECT XR, 산불 시뮬/대응 최적",
+      "savedAt": 1772877998434
+    },
+    "G2B-R26BK01372535": {
+      "probability": 80,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술 전문성",
+        "디지털트윈 솔루션",
+        "원격협업 솔루션",
+        "물류/AR 분야 일치",
+        "공공기관 발주"
+      ],
+      "weaknesses": [
+        "드론 전문성 부족",
+        "경쟁사 존재 가능"
+      ],
+      "strategy": "DT 활용 강조, AR 시각화 강점, 드론 파트너십, 안전/효율성 제안",
+      "summary": "AR/DT, 드론 배송 최적",
+      "savedAt": 1772878008159
+    },
+    "G2B-R26BK01375439": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 전문성",
+        "원격협업 솔루션",
+        "디지털트윈 기술"
+      ],
+      "weaknesses": [
+        "드론 특화 경험 부족",
+        "경쟁사 출현 가능성"
+      ],
+      "strategy": "AR/XR 강점 부각,유지관리 효율 강조,드론 연계 솔루션",
+      "summary": "AR/XR 강점, 수주 유력, 드론 연계",
+      "savedAt": 1772878017236
+    },
+    "G2B-R26BK01375837": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 전문성",
+        "제품군 적합성",
+        "공공기관 경험"
+      ],
+      "weaknesses": [
+        "경쟁 심화",
+        "예산 제약"
+      ],
+      "strategy": "맞춤형 솔루션 제안, 성공사례 및 기술력 강조, 장기적 협력 강조",
+      "summary": "AR/XR 전문성, 제품군으로 수주 유리.",
+      "savedAt": 1772878025316
+    },
+    "G2B-R26BK01352867": {
+      "probability": 75,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 전문성",
+        "디지털트윈 기술",
+        "원격협업 솔루션",
+        "위성데이터 연동"
+      ],
+      "weaknesses": [
+        "경쟁 심화 우려",
+        "예산 규모 제한",
+        "요구사항 불명확"
+      ],
+      "strategy": "기술 적합성 강조",
+      "summary": "VIRNECT 기술 적합, 수주 유력함.",
+      "savedAt": 1772880227951
+    },
+    "G2B-R26BK01374328": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "사료수집 경험 無"
+      ],
+      "strategy": "사업범위 재확인",
+      "summary": "AR/XR 무관, 수주 낮음",
+      "savedAt": 1772880236432
+    },
+    "G2B-R26BK01351587": {
+      "probability": 55,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 기술력",
+        "혁신 솔루션",
+        "상장사 신뢰도"
+      ],
+      "weaknesses": [
+        "직접 연관성 부족",
+        "경쟁사 다양"
+      ],
+      "strategy": "AR/XR 활용 제안",
+      "summary": "AR/XR로 혁신 홍보",
+      "savedAt": 1772880247326
+    },
+    "G2B-R26BK01355028": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 선도기업",
+        "혁신 기술력",
+        "공공기관 경험"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "예산 규모 작음",
+        "경쟁사 다수"
+      ],
+      "strategy": "사업 영역 확장 및 협력사 발굴",
+      "summary": "핵심 사업과 괴리, 수주 난망.",
+      "savedAt": 1772880255745
+    },
+    "G2B-R26BK01349741": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "첨단 IT 기술력",
+        "디지털트윈 역량",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "산림분야 전문성 부족",
+        "사업내용과 거리"
+      ],
+      "strategy": "디지털트윈 활용 제안, 전문기관과 협력",
+      "summary": "AR/XR, 연관성 낮음. 디지털트윈 활용 방안 제시.",
+      "savedAt": 1772880268530
+    },
+    "G2B-R26BK01370242": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 기술력",
+        "원격 협업 가능",
+        "스마트팩토리 부합"
+      ],
+      "weaknesses": [
+        "본업 불일치",
+        "유지보수 경험 부족"
+      ],
+      "strategy": "파트너십 제안",
+      "summary": "AR/XR 강점, 유지보수 경험 부족",
+      "savedAt": 1772880279923
+    },
+    "G2B-R26BK01371812": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "없음"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "전문성 부족",
+        "제품 연관성 없음"
+      ],
+      "strategy": "참여 부적합",
+      "summary": "핵심 사업과 무관",
+      "savedAt": 1772880287476
+    },
+    "G2B-R26BK01352627": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술 적합",
+        "디지털트윈 연계",
+        "원격협업 솔루션",
+        "상장사 신뢰도"
+      ],
+      "weaknesses": [
+        "ISP 경험 부족",
+        "경쟁사 우위 가능",
+        "SCM 직접 솔루션X"
+      ],
+      "strategy": "기술 연계성 강조",
+      "summary": "AR/XR SCM 효율↑. ISP 연계.",
+      "savedAt": 1772880299816
+    },
+    "G2B-R26BK01355999": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "기술 혁신 가능성",
+        "상장사 인지도"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "운영 전문성 부족"
+      ],
+      "strategy": "컨소시엄 참여 및 AR/XR 기술 접목 제안",
+      "summary": "핵심 사업 불일치로 수주 가능성 낮음.",
+      "savedAt": 1772880309626
+    },
+    "G2B-R26BK01374094": {
+      "probability": 1,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력 보유",
+        "원격협업 솔루션",
+        "디지털트윈 기술"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "mRNA 공급 경험無"
+      ],
+      "strategy": "입찰 참여 지양",
+      "summary": "핵심 사업과 무관, 수주 가능성 매우 낮음.",
+      "savedAt": 1772880321280
+    },
+    "G2B-R26BK01344177": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술 기업",
+        "AI 관련 기술 보유",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "PR 전문성 부족",
+        "사업 분야 불일치",
+        "홍보 대행 경험 無"
+      ],
+      "strategy": "PR 전문 기업 협력",
+      "summary": "사업 불일치, 저확률",
+      "savedAt": 1772880329962
+    },
+    "G2B-R26BK01360384": {
+      "probability": 30,
+      "grade": "C",
+      "strengths": [
+        "AI 기술 보유",
+        "디지털트윈 연관",
+        "실세계 데이터 처리"
+      ],
+      "weaknesses": [
+        "AI 벤치마킹 부족",
+        "AR/XR 연관성 낮음"
+      ],
+      "strategy": "AI 역량 및 DT 연계",
+      "summary": "AR/XR 기업, AI 벤치마킹 불일치",
+      "savedAt": 1772880342181
+    },
+    "G2B-R26BK01365291": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 기술력",
+        "AI 활용 경험",
+        "혁신 기술 보유"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "서버/인프라 약점"
+      ],
+      "strategy": "AI 기술 연계 강조",
+      "summary": "AR/XR 기반 AI 개발 지원",
+      "savedAt": 1772880352063
+    },
+    "G2B-R26BK01349106": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술력",
+        "산업 현장 적용",
+        "디지털 트윈",
+        "원격 협업 가능",
+        "AI 연계 잠재력"
+      ],
+      "weaknesses": [
+        "직접 연관성 부족",
+        "경쟁 심화 시장",
+        "맞춤 개발 필요"
+      ],
+      "strategy": "DT/AR/XR 효율성 강조, AI 시너지 부각",
+      "summary": "DT/AR/XR로 시스템 효율 및 운영 최적화",
+      "savedAt": 1772880361682
+    },
+    "G2B-R26BK01349957": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "디지털트윈 연관",
+        "원격/AR 활용성",
+        "산업현장 특화",
+        "AI 전환 부합"
+      ],
+      "weaknesses": [
+        "핵심 시스템 구축",
+        "직접적 AI 구축X"
+      ],
+      "strategy": "Twin 솔루션 강조",
+      "summary": "디지털 전환 강점",
+      "savedAt": 1772880371711
+    },
+    "G2B-R26BK01352846": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "혁신 기술 보유",
+        "원격 협업 솔루션"
+      ],
+      "weaknesses": [
+        "방송 제작 경험 無",
+        "핵심 사업 불일치"
+      ],
+      "strategy": "컨소시엄 구성",
+      "summary": "핵심 사업 불일치로 수주 가능성 매우 낮음.",
+      "savedAt": 1772880381158
+    },
+    "G2B-R26BK01351984": {
+      "probability": 60,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술력",
+        "교육 솔루션 적합",
+        "미래 교육 부합"
+      ],
+      "weaknesses": [
+        "운영 경험 부족",
+        "교육 전문성 부족"
+      ],
+      "strategy": "교육 전문 기업 협력",
+      "summary": "기술력 우수, 협력 필수",
+      "savedAt": 1772880395848
+    },
+    "G2B-R26BK01353689": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "산업현장 특화",
+        "AR/XR 선도기업",
+        "디지털트윈 강점"
+      ],
+      "weaknesses": [
+        "AI 인프라 정의",
+        "직접 AI 역량 부족"
+      ],
+      "strategy": "AI 연동성 강조",
+      "summary": "산업 AI 전환 핵심 솔루션",
+      "savedAt": 1772880405235
+    },
+    "G2B-R26BK01354657": {
+      "probability": 55,
+      "grade": "C",
+      "strengths": [
+        "첨단 AR/XR 기술",
+        "원격협업 솔루션",
+        "디지털 트윈 역량"
+      ],
+      "weaknesses": [
+        "의료기기 전문성",
+        "품질관리 경험 부족"
+      ],
+      "strategy": "의료기기 QC 적용, AI 강조",
+      "summary": "AR/XR 기술 활용 가능하나, 의료기기 QC 전문성 입증이 관건.",
+      "savedAt": 1772880414850
+    },
+    "G2B-R26BK01323865": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "원격협업 솔루션",
+        "디지털트윈 연계",
+        "AR 기술력 우위",
+        "안전관리 특화"
+      ],
+      "weaknesses": [
+        "ISP 전문성 부족",
+        "경쟁 심화 가능성",
+        "가스안전 도메인"
+      ],
+      "strategy": "컨설팅 파트너십, 솔루션 맞춤 제안",
+      "summary": "AR/XR 강점, ISP 역량 보완",
+      "savedAt": 1772880426895
+    },
+    "G2B-R26BK01352553": {
+      "probability": 60,
+      "grade": "B",
+      "strengths": [
+        "첨단 AR/XR 기술",
+        "다양한 제품군 보유",
+        "지능형 조사 부합"
+      ],
+      "weaknesses": [
+        "직접 솔루션 아님",
+        "경쟁 심화 우려"
+      ],
+      "strategy": "AR/XR 기술로 조사 설계, 미래 시스템 연계 강조",
+      "summary": "AR/XR 기술력 기반, 지능형 조사에 강점. 향후 솔루션 연계 가능성.",
+      "savedAt": 1772880436468
+    },
+    "G2B-R26BK01373552": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "코스닥 상장사",
+        "AR/XR 기술력",
+        "디지털트윈",
+        "연구개발 역량"
+      ],
+      "weaknesses": [
+        "레이더 기술 부족",
+        "핵심사업 불일치",
+        "전문성 부족"
+      ],
+      "strategy": "컨소시엄 구성, AR/XR 연계 제안",
+      "summary": "핵심사업 불일치로 수주 낮음",
+      "savedAt": 1772880447118
+    },
+    "G2B-R26BK01348834": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "원격 협업 특화",
+        "디지털 트윈 활용",
+        "ODA 효율 증대"
+      ],
+      "weaknesses": [
+        "ODA 경험 부족",
+        "기술 도입 장벽",
+        "경쟁 심화 우려"
+      ],
+      "strategy": "ODA 특화 솔루션 제시",
+      "summary": "VIRNECT AR/XR, ODA 플랫폼 혁신 잠재력 높음.",
+      "savedAt": 1772880459396
+    },
+    "G2B-R26BK01355688": {
+      "probability": 0,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력 우수",
+        "원격협업 솔루션",
+        "디지털트윈 역량"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "의료 지침 경험 無"
+      ],
+      "strategy": "핵심 역량 집중 전략",
+      "summary": "사업 불일치로 수주 희박",
+      "savedAt": 1772880470396
+    },
+    "G2B-R26BK01372199": {
+      "probability": 35,
+      "grade": "D",
+      "strengths": [
+        "스마트팩토리 연관",
+        "원격협업 기술",
+        "AR/XR 전문성"
+      ],
+      "weaknesses": [
+        "낮은 사업 예산",
+        "유지보수 전문성 부족"
+      ],
+      "strategy": "솔루션 연계 제안",
+      "summary": "저예산, 전략적 접근",
+      "savedAt": 1772880481284
+    },
+    "G2B-R26BK01352840": {
+      "probability": 50,
+      "grade": "C",
+      "strengths": [
+        "혁신 기술 활용",
+        "원격 협업 가능",
+        "디지털 트윈",
+        "현장 효율 증대"
+      ],
+      "weaknesses": [
+        "보안 전문성 부족",
+        "핵심 역량 불일치",
+        "경쟁사 우위"
+      ],
+      "strategy": "보안전문가 협력, AR/XR 활용",
+      "summary": "AR/XR 활용 가능, 보안 전문성 보완.",
+      "savedAt": 1772880491132
+    },
+    "G2B-R26BK01350004": {
+      "probability": 55,
+      "grade": "C",
+      "strengths": [
+        "영상분석 기술",
+        "AI 모델 개발력",
+        "AR/XR 기반기술",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "예산 규모 작음",
+        "의료 도메인 특수",
+        "핵심 사업과 거리"
+      ],
+      "strategy": "AI 영상분석 역량 강조, 의료 시장 진출",
+      "summary": "영상분석 AI 강점, 예산/의료 특수성 고려",
+      "savedAt": 1772880501631
+    },
+    "G2B-R26BK01359002": {
+      "probability": 20,
+      "grade": "D",
+      "strengths": [
+        "AI 기술 활용 가능",
+        "디지털트윈 연관",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "AI 전문성 부족"
+      ],
+      "strategy": "AI 역량 강조",
+      "summary": "사업 불일치로 낮음",
+      "savedAt": 1772880510112
+    },
+    "G2B-R26BK01360021": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "기술 이해도 높음",
+        "혁신 기술 보유",
+        "AR/XR 교육 접목"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "AI 교육 전문성↓"
+      ],
+      "strategy": "참여 재고 필요",
+      "summary": "수주 가능성 희박",
+      "savedAt": 1772880521948
+    },
+    "G2B-R26BK01362511": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "영상분석 기술 보유",
+        "AI 솔루션 경험"
+      ],
+      "weaknesses": [
+        "생물학 도메인 미숙",
+        "주력 사업과 상이",
+        "예산 규모 작음"
+      ],
+      "strategy": "협력사 발굴 제안",
+      "summary": "도메인 불일치로 난항",
+      "savedAt": 1772880530942
+    },
+    "G2B-R26BK01362520": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "컴퓨터 비전 기술",
+        "AR/XR 기술력"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "산림분야 전문성 부족",
+        "예산 규모 작음"
+      ],
+      "strategy": "기술 적용성 분석",
+      "summary": "AR/XR 기업, 산림분야 과제. 도메인 불일치로 수주 낮음.",
+      "savedAt": 1772880540873
+    },
+    "G2B-R26BK01351345": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "디지털 기술 이해",
+        "혁신 기술 보유",
+        "공공기관 경험"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "교육 콘텐츠 無",
+        "문항 개발 역량 無",
+        "핵심 역량과 무관"
+      ],
+      "strategy": "참여 재고 필요. 타겟 시장 재검토. 협력사 모색 고려.",
+      "summary": "핵심 사업과 무관한 교육 콘텐츠 개발 용역으로 수주 가능성 매우 낮음.",
+      "savedAt": 1772880549665
+    },
+    "G2B-R26BK01352289": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "SW 개발 역량",
+        "기술 기반 기업"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "AI 교육 경험 無"
+      ],
+      "strategy": "참여 재고 필요",
+      "summary": "사업 분야 불일치로 수주 가능성 매우 낮음.",
+      "savedAt": 1772880558769
+    },
+    "G2B-R26BK01352287": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "기술력 우수",
+        "디지털트윈 연계?",
+        "상장사 신뢰도"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "AI센터 전문성 부족",
+        "예산 규모 소액"
+      ],
+      "strategy": "협력사 통한 참여",
+      "summary": "핵심 사업과 무관",
+      "savedAt": 1772880568995
+    },
+    "G2B-R26BK01349715": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "디지털트윈 기술",
+        "원격협업 솔루션",
+        "혁신 AR/XR 기술"
+      ],
+      "weaknesses": [
+        "핵심기술 불일치",
+        "예측 전문성 부족",
+        "연구과제 성격",
+        "경쟁사 우위"
+      ],
+      "strategy": "디지털트윈 연계",
+      "summary": "핵심 불일치, 수주 가능성 낮음",
+      "savedAt": 1772880580644
+    },
+    "G2B-R26BK01352972": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "기술적합성",
+        "AR/XR 전문성",
+        "상장사 신뢰",
+        "제품 활용성"
+      ],
+      "weaknesses": [
+        "예산 규모",
+        "사업 범위"
+      ],
+      "strategy": "기술연계 강조 및 실증",
+      "summary": "AR/XR 기술로 AI-VFX 적합",
+      "savedAt": 1772880592081
+    },
+    "G2B-R26BK01353231": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 기술력",
+        "시뮬레이션 연관",
+        "첨단기술 이해"
+      ],
+      "weaknesses": [
+        "예산 규모 작음",
+        "AI 교육 경험 부족",
+        "핵심사업 불일치"
+      ],
+      "strategy": "AR/XR 교육 접목",
+      "summary": "예산 적고 사업 불일치. AR/XR 활용 제안.",
+      "savedAt": 1772880602011
+    },
+    "G2B-R26BK01361213": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 기술력",
+        "원격협업 솔루션",
+        "디지털트윈 활용"
+      ],
+      "weaknesses": [
+        "재활로봇 경험 부족",
+        "의료분야 경험 부족"
+      ],
+      "strategy": "컨소시엄 참여",
+      "summary": "보조적 역할 가능성",
+      "savedAt": 1772880613331
+    },
+    "G2B-R26BK01358971": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "\"AI\" 키워드 일치",
+        "정부기관 발주",
+        "데이터 처리 경험"
+      ],
+      "weaknesses": [
+        "핵심사업 불일치",
+        "통계 전문성 부족",
+        "경쟁 우위 낮음",
+        "관련 솔루션 없음"
+      ],
+      "strategy": "전문기업과 협력",
+      "summary": "AR/XR 기업, 통계 연구 부적합.",
+      "savedAt": 1772880623015
+    },
+    "G2B-R26BK01359673": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "원격협업 솔루션",
+        "스마트고글 제품"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "AI 문해력 부재",
+        "교육콘텐츠 미보유"
+      ],
+      "strategy": "입찰 참여 불가",
+      "summary": "사업분야 불일치로 수주 가능성 매우 낮음.",
+      "savedAt": 1772880631391
+    },
+    "G2B-R26BK01355816": {
+      "probability": 50,
+      "grade": "B",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "디지털트윈 활용",
+        "데이터 시각화"
+      ],
+      "weaknesses": [
+        "분석 용역 미흡",
+        "핵심 역량 불일치"
+      ],
+      "strategy": "AR/XR 분석법 제시, 협력사 연계",
+      "summary": "핵심 역량 불일치. AR/XR 활용 제안",
+      "savedAt": 1772880644861
+    },
+    "G2B-R26BK01360661": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "첨단기술 이해",
+        "로봇산업 연관성",
+        "현장경험 보유"
+      ],
+      "weaknesses": [
+        "정책/지침 전문성 부족",
+        "핵심사업 불일치",
+        "유사수주 실적無"
+      ],
+      "strategy": "컨설팅사와 협력",
+      "summary": "AR/XR기업, 지침개정 용역과 역량 불일치.",
+      "savedAt": 1772880654250
+    },
+    "G2B-R26BK01365790": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술력",
+        "디지털트윈 강점",
+        "원격협업 솔루션",
+        "혁신적 접근 가능",
+        "공공기관 경험"
+      ],
+      "weaknesses": [
+        "AI 직접 연관성",
+        "서고 특수성 이해",
+        "경쟁사 존재",
+        "예산 규모 한정"
+      ],
+      "strategy": "AI+AR/XR 연계, 디지털트윈 강조, 원격관리 효율화, 서고 맞춤 제안, 혁신성 부각",
+      "summary": "AR/XR로 서고 관리 혁신",
+      "savedAt": 1772880666505
+    },
+    "G2B-R26BK01365441": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 선도기업",
+        "원격협업 기술",
+        "디지털트윈 역량"
+      ],
+      "weaknesses": [
+        "백신연구 무관",
+        "의료분야 경험 無",
+        "핵심역량 불일치"
+      ],
+      "strategy": "의료기관과 협력",
+      "summary": "백신연구와 무관, 수주 가능성 매우 낮음.",
+      "savedAt": 1772880676455
+    },
+    "G2B-R26BK01375255": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 선도기업",
+        "혁신 기술력 보유",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "생명공학 전문성X",
+        "핵심 역량 불일치"
+      ],
+      "strategy": "전문기업과 협력",
+      "summary": "핵심 역량과 무관한 과제",
+      "savedAt": 1772880689431
+    },
+    "G2B-R26BK01358703": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "AI/CV 핵심역량",
+        "딥러닝 기술 보유",
+        "영상처리 전문성"
+      ],
+      "weaknesses": [
+        "디무아레 직접 경험",
+        "경쟁 심화 우려",
+        "예산 규모 한계"
+      ],
+      "strategy": "AI/CV 역량 강조",
+      "summary": "AI/CV 기반 수주 가능",
+      "savedAt": 1772880699320
+    },
+    "G2B-R26BK01368360": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AI 기술력 보유",
+        "연구개발 경험",
+        "정부과제 경험"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "전문성 부족",
+        "핵심 역량 이탈"
+      ],
+      "strategy": "입찰 포기 권고",
+      "summary": "사업 분야 불일치로 수주 가능성 매우 낮음.",
+      "savedAt": 1772880707159
+    },
+    "G2B-R26BK01372674": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술 선도",
+        "혁신 제품 보유"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "AI/SSO 전문성 부족"
+      ],
+      "strategy": "참여 재고 필요",
+      "summary": "핵심 역량과 무관, 수주 가능성 매우 낮음.",
+      "savedAt": 1772880718239
+    },
+    "G2B-R26BK01370036": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "디지털트윈 핵심",
+        "원격협업 강점",
+        "스마트팩토리 적합"
+      ],
+      "weaknesses": [
+        "시험편 개발 경험?",
+        "예산 규모 제한"
+      ],
+      "strategy": "Twin/Remote 강조",
+      "summary": "철도 유지보수 최적",
+      "savedAt": 1772880726388
+    },
+    "BIZ-PBLN_000000000119221": {
+      "probability": 55,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 선도기술",
+        "원격협업 솔루션",
+        "스마트고글 활용"
+      ],
+      "weaknesses": [
+        "직접연관성 부족",
+        "예산정보 부재"
+      ],
+      "strategy": "AR/XR로 디자인 혁신 및 약자지원 방안 제시",
+      "summary": "AR/XR 기술로 디자인 혁신 및 약자지원 가능성 모색",
+      "savedAt": 1772880737784
+    },
+    "BIZ-PBLN_000000000119220": {
+      "probability": 40,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 기술력",
+        "디지털트윈 연계",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "IoT 설치 전문성",
+        "직접 연관성 낮음",
+        "예산 불확실성"
+      ],
+      "strategy": "AR/XR로 IoT 가치 증대",
+      "summary": "IoT 데이터 활용 및 스마트워크.",
+      "savedAt": 1772880749452
+    },
+    "G2B-R26BK01360566": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술 보유",
+        "글로벌 전시 이해"
+      ],
+      "weaknesses": [
+        "핵심사업 불일치",
+        "부스 설치 경험 無",
+        "용역 범위 외 전문성"
+      ],
+      "strategy": "파트너십 모색",
+      "summary": "핵심사업 불일치. 수주 낮음. AR/XR 협력 제안 유리.",
+      "savedAt": 1772880758783
+    },
+    "G2B-R26BK01375284": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "스마트고글",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "전문성 부족"
+      ],
+      "strategy": "협력사 발굴",
+      "summary": "사업분야 불일치로 수주 가능성 매우 낮음.",
+      "savedAt": 1772880768083
+    },
+    "G2B-R26BK01369181": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "스마트고글 핵심",
+        "원격협업 강점",
+        "건설현장 특화",
+        "조달청 경험",
+        "디지털트윈 연계"
+      ],
+      "weaknesses": [
+        "예산 제약 가능",
+        "경쟁 심화 우려",
+        "운영관리 복잡"
+      ],
+      "strategy": "VisionX,Remote 중심",
+      "summary": "건설현장 안전에 최적",
+      "savedAt": 1772880776520
+    },
+    "G2B-R26BK01358498": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "코스닥 상장사",
+        "기술 기반 기업",
+        "혁신 기술 보유"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "AI 전문성 부족"
+      ],
+      "strategy": "전문 파트너 협력",
+      "summary": "사업 불일치, 가능성↓",
+      "savedAt": 1772880787449
+    },
+    "G2B-R26BK01373682": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "코스닥 상장기업",
+        "기술력 보유",
+        "사업수행 경험"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "AI 언어평가 미경험"
+      ],
+      "strategy": "컨소시엄 구성 필수",
+      "summary": "사업분야 불일치로 수주 가능성 매우 낮음.",
+      "savedAt": 1772880795454
+    },
+    "G2B-R26BK01349345": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "원격 모니터링",
+        "AI 기술 활용",
+        "스마트 고글"
+      ],
+      "weaknesses": [
+        "해양쓰레기 경험",
+        "경쟁사 존재"
+      ],
+      "strategy": "원격 모니터링 강조",
+      "summary": "VIRNECT AR/XR, AI 모니터링 적합. 원격 협업 강점.",
+      "savedAt": 1772880804493
+    },
+    "G2B-R26BK01349637": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술 적합",
+        "AI 활용 가능",
+        "원격 협업 강점",
+        "스마트고글 활용",
+        "상장사 신뢰도"
+      ],
+      "weaknesses": [
+        "경쟁 심화 우려",
+        "예산 제약 가능성",
+        "특정 분야 경험",
+        "초기 도입 비용"
+      ],
+      "strategy": "VisionX/Remote 강조, AI 모니터링 제안, 원격 효율성 부각, 데이터 활용 방안, 유사 사례 제시",
+      "summary": "AR/XR/AI, 해양쓰레기 모니터링 최적",
+      "savedAt": 1772880817303
+    },
+    "G2B-R26BK01366600": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 훈련 시뮬",
+        "마커리스 추적 기술",
+        "스마트고글 활용"
+      ],
+      "weaknesses": [
+        "AI 재활 전문성 부족",
+        "의료 도메인 경험 부족"
+      ],
+      "strategy": "AR/XR 훈련 강점 부각, AI/의료 협력 제안",
+      "summary": "AR/XR 훈련 강점, AI/재활 전문성 부족, 협력 필수",
+      "savedAt": 1772880827174
+    },
+    "G2B-R26BK01329937": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술 보유",
+        "코스닥 상장사",
+        "AR/XR 선도기업"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "AI/교육 전문성 부족"
+      ],
+      "strategy": "AI/교육 파트너 협력",
+      "summary": "사업 불일치, 파트너십 필수",
+      "savedAt": 1772880837720
+    },
+    "G2B-R26BK01373212": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "AI 기술력 보유",
+        "데이터 처리 경험",
+        "혁신 기술 기업"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "환경 데이터 경험無",
+        "연구 전문성 부족"
+      ],
+      "strategy": "AI/DS 전문 협력",
+      "summary": "핵심 사업 불일치, 협력 필수.",
+      "savedAt": 1772880848649
+    },
+    "G2B-R26BK01359922": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 선도기술",
+        "원격협업 솔루션",
+        "디지털트윈 강점"
+      ],
+      "weaknesses": [
+        "직접 연관성 부족",
+        "AI/LMS 전문성?",
+        "타사 경쟁 심화"
+      ],
+      "strategy": "AR/XR 교육 솔루션 제안",
+      "summary": "AR/XR 교육 혁신 제안",
+      "savedAt": 1772880859179
+    },
+    "G2B-R26BK01355143": {
+      "probability": 20,
+      "grade": "D",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "원격협업 솔루션",
+        "디지털트윈 역량"
+      ],
+      "weaknesses": [
+        "의료재활 비전문",
+        "핵심기술 불일치"
+      ],
+      "strategy": "의료기관 협력 필수, AR/XR 활용 방안 제시",
+      "summary": "AR/XR과 재활사업 연관성 낮아 협력 필수.",
+      "savedAt": 1772880868430
+    },
+    "G2B-R26BK01331671": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "디지털 트윈 역량",
+        "미래 기술 접목"
+      ],
+      "weaknesses": [
+        "ITS 계획 경험 부족",
+        "주력 사업 불일치",
+        "컨설팅 전문성 부족"
+      ],
+      "strategy": "컨소시엄 참여",
+      "summary": "AR/XR 기업, ITS 계획 불일치. 컨소시엄 필수.",
+      "savedAt": 1772880879004
+    },
+    "G2B-R26BK01370733": {
+      "probability": 80,
+      "grade": "B",
+      "strengths": [
+        "디지털트윈 기술",
+        "원격협업 솔루션",
+        "AR/XR 기술력",
+        "해외사업 역량",
+        "통합관리 강점"
+      ],
+      "weaknesses": [
+        "IoT 개발 전문성",
+        "경쟁 심화 우려",
+        "현지화 요구사항"
+      ],
+      "strategy": "디지털트윈 핵심, AR/XR 시너지",
+      "summary": "디지털트윈/AR/XR 강점, 사우디 IoT 관리 적합",
+      "savedAt": 1772880888653
+    },
+    "G2B-R26BK01366408": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "코스닥 상장사",
+        "AR/XR 기술력",
+        "다양한 제품군"
+      ],
+      "weaknesses": [
+        "핵심기술 불일치",
+        "전문분야 상이",
+        "연구경험 부족",
+        "예산 규모 작음"
+      ],
+      "strategy": "협력사 발굴,데이터 시각화,현장 지원 제안,기술 융합 제안",
+      "summary": "AR/XR-레이더 연관성 낮아 수주 가능성 희박.",
+      "savedAt": 1772880898217
+    },
+    "G2B-R26BK01374835": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "AI 기술 보유",
+        "R&D 역량",
+        "디지털트윈 경험"
+      ],
+      "weaknesses": [
+        "핵심사업 불일치",
+        "환경AI 전문성↓",
+        "제품 연관성 부족",
+        "극지연 전문분야"
+      ],
+      "strategy": "핵심사업 집중",
+      "summary": "사업분야 불일치로 수주 가능성 매우 낮음.",
+      "savedAt": 1772880907132
+    },
+    "G2B-R26BK01365399": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "스마트고글 보유",
+        "원격협업 기술 보유",
+        "산업안전 연관성 높음"
+      ],
+      "weaknesses": [
+        "연구용역 경험 부족",
+        "경쟁사 존재 가능성"
+      ],
+      "strategy": "제품 활용 효과 입증",
+      "summary": "스마트 안전 연구 최적",
+      "savedAt": 1772880915383
+    },
+    "G2B-R26BK01365444": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "기술 적합성 우수",
+        "스마트고글 보유",
+        "산업안전 이해도",
+        "AR/XR 선도기업"
+      ],
+      "weaknesses": [
+        "연구용역 경험 부족",
+        "경쟁사 존재 가능"
+      ],
+      "strategy": "스마트 안전장비 기술 전문성 강조 및 연구 역량 어필",
+      "summary": "스마트고글 기술 적합성 높아 수주 가능성 높음",
+      "savedAt": 1772880925538
+    },
+    "G2B-R26BK01349530": {
+      "probability": 25,
+      "grade": "D",
+      "strengths": [
+        "혁신기술기업",
+        "AR/XR 기술력",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "핵심사업 불일치",
+        "AI 연구 경험 부족",
+        "예측기법 전문성↓"
+      ],
+      "strategy": "AI 역량 강조 및 협력",
+      "summary": "핵심사업과 괴리 커 수주↓",
+      "savedAt": 1772880933752
+    },
+    "G2B-R26BK01366208": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "산업용 AR/XR 기술력",
+        "물류 현장 적용 가능",
+        "디지털 전환 경험"
+      ],
+      "weaknesses": [
+        "AI 전략 연구 전문성 부족",
+        "사업 범위와 핵심 역량 불일치"
+      ],
+      "strategy": "AR/XR의 AX 기여 사례 집중",
+      "summary": "AR/XR 강점, AI 전략 연구는 협력 필요",
+      "savedAt": 1772880944631
+    },
+    "G2B-R26BK01367820": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술 보유",
+        "데이터 처리 경험",
+        "AI 기술 활용"
+      ],
+      "weaknesses": [
+        "핵심 역량 불일치",
+        "기상/산림 전문성 부족",
+        "빅데이터 분석 미흡",
+        "AI 모델 개발 부족"
+      ],
+      "strategy": "전문 협력사 발굴 및 AR/DT 활용 제안",
+      "summary": "핵심 역량 불일치로 수주 낮음. 협력사 필수.",
+      "savedAt": 1772880955409
+    },
+    "G2B-R26BK01370607": {
+      "probability": 25,
+      "grade": "D",
+      "strengths": [
+        "AI 기술 보유",
+        "엣지 컴퓨팅 경험",
+        "정부과제 경험"
+      ],
+      "weaknesses": [
+        "도메인 불일치",
+        "핵심기술 차이",
+        "소규모 예산"
+      ],
+      "strategy": "AI/엣지 역량 강조, 유사과제 경험 어필, 기술 확장성 제시",
+      "summary": "도메인 불일치로 수주 가능성 낮음",
+      "savedAt": 1772880964592
+    },
+    "G2B-R26BK01373775": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술력 보유",
+        "AI 기술 경험",
+        "원격 협업 솔루션"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "플랫폼 운영 경험↓",
+        "교육/콜센터 전문성↓"
+      ],
+      "strategy": "협력사 통한 입찰",
+      "summary": "핵심 역량과 동떨어진 입찰",
+      "savedAt": 1772880974223
+    },
+    "G2B-R26BK01365231": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "코스닥 상장사",
+        "AI 기술 보유"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "위성영상 전문성 부족",
+        "제품 연관성 낮음",
+        "유지보수 경험 부족"
+      ],
+      "strategy": "위성영상 전문기업과 협력",
+      "summary": "AR/XR 전문, 위성영상 유지보수 연관성 낮음.",
+      "savedAt": 1772880990914
+    },
+    "G2B-R26BK01366936": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "영상분석 기술력",
+        "AI/XR 핵심기술",
+        "정부과제 경험"
+      ],
+      "weaknesses": [
+        "제품 직접 연관↓",
+        "AI 전문성 부각"
+      ],
+      "strategy": "AI/영상분석 역량강조",
+      "summary": "XR기반 AI영상분석 강점",
+      "savedAt": 1772881000028
+    },
+    "G2B-R26BK01346759": {
+      "probability": 45,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 선도 기술",
+        "디지털트윈 역량",
+        "실용 교육 플랫폼"
+      ],
+      "weaknesses": [
+        "교육사업 경험 부족",
+        "직접적 사업 불일치"
+      ],
+      "strategy": "AR/XR 기반 AI 교육",
+      "summary": "AR/XR 활용 교육 제안",
+      "savedAt": 1772881010274
+    },
+    "G2B-R26BK01363565": {
+      "probability": 20,
+      "grade": "C",
+      "strengths": [
+        "디지털트윈 기술",
+        "첨단 기술력",
+        "경북TP 연계"
+      ],
+      "weaknesses": [
+        "AI 분석 전문성 부족",
+        "용역 성격 상이"
+      ],
+      "strategy": "DT 기반 분석 제안",
+      "summary": "DT 활용 가능, AI 전문성 보완 필수.",
+      "savedAt": 1772881028665
+    },
+    "G2B-R26BK01364467": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술력 보유",
+        "정부사업 경험",
+        "데이터 활용 역량"
+      ],
+      "weaknesses": [
+        "교육사업 경험 부족",
+        "AI/통계 전문성 부족",
+        "핵심 역량 불일치"
+      ],
+      "strategy": "사업 참여 재고",
+      "summary": "핵심 역량 불일치로 수주 매우 어려움.",
+      "savedAt": 1772881036826
+    },
+    "G2B-R26BK01350820": {
+      "probability": 55,
+      "grade": "C",
+      "strengths": [
+        "AI 기술력 보유",
+        "시각정보 처리",
+        "디지털트윈 연계"
+      ],
+      "weaknesses": [
+        "CCTV 주력 아님",
+        "SI 구축 경험 부족"
+      ],
+      "strategy": "AI 관제 특화 제안",
+      "summary": "AI 강점, SI 협력 필수",
+      "savedAt": 1772881048859
+    },
+    "G2B-R26BK01373981": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "AI 기술 활용 경험",
+        "시스템 구축 역량",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "금융 AI 경험 부족",
+        "전문성 부족"
+      ],
+      "strategy": "AI 역량 강조 및 협력",
+      "summary": "핵심 역량 불일치로 수주 난망",
+      "savedAt": 1772881057950
+    },
+    "G2B-R26BK01371889": {
+      "probability": 30,
+      "grade": "C",
+      "strengths": [
+        "디지털 트윈 기술",
+        "혁신 기술 이미지",
+        "원격 협업 가능성"
+      ],
+      "weaknesses": [
+        "AI/생태 전문성 부족",
+        "사업 분야 불일치"
+      ],
+      "strategy": "AI/생태 협력, DT 시각화",
+      "summary": "AR/XR 기업, 연관성 낮음. DT 시각화 제안 시 수주 가능.",
+      "savedAt": 1772881069314
+    },
+    "G2B-R26BK01374856": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술 보유",
+        "디지털트윈 경험",
+        "정부사업 경험"
+      ],
+      "weaknesses": [
+        "AI 분석 전문성↓",
+        "핵심 사업 불일치",
+        "예산 규모 소액"
+      ],
+      "strategy": "AI 전문 협력",
+      "summary": "핵심 사업과 과제 불일치로 수주 가능성 낮음.",
+      "savedAt": 1772881079150
+    },
+    "G2B-R26BK01369647": {
+      "probability": 60,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술력",
+        "디지털트윈",
+        "AI 접목 가능",
+        "스마트고글"
+      ],
+      "weaknesses": [
+        "주력 분야 상이",
+        "보존서고 전문성",
+        "경쟁 심화 우려"
+      ],
+      "strategy": "AR/XR+AI 혁신 제안",
+      "summary": "AR/XR, DT로 관리 혁신",
+      "savedAt": 1772881089681
+    },
+    "G2B-R26BK01369919": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "기술 적합성 우수",
+        "종합 솔루션 제공",
+        "원격 협업 강점",
+        "교육 분야 확장",
+        "정부 기관 발주"
+      ],
+      "weaknesses": [
+        "경쟁 심화 우려",
+        "교육 특화 경험",
+        "유지보수 전문성"
+      ],
+      "strategy": "맞춤형 솔루션 제안",
+      "summary": "AR/XR 기술로 수주 유력",
+      "savedAt": 1772881099748
+    },
+    "BIZ-PBLN_000000000119228": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "원격 협업 솔루션",
+        "디지털 트윈 역량"
+      ],
+      "weaknesses": [
+        "농식품 분야 불일치",
+        "사업 목적 불명확"
+      ],
+      "strategy": "농식품 AR/XR 활용",
+      "summary": "AR/XR 우수, 분야 불일치",
+      "savedAt": 1772881113168
+    },
+    "BIZ-PBLN_000000000119225": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술 적합",
+        "디지털트윈 강점",
+        "원격협업 효율",
+        "혁신적 솔루션",
+        "글로벌 확장성"
+      ],
+      "weaknesses": [
+        "농업 경험 부족",
+        "예산 불확실성",
+        "경쟁 심화 우려",
+        "중국 시장 특수성",
+        "직접 수주 아님"
+      ],
+      "strategy": "농업 특화 제안, 현지 파트너십, 성공 사례 구축, 기술 시연 집중, 비용 효율 강조",
+      "summary": "스마트팜 AR/XR 잠재력 높음. 현지화 전략 필수.",
+      "savedAt": 1772881122202
+    },
+    "BIZ-PBLN_000000000119223": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "원격협업/트윈",
+        "산업 적용 잠재력"
+      ],
+      "weaknesses": [
+        "수주 아닌 지정",
+        "물산업 특화 부족",
+        "발주처/예산 미정",
+        "2026년 장기 사업"
+      ],
+      "strategy": "물산업 특화 개발",
+      "summary": "지정 계획, 수주 낮음. 물산업 특화.",
+      "savedAt": 1772881131971
+    },
+    "BIZ-PBLN_000000000119219": {
+      "probability": 60,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 전문성",
+        "다양한 솔루션",
+        "원격협업 강점"
+      ],
+      "weaknesses": [
+        "사업내용 불명확",
+        "예산 미정"
+      ],
+      "strategy": "사업 파악 및 현지 협력",
+      "summary": "AR/XR 기술력 강점. 사업 파악 및 현지화 전략 필수.",
+      "savedAt": 1772881141471
+    },
+    "BIZ-PBLN_000000000119217": {
+      "probability": 40,
+      "grade": "C",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "새로운 직무 창출",
+        "원격 협업 솔루션"
+      ],
+      "weaknesses": [
+        "사회적기업 불일치",
+        "높은 기술 도입비"
+      ],
+      "strategy": "AR/XR 교육 통한 일자리 창출",
+      "summary": "AR/XR로 사회적 일자리 창출",
+      "savedAt": 1772881154376
+    },
+    "BIZ-PBLN_000000000119216": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "혁신 기술 보유",
+        "사회 가치 부합",
+        "다양한 적용 가능"
+      ],
+      "weaknesses": [
+        "예산 불확실성",
+        "사업 범위 모호"
+      ],
+      "strategy": "사회문제 해결 제안 및 성공사례 강조",
+      "summary": "VIRNECT 기술, 사회가치 사업 적합, 수주 높음.",
+      "savedAt": 1772881165647
+    },
+    "BIZ-PBLN_000000000119215": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 선도 기술",
+        "디지털 트윈 강점",
+        "원격 협업 솔루션",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "AI 핵심 역량 부족",
+        "예산 미정 불확실",
+        "AI 시장 경쟁 심화"
+      ],
+      "strategy": "AI 연계 솔루션 제안 및 전문 기업 협력",
+      "summary": "AR/XR 기반 AI 대전환 기여 가능, AI 역량 강화 및 협력 필수.",
+      "savedAt": 1772881175795
+    },
+    "G2B-R26BK01364491": {
+      "probability": 50,
+      "grade": "C",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "원격협업 솔루션",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "용역 내용 불명확",
+        "직접 연관성 부족"
+      ],
+      "strategy": "AR/XR 활용 제안",
+      "summary": "용역 불명확, 전략 필요",
+      "savedAt": 1772881186415
+    },
+    "G2B-R26BK01371689": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "디지털트윈 기술",
+        "스마트시티 연계성"
+      ],
+      "weaknesses": [
+        "AI 전략 수립 미흡",
+        "사업 분야 불일치",
+        "컨설팅 전문성 부족"
+      ],
+      "strategy": "AI 컨설팅사와 협력, AR/XR 솔루션 공급자로 참여",
+      "summary": "AR/XR 전문, AI 계획 수립 용역과 불일치, 수주 가능성 낮음.",
+      "savedAt": 1772881198646
+    },
+    "G2B-R26BK01356832": {
+      "probability": 55,
+      "grade": "C",
+      "strengths": [
+        "디지털트윈 기술",
+        "AR/XR 데이터분석",
+        "공간정보 처리"
+      ],
+      "weaknesses": [
+        "UAV 운용 경험 부족",
+        "주력사업 불일치"
+      ],
+      "strategy": "UAV 전문기업 협력, 데이터 분석/시각화 강점 부각",
+      "summary": "분석/시각화 강점, UAV 운용 협력 필수",
+      "savedAt": 1772881208439
+    },
+    "G2B-R26BK01371535": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "AI/XR 기술력",
+        "영상처리 전문성",
+        "상장사 신뢰도",
+        "복합시스템 경험"
+      ],
+      "weaknesses": [
+        "직접사업 불일치",
+        "유지보수 특화X",
+        "기존시스템 호환"
+      ],
+      "strategy": "AI/영상처리 강조, 기술력 기반 유지보수, 솔루션 연계 제안",
+      "summary": "AI/영상처리 강점, 유지보수/호환성 입증 필요.",
+      "savedAt": 1772881219170
+    },
+    "G2B-R26BK01372624": {
+      "probability": 55,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 선도기업",
+        "AI/CV 기술력",
+        "영상분석 경험",
+        "공공사업 경험"
+      ],
+      "weaknesses": [
+        "유지보수 전문성",
+        "핵심사업 불일치",
+        "경쟁사 우위"
+      ],
+      "strategy": "AI/CV 역량 강조",
+      "summary": "AI/CV 강점, 유지보수 어필",
+      "savedAt": 1772881229190
+    },
+    "G2B-R26BK01366245": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술 적합",
+        "코스닥 상장사",
+        "제품 포트폴리오",
+        "제조업 전문성"
+      ],
+      "weaknesses": [
+        "용역 경험 확인",
+        "경쟁 심화 예상",
+        "가격 경쟁력"
+      ],
+      "strategy": "기술 적합성 강조, 전시 활용 방안 제시, 상장사 신뢰도 부각, 차별화된 제안",
+      "summary": "AR/XR 기술 적합, 수주 유력",
+      "savedAt": 1772881240187
+    },
+    "G2B-R26BK01354163": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "디지털 트윈 기술",
+        "AR/XR 시각화",
+        "원격 협업 가능"
+      ],
+      "weaknesses": [
+        "경쟁사 솔루션",
+        "환경 전문성"
+      ],
+      "strategy": "디지털 트윈 핵심, AR/XR 활용, 환경 전문가 협력",
+      "summary": "디지털 트윈 및 AR/XR 기술이 배출량 모델 개발에 큰 강점.",
+      "savedAt": 1772881249198
+    },
+    "G2B-R26BK01361383": {
+      "probability": 20,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술",
+        "원격 협업",
+        "실감형 교육"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "플랫폼 구축 경험",
+        "예산 대비 과잉"
+      ],
+      "strategy": "AR/XR 특화 제안",
+      "summary": "LXP와 AR/XR 간 접점 부족",
+      "savedAt": 1772881258444
+    },
+    "G2B-R26BK01370904": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술 적합",
+        "원격협업 강점",
+        "디지털트윈 활용"
+      ],
+      "weaknesses": [
+        "감리 전문성 부족",
+        "주사업과 상이"
+      ],
+      "strategy": "기술 강점 부각,감리 전문성 보완,혁신 감리 강조",
+      "summary": "AR/XR 감리 혁신 가능, 전문성 보완 필요.",
+      "savedAt": 1772881270009
+    },
+    "G2B-R26BK01371352": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "디지털트윈 역량",
+        "협상계약 유리"
+      ],
+      "weaknesses": [
+        "ITS 기획 경험 부족",
+        "핵심사업 불일치",
+        "ITS 전문성 부족"
+      ],
+      "strategy": "디지털트윈 활용, ITS 전문기업 협력, 데이터 시각화 강조",
+      "summary": "ITS 기획과 불일치, 디지털트윈 활용이 관건.",
+      "savedAt": 1772881281199
+    },
+    "G2B-R26BK01354017": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "국방 분야 경험",
+        "AI 기술 활용",
+        "혁신 기술 보유"
+      ],
+      "weaknesses": [
+        "기획 연구 불일치",
+        "AI 안전 전문성 부족",
+        "주력 사업과 차이"
+      ],
+      "strategy": "AI 활용 강조",
+      "summary": "주력 사업과 불일치. AI 연계 중요.",
+      "savedAt": 1772881292041
+    },
+    "G2B-R26BK01357553": {
+      "probability": 25,
+      "grade": "D",
+      "strengths": [
+        "국방 분야 경험",
+        "혁신 기술 보유",
+        "AI 연관 기술"
+      ],
+      "weaknesses": [
+        "AI 안전 전문성 부족",
+        "기획 연구 경험 부족"
+      ],
+      "strategy": "AI 안전 협력 제안",
+      "summary": "AI 안전 기획과 거리",
+      "savedAt": 1772881303569
+    },
+    "G2B-R26BK01351424": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "IT 기술력 보유",
+        "AI 기술 활용",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "의료 AI 비전문",
+        "제품군 불일치"
+      ],
+      "strategy": "의료 AI 협력",
+      "summary": "핵심 역량과 상이, 수주 가능성 낮음.",
+      "savedAt": 1772881313177
+    },
+    "G2B-R26BK01372996": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AI 기술력 보유",
+        "코스닥 상장사",
+        "기술 개발 역량"
+      ],
+      "weaknesses": [
+        "의료AI 전문성 無",
+        "사업 영역 상이",
+        "관련 제품 부재"
+      ],
+      "strategy": "의료AI 협력 필수",
+      "summary": "핵심역량 불일치로 수주 가능성 매우 낮음",
+      "savedAt": 1772881321643
+    },
+    "G2B-R26BK01349604": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "혁신 기술 보유",
+        "GIST 잠재 고객"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "기획 역량 부족",
+        "교육 분야 경험無"
+      ],
+      "strategy": "참여 재고 필요",
+      "summary": "핵심 역량과 무관하여 수주 가능성 매우 낮음.",
+      "savedAt": 1772881328283
+    },
+    "G2B-R26BK01355654": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "혁신기술기업 이미지",
+        "AI 관련 기술 이해",
+        "대학 협력 경험"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "교육운영 경험 부족"
+      ],
+      "strategy": "본업 집중 및 협력",
+      "summary": "사업 불일치로 저조",
+      "savedAt": 1772881336991
+    },
+    "G2B-R26BK01370039": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "혁신 기술 보유",
+        "디지털 트윈",
+        "원격 협업 가능"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "주력 분야 상이"
+      ],
+      "strategy": "AR/XR 활용 제안, 파트너십",
+      "summary": "AR/XR 접목 가능성. 핵심과 거리, 경쟁력 필요.",
+      "savedAt": 1772881344905
+    },
+    "G2B-R26BK01372292": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "디지털트윈 연계",
+        "원격협업/관제",
+        "운영효율 증대",
+        "산업현장 경험"
+      ],
+      "weaknesses": [
+        "로봇제조 비전문",
+        "예산 규모 한계"
+      ],
+      "strategy": "로봇관리/안전강조",
+      "summary": "로봇운영 효율화 기여",
+      "savedAt": 1772881354410
+    },
+    "BIZ-PBLN_000000000119229": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "원격협업 솔루션",
+        "글로벌 사업 경험"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "유통 경험 부족",
+        "프로젝트 목표 상이"
+      ],
+      "strategy": "AR/XR 활용 제안",
+      "summary": "사업분야 불일치로 수주 가능성 매우 낮음.",
+      "savedAt": 1772881363204
+    },
+    "BIZ-PBLN_000000000119227": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "코스닥 상장 기업",
+        "해외 전시 적합성"
+      ],
+      "weaknesses": [
+        "지역 요건 불확실",
+        "경쟁사 존재 가능"
+      ],
+      "strategy": "자유구역 입주 확인 및 해외 전시 활용 계획 수립",
+      "summary": "AR/XR 기술력 우수, 자유구역 입주 시 해외 전시 수혜 유력",
+      "savedAt": 1772881373623
+    },
+    "BIZ-PBLN_000000000119226": {
+      "probability": 80,
+      "grade": "B",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "다양한 제품군",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "입주기업 자격 미확인",
+        "직접 수주 아님"
+      ],
+      "strategy": "자격 확인, 기술 강조",
+      "summary": "혁신 기술로 전시회 적합",
+      "savedAt": 1772881384287
+    },
+    "BIZ-PBLN_000000000119224": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "원격협업 솔루션",
+        "디지털트윈 역량"
+      ],
+      "weaknesses": [
+        "사업 연관성 낮음",
+        "타겟 시장 불일치"
+      ],
+      "strategy": "참가 불필요",
+      "summary": "사업 연관성 매우 낮음",
+      "savedAt": 1772881391420
+    },
+    "BIZ-PBLN_000000000119222": {
+      "probability": 40,
+      "grade": "C",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "다양한 제품 포트폴리오",
+        "코스닥 상장 기업"
+      ],
+      "weaknesses": [
+        "B2B 제품 특성",
+        "유통망 사업 불일치",
+        "길림성 시장 특수성"
+      ],
+      "strategy": "B2B 특화 진출 전략",
+      "summary": "B2B 제품, 유통망 사업 적합성 재검토 필요.",
+      "savedAt": 1772881407455
+    },
+    "BIZ-PBLN_000000000119218": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "중소기업 해당",
+        "혁신 기술 보유",
+        "성장 잠재력"
+      ],
+      "weaknesses": [
+        "직접 수주 아님",
+        "예산 미정",
+        "융자지원 사업"
+      ],
+      "strategy": "관련 공고 주시",
+      "summary": "융자지원 공고로 수주와 무관",
+      "savedAt": 1772881418169
+    },
+    "G2B-R26BK01382920": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "원격협업 솔루션",
+        "첨단기술 기업",
+        "혁신 이미지"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "AR/XR 기술 불필요"
+      ],
+      "strategy": "기술적용 방안 모색",
+      "summary": "사업내용과 기술 불일치",
+      "savedAt": 1773304884736
+    },
+    "G2B-R26BK01377618": {
+      "probability": 80,
+      "grade": "B",
+      "strengths": [
+        "XR/AR 전문기업",
+        "VR 교육 솔루션",
+        "디지털트윈 활용"
+      ],
+      "weaknesses": [
+        "예산 규모 작음",
+        "경쟁사 존재"
+      ],
+      "strategy": "VR교육 특화 제안",
+      "summary": "XR기술력, 수주 유력",
+      "savedAt": 1773304896007
+    },
+    "G2B-R26BK01377235": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술 선도",
+        "혁신 솔루션 보유",
+        "디지털 전환 역량"
+      ],
+      "weaknesses": [
+        "MARC 사업 무관함",
+        "도서관 IT 경험 부족",
+        "제품군 적합성 낮음"
+      ],
+      "strategy": "핵심 사업에 집중",
+      "summary": "VIRNECT 사업과 무관",
+      "savedAt": 1773304906472
+    },
+    "G2B-R26BK01381026": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "원격협업 솔루션",
+        "스마트팩토리 분류",
+        "AR/XR 기술력 보유"
+      ],
+      "weaknesses": [
+        "MRI 유지보수 경험無",
+        "핵심사업과 무관함"
+      ],
+      "strategy": "협력사 통한 참여",
+      "summary": "사업영역 불일치로 수주難",
+      "savedAt": 1773304915172
+    },
+    "G2B-R26BK01385516": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "스마트팩토리 분류",
+        "원격협업 기술",
+        "디지털트윈 역량"
+      ],
+      "weaknesses": [
+        "핵심사업 불일치",
+        "MRI 유지보수 경험無",
+        "전문성 결여"
+      ],
+      "strategy": "전문업체와 협력",
+      "summary": "핵심사업과 불일치, 수주확률 낮음.",
+      "savedAt": 1773304924141
+    },
+    "G2B-R26BK01375634": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "XR/AR 전문성",
+        "다양한 제품군",
+        "기술 분야 적합"
+      ],
+      "weaknesses": [
+        "재활로봇 경험 부족",
+        "LLM 연관성 부족"
+      ],
+      "strategy": "XR 활용성 강조",
+      "summary": "XR/AR 기술 적합, 수주 유력",
+      "savedAt": 1773304990527
+    },
+    "G2B-R26BK01378464": {
+      "probability": 45,
+      "grade": "C",
+      "strengths": [
+        "산업현장 경험",
+        "혁신 AR/XR 기술",
+        "안전 분야 확장"
+      ],
+      "weaknesses": [
+        "주제 연관성 낮음",
+        "연구 역량 불확실",
+        "예산 규모 제약"
+      ],
+      "strategy": "AR/XR 활용 연구 제안",
+      "summary": "AR/XR 연관성 낮아 수주 보통 이하",
+      "savedAt": 1773304934831
+    },
+    "G2B-R26BK01383668": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "코스닥 상장사",
+        "기술력 우수",
+        "공공기관 인지도"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "인증 경험 부족"
+      ],
+      "strategy": "파트너십 모색",
+      "summary": "사업 연관성 낮음",
+      "savedAt": 1773304947490
+    },
+    "G2B-R26BK01386558": {
+      "probability": 75,
+      "grade": "A",
+      "strengths": [
+        "디지털트윈 솔루션",
+        "원격협업 기술",
+        "AR/XR 기술력"
+      ],
+      "weaknesses": [
+        "경쟁사 존재",
+        "구축 경험 부족"
+      ],
+      "strategy": "디지털트윈, 원격협업으로 효율적 관리",
+      "summary": "버넥트 솔루션은 드론 인프라 관리에 적합",
+      "savedAt": 1773304958734
+    },
+    "G2B-R26BK01386703": {
+      "probability": 45,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 훈련 기술",
+        "원격 협업 솔루션",
+        "디지털 트윈"
+      ],
+      "weaknesses": [
+        "센터 운영 경험 부족",
+        "핵심 사업과 거리",
+        "경쟁사 대비 약점"
+      ],
+      "strategy": "AR/XR 훈련 솔루션 제안",
+      "summary": "기술 강점, 운영 경험 약점",
+      "savedAt": 1773304968947
+    },
+    "G2B-R26BK01386217": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "디지털트윈 연동",
+        "원격협업 솔루션",
+        "제조현장 경험"
+      ],
+      "weaknesses": [
+        "AMR 직접 개발 無",
+        "AI 자율제조 부족"
+      ],
+      "strategy": "AMR+AR/XR 통합 제안, 운영 효율성 강조",
+      "summary": "AMR 직접 개발 역량 부족하나, AR/XR로 운영 효율성 제고 제안 가능.",
+      "savedAt": 1773304979308
+    },
+    "G2B-R26BK01385131": {
+      "probability": 30,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 혁신 기술",
+        "원격 협업 솔루션",
+        "디지털 트윈 강점"
+      ],
+      "weaknesses": [
+        "일반 이러닝 괴리",
+        "높은 도입 비용"
+      ],
+      "strategy": "AR/XR 특화 제안",
+      "summary": "AR/XR 잠재력, 불확실",
+      "savedAt": 1773305001316
+    },
+    "G2B-R26BK01358922": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "디지털트윈 연계",
+        "국방 분야 경험",
+        "AR/XR 기술력"
+      ],
+      "weaknesses": [
+        "AI 플랫폼 부재",
+        "AI 개발 전문성"
+      ],
+      "strategy": "Twin/AR/XR 활용",
+      "summary": "Twin/AR/XR로 AI 시너지",
+      "savedAt": 1773305011286
+    },
+    "G2B-R26BK01360137": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 전문성",
+        "원격협업 솔루션",
+        "디지털트윈 강점"
+      ],
+      "weaknesses": [
+        "AI 데이터 전문성",
+        "사업 범위 모호"
+      ],
+      "strategy": "AR/XR-AI 연계 강조",
+      "summary": "AR/XR로 행정혁신 기여",
+      "savedAt": 1773305021989
+    },
+    "G2B-R26BK01382940": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "디지털트윈 역량",
+        "혁신 기술 보유"
+      ],
+      "weaknesses": [
+        "보안 전문성 부족",
+        "규제 분석 경험 無"
+      ],
+      "strategy": "전문기관과 협력",
+      "summary": "핵심 역량 불일치로 수주 난망",
+      "savedAt": 1773305035344
+    },
+    "G2B-R26BK01380775": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "혁신 제품 보유",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "금융IT 경험 부족",
+        "XBRL 전문성 부재",
+        "사업영역 불일치",
+        "핵심기술 무관함"
+      ],
+      "strategy": "핵심역량 집중",
+      "summary": "AR/XR과 금융IT 불일치",
+      "savedAt": 1773305046129
+    },
+    "G2B-R26BK01384196": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "디지털트윈 활용",
+        "혁신적 시각화",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "SAR 데이터 미경험",
+        "핵심역량 불일치"
+      ],
+      "strategy": "SAR전문기업 협력",
+      "summary": "AR/XR-SAR 분석 연관성↓, 수주↓",
+      "savedAt": 1773305058944
+    },
+    "G2B-R26BK01380491": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "로봇 분류 일치",
+        "기술기업 이미지"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "농업 드론 경험 無",
+        "제품 연관성 부족"
+      ],
+      "strategy": "농업 드론社 협력",
+      "summary": "핵심 사업 불일치로 수주 가능성 매우 낮음.",
+      "savedAt": 1773305070002
+    },
+    "G2B-R26BK01377950": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "원격협업(Remote)",
+        "디지털트윈(Twin)",
+        "스마트고글(VisionX)",
+        "첨단기술력",
+        "산업용 솔루션"
+      ],
+      "weaknesses": [
+        "드론운영 미경험",
+        "예산규모 작음",
+        "경쟁사 많음"
+      ],
+      "strategy": "AR/XR 기반 관리 제안",
+      "summary": "원격협업/트윈으로 드론 시스템 운영 효율성 극대화 가능.",
+      "savedAt": 1773305083540
+    },
+    "G2B-R26BK01378342": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "AI 기술력 보유",
+        "산업 솔루션 경험",
+        "2차 사업 유리"
+      ],
+      "weaknesses": [
+        "음향 AI 전문성?",
+        "주력 분야 차이"
+      ],
+      "strategy": "AI 역량 강조",
+      "summary": "AI 역량으로 수주 기대",
+      "savedAt": 1773305095181
+    },
+    "G2B-R26BK01355856": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술력",
+        "원격협업 솔루션",
+        "디지털트윈 역량",
+        "교육/훈련 특화",
+        "기술지원 강화"
+      ],
+      "weaknesses": [
+        "경쟁사 다수",
+        "유지보수 경험",
+        "가격 경쟁력",
+        "AR/XR 활용도"
+      ],
+      "strategy": "AR/XR 가치 제안",
+      "summary": "AR/XR 활용 경쟁 우위",
+      "savedAt": 1773305107107
+    },
+    "G2B-R26BK01358657": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "AI/CV 역량",
+        "기술 개발력",
+        "데이터 처리"
+      ],
+      "weaknesses": [
+        "분야 불일치",
+        "포렌식 전문성 無",
+        "예산 규모 작음"
+      ],
+      "strategy": "포렌식 AI 협력",
+      "summary": "AR/XR과 포렌식 AI 불일치로 수주 가능성 낮음.",
+      "savedAt": 1773305117600
+    },
+    "G2B-R26BK01358839": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AI 기술 활용 경험",
+        "첨단 기술 기업",
+        "데이터 처리 경험"
+      ],
+      "weaknesses": [
+        "핵심 역량 불일치",
+        "필적 분석 전문성 無"
+      ],
+      "strategy": "참여 재고 필요",
+      "summary": "핵심 역량과 동떨어진 사업",
+      "savedAt": 1773305127577
+    },
+    "G2B-R26BK01355359": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "AR/XR, AI 전문성",
+        "유망산업 직접 경험",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "분석 전문성 강조 필요",
+        "컨설팅 경쟁사"
+      ],
+      "strategy": "기술+분석 역량 강조",
+      "summary": "기술 기반 분석 강점",
+      "savedAt": 1773305136459
+    },
+    "G2B-R26BK01360170": {
+      "probability": 40,
+      "grade": "C",
+      "strengths": [
+        "디지털트윈 적합",
+        "원격협업 활용성",
+        "기술력 우수",
+        "시각화 강점"
+      ],
+      "weaknesses": [
+        "AI 핵심역량 부족",
+        "수문학 전문성",
+        "경쟁사 우위",
+        "예산 제약"
+      ],
+      "strategy": "AI 전문기업 협력, 디지털트윈 강조, AR/XR 활용 제안, 유지보수 솔루션",
+      "summary": "디지털트윈 강점, AI 협력 필수.",
+      "savedAt": 1773305146251
+    },
+    "BIZ-PBLN_000000000119391": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "산업용 솔루션",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "사업 연관성 부족",
+        "주력 분야 아님"
+      ],
+      "strategy": "사업 참여 부적합",
+      "summary": "AR/XR과 무관한 사업으로 수주 가능성 매우 낮음.",
+      "savedAt": 1773305155256
+    },
+    "BIZ-PBLN_000000000119388": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력 우수",
+        "코스닥 상장기업",
+        "다양한 솔루션 보유"
+      ],
+      "weaknesses": [
+        "지원 대상 아님",
+        "사업 성격 불일치"
+      ],
+      "strategy": "본 사업 부적합",
+      "summary": "재도전 지원사업과 무관",
+      "savedAt": 1773305164034
+    },
+    "BIZ-PBLN_000000000119382": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술력",
+        "AR/XR 전문성",
+        "산업 솔루션"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "사회적기업 아님",
+        "수주 아닌 모집"
+      ],
+      "strategy": "사업 목적 재확인",
+      "summary": "사업 불일치, 수주 낮음.",
+      "savedAt": 1773305174905
+    },
+    "G2B-R26BK01378115": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "디지털트윈 제품",
+        "BIM-AR/XR 연계",
+        "혁신기술 보유",
+        "국토부 관심분야"
+      ],
+      "weaknesses": [
+        "예산 규모 작음",
+        "경쟁사 존재"
+      ],
+      "strategy": "Twin 제품 특화 제안",
+      "summary": "Twin 제품 강점, BIM 연계 우수, 수주 유력",
+      "savedAt": 1773305183420
+    },
+    "G2B-R26BK01377410": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "3D 데이터 처리 전문",
+        "디지털트윈 기술",
+        "객체 인식/분석 강점",
+        "SW 개발 역량 우수"
+      ],
+      "weaknesses": [
+        "드론 제어 직접 경험↓",
+        "예산 규모 소액"
+      ],
+      "strategy": "3D 데이터 처리 강조",
+      "summary": "3D 데이터 처리 강점, 드론 데이터 연계 제안 필요",
+      "savedAt": 1773305197153
+    },
+    "G2B-R26BK01374099": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술력 우수",
+        "드론 안전 연관성",
+        "원격 협업 솔루션",
+        "스마트 고글 활용",
+        "디지털 트윈 가능"
+      ],
+      "weaknesses": [
+        "행사 위탁 경험 부족",
+        "예산 제약 가능성",
+        "직접적 연관성 낮음"
+      ],
+      "strategy": "기술 특화 제안 및 파트너십 모색",
+      "summary": "AR/XR 기술로 드론 행사 안전 강화, 파트너십 통한 접근 필요.",
+      "savedAt": 1773305208374
+    },
+    "G2B-R26BK01382015": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "디지털 트윈 기술",
+        "원격 협업 솔루션",
+        "AR/XR 기술 선도"
+      ],
+      "weaknesses": [
+        "로봇 제조/공급 無",
+        "핵심 사업 불일치"
+      ],
+      "strategy": "입찰 포기 검토 및 협력사 모색",
+      "summary": "핵심 사업 불일치로 수주 가능성 낮음.",
+      "savedAt": 1773305222110
+    },
+    "G2B-R26BK01381385": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "스마트고글",
+        "원격협업 솔루션",
+        "디지털트윈",
+        "AI 기술 보유"
+      ],
+      "weaknesses": [
+        "언어 AI 경험 부족",
+        "교육 서비스 미경험",
+        "핵심사업과 무관",
+        "NLP/음성인식 미흡",
+        "서비스 운영 경험X"
+      ],
+      "strategy": "사업 분야 재검토",
+      "summary": "AR/XR 전문성과 무관, 수주 가능성 매우 낮음.",
+      "savedAt": 1773305231516
+    },
+    "G2B-R26BK01386156": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "혁신 AR/XR 기술력",
+        "AI 기술 활용 경험"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "AI API 전문성 부족",
+        "도서관 특화 미흡"
+      ],
+      "strategy": "AI 전문기업 협력,AR/XR+AI 융합 제안,기술 확장성 강조",
+      "summary": "AR/XR 전문기업으로 AI API 사업 직접 연관성 낮음.",
+      "savedAt": 1773305241145
+    },
+    "BIZ-PBLN_000000000119383": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술 선도",
+        "다양한 솔루션 보유",
+        "코스닥 상장 기업"
+      ],
+      "weaknesses": [
+        "사업 연관성 부족",
+        "전문 분야 불일치",
+        "예산 미정"
+      ],
+      "strategy": "사업 연관성 재검토",
+      "summary": "핵심 사업과 연관성 낮음",
+      "savedAt": 1773305251720
+    },
+    "BIZ-PBLN_000000000119380": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "다양한 제품군",
+        "신시장 개척 기회"
+      ],
+      "weaknesses": [
+        "화장품 분야 니치",
+        "직접 연관성 부족",
+        "높은 도입 비용"
+      ],
+      "strategy": "화장품 산업 적용 제안",
+      "summary": "AR/XR 기술로 화장품 산업 혁신 가능성 제시",
+      "savedAt": 1773305264941
+    },
+    "BIZ-PBLN_000000000119379": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "코스닥 상장사",
+        "글로벌 확장 잠재력"
+      ],
+      "weaknesses": [
+        "경쟁 심화 가능성",
+        "예산 미정 불확실"
+      ],
+      "strategy": "해외 진출 계획 강조",
+      "summary": "해외 진출 적합 기업",
+      "savedAt": 1773305273339
+    },
+    "G2B-R26BK01381762": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "첨단 AR/XR 기술",
+        "원격 협업 솔루션",
+        "디지털 트윈 역량",
+        "국방 분야 관심"
+      ],
+      "weaknesses": [
+        "SEM/XRD 전문성 부족",
+        "사업 분야 불일치",
+        "낮은 예산 규모",
+        "경쟁사 우위 가능"
+      ],
+      "strategy": "SEM/XRD 전문성 확보 및 AR/XR 연계 방안 제시",
+      "summary": "SEM/XRD 분석지원과 AR/XR 기술의 직접적 연관성 낮아 전문성 보강 필요.",
+      "savedAt": 1773305285478
+    },
+    "G2B-R26BK01380724": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "디지털트윈 적합",
+        "원격협업 강점",
+        "AR/XR 전문성",
+        "항만 인프라 적용"
+      ],
+      "weaknesses": [
+        "CCUS 경험 부족",
+        "연구용역 불확실",
+        "예산 규모 한계"
+      ],
+      "strategy": "디지털트윈/원격협업. CCUS 연계. 파트너십 고려.",
+      "summary": "디지털트윈/원격협업 강점. CCUS 연계 중요.",
+      "savedAt": 1773305296058
+    },
+    "G2B-R26BK01381592": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "기술 이해도 높음",
+        "혁신 기업 이미지",
+        "AI 기술 연관성"
+      ],
+      "weaknesses": [
+        "PR 전문성 부족",
+        "사업 영역 불일치"
+      ],
+      "strategy": "PR 전문 기업 협력",
+      "summary": "PR 전문성 부족으로 수주 가능성 매우 낮음.",
+      "savedAt": 1773305305080
+    },
+    "G2B-R26BK01378531": {
+      "probability": 25,
+      "grade": "D",
+      "strengths": [
+        "코스닥 상장사",
+        "기술 이해도 높음",
+        "디지털트윈 기술"
+      ],
+      "weaknesses": [
+        "행사 운영 미경험",
+        "주력 사업과 상이"
+      ],
+      "strategy": "행사 전문 협력",
+      "summary": "사업 분야 불일치",
+      "savedAt": 1773305314637
+    },
+    "G2B-R26BK01358810": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술 기업",
+        "코스닥 상장사",
+        "디지털 전환 역량"
+      ],
+      "weaknesses": [
+        "AI/ISP 전문성 부족",
+        "핵심 사업과 무관"
+      ],
+      "strategy": "AI/ISP 전문기업 협력",
+      "summary": "사업 분야 불일치",
+      "savedAt": 1773305327100
+    },
+    "G2B-R26BK01379793": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "디지털트윈 제품",
+        "AR/XR 전문성",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "소규모 예산",
+        "기술 개발 과제"
+      ],
+      "strategy": "Twin 제품 강조, AR/XR 연동, 연구원 협력 경험 부각",
+      "summary": "VIRNECT의 디지털트윈 제품과 AR/XR 기술이 연구원 과제에 매우 적합함.",
+      "savedAt": 1773305335547
+    },
+    "G2B-R26BK01370972": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술력",
+        "스마트고글",
+        "디지털트윈",
+        "원격협업",
+        "농업 확장성"
+      ],
+      "weaknesses": [
+        "농업 경험 부족",
+        "전략 수립 역량",
+        "예산 규모 작음"
+      ],
+      "strategy": "기술 연관성 강조",
+      "summary": "AR/XR 기술, 스마트농업 피지컬 AI 전략에 매우 적합.",
+      "savedAt": 1773305346081
+    },
+    "G2B-R26BK01386886": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술력 우수",
+        "교육 분야 적용 용이",
+        "원격 협업/지원 강점"
+      ],
+      "weaknesses": [
+        "드론 코딩 직접성↓",
+        "특화 솔루션 부재"
+      ],
+      "strategy": "AR/XR로 교육 효과 극대화",
+      "summary": "AR/XR로 드론 교육 혁신 가능성",
+      "savedAt": 1773305356560
+    },
+    "G2B-R26BK01378897": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술 기업",
+        "공공기관 경험"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "조사 전문성 부족",
+        "예산 규모 작음"
+      ],
+      "strategy": "입찰 포기 또는 협력",
+      "summary": "핵심 사업과 무관함",
+      "savedAt": 1773305364200
+    },
+    "G2B-R26BK01384879": {
+      "probability": 40,
+      "grade": "C",
+      "strengths": [
+        "영상분석 기술",
+        "AI/CV 역량",
+        "기술 적응력"
+      ],
+      "weaknesses": [
+        "의료 도메인 부족",
+        "핵심사업과 거리",
+        "소규모 예산"
+      ],
+      "strategy": "보유 기술 확장성 강조",
+      "summary": "영상분석 강점, 도메인 약점",
+      "savedAt": 1773305374136
+    },
+    "G2B-R26BK01384184": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "대규모 예산 경험",
+        "플랫폼 개발 경험",
+        "정부과제 경험",
+        "기술 기반 기업"
+      ],
+      "weaknesses": [
+        "AI 핵심 역량 부족",
+        "도메인 지식 부재",
+        "제품 연관성 낮음",
+        "전문 인력 부족"
+      ],
+      "strategy": "AI 전문기업 협력",
+      "summary": "AI 독성 예측과 무관",
+      "savedAt": 1773305384878
+    },
+    "G2B-R26BK01381984": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력 우수",
+        "원격협업 솔루션",
+        "디지털트윈 전문"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "경제AI 전문성 부족"
+      ],
+      "strategy": "참여 지양 권고",
+      "summary": "핵심역량과 무관, 수주 가능성 낮음",
+      "savedAt": 1773305394638
+    },
+    "G2B-R26BK01376538": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "디지털트윈 적합",
+        "AR/XR 기술력",
+        "상장사 신뢰도"
+      ],
+      "weaknesses": [
+        "환경분야 경험 부족",
+        "경쟁 심화"
+      ],
+      "strategy": "맞춤형 솔루션 제안",
+      "summary": "VIRNECT, 환경정보 사업에 AR/XR/DT 최적. 수주 유력.",
+      "savedAt": 1773305405404
+    },
+    "BIZ-PBLN_000000000119389": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "원격협업 솔루션",
+        "디지털트윈 역량",
+        "산업현장 경험"
+      ],
+      "weaknesses": [
+        "식품산업 경험 부족",
+        "사업목적 불일치",
+        "대상자 공고",
+        "예산 미정"
+      ],
+      "strategy": "식품안전/효율 강조, 푸드테크 기업 협력, 원격지원 솔루션 제안",
+      "summary": "사업 성격상 연관성 낮음",
+      "savedAt": 1773305419722
+    },
+    "BIZ-PBLN_000000000119385": {
+      "probability": 90,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 전문성",
+        "혁신 기술 보유",
+        "글로벌 시장 적합",
+        "다양한 솔루션"
+      ],
+      "weaknesses": [
+        "참가 비용 부담",
+        "경쟁 심화 가능성"
+      ],
+      "strategy": "핵심 제품 시연, 파트너십 구축, 글로벌 홍보 강화",
+      "summary": "AR/XR 전문성으로 참가 적합, 글로벌 시장 확대 기회.",
+      "savedAt": 1773305429218
+    },
+    "BIZ-PBLN_000000000119384": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술 보유",
+        "AR/XR 시장 선도",
+        "다양한 제품군"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "전문성 부족"
+      ],
+      "strategy": "핵심역량 집중",
+      "summary": "사업분야 불일치로 수주 어려움",
+      "savedAt": 1773305443212
+    },
+    "BIZ-PBLN_000000000119381": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "첨단 기술 이미지",
+        "스타트업 잠재 수요"
+      ],
+      "weaknesses": [
+        "사업 성격 불일치",
+        "직접 수주 어려움",
+        "예산 미정"
+      ],
+      "strategy": "기술사업 모니터링",
+      "summary": "창업자 모집 사업으로 직접 수주 가능성 매우 낮음.",
+      "savedAt": 1773305452380
+    },
+    "G2B-R26BK01378460": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "제품 적합성",
+        "기술력",
+        "시장 트렌드"
+      ],
+      "weaknesses": [
+        "컨설팅 경험",
+        "중소기업 특화"
+      ],
+      "strategy": "컨설팅 역량 강조",
+      "summary": "AR/XR 솔루션 강점, 스마트 공장 적합",
+      "savedAt": 1773305465162
+    },
+    "G2B-R26BK01378924": {
+      "probability": 25,
+      "grade": "D",
+      "strengths": [
+        "첨단 AR/XR 기술",
+        "코스닥 상장기업",
+        "로봇 분류 연관성"
+      ],
+      "weaknesses": [
+        "드론쇼 경험 부족",
+        "핵심 사업 불일치"
+      ],
+      "strategy": "협력사 통한 접근",
+      "summary": "사업 연관성 낮아 협력 필수",
+      "savedAt": 1773305476499
+    },
+    "G2B-R26BK01378395": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "첨단기술 전문성",
+        "DT 구현 경험",
+        "디지털트윈 역량"
+      ],
+      "weaknesses": [
+        "전략수립 경험",
+        "AI 컨설팅 부족",
+        "공공기관 기획"
+      ],
+      "strategy": "컨설팅사 협력, AR/XR 활용 제안, 디지털트윈 연계",
+      "summary": "AR/XR 기술력은 강점, 전략수립 역량 보완 필요",
+      "savedAt": 1773305485747
+    },
+    "G2B-R26BK01378448": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "기술 이해도 높음",
+        "디지털트윈 연계",
+        "스마트시티 잠재"
+      ],
+      "weaknesses": [
+        "AI 전략 경험 부족",
+        "핵심 사업 불일치",
+        "정책 수립 미경험"
+      ],
+      "strategy": "AI 컨설팅 협력, AR/XR 활용 제안, 향후 구현 사업 집중",
+      "summary": "AI 전략 수립과 핵심 사업 불일치.",
+      "savedAt": 1773305494751
+    },
+    "G2B-R26BK01379559": {
+      "probability": 30,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술력 보유",
+        "원격 협업 솔루션",
+        "디지털 트윈 역량",
+        "AI 기술 잠재력",
+        "코스닥 상장 기업"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "컨설팅 전문성 부족",
+        "경쟁사 우위 예상"
+      ],
+      "strategy": "AI/원격/트윈 연계 제안",
+      "summary": "사업 불일치로 낮은 기회, 기술 연계 전략으로 극복.",
+      "savedAt": 1773305507096
+    },
+    "G2B-R26BK01382348": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AI 기술력 보유",
+        "혁신 기술 기업"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "도메인 지식 부족",
+        "ISP 경험 부족"
+      ],
+      "strategy": "컨소시엄 구성 필수",
+      "summary": "사업 불일치로 수주 난망",
+      "savedAt": 1773305518628
+    },
+    "G2B-R26BK01386845": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술 기업",
+        "디지털 전환 경험",
+        "기술 통합 역량"
+      ],
+      "weaknesses": [
+        "핵심 역량 불일치",
+        "AI/LLM 경험 부족",
+        "경쟁사 우위 예상"
+      ],
+      "strategy": "AI/LLM 파트너십",
+      "summary": "AR/XR 전문, AI/LLM 사업 불일치로 수주 낮음.",
+      "savedAt": 1773305527849
+    },
+    "G2B-R26BK01380601": {
+      "probability": 55,
+      "grade": "B",
+      "strengths": [
+        "디지털트윈",
+        "원격협업 솔루션",
+        "스마트팩토리 적합"
+      ],
+      "weaknesses": [
+        "유지보수 전문성",
+        "예측시스템 경험"
+      ],
+      "strategy": "DT/AR 유지보수 제안",
+      "summary": "AR/DT 기반 유지보수",
+      "savedAt": 1773305539856
+    },
+    "G2B-R26BK01378891": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술 기업",
+        "AI 기술 잠재력"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "교육 운영 경험 無",
+        "콘텐츠 마케팅 無",
+        "낮은 예산 규모"
+      ],
+      "strategy": "교육 전문 기업 협력",
+      "summary": "핵심 사업과 무관함",
+      "savedAt": 1773305549450
+    },
+    "G2B-R26BK01378991": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "코스닥 상장사",
+        "AR/XR 기술력",
+        "산업 솔루션"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "교육 경험 부족",
+        "AI/마케팅 무관",
+        "예산 규모 작음"
+      ],
+      "strategy": "AI/교육 파트너십",
+      "summary": "AR/XR과 AI/마케팅 교육은 무관, 수주 희박.",
+      "savedAt": 1773305559262
+    },
+    "G2B-R26BK01383605": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "AI 기술력 보유",
+        "플랫폼 개발 경험",
+        "스마트팜 연계 가능"
+      ],
+      "weaknesses": [
+        "농업 전문성 부족",
+        "AR/XR 활용도 낮음",
+        "낮은 사업 예산"
+      ],
+      "strategy": "AI/플랫폼 강조, 농업 파트너 협력, AR/XR 간접 기여",
+      "summary": "AI 역량 있으나 농업 특화 전문성 부족, 수주 보통.",
+      "savedAt": 1773305570335
+    },
+    "G2B-R26BK01384273": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "원격협업 기술",
+        "스마트고글 활용",
+        "AR/XR 핵심 기술",
+        "모션트래킹 가능",
+        "혁신 기술력"
+      ],
+      "weaknesses": [
+        "의료분야 경험",
+        "AI 전문성 부족",
+        "기획연구 경험",
+        "산업분야 편중"
+      ],
+      "strategy": "의료기관 협력,원격재활 특화,AI 연동 방안 제시,기획 역량 강조",
+      "summary": "AR/XR 재활기획 적합. AI/의료 보완 시 수주 유력.",
+      "savedAt": 1773305584421
+    },
+    "G2B-R26BK01362637": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "첨단 AR/XR 기술",
+        "혁신 솔루션 보유",
+        "시각화 기술 우수"
+      ],
+      "weaknesses": [
+        "AI SW 전문성 부족",
+        "멀티모달 AI 부재"
+      ],
+      "strategy": "AI 전문기업과 협력",
+      "summary": "AR/XR 전문성으로 AI SW 용역과 불일치, 수주 가능성 낮음.",
+      "savedAt": 1773305596413
+    },
+    "BIZ-PBLN_000000000119390": {
+      "probability": 0,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술 선도",
+        "산업용 솔루션 강점",
+        "원격 협업 전문성"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "기술 연관성 전무",
+        "수요 시장 상이"
+      ],
+      "strategy": "본 사업 참여 불필요",
+      "summary": "사업 성격 불일치로 수주 가능성 없음",
+      "savedAt": 1773305604470
+    },
+    "BIZ-PBLN_000000000119387": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "코스닥 상장사",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "사회적기업 아님",
+        "사업목적 불일치",
+        "높은 기술비용"
+      ],
+      "strategy": "사회적 가치 연계",
+      "summary": "사업목적과 괴리 큼",
+      "savedAt": 1773305614179
+    },
+    "BIZ-PBLN_000000000119386": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술 선도",
+        "혁신 솔루션 보유",
+        "다양한 제품군"
+      ],
+      "weaknesses": [
+        "사업 내용 불일치",
+        "수주 목적 상이",
+        "예산 정보 부족"
+      ],
+      "strategy": "사업 내용 재확인, 참여 적합성 검토, 참여 재고 필요",
+      "summary": "사업 분야 불일치로 수주 가능성 매우 낮음.",
+      "savedAt": 1773305625522
+    },
+    "BIZ-PBLN_000000000119378": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "디지털 경험 제공",
+        "혁신적 접근 가능"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "관광굿즈 경험 無"
+      ],
+      "strategy": "AR 연계 굿즈 제안",
+      "summary": "사업 분야 불일치로 수주 어려움",
+      "savedAt": 1773305638220
+    },
+    "BIZ-PBLN_000000000119377": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 핵심 사업",
+        "제품 포트폴리오",
+        "실증 사업 적합"
+      ],
+      "weaknesses": [
+        "예산 미정 불확실",
+        "경쟁사 존재 가능",
+        "홀로그램 정의 모호"
+      ],
+      "strategy": "제품 실증 사례 제시",
+      "summary": "AR/XR 전문성 기반, 높은 수주 가능성 보유.",
+      "savedAt": 1773305647426
+    },
+    "G2B-R26BK01389228": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 전문성",
+        "디지털트윈 제품",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "품질관리 특화?",
+        "경쟁사 존재"
+      ],
+      "strategy": "ARD 시각화 및 DT 연계",
+      "summary": "ARD 품질관리 시각화 및 효율화에 기여 가능성 높음.",
+      "savedAt": 1773824804345
+    },
+    "G2B-R26BK01392240": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술력 보유",
+        "디지털 전환 역량",
+        "공공사업 참여 경험"
+      ],
+      "weaknesses": [
+        "MARC 사업 무관",
+        "제품군 불일치",
+        "도서관 전문성 부족",
+        "예산 규모 부적합"
+      ],
+      "strategy": "협력사 통한 참여",
+      "summary": "핵심 사업과 무관, 수주 가능성 매우 낮음.",
+      "savedAt": 1773824816265
+    },
+    "G2B-R26BK01403678": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력 보유",
+        "디지털트윈 기술",
+        "혁신 기술 기업"
+      ],
+      "weaknesses": [
+        "원자력 전문성 無",
+        "사업 분야 불일치",
+        "핵심 기술 이탈"
+      ],
+      "strategy": "원자력 전문 협력",
+      "summary": "전문성 부족, 수주難",
+      "savedAt": 1773824826033
+    },
+    "G2B-R26BK01393481": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "제품 'Twin' 보유",
+        "AR/XR 전문성",
+        "기술 적합성 높음"
+      ],
+      "weaknesses": [
+        "예산 규모 작음",
+        "경쟁 심화 우려"
+      ],
+      "strategy": "Twin 연동 및 특화",
+      "summary": "제품 적합성 높음",
+      "savedAt": 1773824835724
+    },
+    "G2B-R26BK01403685": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "디지털트윈 기술",
+        "원격협업 솔루션",
+        "시각화 역량"
+      ],
+      "weaknesses": [
+        "핵심기술 불일치",
+        "원자력 전문성 부족",
+        "연구과제 특성"
+      ],
+      "strategy": "AR/XR 활용 제안",
+      "summary": "핵심기술 불일치로 낮음",
+      "savedAt": 1773824843544
+    },
+    "G2B-R26BK01403646": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "원격협업 솔루션",
+        "엔터프라이즈 경험"
+      ],
+      "weaknesses": [
+        "의료판독 전문성 부족",
+        "AR/XR 주력사업 불일치",
+        "제품 직접적용 어려움"
+      ],
+      "strategy": "사업분야 재검토 필요",
+      "summary": "핵심사업과 불일치",
+      "savedAt": 1773824853035
+    },
+    "G2B-R26BK01387878": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "스마트팩토리 연관"
+      ],
+      "weaknesses": [
+        "폐기물 처리 無",
+        "핵심 역량 불일치"
+      ],
+      "strategy": "입찰 참여 지양",
+      "summary": "사업 분야 불일치",
+      "savedAt": 1773824860952
+    },
+    "G2B-R26BK01392024": {
+      "probability": 90,
+      "grade": "A",
+      "strengths": [
+        "디지털트윈 제품 보유",
+        "AR/XR 기술력",
+        "코스닥 상장사",
+        "사업 분야 일치"
+      ],
+      "weaknesses": [
+        "경쟁사 존재",
+        "공공사업 경험"
+      ],
+      "strategy": "맞춤형 솔루션 제안",
+      "summary": "제품/기술력 기반 수주 유력",
+      "savedAt": 1773824869650
+    },
+    "G2B-R26BK01392531": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "원격협업 솔루션",
+        "디지털트윈 역량",
+        "혁신 기술 보유"
+      ],
+      "weaknesses": [
+        "GPU 시스템 미경험",
+        "AI 인프라 부족",
+        "하드웨어 공급사X",
+        "사업영역 불일치"
+      ],
+      "strategy": "컨소시엄 구성",
+      "summary": "GPU 시스템 사업과 무관하여 수주 가능성 낮음.",
+      "savedAt": 1773824877739
+    },
+    "G2B-R26BK01399242": {
+      "probability": 25,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술 보유",
+        "대기업 협력 경험",
+        "높은 예산 사업"
+      ],
+      "weaknesses": [
+        "사업 연관성 부족",
+        "클라이언트 불일치",
+        "운영업체 선정"
+      ],
+      "strategy": "AR/XR 활용 제안, 운영 효율성 강조, 기술 차별화 시도",
+      "summary": "사업 연관성 낮음, 기술로 차별화 필요.",
+      "savedAt": 1773824886816
+    },
+    "G2B-R26BK01391045": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 드론 연관",
+        "원격협업/고글 활용",
+        "디지털트윈 적용",
+        "공공기관 발주"
+      ],
+      "weaknesses": [
+        "AR/XR 명시 부족",
+        "경쟁사 존재",
+        "정보시스템 초점"
+      ],
+      "strategy": "AR/XR 효율성 강조, 제품 활용 사례 제시, 기존 시스템 연동",
+      "summary": "AR/XR로 유지보수 효율 증대 가능성 높음.",
+      "savedAt": 1773824894973
+    },
+    "G2B-R26BK01393160": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "기술력 보유",
+        "로봇 분류 부합",
+        "혁신 기업 이미지"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "전문성 부족",
+        "제품 연관성 낮음",
+        "운영 경험 부재"
+      ],
+      "strategy": "전문업체와 협력",
+      "summary": "핵심 사업과 무관",
+      "savedAt": 1773824904029
+    },
+    "G2B-R26BK01400426": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술 선도",
+        "스마트고글 제품",
+        "원격협업 솔루션",
+        "디지털트윈 기술"
+      ],
+      "weaknesses": [
+        "보험 서비스 아님",
+        "사업 분야 불일치",
+        "보험 전문성 없음",
+        "기술 활용성 전무"
+      ],
+      "strategy": "입찰 참여 불가",
+      "summary": "사업 영역 불일치",
+      "savedAt": 1773824913661
+    },
+    "G2B-R26BK01390434": {
+      "probability": 55,
+      "grade": "C",
+      "strengths": [
+        "AI 기술력 보유",
+        "디지털트윈 연관",
+        "혁신 기술력"
+      ],
+      "weaknesses": [
+        "직접 연관성 부족",
+        "해양 전문성 부족"
+      ],
+      "strategy": "디지털트윈 강조",
+      "summary": "AI/DT 기술 활용 가능하나, 직접 연관성 부족. 경쟁력 강화 필요.",
+      "savedAt": 1773824922644
+    },
+    "G2B-R26BK01385699": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "원격협업 강점",
+        "디지털트윈 적합",
+        "스마트고글 활용"
+      ],
+      "weaknesses": [
+        "산불 경험 부족",
+        "조사사업 특성"
+      ],
+      "strategy": "원격협업/DT 강조",
+      "summary": "기술적합성 높음",
+      "savedAt": 1773824930181
+    },
+    "G2B-R26BK01393417": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술력",
+        "유지보수 특화",
+        "디지털트윈",
+        "원격협업 기능",
+        "스마트팩토리"
+      ],
+      "weaknesses": [
+        "데이터 분석력",
+        "경쟁사 존재"
+      ],
+      "strategy": "핵심 기술 강조",
+      "summary": "AR/XR 유지보수 최적",
+      "savedAt": 1773824938279
+    },
+    "G2B-R26BK01394395": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "상장사 신뢰도",
+        "SW 개발 경험",
+        "AI 기술 잠재력"
+      ],
+      "weaknesses": [
+        "핵심역량 불일치",
+        "예산 규모 작음",
+        "AR/XR 무관 사업"
+      ],
+      "strategy": "참여 재고, 파트너십 고려, AI 역량 강조",
+      "summary": "핵심역량과 무관, 수주 낮음.",
+      "savedAt": 1773824951167
+    },
+    "G2B-R26BK01366610": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "혁신기술 보유",
+        "상장사 신뢰도",
+        "다양한 솔루션"
+      ],
+      "weaknesses": [
+        "AI 교육 무관",
+        "핵심사업 불일치",
+        "전문성 부족"
+      ],
+      "strategy": "전문기업과 협력",
+      "summary": "핵심사업과 무관하여 수주 가능성 매우 낮음.",
+      "savedAt": 1773824959296
+    },
+    "BIZ-PBLN_000000000119674": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "디지털트윈 기술",
+        "AR/XR 기술력",
+        "혁신 기술 적합",
+        "스마트고글 활용"
+      ],
+      "weaknesses": [
+        "DPP 직접 경험 부족",
+        "예산 불확실성",
+        "경쟁사 존재 가능",
+        "AR/XR 비핵심 우려"
+      ],
+      "strategy": "DPP-트윈 연계 및 AR 활용",
+      "summary": "DPP에 트윈/AR 시너지",
+      "savedAt": 1773824972931
+    },
+    "G2B-R26BK01399461": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "XR 전문기업",
+        "다양한 제품군",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "경쟁사 존재",
+        "가격 경쟁력"
+      ],
+      "strategy": "통합 솔루션 제안",
+      "summary": "XR센터 운영에 강점",
+      "savedAt": 1773824979793
+    },
+    "G2B-R26BK01394393": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술 보유",
+        "코스닥 상장사",
+        "대기업 고객 경험"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "예산 규모 미흡",
+        "출판 경험 부족"
+      ],
+      "strategy": "핵심 사업 집중",
+      "summary": "핵심 역량과 불일치",
+      "savedAt": 1773824989214
+    },
+    "G2B-R26BK01403014": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "메타버스 전문성",
+        "디지털트윈 기술",
+        "AR/XR 선도기업"
+      ],
+      "weaknesses": [
+        "플랫폼 통합 역량",
+        "예산 압박 가능성"
+      ],
+      "strategy": "트윈 솔루션 강조",
+      "summary": "메타버스 쇼룸 최적화",
+      "savedAt": 1773824998932
+    },
+    "G2B-R26BK01393044": {
+      "probability": 80,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 전문기업",
+        "다양한 제품군 보유",
+        "코스닥 상장사 신뢰"
+      ],
+      "weaknesses": [
+        "콘텐츠 제작 역량",
+        "경쟁 심화 가능성"
+      ],
+      "strategy": "맞춤형 솔루션 및 운영 노하우 강조",
+      "summary": "AR/XR 전문성 기반, 체험관 운영 최적화 기술 제안으로 수주 가능성 높음.",
+      "savedAt": 1773825012421
+    },
+    "G2B-R26BK01388736": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술력 우수",
+        "스마트고글 보유",
+        "디지털트윈 솔루션",
+        "원격협업 기능 제공",
+        "국방 분야 적용성"
+      ],
+      "weaknesses": [
+        "예산 규모 제한적",
+        "경쟁사 존재 가능"
+      ],
+      "strategy": "AR/XR 활용 방안 제시",
+      "summary": "AR/XR, DT 기술로 스마트팩토리 연구 적합.",
+      "savedAt": 1773825022450
+    },
+    "G2B-R26BK01365880": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "디지털트윈 적합",
+        "현장활용 솔루션",
+        "AR/XR 시각화 강점"
+      ],
+      "weaknesses": [
+        "시뮬레이션 전문성",
+        "경쟁사 존재 가능"
+      ],
+      "strategy": "디지털트윈+현장활용 강조, 시뮬레이션 연동 방안 제시",
+      "summary": "디지털트윈 및 현장활용 강점, 시뮬레이션 연동이 관건",
+      "savedAt": 1773825033167
+    },
+    "G2B-R26BK01401824": {
+      "probability": 80,
+      "grade": "B",
+      "strengths": [
+        "디지털트윈 적합",
+        "AR 시각화 강점",
+        "혁신 기술 보유"
+      ],
+      "weaknesses": [
+        "교통 전문성 부족",
+        "경쟁사 존재"
+      ],
+      "strategy": "Twin+AR 기술 강조",
+      "summary": "Twin 기술로 시뮬 적합",
+      "savedAt": 1773825041189
+    },
+    "G2B-R26BK01397634": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 산업 특화",
+        "원격협업/디지털트윈",
+        "공정 시각화 강점"
+      ],
+      "weaknesses": [
+        "로봇 직접 제조X",
+        "경쟁사 존재 가능"
+      ],
+      "strategy": "AR/XR 공정 효율화",
+      "summary": "AR/XR 로봇 공정 체감 지원 적합",
+      "savedAt": 1773825051495
+    },
+    "G2B-R26BK01387390": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술력",
+        "물리 데이터 수집",
+        "디지털 트윈"
+      ],
+      "weaknesses": [
+        "AI 개발 전문성",
+        "소액 예산"
+      ],
+      "strategy": "AR/XR 데이터 수집 강조",
+      "summary": "AR/XR로 물리 AI 데이터셋. AI 전문성, 예산.",
+      "savedAt": 1773825065180
+    },
+    "G2B-R26BK01390962": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 기술력",
+        "원격 협업 솔루션",
+        "디지털 트윈 활용",
+        "산업용 AR/XR 전문"
+      ],
+      "weaknesses": [
+        "직접 연관성 부족",
+        "장치 임차 불일치",
+        "경쟁 심화 우려"
+      ],
+      "strategy": "AR/XR 운영 효율화,원격/트윈 활용 제안,파트너십 고려,데이터 시각화 강조",
+      "summary": "AR/XR 운영 효율화. 핵심 요구와 간접 연관, 전략 필수.",
+      "savedAt": 1773825079340
+    },
+    "G2B-R26BK01381827": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "Twin 제품 연관성",
+        "정부기관 발주",
+        "3D모델링 핵심",
+        "AR/XR 활용성"
+      ],
+      "weaknesses": [
+        "드론조사 전문성",
+        "경쟁사 존재"
+      ],
+      "strategy": "Twin 활용, 후처리 강조",
+      "summary": "Twin 연계 가능, 드론조사 파트너십 필요",
+      "savedAt": 1773825089483
+    },
+    "G2B-R26BK01389365": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "기술력 보유",
+        "AI 기술 활용",
+        "상장사 신뢰도"
+      ],
+      "weaknesses": [
+        "핵심사업 불일치",
+        "가이드라인 경험 부족"
+      ],
+      "strategy": "AI 역량 강조, 협력사 모색, 기술 활용 제안",
+      "summary": "핵심사업 불일치로 수주 가능성 낮음.",
+      "savedAt": 1773825099204
+    },
+    "G2B-R26BK01388737": {
+      "probability": 25,
+      "grade": "D",
+      "strengths": [
+        "복합 시스템 구축",
+        "AI 기술 내재화",
+        "디지털트윈 활용"
+      ],
+      "weaknesses": [
+        "핵심사업 불일치",
+        "예산 규모 부족",
+        "교육 AI 경험↓"
+      ],
+      "strategy": "디지털트윈 연계, AI 역량 강조, 맞춤형 제안",
+      "summary": "AR/XR 전문, AI 사업 연관성 낮음. 맞춤형 제안으로 승부.",
+      "savedAt": 1773825110955
+    },
+    "G2B-R26BK01400445": {
+      "probability": 30,
+      "grade": "D",
+      "strengths": [
+        "VisionX 엣지AI 기기",
+        "AI 통합 기술력",
+        "코스닥 기업 인지도"
+      ],
+      "weaknesses": [
+        "개발키트 직결성↓",
+        "경쟁사 전문성"
+      ],
+      "strategy": "VisionX를 엣지AI 개발 플랫폼으로 제안, 실용성 강조.",
+      "summary": "엣지AI 키트와 직접 연관성 낮으나, VisionX 활용 가능성 모색.",
+      "savedAt": 1773825121454
+    },
+    "G2B-R26BK01389754": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "AI/영상분석 역량",
+        "기술 개발 능력"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "생물학 전문성 부족",
+        "제품 연관성 낮음"
+      ],
+      "strategy": "AI/영상분석 강조",
+      "summary": "핵심사업과 동떨어짐",
+      "savedAt": 1773825129738
+    },
+    "G2B-R26BK01389779": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "영상처리 기술",
+        "AR/XR 시각화",
+        "기술력 보유"
+      ],
+      "weaknesses": [
+        "핵심역량 불일치",
+        "생물학 전문성 無",
+        "예산 규모 작음"
+      ],
+      "strategy": "영상처리 기술 강조",
+      "summary": "핵심역량 불일치, 수주 낮음",
+      "savedAt": 1773825141946
+    },
+    "G2B-R26BK01393718": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "AI 기술력 보유",
+        "정부기관 경험",
+        "혁신 기술 기업"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "전문성 부족",
+        "경쟁 심화"
+      ],
+      "strategy": "AI 역량 강조, 기술 확장 제안, 협력사 발굴",
+      "summary": "핵심 사업 불일치로 수주 가능성 낮음.",
+      "savedAt": 1773825150586
+    },
+    "G2B-R26BK01394592": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술 보유",
+        "디지털트윈 기술",
+        "원격 협업 솔루션"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "감리 전문성 부족"
+      ],
+      "strategy": "입찰 포기 고려",
+      "summary": "핵심 사업과 무관, 수주 가능성 낮음.",
+      "savedAt": 1773825161436
+    },
+    "G2B-R26BK01385018": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "산업현장 경험",
+        "디지털트윈"
+      ],
+      "weaknesses": [
+        "AI 모델 개발 부족",
+        "유전 예측 전문성",
+        "사업 분야 불일치"
+      ],
+      "strategy": "수주 포기 검토",
+      "summary": "AI 모델 개발과 사업 불일치로 수주 가능성 낮음.",
+      "savedAt": 1773825170552
+    },
+    "G2B-R26BK01388639": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "AI 기술력 보유",
+        "산업단지 이해"
+      ],
+      "weaknesses": [
+        "핵심사업 불일치",
+        "역량검사 경험↓",
+        "경쟁사 우위"
+      ],
+      "strategy": "AR/XR 연계 제안",
+      "summary": "핵심사업 불일치로 수주↓",
+      "savedAt": 1773825179150
+    },
+    "G2B-R26BK01386307": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AI 기술 일부 보유",
+        "원격협업 경험",
+        "정부사업 경험"
+      ],
+      "weaknesses": [
+        "핵심사업 불일치",
+        "AI/콜센터 경험↓",
+        "BPR/ISP 전문성↓",
+        "주력제품 무관"
+      ],
+      "strategy": "IT 전문기업 협력",
+      "summary": "핵심사업과 무관, 수주난망",
+      "savedAt": 1773825191345
+    },
+    "G2B-R26BK01389147": {
+      "probability": 50,
+      "grade": "C",
+      "strengths": [
+        "디지털트윈 기술",
+        "AR/XR 시각화",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "AI 핵심역량 부족",
+        "문화유산 전문성"
+      ],
+      "strategy": "AI/문화유산 협력, 디지털트윈 플랫폼, 데이터 수집 방안",
+      "summary": "디지털트윈 강점, AI/문화유산 협력 필수.",
+      "savedAt": 1773825201854
+    },
+    "G2B-R26BK01392314": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "AI 기술 보유",
+        "디지털트윈 경험",
+        "산업용 솔루션"
+      ],
+      "weaknesses": [
+        "해양AI 전문성 부족",
+        "핵심사업 불일치",
+        "알고리즘 개발 미흡"
+      ],
+      "strategy": "해양AI 전문 협력",
+      "summary": "AR/XR, 해양AI 불일치",
+      "savedAt": 1773825212215
+    },
+    "G2B-R26BK01394374": {
+      "probability": 40,
+      "grade": "C",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "간호교육 적용 가능",
+        "원격협업 솔루션",
+        "디지털트윈 잠재"
+      ],
+      "weaknesses": [
+        "직접 연관성 부족",
+        "예산 제약",
+        "AI 전문성 불확실",
+        "모델구축 초점 상이"
+      ],
+      "strategy": "AR/XR 교육모델 제안, AI 연계성 강조, 소규모 파일럿 제안, 교육효과 극대화",
+      "summary": "AR/XR 교육모델 제안 및 AI 연계 강조 필수.",
+      "savedAt": 1773825224679
+    }
+  }
+}
