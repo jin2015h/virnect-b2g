@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T09:15:40.702Z",
+  "updatedAt": "2026-03-18T09:15:50.694Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -4791,6 +4791,22 @@
       "strategy": "컨소시엄 구성",
       "summary": "AR/XR과 무관, 백신 사업계획 전문성 부족.",
       "savedAt": 1773825340700
+    },
+    "G2B-R26BK01397223": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "Twin 제품 직접 연관",
+        "제조 분야 전문성",
+        "AR/XR 기술 시너지"
+      ],
+      "weaknesses": [
+        "교육 커리큘럼",
+        "경쟁사 존재 가능"
+      ],
+      "strategy": "Twin 강조, AR/XR 교육, 제조사례, 맞춤형 제안",
+      "summary": "버넥트 Twin과 제조 분야 강점 일치, 수주 유력.",
+      "savedAt": 1773825350693
     }
   }
 }
