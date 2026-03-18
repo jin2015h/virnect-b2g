@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T09:18:20.858Z",
+  "updatedAt": "2026-03-18T09:18:32.034Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5042,6 +5042,22 @@
       "strategy": "AR/XR 기반 영상DB 제안",
       "summary": "AR/XR 기술로 영상DB 구축",
       "savedAt": 1773825500856
+    },
+    "G2B-R26BK01400270": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "상장사 신뢰도",
+        "원격 관리 역량"
+      ],
+      "weaknesses": [
+        "바이오 도메인 無",
+        "AR/XR 연관성 低",
+        "감리 전문성 부족"
+      ],
+      "strategy": "IT 감리 역량 부각",
+      "summary": "핵심 사업과 괴리",
+      "savedAt": 1773825512034
     }
   }
 }
