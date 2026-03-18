@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T09:20:03.913Z",
+  "updatedAt": "2026-03-18T09:20:13.700Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5210,6 +5210,22 @@
       "strategy": "기술융합 제안, 컨소시엄 구성, AI 역량 강조",
       "summary": "AR/XR-AI 분석 연관성 낮아 수주 보통. 기술융합/협력 필수.",
       "savedAt": 1773825603912
+    },
+    "G2B-R26BK01367179": {
+      "probability": 25,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 기술력",
+        "혁신적 교육 제안",
+        "대규모 사업 경험"
+      ],
+      "weaknesses": [
+        "AI 콘텐츠 경험 부족",
+        "핵심 사업 불일치"
+      ],
+      "strategy": "AR/XR 접목 제안, 혁신 학습 강조, 기술력 기반 접근",
+      "summary": "AI 교육 AR/XR 접목 기회",
+      "savedAt": 1773825613699
     }
   }
 }
