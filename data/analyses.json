@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T09:14:47.006Z",
+  "updatedAt": "2026-03-18T09:14:55.772Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -4724,6 +4724,22 @@
       "strategy": "AI플랫폼 강조, 전문성 보완",
       "summary": "AI플랫폼 강점, 대화모델 전문성 보완 필요",
       "savedAt": 1773825287002
+    },
+    "G2B-R26BK01393636": {
+      "probability": 8,
+      "grade": "D",
+      "strengths": [
+        "코스닥 상장사",
+        "IT 기술력 보유",
+        "AI 기술 보유"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "AI 분석 경험 부족"
+      ],
+      "strategy": "컨소시엄 구성",
+      "summary": "핵심역량과 괴리 큼",
+      "savedAt": 1773825295770
     }
   }
 }
