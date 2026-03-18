@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T09:19:24.666Z",
+  "updatedAt": "2026-03-18T09:19:33.573Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5141,6 +5141,22 @@
       "strategy": "타 사업 집중 요망",
       "summary": "기술 연관성 낮아 수주 어려움",
       "savedAt": 1773825564663
+    },
+    "BIZ-PBLN_000000000119670": {
+      "probability": 55,
+      "grade": "C",
+      "strengths": [
+        "디지털트윈 강점",
+        "에너지 시각화",
+        "원격협업 지원"
+      ],
+      "weaknesses": [
+        "축산분야 경험↓",
+        "AR/XR 직접 연관↓"
+      ],
+      "strategy": "디지털트윈 제안",
+      "summary": "디지털트윈 활용 유력",
+      "savedAt": 1773825573571
     }
   }
 }
