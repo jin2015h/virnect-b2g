@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T09:19:05.406Z",
+  "updatedAt": "2026-03-18T09:19:15.205Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5108,6 +5108,23 @@
       "strategy": "AI 전문기업 협력",
       "summary": "개발/실증에 적합",
       "savedAt": 1773825545402
+    },
+    "BIZ-PBLN_000000000119673": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "반도체 산업 적합",
+        "혁신 AR/XR 기술",
+        "해외 시장 확장 기회"
+      ],
+      "weaknesses": [
+        "예산 미정 리스크",
+        "경쟁 심화 가능성",
+        "전시 효과 미지수"
+      ],
+      "strategy": "반도체 특화 솔루션",
+      "summary": "VIRNECT, 반도체 AR/XR로 SEMICON TAIWAN서 해외 확장 기회.",
+      "savedAt": 1773825555204
     }
   }
 }
