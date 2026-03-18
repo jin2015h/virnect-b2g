@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T09:19:42.509Z",
+  "updatedAt": "2026-03-18T09:19:54.030Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5175,6 +5175,24 @@
       "strategy": "AR/XR 상용화 강조",
       "summary": "AR/XR 기술로 상용화 지원사업에 매우 적합함.",
       "savedAt": 1773825582508
+    },
+    "G2B-R26BK01389804": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "코스닥 상장사",
+        "플랫폼 기술력",
+        "협상 단계 진입",
+        "원격/트윈 경험"
+      ],
+      "weaknesses": [
+        "농업 도메인 부족",
+        "AR/XR 불일치",
+        "AI 전문성 불확실"
+      ],
+      "strategy": "AR/XR 접목 제안",
+      "summary": "AR/XR 접목이 관건",
+      "savedAt": 1773825594029
     }
   }
 }
