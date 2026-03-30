@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:47:01.066Z",
+  "updatedAt": "2026-03-30T08:47:11.718Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6602,6 +6602,22 @@
       "strategy": "AR/XR로 포털 고도화",
       "summary": "AR/XR 기술로 포털 혁신 가능하나, 유지보수 경험 부족.",
       "savedAt": 1774860421065
+    },
+    "G2B-R26BK01416458": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "첨단 AR/XR 기술",
+        "혁신 기업 이미지",
+        "디지털 전환 역량"
+      ],
+      "weaknesses": [
+        "핵심사업과 불일치",
+        "교육운영 경험 부족"
+      ],
+      "strategy": "협력사 발굴 및 제안",
+      "summary": "핵심사업과 괴리, 수주↓",
+      "savedAt": 1774860431717
     }
   }
 }
