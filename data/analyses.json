@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:46:41.472Z",
+  "updatedAt": "2026-03-30T08:46:50.060Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6570,6 +6570,22 @@
       "strategy": "맞춤형 솔루션 제안",
       "summary": "높은 수주 가능성",
       "savedAt": 1774860401468
+    },
+    "G2B-R26BK01426673": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "디지털트윈 기술",
+        "물리-가상 데이터",
+        "AR/XR 혁신 역량"
+      ],
+      "weaknesses": [
+        "AI 연구 전문성",
+        "예산 규모 작음"
+      ],
+      "strategy": "AI 연구 협력 제안",
+      "summary": "디지털트윈 강점 활용",
+      "savedAt": 1774860410059
     }
   }
 }
