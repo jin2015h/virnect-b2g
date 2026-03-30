@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:38:09.645Z",
+  "updatedAt": "2026-03-30T08:38:21.377Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5829,6 +5829,22 @@
       "strategy": "입찰 재고 필요",
       "summary": "AR/XR과 무관한 사업",
       "savedAt": 1774859889644
+    },
+    "G2B-R26BK01405866": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "기술 혁신 기업",
+        "데이터 관리 역량",
+        "공공기관 경험"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "챗봇 전문성 부족"
+      ],
+      "strategy": "AI 전문기업 협력",
+      "summary": "핵심 역량과 무관",
+      "savedAt": 1774859901373
     }
   }
 }
