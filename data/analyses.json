@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:53:16.611Z",
+  "updatedAt": "2026-03-30T08:53:29.559Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7178,6 +7178,24 @@
       "strategy": "AR/XR 활용 및 협력",
       "summary": "AR/XR로 관광상품 혁신",
       "savedAt": 1774860796609
+    },
+    "BIZ-PBLN_000000000120076": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "첨단 AR/XR 기술",
+        "코스닥 상장사",
+        "다양한 제품군",
+        "디지털 전환 기여"
+      ],
+      "weaknesses": [
+        "마케팅 직접 연관성↓",
+        "예산/요구사항 불확실",
+        "경쟁 심화 예상"
+      ],
+      "strategy": "AR/XR 마케팅 제안 및 AI 연계 강화",
+      "summary": "AR/XR 혁신성 강점, 마케팅 특화 전략 필요.",
+      "savedAt": 1774860809557
     }
   }
 }
