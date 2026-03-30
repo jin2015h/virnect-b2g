@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:55:23.631Z",
+  "updatedAt": "2026-03-30T08:55:36.302Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7362,6 +7362,24 @@
       "strategy": "AR/XR 활용 제안",
       "summary": "AR/XR 기술로 AI당직 시스템에 기여 가능하나, 핵심 기술 연관성 및 경쟁 환경 고려 시 수주 가능성은 중간.",
       "savedAt": 1774860923628
+    },
+    "G2B-R26BK01396423": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "KAIST 혁신성 선호",
+        "AR/XR 기술 차별화",
+        "디지털트윈 활용",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "전시 전문성 부족",
+        "AR/XR 명시 부재",
+        "경쟁사 다수"
+      ],
+      "strategy": "AR/XR 활용 제안",
+      "summary": "KAIST 혁신 이미지에 AR/XR 접목 제안.",
+      "savedAt": 1774860936301
     }
   }
 }
