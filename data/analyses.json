@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:41:09.398Z",
+  "updatedAt": "2026-03-30T08:41:21.231Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6094,6 +6094,22 @@
       "strategy": "AR/XR 교육 제안, 협력",
       "summary": "AR/XR 교육 접목 시 수주 가능.",
       "savedAt": 1774860069397
+    },
+    "G2B-R26BK01407967": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "AI 기술 보유",
+        "코스닥 상장사",
+        "다양한 산업 경험"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "EV AI 전문성 부족"
+      ],
+      "strategy": "AI 전문기업 협력",
+      "summary": "AR/XR 기업, AI 모델 개발과 연관성 낮음. 협력 필요.",
+      "savedAt": 1774860081227
     }
   }
 }
