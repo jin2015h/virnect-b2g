@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:56:25.306Z",
+  "updatedAt": "2026-03-30T08:56:34.033Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7461,6 +7461,23 @@
       "strategy": "AI 역량 적극 강조, AR/XR 연계 제안, 맞춤 교육 개발",
       "summary": "주력사업과 상이, AI 역량 강조 필요.",
       "savedAt": 1774860985305
+    },
+    "G2B-R26BK01410222": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "기술 이해도 높음",
+        "공공사업 경험"
+      ],
+      "weaknesses": [
+        "AI 기획 경험 부족",
+        "핵심 사업 불일치",
+        "전문성 부족"
+      ],
+      "strategy": "AI 전문기업 협력",
+      "summary": "핵심사업 불일치로 수주난",
+      "savedAt": 1774860994031
     }
   }
 }
