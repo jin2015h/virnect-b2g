@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:43:56.174Z",
+  "updatedAt": "2026-03-30T08:44:05.833Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6346,6 +6346,25 @@
       "strategy": "AI 영상처리 강조",
       "summary": "AI/XR 기술 활용 가능",
       "savedAt": 1774860236172
+    },
+    "G2B-R26BK01397307": {
+      "probability": 40,
+      "grade": "C",
+      "strengths": [
+        "혁신 기술력",
+        "디지털트윈",
+        "원격협업 솔루션",
+        "산업 적용 경험"
+      ],
+      "weaknesses": [
+        "AI 플랫폼 전문성",
+        "ISP 컨설팅 경험",
+        "직접 연관성 부족",
+        "예산 규모 작음"
+      ],
+      "strategy": "AR/XR/DT 활용 제안. 미래 전략 수립. 협력 고려.",
+      "summary": "AI 플랫폼 ISP 간접적. DT 등 혁신 기술로 차별화 필요.",
+      "savedAt": 1774860245830
     }
   }
 }
