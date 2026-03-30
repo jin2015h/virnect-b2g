@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:59:01.932Z",
+  "updatedAt": "2026-03-30T08:59:11.673Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7715,6 +7715,22 @@
       "strategy": "맞춤형 제안 필수",
       "summary": "AR/XR 강점, 수주 유력",
       "savedAt": 1774861141931
+    },
+    "BIZ-PBLN_000000000120081": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "핵심 AR/XR 기술",
+        "제품 포트폴리오",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "예산 불확실성",
+        "경쟁 심화"
+      ],
+      "strategy": "제품 통합 제안",
+      "summary": "AR/XR 기술력 기반 수주 유력",
+      "savedAt": 1774861151669
     }
   }
 }
