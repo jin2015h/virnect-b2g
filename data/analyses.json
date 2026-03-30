@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:50:44.524Z",
+  "updatedAt": "2026-03-30T08:50:54.425Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6940,6 +6940,22 @@
       "strategy": "입찰 불참 고려",
       "summary": "사업 분야 불일치로 수주 가능성 전무.",
       "savedAt": 1774860644522
+    },
+    "G2B-R26BK01413049": {
+      "probability": 55,
+      "grade": "C",
+      "strengths": [
+        "AI 모니터링 적합",
+        "디지털트윈 활용",
+        "AR/XR 기술력"
+      ],
+      "weaknesses": [
+        "정책연구 비전문",
+        "환경사업 경험↓"
+      ],
+      "strategy": "AI/XR 모니터링 강조, 정책연구 협력 제안",
+      "summary": "AI/XR 모니터링 강점, 정책연구는 약점",
+      "savedAt": 1774860654424
     }
   }
 }
