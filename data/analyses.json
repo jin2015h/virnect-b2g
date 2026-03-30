@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:56:03.261Z",
+  "updatedAt": "2026-03-30T08:56:12.701Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7428,6 +7428,23 @@
       "strategy": "직업교육 특화 제안, 성공사례 강조, 쉬운 도입 방안 제시",
       "summary": "VIRNECT의 AR/XR 기술은 전문대학 혁신사업에 매우 적합하여 수주 가능성이 높음.",
       "savedAt": 1774860963260
+    },
+    "G2B-R26BK01412696": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "스마트팩토리 적합",
+        "원격협업 강점",
+        "혁신기술 교육",
+        "AR/XR 전문성"
+      ],
+      "weaknesses": [
+        "운영사업 경험",
+        "예산 제약 가능성"
+      ],
+      "strategy": "AR/XR 교육효과 강조",
+      "summary": "AR/XR 기반 교육 최적",
+      "savedAt": 1774860972699
     }
   }
 }
