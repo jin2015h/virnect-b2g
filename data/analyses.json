@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:50:23.190Z",
+  "updatedAt": "2026-03-30T08:50:35.411Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6907,6 +6907,22 @@
       "strategy": "로봇 운영 효율화",
       "summary": "로봇 운영 효율화 기여",
       "savedAt": 1774860623189
+    },
+    "G2B-R26BK01416282": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술 적합",
+        "디지털트윈 핵심",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "드론 운영 경험X",
+        "경쟁 심화 예상"
+      ],
+      "strategy": "AR/XR-DT 융합 강조, 드론 협력 제안",
+      "summary": "AR/XR-DT-원격협업, 드론 점검 플랫폼에 최적. 수주 가능성 높음.",
+      "savedAt": 1774860635410
     }
   }
 }
