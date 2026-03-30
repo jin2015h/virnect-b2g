@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:37:50.413Z",
+  "updatedAt": "2026-03-30T08:38:01.338Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5796,6 +5796,22 @@
       "strategy": "AI 역량 강조",
       "summary": "사업 불일치로 낮음",
       "savedAt": 1774859870412
+    },
+    "G2B-R26BK01399620": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술 적합",
+        "스마트고글 활용",
+        "마커리스 AR 추적"
+      ],
+      "weaknesses": [
+        "의료 도메인 전문성",
+        "재활 AI 특화 필요"
+      ],
+      "strategy": "의료기관 협력 및 AR/XR 재활 효과 강조",
+      "summary": "AR/XR 재활 적합, 고글/AR 추적 강점",
+      "savedAt": 1774859881337
     }
   }
 }
