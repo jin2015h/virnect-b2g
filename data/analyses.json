@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:43:33.699Z",
+  "updatedAt": "2026-03-30T08:43:44.435Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6314,6 +6314,22 @@
       "strategy": "AI/XR 융합, 맞춤 제안",
       "summary": "VIRNECT 기술은 AI 계측/제어에 적합하며, 산업 경험으로 수주 가능성 높음.",
       "savedAt": 1774860213696
+    },
+    "G2B-R26BK01414381": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "SW 개발 역량",
+        "AI 기술 이해",
+        "혁신 기술 지향"
+      ],
+      "weaknesses": [
+        "GPR 전문성 부족",
+        "지반탐지 경험 無"
+      ],
+      "strategy": "컨소시엄 구성",
+      "summary": "핵심 역량 불일치",
+      "savedAt": 1774860224434
     }
   }
 }
