@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:39:26.435Z",
+  "updatedAt": "2026-03-30T08:39:39.033Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5947,6 +5947,22 @@
       "strategy": "컨소시엄 구성",
       "summary": "핵심기술 불일치로 수주↓",
       "savedAt": 1774859966435
+    },
+    "G2B-R26BK01424481": {
+      "probability": 1,
+      "grade": "D",
+      "strengths": [
+        "해당사항 없음",
+        "해당사항 없음",
+        "해당사항 없음"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "제품/서비스 무관"
+      ],
+      "strategy": "참여 철회 권고",
+      "summary": "VIRNECT 사업과 무관, 수주 가능성 희박.",
+      "savedAt": 1774859979032
     }
   }
 }
