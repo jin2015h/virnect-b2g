@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:44:18.300Z",
+  "updatedAt": "2026-03-30T08:44:26.464Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6381,6 +6381,22 @@
       "strategy": "AI 전문기업과 협력",
       "summary": "원격협업 강점, AI 역량 보완 필요",
       "savedAt": 1774860258299
+    },
+    "G2B-R26BK01415767": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "혁신기술기업",
+        "AI기술일부보유"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "AI전략 경험부족",
+        "보건분야 미경험"
+      ],
+      "strategy": "AI전문기업 협력",
+      "summary": "AR/XR 전문기업으로 AI 전략수립 사업과 연관성 낮음.",
+      "savedAt": 1774860266463
     }
   }
 }
