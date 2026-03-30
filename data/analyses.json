@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:59:35.753Z",
+  "updatedAt": "2026-03-30T08:59:46.540Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7764,6 +7764,22 @@
       "strategy": "수주 포기 검토",
       "summary": "사업 분야 불일치로 수주 가능성 매우 낮음",
       "savedAt": 1774861175752
+    },
+    "BIZ-PBLN_000000000120077": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "자동차 특화 솔루션",
+        "디지털트윈 핵심",
+        "원격협업 효율성"
+      ],
+      "weaknesses": [
+        "예산 미정 불확실",
+        "경쟁사 분석 필요"
+      ],
+      "strategy": "자동차 맞춤 제안, DT 강조",
+      "summary": "VIRNECT, 자동차 기반조성 최적",
+      "savedAt": 1774861186539
     }
   }
 }
