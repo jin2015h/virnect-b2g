@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:35:33.770Z",
+  "updatedAt": "2026-03-30T08:35:42.875Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5561,6 +5561,23 @@
       "strategy": "MRO 적용 방안 제시",
       "summary": "사업 연관성 낮음",
       "savedAt": 1774859733769
+    },
+    "G2B-R26BK01425911": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술 적합",
+        "시뮬레이션 특화",
+        "충분한 예산",
+        "공공기관 발주"
+      ],
+      "weaknesses": [
+        "교육 콘텐츠 개발",
+        "경쟁 심화 우려"
+      ],
+      "strategy": "맞춤형 시연 제안",
+      "summary": "AR/XR 교육 최적",
+      "savedAt": 1774859742875
     }
   }
 }
