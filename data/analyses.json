@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:35:52.044Z",
+  "updatedAt": "2026-03-30T08:36:05.613Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5594,6 +5594,38 @@
       "strategy": "핵심 제품군 강조",
       "summary": "Twin 제품과 AR/XR 강점으로 수주 가능성 높음.",
       "savedAt": 1774859752044
+    },
+    "G2B-R26BK01420641": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술력",
+        "항공우주 적합성",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "예산 규모 제한",
+        "경쟁사 존재"
+      ],
+      "strategy": "맞춤형 솔루션 제안",
+      "summary": "VIRNECT AR/XR, 항공우주 사업에 최적.",
+      "savedAt": 1774859752945
+    },
+    "G2B-R26BK01413590": {
+      "probability": 25,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "디지털 트윈",
+        "원격 협업 솔루션"
+      ],
+      "weaknesses": [
+        "보안 가이드 경험",
+        "사업 분야 이격"
+      ],
+      "strategy": "보안 전문 협력, 기술 활용 명확화, SMR 맞춤 제안",
+      "summary": "AR/XR 강점, 보안 경험 부족.",
+      "savedAt": 1774859765613
     }
   }
 }
