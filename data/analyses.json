@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:44:05.833Z",
+  "updatedAt": "2026-03-30T08:44:18.300Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6365,6 +6365,22 @@
       "strategy": "AR/XR/DT 활용 제안. 미래 전략 수립. 협력 고려.",
       "summary": "AI 플랫폼 ISP 간접적. DT 등 혁신 기술로 차별화 필요.",
       "savedAt": 1774860245830
+    },
+    "G2B-R26BK01409496": {
+      "probability": 40,
+      "grade": "C",
+      "strengths": [
+        "원격협업 솔루션",
+        "현장지원 스마트고글",
+        "디지털 전환 기여"
+      ],
+      "weaknesses": [
+        "AI 시스템 전문성 부족",
+        "주사업자 경쟁 불리"
+      ],
+      "strategy": "AI 전문기업과 협력",
+      "summary": "원격협업 강점, AI 역량 보완 필요",
+      "savedAt": 1774860258299
     }
   }
 }
