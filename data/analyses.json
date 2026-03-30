@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:35:24.029Z",
+  "updatedAt": "2026-03-30T08:35:33.770Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5545,6 +5545,22 @@
       "strategy": "기술 연계 강조 및 협력사 모색",
       "summary": "디지털트윈 강점이나 LiDAR 전문성 보완 필요",
       "savedAt": 1774859724029
+    },
+    "G2B-R26BK01406986": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 선도기업",
+        "혁신 기술 보유",
+        "원격 협업 강점"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "MRO 직접 경험 無"
+      ],
+      "strategy": "MRO 적용 방안 제시",
+      "summary": "사업 연관성 낮음",
+      "savedAt": 1774859733769
     }
   }
 }
