@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:55:43.744Z",
+  "updatedAt": "2026-03-30T08:55:54.097Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7396,6 +7396,22 @@
       "strategy": "AR/XR 가상 박람회 제안",
       "summary": "직접 연관성 낮음, 혁신 기회",
       "savedAt": 1774860943742
+    },
+    "G2B-R26BK01418445": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술력",
+        "KAIST 연관성",
+        "디지털트윈"
+      ],
+      "weaknesses": [
+        "타당성 검토 경험",
+        "예술 분야 전문성"
+      ],
+      "strategy": "AR/XR 기술 적용 제안",
+      "summary": "AR/XR 적합, 경험 보완",
+      "savedAt": 1774860954096
     }
   }
 }
