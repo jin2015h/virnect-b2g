@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:57:42.928Z",
+  "updatedAt": "2026-03-30T08:57:53.924Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7580,6 +7580,24 @@
       "strategy": "본업 집중",
       "summary": "본업과 무관한 HR 용역. 수주 희박.",
       "savedAt": 1774861062927
+    },
+    "G2B-R26BK01409052": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술 보유",
+        "원격 협업 잠재력",
+        "KISA 신기술 관심"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "포렌식 전문성 부족",
+        "설계 용역 경험 부족",
+        "AR/XR 직접 연관성↓"
+      ],
+      "strategy": "IT 인프라 협력, AR/XR 활용 제안, 데이터 시각화 강조",
+      "summary": "AR/XR-포렌식 연관성 낮음",
+      "savedAt": 1774861073923
     }
   }
 }
