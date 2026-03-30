@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:53:05.387Z",
+  "updatedAt": "2026-03-30T08:53:16.611Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7162,6 +7162,22 @@
       "strategy": "참여 대신 협력 제안",
       "summary": "사업 목적 불일치로 수주 가능성 매우 낮음.",
       "savedAt": 1774860785386
+    },
+    "BIZ-PBLN_000000000120078": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 기술력",
+        "디지털트윈 활용",
+        "미래 관광 트렌드"
+      ],
+      "weaknesses": [
+        "직접 연관성 부족",
+        "디자인 전문성 부족"
+      ],
+      "strategy": "AR/XR 활용 및 협력",
+      "summary": "AR/XR로 관광상품 혁신",
+      "savedAt": 1774860796609
     }
   }
 }
