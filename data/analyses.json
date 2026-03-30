@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:58:02.766Z",
+  "updatedAt": "2026-03-30T08:58:11.342Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7614,6 +7614,22 @@
       "strategy": "핵심 역량 집중",
       "summary": "AR/XR과 FTA 컨설팅은 무관, 수주 가능성 희박.",
       "savedAt": 1774861082765
+    },
+    "BIZ-PBLN_000000000120088": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "원격협업 솔루션",
+        "디지털트윈 기술"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "FTA 컨설팅 무관"
+      ],
+      "strategy": "핵심 역량 집중",
+      "summary": "FTA 컨설팅 무관. 수주 희박.",
+      "savedAt": 1774861091337
     }
   }
 }
