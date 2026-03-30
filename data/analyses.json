@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:43:12.590Z",
+  "updatedAt": "2026-03-30T08:43:23.414Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6282,6 +6282,22 @@
       "strategy": "AR/XR 연계 및 VisionX 활용 제안",
       "summary": "AR/XR 기반 데이터 수집 장치 납품 가능성 분석",
       "savedAt": 1774860192589
+    },
+    "G2B-R26BK01416642": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "첨단 기술력 보유",
+        "AI 관련 기술력",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "주력 사업과 차이",
+        "경쟁 심화 가능성"
+      ],
+      "strategy": "AI 기술력 강조",
+      "summary": "AI 기술력 기반 수주 가능성 높음",
+      "savedAt": 1774860203414
     }
   }
 }
