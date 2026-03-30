@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:34:39.604Z",
+  "updatedAt": "2026-03-30T08:34:51.136Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5479,6 +5479,22 @@
       "strategy": "AR/XR 기술 활용",
       "summary": "AR/XR 접목이 관건",
       "savedAt": 1774859679603
+    },
+    "G2B-R26BK01413807": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "원격협업 솔루션",
+        "스마트고글 활용",
+        "점검 효율성 증대"
+      ],
+      "weaknesses": [
+        "직접 유지보수X",
+        "프로그램 운용"
+      ],
+      "strategy": "AR/XR 가치 제안",
+      "summary": "AR/XR 점검 효율화",
+      "savedAt": 1774859691135
     }
   }
 }
