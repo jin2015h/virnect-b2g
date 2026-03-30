@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:34:30.247Z",
+  "updatedAt": "2026-03-30T08:34:39.604Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5463,6 +5463,22 @@
       "strategy": "AR/XR 활용 제안",
       "summary": "AR/XR 접목시 기회",
       "savedAt": 1774859670246
+    },
+    "G2B-R26BK01412472": {
+      "probability": 55,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 전문성",
+        "기술력 보유",
+        "혁신 기업 이미지"
+      ],
+      "weaknesses": [
+        "콘텐츠 제작 경험 부족",
+        "사업 분야 불일치"
+      ],
+      "strategy": "AR/XR 기술 활용",
+      "summary": "AR/XR 접목이 관건",
+      "savedAt": 1774859679603
     }
   }
 }
