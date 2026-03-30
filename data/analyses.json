@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:52:44.350Z",
+  "updatedAt": "2026-03-30T08:52:56.130Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7129,6 +7129,22 @@
       "strategy": "파트너십, 틈새시장 공략",
       "summary": "AR/XR-ITS 연관성 낮음. 파트너십으로 틈새 공략.",
       "savedAt": 1774860764349
+    },
+    "G2B-R26BK01425667": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "코스닥 상장사",
+        "디지털트윈 역량"
+      ],
+      "weaknesses": [
+        "사업 연관성 부족",
+        "핵심기술 불일치"
+      ],
+      "strategy": "AR/XR 활용 제안 및 전문 협력사 발굴",
+      "summary": "AR/XR-바이오플랫폼 연관성 낮음",
+      "savedAt": 1774860776129
     }
   }
 }
