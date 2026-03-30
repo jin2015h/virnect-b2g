@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:40:34.840Z",
+  "updatedAt": "2026-03-30T08:40:47.195Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6046,6 +6046,22 @@
       "strategy": "Twin 기반 시뮬 제안, AR/XR 연계",
       "summary": "Twin으로 시뮬 가능하나 주력은 아님",
       "savedAt": 1774860034839
+    },
+    "G2B-R26BK01412584": {
+      "probability": 45,
+      "grade": "C",
+      "strengths": [
+        "디지털트윈 기술",
+        "XR/AR 시각화",
+        "데이터 통합 역량"
+      ],
+      "weaknesses": [
+        "CFD 개발 전문성 부족",
+        "핵심 기술 불일치"
+      ],
+      "strategy": "CFD 협력 및 DT 강조",
+      "summary": "DT 강점, CFD 개발 역량 부족",
+      "savedAt": 1774860047191
     }
   }
 }
