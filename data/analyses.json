@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:48:59.292Z",
+  "updatedAt": "2026-03-30T08:49:09.070Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6771,6 +6771,23 @@
       "strategy": "AR/XR 연계 제안",
       "summary": "카메라 공급 약점, AI/XR 연계 솔루션 제안 필수.",
       "savedAt": 1774860539291
+    },
+    "G2B-R26BK01427167": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "AI/DL 기술 보유",
+        "첨단 기술 기업",
+        "컴퓨터비전 경험"
+      ],
+      "weaknesses": [
+        "핵심사업 불일치",
+        "영상분석 전문성↓",
+        "포렌식 경험 전무"
+      ],
+      "strategy": "협력사 발굴 제안",
+      "summary": "사업영역과 상이",
+      "savedAt": 1774860549070
     }
   }
 }
