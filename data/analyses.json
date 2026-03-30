@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:37:18.784Z",
+  "updatedAt": "2026-03-30T08:37:28.252Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5743,6 +5743,24 @@
       "strategy": "드론쇼 전문기업 협력",
       "summary": "핵심사업과 불일치",
       "savedAt": 1774859838783
+    },
+    "G2B-R26BK01407489": {
+      "probability": 60,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 전문성",
+        "디지털트윈 기술",
+        "콘텐츠 이해도",
+        "혁신 기술 보유"
+      ],
+      "weaknesses": [
+        "AI 직접경험 부족",
+        "매니지먼트 약점",
+        "경쟁사 대비 차별"
+      ],
+      "strategy": "AI+AR/XR 시너지 강조",
+      "summary": "AI콘텐츠 확장 기회",
+      "savedAt": 1774859848251
     }
   }
 }
