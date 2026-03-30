@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:58:46.167Z",
+  "updatedAt": "2026-03-30T08:58:54.773Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7681,6 +7681,22 @@
       "strategy": "AX 맞춤 제안 및 ROI 강조",
       "summary": "AX 최적 AR/XR 솔루션, 수주 기대.",
       "savedAt": 1774861126163
+    },
+    "BIZ-PBLN_000000000120083": {
+      "probability": 40,
+      "grade": "C",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "데이터 생성/활용",
+        "디지털트윈 연관"
+      ],
+      "weaknesses": [
+        "직접 연관성 부족",
+        "가치평가 전문성"
+      ],
+      "strategy": "데이터 연관성 강조",
+      "summary": "AR/XR 데이터 가치 강조",
+      "savedAt": 1774861134769
     }
   }
 }
