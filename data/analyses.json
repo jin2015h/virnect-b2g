@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:57:18.248Z",
+  "updatedAt": "2026-03-30T08:57:28.797Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7545,6 +7545,24 @@
       "strategy": "AI 교육 전문 협력",
       "summary": "AI 교육사업 불일치",
       "savedAt": 1774861038243
+    },
+    "G2B-R26BK01396655": {
+      "probability": 90,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술 우위",
+        "혁신적 전시 가능",
+        "KAIST 이미지 부합",
+        "제품 활용성 높음"
+      ],
+      "weaknesses": [
+        "경쟁 심화 우려",
+        "예산 제약 가능",
+        "전시 운영 경험"
+      ],
+      "strategy": "AR/XR 차별화 강조",
+      "summary": "AR/XR로 혁신 전시 가능",
+      "savedAt": 1774861048796
     }
   }
 }
