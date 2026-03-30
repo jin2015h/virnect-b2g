@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:45:04.453Z",
+  "updatedAt": "2026-03-30T08:45:15.778Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6447,6 +6447,23 @@
       "strategy": "정책연구 파트너링",
       "summary": "AR/XR과 무관한 정책연구",
       "savedAt": 1774860304451
+    },
+    "G2B-R26BK01406312": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "코스닥 상장사",
+        "AR/XR 기술 선도",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "사업 연관성 부족",
+        "데이터 구축 경험 無",
+        "ISNI 전문성 부재"
+      ],
+      "strategy": "데이터 전문 기업 협력",
+      "summary": "AR/XR 기업, 사업 연관성 낮음",
+      "savedAt": 1774860315774
     }
   }
 }
