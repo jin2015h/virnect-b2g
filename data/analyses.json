@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:38:01.338Z",
+  "updatedAt": "2026-03-30T08:38:09.645Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5812,6 +5812,23 @@
       "strategy": "의료기관 협력 및 AR/XR 재활 효과 강조",
       "summary": "AR/XR 재활 적합, 고글/AR 추적 강점",
       "savedAt": 1774859881337
+    },
+    "G2B-R26BK01403301": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력 우수",
+        "코스닥 상장사",
+        "기업 솔루션 경험"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "AI 분석 전문성 부족",
+        "환경 데이터 경험無"
+      ],
+      "strategy": "입찰 재고 필요",
+      "summary": "AR/XR과 무관한 사업",
+      "savedAt": 1774859889644
     }
   }
 }
