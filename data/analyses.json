@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:52:03.192Z",
+  "updatedAt": "2026-03-30T08:52:12.552Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7060,6 +7060,24 @@
       "strategy": "AR/XR 관측/분석 제안",
       "summary": "AR/XR로 관측/분석 효율화",
       "savedAt": 1774860723191
+    },
+    "G2B-R26BK01394978": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술 적합",
+        "원격협업 솔루션",
+        "코스닥 상장사",
+        "디지털트윈 활용"
+      ],
+      "weaknesses": [
+        "운영 전문성 부족",
+        "경쟁사 다수",
+        "AR/XR 비중 불확실"
+      ],
+      "strategy": "AR/XR 교육 강조",
+      "summary": "기술 적합성 높음",
+      "savedAt": 1774860732550
     }
   }
 }
