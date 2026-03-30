@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:54:40.432Z",
+  "updatedAt": "2026-03-30T08:55:02.461Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7314,6 +7314,37 @@
       "strategy": "AI 접목 AR/XR 강조",
       "summary": "AR/XR 강점, AI 연계 중요",
       "savedAt": 1774860880430
+    },
+    "G2B-R26BK01406021": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "기술력 보유",
+        "공공사업 경험",
+        "혁신 기업 이미지"
+      ],
+      "weaknesses": [
+        "생성AI 역량 부족",
+        "사업분야 불일치"
+      ],
+      "strategy": "전문기업과 협력",
+      "summary": "핵심역량과 상이함",
+      "savedAt": 1774860890660
+    },
+    "G2B-R26BK01419485": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AI 기술력 보유",
+        "혁신 기술 기업"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "금융 IT 경험 無"
+      ],
+      "strategy": "컨소시엄 구성",
+      "summary": "사업 분야 불일치로 수주 어려움",
+      "savedAt": 1774860902460
     }
   }
 }
