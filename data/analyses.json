@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:52:21.890Z",
+  "updatedAt": "2026-03-30T08:52:32.462Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7095,6 +7095,24 @@
       "strategy": "IT 인프라사와 협력",
       "summary": "핵심사업과 괴리 큼",
       "savedAt": 1774860741888
+    },
+    "G2B-R26BK01411212": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "국방 분야 경험",
+        "원격 협업 솔루션",
+        "스마트 고글"
+      ],
+      "weaknesses": [
+        "LLM/NLP 전문성 부족",
+        "핵심 기술 불일치",
+        "문자 정보망과 거리"
+      ],
+      "strategy": "컨소시엄 참여 고려",
+      "summary": "LLM 프로젝트와 불일치",
+      "savedAt": 1774860752461
     }
   }
 }
