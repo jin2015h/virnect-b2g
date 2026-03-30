@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:45:15.778Z",
+  "updatedAt": "2026-03-30T08:45:29.791Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6464,6 +6464,22 @@
       "strategy": "데이터 전문 기업 협력",
       "summary": "AR/XR 기업, 사업 연관성 낮음",
       "savedAt": 1774860315774
+    },
+    "G2B-R26BK01418207": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "지능형 제조 전문성",
+        "AR/XR 기술 우위",
+        "혁신적 교육 가능"
+      ],
+      "weaknesses": [
+        "연수사업 경험 부족",
+        "경쟁사 범위 넓음"
+      ],
+      "strategy": "AR/XR 활용 차별화",
+      "summary": "기술 적합, 연수 경험 부족, AR/XR 차별화로 승부",
+      "savedAt": 1774860329790
     }
   }
 }
