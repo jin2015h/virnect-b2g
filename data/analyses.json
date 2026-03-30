@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:54:31.018Z",
+  "updatedAt": "2026-03-30T08:54:40.432Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7298,6 +7298,22 @@
       "strategy": "디지털트윈/AR 활용 제안",
       "summary": "AR/XR 기술은 우수하나 드론쇼 운영 경험 부족.",
       "savedAt": 1774860871017
+    },
+    "G2B-R26BK01410975": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술력 우수",
+        "원격협업 교육 적합",
+        "디지털트윈 활용"
+      ],
+      "weaknesses": [
+        "AI 플랫폼 전문성",
+        "의료교육 경험 부족"
+      ],
+      "strategy": "AI 접목 AR/XR 강조",
+      "summary": "AR/XR 강점, AI 연계 중요",
+      "savedAt": 1774860880430
     }
   }
 }
