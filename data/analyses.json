@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:46:20.910Z",
+  "updatedAt": "2026-03-30T08:46:33.234Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5580,20 +5580,23 @@
       "savedAt": 1774859742875
     },
     "G2B-R26BK01414273": {
-      "probability": 90,
+      "probability": 85,
       "grade": "A",
       "strengths": [
-        "제품군 일치",
-        "핵심 역량 부합",
-        "기술 적합성"
+        "Twin 제품 보유",
+        "AR/XR 기술력",
+        "코스닥 상장사",
+        "사업 분야 일치",
+        "가상 시운전 연계"
       ],
       "weaknesses": [
-        "예산 규모 소액",
-        "경쟁 심화 우려"
+        "예산 규모 작음",
+        "경쟁 심화 우려",
+        "MCC 특화 필요"
       ],
-      "strategy": "핵심 제품군 강조",
-      "summary": "Twin 제품과 AR/XR 강점으로 수주 가능성 높음.",
-      "savedAt": 1774859752044
+      "strategy": "Twin 강점, MCC 특화 제안",
+      "summary": "핵심 역량으로 수주 유력",
+      "savedAt": 1774860393232
     },
     "G2B-R26BK01420641": {
       "probability": 85,
