@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:40:03.548Z",
+  "updatedAt": "2026-03-30T08:40:14.918Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5998,6 +5998,22 @@
       "strategy": "파트너십 모색",
       "summary": "핵심 기술 불일치, 수주 어려움",
       "savedAt": 1774860003547
+    },
+    "G2B-R26BK01421833": {
+      "probability": 55,
+      "grade": "C",
+      "strengths": [
+        "현장 데이터 수집",
+        "원격 전문가 협업",
+        "혁신 AR/XR 기술"
+      ],
+      "weaknesses": [
+        "MRV 핵심 기능 부족",
+        "산림 분야 경험 부족"
+      ],
+      "strategy": "컨소시엄 구성 제안",
+      "summary": "AR/XR 현장 MRV 강점, 파트너십 필수",
+      "savedAt": 1774860014913
     }
   }
 }
