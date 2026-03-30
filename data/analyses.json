@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:36:05.613Z",
+  "updatedAt": "2026-03-30T08:36:17.954Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5626,6 +5626,22 @@
       "strategy": "보안 전문 협력, 기술 활용 명확화, SMR 맞춤 제안",
       "summary": "AR/XR 강점, 보안 경험 부족.",
       "savedAt": 1774859765613
+    },
+    "G2B-R26BK01412686": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술 보유",
+        "R&D 역량 보유",
+        "디지털트윈 기술"
+      ],
+      "weaknesses": [
+        "GPU 시스템 경험 부족",
+        "핵심 사업 불일치"
+      ],
+      "strategy": "IT 인프라 협력 필수",
+      "summary": "사업 영역 불일치로 수주 가능성 매우 낮음",
+      "savedAt": 1774859777954
     }
   }
 }
