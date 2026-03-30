@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:39:03.582Z",
+  "updatedAt": "2026-03-30T08:39:16.456Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5913,6 +5913,23 @@
       "strategy": "AR/XR 교육 접목 제안",
       "summary": "사업 분야 불일치로 수주 가능성 낮음. AR/XR 교육 접목 제안 필요.",
       "savedAt": 1774859943581
+    },
+    "G2B-R26BK01393189": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "코스닥 상장사",
+        "혁신 기술 보유",
+        "AR/XR 기술력"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "핵심 기술 비관련",
+        "ISP 경험 부족"
+      ],
+      "strategy": "IT 컨설팅 협력",
+      "summary": "AR/XR 기업, ISP 사업 부적합. 수주 희박.",
+      "savedAt": 1774859956456
     }
   }
 }
