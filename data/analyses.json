@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:52:12.552Z",
+  "updatedAt": "2026-03-30T08:52:21.890Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7078,6 +7078,23 @@
       "strategy": "AR/XR 교육 강조",
       "summary": "기술 적합성 높음",
       "savedAt": 1774860732550
+    },
+    "G2B-R26BK01397987": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "스마트팩토리 연관",
+        "기술 이해도 높음",
+        "디지털트윈 경험"
+      ],
+      "weaknesses": [
+        "핵심사업 불일치",
+        "GPU 공급 경험 부족",
+        "경쟁사 우위"
+      ],
+      "strategy": "IT 인프라사와 협력",
+      "summary": "핵심사업과 괴리 큼",
+      "savedAt": 1774860741888
     }
   }
 }
