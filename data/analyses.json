@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:48:48.886Z",
+  "updatedAt": "2026-03-30T08:48:59.292Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6755,6 +6755,22 @@
       "strategy": "스마트고글 활용 강조",
       "summary": "고글, AI 데이터 수집 적합",
       "savedAt": 1774860528885
+    },
+    "G2B-R26BK01426788": {
+      "probability": 50,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 기술력",
+        "산업용 솔루션",
+        "AI 연계 가능"
+      ],
+      "weaknesses": [
+        "카메라 직접 공급X",
+        "예산 규모 작음"
+      ],
+      "strategy": "AR/XR 연계 제안",
+      "summary": "카메라 공급 약점, AI/XR 연계 솔루션 제안 필수.",
+      "savedAt": 1774860539291
     }
   }
 }
