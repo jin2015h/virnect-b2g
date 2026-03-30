@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:59:11.673Z",
+  "updatedAt": "2026-03-30T08:59:22.467Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7731,6 +7731,23 @@
       "strategy": "제품 통합 제안",
       "summary": "AR/XR 기술력 기반 수주 유력",
       "savedAt": 1774861151669
+    },
+    "BIZ-PBLN_000000000120080": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "원격협업/DT",
+        "다양한 솔루션"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "공고 목적 상이",
+        "바이오 경험 부족"
+      ],
+      "strategy": "수혜기업 대상 영업",
+      "summary": "바이오사업 연관성 낮아 수주 희박.",
+      "savedAt": 1774861162462
     }
   }
 }
