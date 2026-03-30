@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:49:09.070Z",
+  "updatedAt": "2026-03-30T08:49:17.981Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6788,6 +6788,21 @@
       "strategy": "협력사 발굴 제안",
       "summary": "사업영역과 상이",
       "savedAt": 1774860549070
+    },
+    "G2B-R26BK01413554": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "AI/CV 기술 보유",
+        "SW 개발 역량"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "수중 환경 전문성 부족"
+      ],
+      "strategy": "전문 협력사 발굴",
+      "summary": "사업 연관성 낮음",
+      "savedAt": 1774860557980
     }
   }
 }
