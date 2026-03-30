@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:40:23.235Z",
+  "updatedAt": "2026-03-30T08:40:34.840Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6030,6 +6030,22 @@
       "strategy": "BIM 연계 솔루션 강조",
       "summary": "디지털트윈 핵심 역량, 수주 유력",
       "savedAt": 1774860023234
+    },
+    "G2B-R26BK01406718": {
+      "probability": 50,
+      "grade": "C",
+      "strengths": [
+        "Twin 플랫폼 연관",
+        "시뮬레이션 역량",
+        "기술력 및 혁신성"
+      ],
+      "weaknesses": [
+        "주력분야 불일치",
+        "순수 시뮬 전문성"
+      ],
+      "strategy": "Twin 기반 시뮬 제안, AR/XR 연계",
+      "summary": "Twin으로 시뮬 가능하나 주력은 아님",
+      "savedAt": 1774860034839
     }
   }
 }
