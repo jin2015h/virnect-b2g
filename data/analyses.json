@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:40:47.195Z",
+  "updatedAt": "2026-03-30T08:40:57.846Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6062,6 +6062,22 @@
       "strategy": "CFD 협력 및 DT 강조",
       "summary": "DT 강점, CFD 개발 역량 부족",
       "savedAt": 1774860047191
+    },
+    "G2B-R26BK01414312": {
+      "probability": 20,
+      "grade": "D",
+      "strengths": [
+        "원격협업 기술",
+        "현장 작업 지원",
+        "로봇 분야 연관"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "HW/서비스 중심"
+      ],
+      "strategy": "원격 유지보수 제안",
+      "summary": "사업 연관성 낮음",
+      "savedAt": 1774860057843
     }
   }
 }
