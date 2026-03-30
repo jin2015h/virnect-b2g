@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:35:42.875Z",
+  "updatedAt": "2026-03-30T08:35:52.044Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5578,6 +5578,22 @@
       "strategy": "맞춤형 시연 제안",
       "summary": "AR/XR 교육 최적",
       "savedAt": 1774859742875
+    },
+    "G2B-R26BK01414273": {
+      "probability": 90,
+      "grade": "A",
+      "strengths": [
+        "제품군 일치",
+        "핵심 역량 부합",
+        "기술 적합성"
+      ],
+      "weaknesses": [
+        "예산 규모 소액",
+        "경쟁 심화 우려"
+      ],
+      "strategy": "핵심 제품군 강조",
+      "summary": "Twin 제품과 AR/XR 강점으로 수주 가능성 높음.",
+      "savedAt": 1774859752044
     }
   }
 }
