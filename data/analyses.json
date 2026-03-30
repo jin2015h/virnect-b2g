@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:46:08.526Z",
+  "updatedAt": "2026-03-30T08:46:20.910Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6535,6 +6535,22 @@
       "strategy": "디지털 전환 강조",
       "summary": "기술 적합성 높아 수주 유력",
       "savedAt": 1774860368525
+    },
+    "G2B-R26BK01418650": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "XR 전문성",
+        "코스닥 상장사",
+        "다양한 기술력"
+      ],
+      "weaknesses": [
+        "VR 콘텐츠 경험",
+        "산업용 AR 주력"
+      ],
+      "strategy": "VR 콘텐츠 협력 제안",
+      "summary": "XR 전문성 강점, VR 콘텐츠 보완 필요",
+      "savedAt": 1774860380909
     }
   }
 }
