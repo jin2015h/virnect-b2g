@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:40:57.846Z",
+  "updatedAt": "2026-03-30T08:41:09.398Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6078,6 +6078,22 @@
       "strategy": "원격 유지보수 제안",
       "summary": "사업 연관성 낮음",
       "savedAt": 1774860057843
+    },
+    "G2B-R26BK01421567": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 기술력",
+        "혁신 교육 가능",
+        "시뮬레이션"
+      ],
+      "weaknesses": [
+        "운영 경험 부족",
+        "사업 분야 상이"
+      ],
+      "strategy": "AR/XR 교육 제안, 협력",
+      "summary": "AR/XR 교육 접목 시 수주 가능.",
+      "savedAt": 1774860069397
     }
   }
 }
