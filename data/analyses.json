@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:46:33.234Z",
+  "updatedAt": "2026-03-30T08:46:41.472Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6554,6 +6554,22 @@
       "strategy": "VR 콘텐츠 협력 제안",
       "summary": "XR 전문성 강점, VR 콘텐츠 보완 필요",
       "savedAt": 1774860380909
+    },
+    "G2B-R26BK01419570": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술 적합",
+        "스마트팩토리 경험",
+        "디지털트윈 역량"
+      ],
+      "weaknesses": [
+        "작은 예산",
+        "군 특수성 이해"
+      ],
+      "strategy": "맞춤형 솔루션 제안",
+      "summary": "높은 수주 가능성",
+      "savedAt": 1774860401468
     }
   }
 }
