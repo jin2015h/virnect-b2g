@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:55:36.302Z",
+  "updatedAt": "2026-03-30T08:55:43.744Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7380,6 +7380,22 @@
       "strategy": "AR/XR 활용 제안",
       "summary": "KAIST 혁신 이미지에 AR/XR 접목 제안.",
       "savedAt": 1774860936301
+    },
+    "G2B-R26BK01396589": {
+      "probability": 25,
+      "grade": "C",
+      "strengths": [
+        "혁신 기술 기업",
+        "발주처 기술 지향",
+        "가상 행사 가능성"
+      ],
+      "weaknesses": [
+        "직접 연관성 낮음",
+        "채용 박람회 초점"
+      ],
+      "strategy": "AR/XR 가상 박람회 제안",
+      "summary": "직접 연관성 낮음, 혁신 기회",
+      "savedAt": 1774860943742
     }
   }
 }
