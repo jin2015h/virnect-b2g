@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:57:28.797Z",
+  "updatedAt": "2026-03-30T08:57:42.928Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7563,6 +7563,23 @@
       "strategy": "AR/XR 차별화 강조",
       "summary": "AR/XR로 혁신 전시 가능",
       "savedAt": 1774861048796
+    },
+    "G2B-R26BK01397669": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "기술력",
+        "AR/XR 전문",
+        "혁신 제품"
+      ],
+      "weaknesses": [
+        "HR 전문성 無",
+        "업무 연관성 無",
+        "경쟁력 부족"
+      ],
+      "strategy": "본업 집중",
+      "summary": "본업과 무관한 HR 용역. 수주 희박.",
+      "savedAt": 1774861062927
     }
   }
 }
