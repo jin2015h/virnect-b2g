@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:48:38.619Z",
+  "updatedAt": "2026-03-30T08:48:48.886Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6739,6 +6739,22 @@
       "strategy": "AR/XR-AI 연계 제안",
       "summary": "AR/XR-AI 강점, 장비는 약점.",
       "savedAt": 1774860518616
+    },
+    "G2B-R26BK01426767": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "엣지 장비 전문성",
+        "산업용 데이터 수집",
+        "AI 연동 가능성"
+      ],
+      "weaknesses": [
+        "AI 전용 장비 아님",
+        "경쟁사 존재"
+      ],
+      "strategy": "스마트고글 활용 강조",
+      "summary": "고글, AI 데이터 수집 적합",
+      "savedAt": 1774860528885
     }
   }
 }
