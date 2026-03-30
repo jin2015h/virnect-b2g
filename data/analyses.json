@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:43:44.435Z",
+  "updatedAt": "2026-03-30T08:43:56.174Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6330,6 +6330,22 @@
       "strategy": "컨소시엄 구성",
       "summary": "핵심 역량 불일치",
       "savedAt": 1774860224434
+    },
+    "G2B-R26BK01423000": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "AI 영상처리 역량",
+        "AR/XR 기술력",
+        "공공기관 경험"
+      ],
+      "weaknesses": [
+        "핵심사업 불일치",
+        "유지보수 전문성"
+      ],
+      "strategy": "AI 영상처리 강조",
+      "summary": "AI/XR 기술 활용 가능",
+      "savedAt": 1774860236172
     }
   }
 }
