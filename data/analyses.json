@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:47:49.076Z",
+  "updatedAt": "2026-03-30T08:47:58.907Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -6669,6 +6669,24 @@
       "strategy": "AI 역량 강화",
       "summary": "핵심역량과 괴리",
       "savedAt": 1774860469074
+    },
+    "G2B-R26BK01419162": {
+      "probability": 20,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술 기업",
+        "플랫폼 운영 경험",
+        "AI 기술 활용",
+        "대규모 예산 경험"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "생성형 AI 전문성",
+        "경쟁사 우위"
+      ],
+      "strategy": "AI 전문 기업 협력",
+      "summary": "AR/XR 기업, AI O&M 연관성 낮음",
+      "savedAt": 1774860478903
     }
   }
 }
