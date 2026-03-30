@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:56:44.671Z",
+  "updatedAt": "2026-03-30T08:56:55.308Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7496,6 +7496,22 @@
       "strategy": "AI 전문사와 협력",
       "summary": "핵심 역량과 불일치",
       "savedAt": 1774861004670
+    },
+    "G2B-R26BK01417127": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "원격협업 솔루션",
+        "디지털트윈 역량"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "AI 프로그램 경험 無"
+      ],
+      "strategy": "사업 확장 기회 모색",
+      "summary": "핵심 역량 불일치, 수주 희박",
+      "savedAt": 1774861015307
     }
   }
 }
