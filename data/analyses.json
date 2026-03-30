@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:52:32.462Z",
+  "updatedAt": "2026-03-30T08:52:44.350Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7113,6 +7113,22 @@
       "strategy": "컨소시엄 참여 고려",
       "summary": "LLM 프로젝트와 불일치",
       "savedAt": 1774860752461
+    },
+    "G2B-R26BK01412357": {
+      "probability": 8,
+      "grade": "D",
+      "strengths": [
+        "디지털트윈 활용",
+        "원격협업 가능",
+        "혁신기술 보유"
+      ],
+      "weaknesses": [
+        "ITS 구축 경험 부족",
+        "주력사업 불일치"
+      ],
+      "strategy": "파트너십, 틈새시장 공략",
+      "summary": "AR/XR-ITS 연관성 낮음. 파트너십으로 틈새 공략.",
+      "savedAt": 1774860764349
     }
   }
 }
