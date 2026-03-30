@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:36:29.000Z",
+  "updatedAt": "2026-03-30T08:36:38.979Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -5659,6 +5659,22 @@
       "strategy": "ITSI 전문 파트너",
       "summary": "핵심사업 불일치로 수주 가능성 매우 낮음.",
       "savedAt": 1774859788996
+    },
+    "G2B-R26BK01416105": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "스마트 안전 적합",
+        "원격/디지털트윈",
+        "산업 전문성"
+      ],
+      "weaknesses": [
+        "감리사업 특수성",
+        "경쟁 심화 우려"
+      ],
+      "strategy": "감리 특화 솔루션 제안",
+      "summary": "AR/XR 기술로 안전 감리 최적화",
+      "savedAt": 1774859798978
     }
   }
 }
