@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:58:35.604Z",
+  "updatedAt": "2026-03-30T08:58:46.167Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7665,6 +7665,22 @@
       "strategy": "사업 범위 재확인, AR/XR 접목 제안, 콘텐츠사 협력 모색",
       "summary": "만화원작 콘텐츠 사업과 분야 불일치, 수주 가능성 매우 낮음.",
       "savedAt": 1774861115598
+    },
+    "BIZ-PBLN_000000000120085": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술력 우수",
+        "디지털트윈 핵심",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "예산 미정 불확실",
+        "경쟁 심화 가능성"
+      ],
+      "strategy": "AX 맞춤 제안 및 ROI 강조",
+      "summary": "AX 최적 AR/XR 솔루션, 수주 기대.",
+      "savedAt": 1774861126163
     }
   }
 }
