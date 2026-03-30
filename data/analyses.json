@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T08:51:35.329Z",
+  "updatedAt": "2026-03-30T08:51:50.495Z",
   "analyses": {
     "G2B-R26BK01343615": {
       "probability": 85,
@@ -7025,6 +7025,23 @@
       "strategy": "드론전문 협력, AR/XR 가치 제안, 데이터 활용 강조",
       "summary": "직접운영 미흡, 협력 필수",
       "savedAt": 1774860695324
+    },
+    "G2B-R26BK01423522": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "디지털트윈 강점",
+        "AR/XR 시각화",
+        "원격협업 가능",
+        "혁신기술 적용"
+      ],
+      "weaknesses": [
+        "주력분야 상이",
+        "예산 규모 협소"
+      ],
+      "strategy": "Twin, AR/XR 시각화 제안",
+      "summary": "VIRNECT는 UTM 실증에 Twin, AR/XR 시각화로 기여 가능.",
+      "savedAt": 1774860710492
     }
   }
 }
