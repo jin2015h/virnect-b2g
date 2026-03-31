@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:51:11.794Z",
+  "updatedAt": "2026-03-31T07:51:26.165Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -8875,6 +8875,48 @@
         "files": [],
         "contact": "석재원 043-830-4035",
         "qual": "2026-04-13 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01424791": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술 전문성",
+        "혁신적 기획 제안",
+        "디지털트윈, AR 활용"
+      ],
+      "weaknesses": [
+        "행사 기획 경험 부족",
+        "경쟁사 존재"
+      ],
+      "strategy": "협력 및 AR/XR 기획",
+      "summary": "AR/XR로 혁신 기회, 기획 경험 보완 필요.",
+      "savedAt": 1774943486164,
+      "_bid": {
+        "id": "G2B-R26BK01424791",
+        "bidNo": "R26BK01424791",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "(협상에의한 계약) 2026 강남 로봇플러스 페스티벌 기획·운영 용역",
+        "agency": "서울특별시 강남구",
+        "demandAgency": "",
+        "budget": "541,636,364원",
+        "deadline": "-",
+        "openDate": "2026-04-16 16:00:00",
+        "openPlace": "2026. 4. 16.(목) 16:00 까지 강남구 혁신전략과로 '직접 방문' 제출",
+        "postDate": "2026-03-26",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "(협상에의한 계약) 2026 강남 로봇플러스 페스티벌 기획·운영 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01424791&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "배영현 02-3423-5255",
+        "qual": "",
         "source": "g2b"
       }
     }
