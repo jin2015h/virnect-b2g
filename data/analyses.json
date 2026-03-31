@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:51:38.023Z",
+  "updatedAt": "2026-03-31T07:51:47.756Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -8961,6 +8961,49 @@
         "files": [],
         "contact": "배영현 02-3423-5255",
         "qual": "",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01428051": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술 적합",
+        "신산업 운영 지원",
+        "제품 포트폴리오",
+        "규제혁신 기여"
+      ],
+      "weaknesses": [
+        "AI 직접성 부족",
+        "예산 규모 제한"
+      ],
+      "strategy": "AR/XR로 AI운영/규제혁신 기여 강조",
+      "summary": "AR/XR로 신산업 운영/규제 혁신 기여, 수주 가능성 높음.",
+      "savedAt": 1774943507754,
+      "_bid": {
+        "id": "G2B-R26BK01428051",
+        "bidNo": "R26BK01428051",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "2026년 서울시 신산업분야 규제혁신 협력사업 (인공지능·로봇·모빌리티 분야 운영 용역)",
+        "agency": "(재)서울경제진흥원",
+        "demandAgency": "",
+        "budget": "64,700,000원",
+        "deadline": "2026-04-10 10:00:00",
+        "openDate": "2026-04-10 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-30",
+        "contractType": "입찰",
+        "category": "AI",
+        "keywords": [],
+        "description": "2026년 서울시 신산업분야 규제혁신 협력사업 (인공지능·로봇·모빌리티 분야 운영 용역)",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01428051&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "김응례 02-2222-3877",
+        "qual": "2026-04-09 18:00",
         "source": "g2b"
       }
     }
