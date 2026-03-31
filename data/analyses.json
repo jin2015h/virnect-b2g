@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:48:15.022Z",
+  "updatedAt": "2026-03-31T07:48:26.106Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -8290,6 +8290,50 @@
         "files": [],
         "contact": "최인영 041-559-0522",
         "qual": "2026-04-12 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01433103": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "Twin 제품 적합",
+        "AR/XR 기술력",
+        "국토부 발주 경험",
+        "BIM 연계 가능성"
+      ],
+      "weaknesses": [
+        "경쟁사 다수",
+        "예산 규모 보통",
+        "공동활용 상세"
+      ],
+      "strategy": "Twin 솔루션 강조, BIM 데이터 통합, AR/XR 시각화, 협업 기능 부각",
+      "summary": "VIRNECT Twin, BIM 디지털트윈에 강점",
+      "savedAt": 1774943306101,
+      "_bid": {
+        "id": "G2B-R26BK01433103",
+        "bidNo": "R26BK01433103",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "BIM 데이터의 공동활용체계 개발",
+        "agency": "국토교통부",
+        "demandAgency": "",
+        "budget": "72,727,273원",
+        "deadline": "2026-04-01 11:00:00",
+        "openDate": "2026-04-01 12:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-31",
+        "contractType": "입찰",
+        "category": "디지털트윈",
+        "keywords": [],
+        "description": "BIM 데이터의 공동활용체계 개발",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01433103&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "백현화 044-201-3182",
+        "qual": "2026-03-31 18:00",
         "source": "g2b"
       }
     }
