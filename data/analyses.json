@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:47:13.318Z",
+  "updatedAt": "2026-03-31T07:47:30.090Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -8076,6 +8076,49 @@
         "files": [],
         "contact": "조윤정 02-590-8873",
         "qual": "2026-04-13 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01432707": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 전문기업",
+        "코스닥 상장사",
+        "원격협업 기술"
+      ],
+      "weaknesses": [
+        "사업 제품 불일치",
+        "AI/RAG 비전문",
+        "솔트룩스 직접경쟁"
+      ],
+      "strategy": "솔트룩스 협력 제안",
+      "summary": "제품 불일치, 협력 필수",
+      "savedAt": 1774943250089,
+      "_bid": {
+        "id": "G2B-R26BK01432707",
+        "bidNo": "R26BK01432707",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "SW 3자단가(Luxia A.RAG v3.0 (주)솔트룩스)",
+        "agency": "조달청",
+        "demandAgency": "",
+        "budget": "363,636,364원",
+        "deadline": "2026-04-02 12:00:00",
+        "openDate": "2026-04-02 13:00:00",
+        "openPlace": "",
+        "postDate": "2026-03-31",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "SW 3자단가(Luxia A.RAG v3.0 (주)솔트룩스)",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01432707&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "김범준 070-4056-7369",
+        "qual": "2026-04-01 18:00",
         "source": "g2b"
       }
     }
