@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:53:24.349Z",
+  "updatedAt": "2026-03-31T07:53:34.836Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -9356,6 +9356,42 @@
         "contact": "김신영 053-851-9125",
         "qual": "",
         "source": "g2b"
+      }
+    },
+    "BIZ-PBLN_000000000120206": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "기술 적합성",
+        "제품 다양성",
+        "지역 연관성"
+      ],
+      "weaknesses": [
+        "예산 미정",
+        "사업 범위 모호"
+      ],
+      "strategy": "포항시와 협력,맞춤형 제안,성공사례 강조",
+      "summary": "VIRNECT 기술 적합, 예산 확보 및 맞춤형 제안 중요.",
+      "savedAt": 1774943614834,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120206",
+        "stage": "지원사업",
+        "title": "[경북] 2026년 포항시 유망강소기업 육성사업 시행계획 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-17",
+        "postDate": "2026-04-01",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "[경북] 2026년 포항시 유망강소기업 육성사업 시행계획 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120206",
+        "source": "bizinfo"
       }
     }
   }
