@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:48:36.605Z",
+  "updatedAt": "2026-03-31T07:48:51.237Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -8376,6 +8376,49 @@
         "files": [],
         "contact": "박은정 054-930-6132",
         "qual": "2026-04-02 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01413054": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "미래차 연관성",
+        "혁신 교육 가능성"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "운영 경험 부족",
+        "기술 vs 운영"
+      ],
+      "strategy": "AR/XR 차별화 제안",
+      "summary": "AR/XR 기업, 운영 용역 불일치",
+      "savedAt": 1774943331235,
+      "_bid": {
+        "id": "G2B-R26BK01413054",
+        "bidNo": "R26BK01413054",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "[1-1-2-1-6][미래차로봇] 미래차 RISE 모빌리티 진로프로그램 운영 용역",
+        "agency": "경상국립대학교",
+        "demandAgency": "",
+        "budget": "118,181,818원",
+        "deadline": "2026-04-06 10:00:00",
+        "openDate": "2026-04-06 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-25",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "[1-1-2-1-6][미래차로봇] 미래차 RISE 모빌리티 진로프로그램 운영 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01413054&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "김성은 055-772-4477",
+        "qual": "2026-04-03 18:00",
         "source": "g2b"
       }
     }
