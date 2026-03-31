@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:50:52.865Z",
+  "updatedAt": "2026-03-31T07:51:11.794Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -8830,6 +8830,50 @@
         "draftUrl": "",
         "files": [],
         "contact": "하창일 032-727-5625",
+        "qual": "2026-04-13 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01429516": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술력",
+        "원격협업 솔루션",
+        "디지털트윈 활용",
+        "스마트고글 연동"
+      ],
+      "weaknesses": [
+        "드론 직접 기술X",
+        "식생판별 전문성",
+        "예산 규모 제약"
+      ],
+      "strategy": "드론 데이터 시각화, 원격 협업, 디지털 트윈 활용",
+      "summary": "AR/XR은 드론 데이터 분석 및 원격 협업에 기여 가능. 식생 피해 판별 전문성 보완 필요.",
+      "savedAt": 1774943471793,
+      "_bid": {
+        "id": "G2B-R26BK01429516",
+        "bidNo": "R26BK01429516",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "드론 활용 화학사고 환경영향 조사 연구(Ⅱ)-식생의 화학사고 피해 판별 가능성 탐구",
+        "agency": "기후에너지환경부 화학물질안전원",
+        "demandAgency": "",
+        "budget": "46,363,636원",
+        "deadline": "2026-04-14 11:00:00",
+        "openDate": "2026-04-14 12:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-30",
+        "contractType": "입찰",
+        "category": "로봇",
+        "keywords": [],
+        "description": "드론 활용 화학사고 환경영향 조사 연구(Ⅱ)-식생의 화학사고 피해 판별 가능성 탐구",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01429516&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "석재원 043-830-4035",
         "qual": "2026-04-13 18:00",
         "source": "g2b"
       }
