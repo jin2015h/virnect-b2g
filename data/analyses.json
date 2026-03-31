@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:49:35.834Z",
+  "updatedAt": "2026-03-31T07:49:45.674Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -8545,6 +8545,48 @@
         "files": [],
         "contact": "이수정 02-6912-2301",
         "qual": "2026-04-09 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01429799": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "디지털트윈 기술",
+        "AR/XR 시각화",
+        "혁신 기술 적용"
+      ],
+      "weaknesses": [
+        "주행 시뮬 전문성",
+        "예산 제약"
+      ],
+      "strategy": "Twin 기반 시뮬 제안, AR/XR 시각화 차별화",
+      "summary": "Twin+AR/XR 시뮬 구현, 혁신적 시각화 강점",
+      "savedAt": 1774943385672,
+      "_bid": {
+        "id": "G2B-R26BK01429799",
+        "bidNo": "R26BK01429799",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "주행 시뮬레이션 기반 C-ISA 서비스 구현 용역",
+        "agency": "한국건설기술연구원",
+        "demandAgency": "",
+        "budget": "36,168,182원",
+        "deadline": "2026-04-06 11:00:00",
+        "openDate": "2026-04-06 12:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-30",
+        "contractType": "입찰",
+        "category": "시뮬레이션",
+        "keywords": [],
+        "description": "주행 시뮬레이션 기반 C-ISA 서비스 구현 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01429799&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "변진호 031-910-0433",
+        "qual": "2026-04-05 18:00",
         "source": "g2b"
       }
     }
