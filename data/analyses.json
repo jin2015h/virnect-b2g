@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:47:30.090Z",
+  "updatedAt": "2026-03-31T07:47:42.360Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -8119,6 +8119,51 @@
         "files": [],
         "contact": "김범준 070-4056-7369",
         "qual": "2026-04-01 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01415573": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술력 우수",
+        "로봇 행사 적합성",
+        "원격 협업 솔루션",
+        "디지털 트윈 활용",
+        "스마트 고글 활용"
+      ],
+      "weaknesses": [
+        "행사 운영 경험 부족",
+        "경쟁사 존재 가능성",
+        "예산 제약 고려"
+      ],
+      "strategy": "기술 기반 운영 제안",
+      "summary": "VIRNECT 기술 적합성 높음",
+      "savedAt": 1774943262358,
+      "_bid": {
+        "id": "G2B-R26BK01415573",
+        "bidNo": "R26BK01415573",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "「2026 대전 첨단로봇 커넥트」운영 대행 용역",
+        "agency": "대전관광공사",
+        "demandAgency": "",
+        "budget": "102,649,091원",
+        "deadline": "2026-04-03 11:00:00",
+        "openDate": "2026-04-03 12:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-23",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "「2026 대전 첨단로봇 커넥트」운영 대행 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01415573&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "채복석 042-250-1201",
+        "qual": "2026-04-02 18:00",
         "source": "g2b"
       }
     }
