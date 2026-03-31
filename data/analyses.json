@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:48:04.113Z",
+  "updatedAt": "2026-03-31T07:48:15.022Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -8248,6 +8248,48 @@
         "files": [],
         "contact": "강민주 061-928-8002",
         "qual": "2026-04-06 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01431267": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "XR/AR 전문기업",
+        "디지털트윈 강점",
+        "공공기관 경험"
+      ],
+      "weaknesses": [
+        "VR영상 제작 경험",
+        "콘텐츠 제작 특화"
+      ],
+      "strategy": "트윈 활용 안전 특화 솔루션 제시",
+      "summary": "XR 기술력과 트윈 강점, VR 영상 제작 역량 보완 필요",
+      "savedAt": 1774943295017,
+      "_bid": {
+        "id": "G2B-R26BK01431267",
+        "bidNo": "R26BK01431267",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "현장안전 훈련용VR시뮬레이션 영상 제작",
+        "agency": "소방청 국립소방연구원",
+        "demandAgency": "",
+        "budget": "36,363,636원",
+        "deadline": "2026-04-13 10:00:00",
+        "openDate": "2026-04-13 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-31",
+        "contractType": "입찰",
+        "category": "XR/AR",
+        "keywords": [],
+        "description": "현장안전 훈련용VR시뮬레이션 영상 제작",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01431267&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "최인영 041-559-0522",
+        "qual": "2026-04-12 18:00",
         "source": "g2b"
       }
     }
