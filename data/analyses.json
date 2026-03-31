@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:50:10.547Z",
+  "updatedAt": "2026-03-31T07:50:20.632Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -8669,6 +8669,42 @@
         "draftUrl": "",
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120207",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120198": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술력 우수",
+        "문화콘텐츠 적합",
+        "다양한 제품군"
+      ],
+      "weaknesses": [
+        "간접적 수주 기회",
+        "예산 불확실성"
+      ],
+      "strategy": "문화기업과 협력, 맞춤형 솔루션, 성공사례 홍보",
+      "summary": "문화콘텐츠 수주 유망",
+      "savedAt": 1774943420626,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120198",
+        "stage": "지원사업",
+        "title": "2026년 4월 문화콘텐츠기업보증 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-07",
+        "postDate": "2026-04-01",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "2026년 4월 문화콘텐츠기업보증 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120198",
         "source": "bizinfo"
       }
     }
