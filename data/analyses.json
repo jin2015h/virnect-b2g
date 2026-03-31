@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:52:16.476Z",
+  "updatedAt": "2026-03-31T07:52:25.802Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -9128,6 +9128,45 @@
         "draftUrl": "",
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120208",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120205": {
+      "probability": 75,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술력",
+        "산업현장 적용",
+        "원격협업 솔루션",
+        "디지털트윈",
+        "포항시 산업특성"
+      ],
+      "weaknesses": [
+        "예산 미정",
+        "경쟁 심화 가능",
+        "사업 분류 모호"
+      ],
+      "strategy": "포항시 산업 분석, 맞춤형 솔루션 제안, 성공사례 강조, 비용 효율성 어필, 지역 고용 창출",
+      "summary": "VIRNECT AR/XR, 포항 산업 위기 대응",
+      "savedAt": 1774943545800,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120205",
+        "stage": "지원사업",
+        "title": "[경북] 포항시 2026년 지역산업위기대응 맞춤형 지원사업 참여기업 모집 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-10",
+        "postDate": "2026-04-01",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "[경북] 포항시 2026년 지역산업위기대응 맞춤형 지원사업 참여기업 모집 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120205",
         "source": "bizinfo"
       }
     }
