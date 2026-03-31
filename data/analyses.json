@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:50:44.078Z",
+  "updatedAt": "2026-03-31T07:50:52.865Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -8788,6 +8788,49 @@
         "files": [],
         "contact": "강은하 02-2223-3622",
         "qual": "",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01429207": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "디지털트윈 연계",
+        "기술원 발주",
+        "혁신기술 이미지"
+      ],
+      "weaknesses": [
+        "컨설팅 전문성 부족",
+        "드론물류 전문성",
+        "직접 연관성 낮음"
+      ],
+      "strategy": "디지털트윈 강조, 파트너십 모색",
+      "summary": "기술 연계 가능하나 컨설팅 전문성 보완 필요.",
+      "savedAt": 1774943452863,
+      "_bid": {
+        "id": "G2B-R26BK01429207",
+        "bidNo": "R26BK01429207",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "2026년 드론배송 유통‧물류 연계 컨설팅 용역",
+        "agency": "항공안전기술원",
+        "demandAgency": "",
+        "budget": "163,636,364원",
+        "deadline": "2026-04-14 10:00:00",
+        "openDate": "2026-04-14 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-31",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "2026년 드론배송 유통‧물류 연계 컨설팅 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01429207&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "하창일 032-727-5625",
+        "qual": "2026-04-13 18:00",
         "source": "g2b"
       }
     }
