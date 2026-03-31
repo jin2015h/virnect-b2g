@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:46:28.422Z",
+  "updatedAt": "2026-03-31T07:46:39.778Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -7904,6 +7904,48 @@
         "files": [],
         "contact": "김정호 042-868-8128",
         "qual": "2026-04-06 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01430245": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "디지털트윈 경험",
+        "혁신기술 보유"
+      ],
+      "weaknesses": [
+        "전문분야 불일치",
+        "연구역량 부족"
+      ],
+      "strategy": "전문기관과 협력",
+      "summary": "핵심역량과 무관, 수주난망",
+      "savedAt": 1774943199777,
+      "_bid": {
+        "id": "G2B-R26BK01430245",
+        "bidNo": "R26BK01430245",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "SMR 추진 15,000 TEU 컨테이너선의 동복원 안정성 평가 및 선박-원자로 통합 사고 시나리오 도출 연구",
+        "agency": "한국해양과학기술원 부설 선박해양플랜트연구소",
+        "demandAgency": "",
+        "budget": "36,363,636원",
+        "deadline": "2026-04-08 11:00:00",
+        "openDate": "2026-04-08 12:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-30",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "SMR 추진 15,000 TEU 컨테이너선의 동복원 안정성 평가 및 선박-원자로 통합 사고 시나리오 도출 연구",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01430245&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "최휘련 070-8028-7030",
+        "qual": "2026-04-07 18:00",
         "source": "g2b"
       }
     }
