@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:54:07.078Z",
+  "updatedAt": "2026-03-31T07:54:18.928Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -9498,6 +9498,44 @@
         "draftUrl": "",
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120201",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120197": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "제품-시장 적합성",
+        "안전/효율 개선",
+        "종합 솔루션 제공",
+        "작업환경 개선"
+      ],
+      "weaknesses": [
+        "예산 미정 불확실",
+        "기술 도입 저항",
+        "경쟁 심화 가능성"
+      ],
+      "strategy": "뿌리산업 특화 제안, ROI 및 안전 강조, 파일럿 프로그램, 작업환경 개선 부각",
+      "summary": "VIRNECT AR/XR, 뿌리산업 개선 기여, 수주↑",
+      "savedAt": 1774943658925,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120197",
+        "stage": "지원사업",
+        "title": "2026년 뿌리기업 명가, 일하기 좋은 뿌리기업 선정 통합 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-22",
+        "postDate": "2026-03-23",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "2026년 뿌리기업 명가, 일하기 좋은 뿌리기업 선정 통합 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120197",
         "source": "bizinfo"
       }
     }
