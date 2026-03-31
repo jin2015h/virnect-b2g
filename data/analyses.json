@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:49:04.924Z",
+  "updatedAt": "2026-03-31T07:49:16.080Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -8456,6 +8456,51 @@
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120195",
         "source": "bizinfo"
+      }
+    },
+    "G2B-R26BK01396391": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술력",
+        "디지털트윈 솔루션",
+        "원격협업 솔루션",
+        "조선해양산업 적합",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "연구용역 특성",
+        "경쟁사 존재",
+        "MRV 전문성 입증"
+      ],
+      "strategy": "Twin/Remote 활용 강조",
+      "summary": "VIRNECT 기술, MRV 연구 적합, 상장사 역량 우수.",
+      "savedAt": 1774943356078,
+      "_bid": {
+        "id": "G2B-R26BK01396391",
+        "bidNo": "R26BK01396391",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "조선해양산업 MRV 시스템 표준체계 연구용역",
+        "agency": "조달청",
+        "demandAgency": "",
+        "budget": "409,090,909원",
+        "deadline": "2026-04-21 10:00:00",
+        "openDate": "2026-04-21 11:00:00",
+        "openPlace": "",
+        "postDate": "2026-03-30",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "조선해양산업 MRV 시스템 표준체계 연구용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01396391&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "양희선 042-724-7360",
+        "qual": "2026-04-20 18:00",
+        "source": "g2b"
       }
     }
   }
