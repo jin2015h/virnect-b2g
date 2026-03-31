@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:51:57.482Z",
+  "updatedAt": "2026-03-31T07:52:06.129Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -9047,6 +9047,49 @@
         "files": [],
         "contact": "김태민 02-2284-1143",
         "qual": "2026-04-09 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01431699": {
+      "probability": 25,
+      "grade": "D",
+      "strengths": [
+        "혁신기술 보유",
+        "교육효과 증대",
+        "브랜드 인지도"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "예산규모 작음",
+        "교육경험 부족"
+      ],
+      "strategy": "AR/XR 교육 접목 제안",
+      "summary": "핵심사업과 괴리, 혁신성 어필 필요",
+      "savedAt": 1774943526128,
+      "_bid": {
+        "id": "G2B-R26BK01431699",
+        "bidNo": "R26BK01431699",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "2026 청소년 창작 로봇교실 운영 용역",
+        "agency": "인천테크노파크",
+        "demandAgency": "",
+        "budget": "35,454,545원",
+        "deadline": "2026-04-14 10:00:00",
+        "openDate": "2026-04-14 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-31",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "2026 청소년 창작 로봇교실 운영 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01431699&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "이석우 032-260-0738",
+        "qual": "2026-04-13 18:00",
         "source": "g2b"
       }
     }
