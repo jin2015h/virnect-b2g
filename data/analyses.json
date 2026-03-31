@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:50:20.632Z",
+  "updatedAt": "2026-03-31T07:50:32.160Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -8705,6 +8705,44 @@
         "draftUrl": "",
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120198",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120194": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "다양한 제품군",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "사업 연관성 부족",
+        "발주처 불명확",
+        "예산 미정",
+        "사업 내용 불명확"
+      ],
+      "strategy": "IP 관련 사업 모색",
+      "summary": "IP보증 공고, AR/XR 연관성 낮음",
+      "savedAt": 1774943432158,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120194",
+        "stage": "지원사업",
+        "title": "2026년 4월 콘텐츠IP보증 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-07",
+        "postDate": "2026-04-01",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "2026년 4월 콘텐츠IP보증 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120194",
         "source": "bizinfo"
       }
     }
