@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:47:04.446Z",
+  "updatedAt": "2026-03-31T07:47:13.318Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -8034,6 +8034,48 @@
         "files": [],
         "contact": "손국환 044-201-3186",
         "qual": "2026-03-31 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01431879": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "제품명 일치",
+        "핵심 기술력 보유",
+        "공공기관 경험"
+      ],
+      "weaknesses": [
+        "경쟁사 존재",
+        "세부 요구 불명확"
+      ],
+      "strategy": "Twin 제품 강점 부각",
+      "summary": "핵심 제품과 사업 일치",
+      "savedAt": 1774943233317,
+      "_bid": {
+        "id": "G2B-R26BK01431879",
+        "bidNo": "R26BK01431879",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "2026년 이천시 디지털트윈 솔루션 확산 및 개발",
+        "agency": "조달청 서울지방조달청",
+        "demandAgency": "",
+        "budget": "272,727,273원",
+        "deadline": "2026-04-14 10:00:00",
+        "openDate": "2026-04-14 11:00:00",
+        "openPlace": "",
+        "postDate": "2026-03-31",
+        "contractType": "입찰",
+        "category": "디지털트윈",
+        "keywords": [],
+        "description": "2026년 이천시 디지털트윈 솔루션 확산 및 개발",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01431879&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "조윤정 02-590-8873",
+        "qual": "2026-04-13 18:00",
         "source": "g2b"
       }
     }
