@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:46:50.222Z",
+  "updatedAt": "2026-03-31T07:47:04.446Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -7988,6 +7988,52 @@
         "files": [],
         "contact": "최휘련 070-8028-7030",
         "qual": "2026-04-07 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01431791": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "원격협업 강점",
+        "디지털트윈 활용",
+        "AR 시각화 우수",
+        "스마트고글 적용",
+        "안전/효율 증대"
+      ],
+      "weaknesses": [
+        "드론 전문성 부족",
+        "경쟁사 존재",
+        "직접 연관성 약",
+        "사업 범위 불명"
+      ],
+      "strategy": "AR/XR로 안전/효율↑ 강조",
+      "summary": "VIRNECT AR/XR, 드론 안전/활성화.",
+      "savedAt": 1774943224445,
+      "_bid": {
+        "id": "G2B-R26BK01431791",
+        "bidNo": "R26BK01431791",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "2026년 드론 안전 및 활성화 지원 업무 위탁",
+        "agency": "국토교통부",
+        "demandAgency": "",
+        "budget": "23,702,598,000원",
+        "deadline": "2026-04-01 11:00:00",
+        "openDate": "2026-04-01 12:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-31",
+        "contractType": "입찰",
+        "category": "로봇",
+        "keywords": [],
+        "description": "2026년 드론 안전 및 활성화 지원 업무 위탁",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01431791&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "손국환 044-201-3186",
+        "qual": "2026-03-31 18:00",
         "source": "g2b"
       }
     }
