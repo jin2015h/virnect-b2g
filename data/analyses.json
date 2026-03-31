@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:47:42.360Z",
+  "updatedAt": "2026-03-31T07:47:53.702Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -8164,6 +8164,48 @@
         "files": [],
         "contact": "채복석 042-250-1201",
         "qual": "2026-04-02 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01429528": {
+      "probability": 25,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 기술력",
+        "원격협업 솔루션",
+        "디지털트윈 활용"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "MRO 전문성 부족"
+      ],
+      "strategy": "MRO 효율화 제안",
+      "summary": "간접적 연관성",
+      "savedAt": 1774943273700,
+      "_bid": {
+        "id": "G2B-R26BK01429528",
+        "bidNo": "R26BK01429528",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "2026년 소모성자재(MRO) 납품 중소기업 지원 용역",
+        "agency": "주식회사한국중소벤처기업유통원",
+        "demandAgency": "",
+        "budget": "92,354,555원",
+        "deadline": "2026-04-10 15:00:00",
+        "openDate": "2026-04-10 16:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-30",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "2026년 소모성자재(MRO) 납품 중소기업 지원 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01429528&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "안현준 02-6678-9224",
+        "qual": "2026-04-09 18:00",
         "source": "g2b"
       }
     }
