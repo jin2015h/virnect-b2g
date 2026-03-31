@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:49:59.960Z",
+  "updatedAt": "2026-03-31T07:50:10.547Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -8632,6 +8632,44 @@
         "contact": "최준영 041-930-3283",
         "qual": "2026-04-05 18:00",
         "source": "g2b"
+      }
+    },
+    "BIZ-PBLN_000000000120207": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술 혁신성",
+        "원격협업/스마트고글",
+        "산업현장 적용 경험",
+        "코스닥 상장 기업"
+      ],
+      "weaknesses": [
+        "예산 미정 불확실성",
+        "사업 분류 모호함",
+        "SME 맞춤형 제안 필요"
+      ],
+      "strategy": "AR/XR 위기대응 솔루션",
+      "summary": "AR/XR 기술로 위기대응 효율 증대 가능",
+      "savedAt": 1774943410545,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120207",
+        "stage": "지원사업",
+        "title": "[부산] 2026년 상반기 중소기업 밀집지역 위기대응 체계 구축사업 Stand-up 맞춤지원 모집 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-06",
+        "postDate": "2026-03-23",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "[부산] 2026년 상반기 중소기업 밀집지역 위기대응 체계 구축사업 Stand-up 맞춤지원 모집 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120207",
+        "source": "bizinfo"
       }
     }
   }
