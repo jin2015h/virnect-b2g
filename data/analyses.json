@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:46:39.778Z",
+  "updatedAt": "2026-03-31T07:46:50.222Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -7941,6 +7941,48 @@
         "description": "SMR 추진 15,000 TEU 컨테이너선의 동복원 안정성 평가 및 선박-원자로 통합 사고 시나리오 도출 연구",
         "requirements": [],
         "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01430245&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "최휘련 070-8028-7030",
+        "qual": "2026-04-07 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01430285": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "디지털트윈 솔루션",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "전문성 부족"
+      ],
+      "strategy": "사업 분야 재검토",
+      "summary": "AR/XR과 연구 불일치",
+      "savedAt": 1774943210217,
+      "_bid": {
+        "id": "G2B-R26BK01430285",
+        "bidNo": "R26BK01430285",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "SMR 추진선 충돌해석 모델 구축 및 가이드라인 개발 연구",
+        "agency": "한국해양과학기술원 부설 선박해양플랜트연구소",
+        "demandAgency": "",
+        "budget": "45,454,545원",
+        "deadline": "2026-04-08 11:00:00",
+        "openDate": "2026-04-08 12:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-30",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "SMR 추진선 충돌해석 모델 구축 및 가이드라인 개발 연구",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01430285&bidPbancOrd=000",
         "specUrl": "",
         "draftUrl": "",
         "files": [],
