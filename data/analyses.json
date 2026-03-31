@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:53:55.939Z",
+  "updatedAt": "2026-03-31T07:54:07.078Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -9462,6 +9462,42 @@
         "draftUrl": "",
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120203",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120201": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 기술력 보유",
+        "원격협업 솔루션",
+        "디지털트윈 역량"
+      ],
+      "weaknesses": [
+        "사업 연관성 낮음",
+        "요구사항 불명확"
+      ],
+      "strategy": "AR/XR로 R&D 효율화",
+      "summary": "AR/XR R&D 지원 제안",
+      "savedAt": 1774943647077,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120201",
+        "stage": "지원사업",
+        "title": "[경기] 포천시 2026년 신소재개발 프로그램 지원사업 모집 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-09-30",
+        "postDate": "2026-03-18",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "[경기] 포천시 2026년 신소재개발 프로그램 지원사업 모집 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120201",
         "source": "bizinfo"
       }
     }
