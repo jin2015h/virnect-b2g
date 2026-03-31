@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:50:32.160Z",
+  "updatedAt": "2026-03-31T07:50:44.078Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -8744,6 +8744,51 @@
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120194",
         "source": "bizinfo"
+      }
+    },
+    "G2B-R26BK01433214": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 전문기업",
+        "제품 직접 연관",
+        "산업 XR 경험",
+        "코스닥 상장사",
+        "분류 일치"
+      ],
+      "weaknesses": [
+        "예산 규모 작음",
+        "KEPIC 도메인",
+        "경쟁사 존재"
+      ],
+      "strategy": "핵심 기술 강조, 예산 맞춤",
+      "summary": "AR/XR 전문성, 수주 기대",
+      "savedAt": 1774943444076,
+      "_bid": {
+        "id": "G2B-R26BK01433214",
+        "bidNo": "R26BK01433214",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "KEPIC-MR(과압보호)분야 2026년 판 개발",
+        "agency": "(사)대한전기협회",
+        "demandAgency": "",
+        "budget": "15,554,000원",
+        "deadline": "-",
+        "openDate": "2026-04-21 15:00:00",
+        "openPlace": "대한전기협회",
+        "postDate": "2026-03-31",
+        "contractType": "입찰",
+        "category": "XR/AR",
+        "keywords": [],
+        "description": "KEPIC-MR(과압보호)분야 2026년 판 개발",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01433214&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "강은하 02-2223-3622",
+        "qual": "",
+        "source": "g2b"
       }
     }
   }
