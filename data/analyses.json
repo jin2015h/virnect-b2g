@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:52:36.147Z",
+  "updatedAt": "2026-03-31T07:52:47.085Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -9203,6 +9203,43 @@
         "draftUrl": "",
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120202",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120200": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "첨단 AR/XR 기술",
+        "산업 현장 솔루션",
+        "원격 협업 기능"
+      ],
+      "weaknesses": [
+        "그린바이오 불일치",
+        "기술개발 초점 상이",
+        "바이오 특화 부족"
+      ],
+      "strategy": "운영 효율성 강조 및 바이오 기업 협력",
+      "summary": "그린바이오 분야 연관성 낮아 수주 가능성 희박",
+      "savedAt": 1774943567083,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120200",
+        "stage": "지원사업",
+        "title": "2026년 2차 평창군 그린바이오 기술개발(R&BD) 기술고도화지원(비R&D) 모집 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-14",
+        "postDate": "2026-03-23",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "2026년 2차 평창군 그린바이오 기술개발(R&BD) 기술고도화지원(비R&D) 모집 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120200",
         "source": "bizinfo"
       }
     }
