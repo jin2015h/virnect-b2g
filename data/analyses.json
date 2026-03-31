@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:53:12.270Z",
+  "updatedAt": "2026-03-31T07:53:24.349Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -9314,6 +9314,48 @@
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120196",
         "source": "bizinfo"
+      }
+    },
+    "G2B-R26BK01428931": {
+      "probability": 55,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 기술력 우수",
+        "시뮬레이션 연관성",
+        "혁신 교육 가능성"
+      ],
+      "weaknesses": [
+        "주력 분야 불일치",
+        "교육 콘텐츠 부족"
+      ],
+      "strategy": "AR/XR 교육 특화 제안",
+      "summary": "AR/XR 교육 적용 가능",
+      "savedAt": 1774943604348,
+      "_bid": {
+        "id": "G2B-R26BK01428931",
+        "bidNo": "R26BK01428931",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "‘청소년AI로봇체험교육사업’ 2026년 경상북도 청소년 AI로봇체험교육 사업 온라인 확산형 프로그램 운영 용역",
+        "agency": "사단법인 경북아이씨티융합산업진흥협회",
+        "demandAgency": "",
+        "budget": "104,545,455원",
+        "deadline": "-",
+        "openDate": "2026-03-30 15:00:00",
+        "openPlace": "경상북도 포항시 남구 지곡로 394, 포항테크노파크 제1벤처동 201-202호",
+        "postDate": "2026-03-30",
+        "contractType": "입찰",
+        "category": "시뮬레이션",
+        "keywords": [],
+        "description": "‘청소년AI로봇체험교육사업’ 2026년 경상북도 청소년 AI로봇체험교육 사업 온라인 확산형 프로그램 운영 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01428931&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "김신영 053-851-9125",
+        "qual": "",
+        "source": "g2b"
       }
     }
   }
