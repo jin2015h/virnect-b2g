@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:53:34.836Z",
+  "updatedAt": "2026-03-31T07:53:46.972Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -9391,6 +9391,41 @@
         "draftUrl": "",
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120206",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120204": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "디지털트윈 기술",
+        "AR/XR 기술력"
+      ],
+      "weaknesses": [
+        "AI 특화 아님",
+        "스타트업 아님"
+      ],
+      "strategy": "직접 참여 부적합",
+      "summary": "사업 성격 및 대상 불일치",
+      "savedAt": 1774943626971,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120204",
+        "stage": "지원사업",
+        "title": "2026년 AI 특화 창업 프로그램(인공지능사관학교 수료생 대상) 참가자 모집 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-17",
+        "postDate": "2026-03-23",
+        "contractType": "공모/지원",
+        "category": "AI",
+        "keywords": [],
+        "description": "2026년 AI 특화 창업 프로그램(인공지능사관학교 수료생 대상) 참가자 모집 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120204",
         "source": "bizinfo"
       }
     }
