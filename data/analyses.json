@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:46:07.705Z",
+  "updatedAt": "2026-03-31T07:46:19.250Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -7820,6 +7820,48 @@
         "files": [],
         "contact": "김정호 042-868-8128",
         "qual": "2026-04-06 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01430126": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "3D 모델링 역량",
+        "데이터 시각화"
+      ],
+      "weaknesses": [
+        "SAR 데이터 전문성↓",
+        "지반공학 전문성↓",
+        "사업 분야 불일치"
+      ],
+      "strategy": "전문기업과 협력",
+      "summary": "핵심 역량 불일치로 수주↓",
+      "savedAt": 1774943179249,
+      "_bid": {
+        "id": "G2B-R26BK01430126",
+        "bidNo": "R26BK01430126",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "SAR 위성 데이터 기반 사면 지반 피해도 지수 개발 용역",
+        "agency": "한국건설기술연구원",
+        "demandAgency": "",
+        "budget": "59,090,909원",
+        "deadline": "2026-04-06 11:00:00",
+        "openDate": "2026-04-06 12:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-30",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "SAR 위성 데이터 기반 사면 지반 피해도 지수 개발 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01430126&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "류문선 031-910-0481",
+        "qual": "2026-04-05 18:00",
         "source": "g2b"
       }
     }
