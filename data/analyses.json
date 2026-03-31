@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:52:06.129Z",
+  "updatedAt": "2026-03-31T07:52:16.476Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -9091,6 +9091,44 @@
         "contact": "이석우 032-260-0738",
         "qual": "2026-04-13 18:00",
         "source": "g2b"
+      }
+    },
+    "BIZ-PBLN_000000000120208": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술력 우수",
+        "혁신제품 적합성",
+        "다양한 제품군 보유",
+        "코스닥 상장 기업"
+      ],
+      "weaknesses": [
+        "경쟁사 많음",
+        "예산 미정 불확실",
+        "규격 맞춤 필요"
+      ],
+      "strategy": "혁신성 적극 강조, 정책 부합성 제시, 실증 사례 확보, 기술 우위 입증, 맞춤형 제안 준비",
+      "summary": "AR/XR 혁신성 강점, 수주 가능성 높음",
+      "savedAt": 1774943536472,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120208",
+        "stage": "지원사업",
+        "title": "2026년 1차 중소벤처기업부 혁신제품 규격추가 모집 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-13",
+        "postDate": "2026-03-23",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "2026년 1차 중소벤처기업부 혁신제품 규격추가 모집 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120208",
+        "source": "bizinfo"
       }
     }
   }
