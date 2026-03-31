@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:48:51.237Z",
+  "updatedAt": "2026-03-31T07:49:04.924Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -8420,6 +8420,42 @@
         "contact": "김성은 055-772-4477",
         "qual": "2026-04-03 18:00",
         "source": "g2b"
+      }
+    },
+    "BIZ-PBLN_000000000120195": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "미래지향적 이미지",
+        "글로벌 행사 경험"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "예산 불확실성"
+      ],
+      "strategy": "AR/XR 활용 제안",
+      "summary": "사업 연관성 낮음. 기술 활용 방안 모색 필요.",
+      "savedAt": 1774943344922,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120195",
+        "stage": "지원사업",
+        "title": "[강원] 횡성군 2026년 제53회 LA 한인축제 참가기업 모집 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-03",
+        "postDate": "2026-03-23",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "[강원] 횡성군 2026년 제53회 LA 한인축제 참가기업 모집 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120195",
+        "source": "bizinfo"
       }
     }
   }
