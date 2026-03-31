@@ -683,7 +683,48 @@ async function loadBids() {
     if (BIDS.length>0) document.getElementById('empty-state').style.display='none';
     // 서버 분석 결과 병합 로드
     loadAnalysesFromGitHub();
+    // 현재 공고 목록에 없는 분석 결과 정리
+    pruneAnalyses();
   } catch(e) { console.error('bids.json 로드 실패:',e); }
+}
+
+function pruneAnalyses() {
+  const activeIds = new Set(BIDS.map(b => b.id));
+  const now = new Date();
+  let pruned = 0;
+  const preserved = [];
+
+  for (const [id, a] of Object.entries(analyses)) {
+    if (activeIds.has(id)) continue; // 현재 목록에 있으면 skip
+    // 분석 시 저장한 bid 데이터에서 마감일 확인
+    const deadline = a._bid && a._bid.deadline ? a._bid.deadline : null;
+    if (deadline && deadline !== '-') {
+      try {
+        const dl = new Date(deadline.replace(' ', 'T'));
+        if (dl > now) {
+          // 마감 전 → 목록에 다시 추가
+          preserved.push(a._bid);
+          continue;
+        }
+      } catch(e) {}
+    }
+    // 마감 지났거나 마감 정보 없으면 삭제
+    delete analyses[id];
+    pruned++;
+  }
+
+  // 마감 전 분석 공고를 BIDS에 병합 (중복 방지)
+  if (preserved.length > 0) {
+    const existIds = new Set(BIDS.map(b => b.id));
+    preserved.forEach(b => { if (!existIds.has(b.id)) BIDS.push(b); });
+    rebuildCatFilter(); renderList();
+  }
+
+  if (pruned > 0) {
+    localStorage.setItem(STORAGE_KEY_CACHE, JSON.stringify(analyses));
+    console.log(`분석 정리: ${pruned}건 삭제 (마감), ${preserved.length}건 보존`);
+    updateBadge();
+  }
 }
 
 const stageFiltersEl = document.getElementById('stage-filters');
@@ -951,7 +992,7 @@ async function callGemini(bid) {
 
 async function analyze(bid) {
   if(!apiKey){ analyses[bid.id]={error:'❌ Google API 키를 먼저 입력해주세요'}; refreshAnalysisPanel(bid.id); return; }
-  try{ const r=await callGemini(bid); r.savedAt=Date.now(); analyses[bid.id]=r; saveAnalyses(); }
+  try{ const r=await callGemini(bid); r.savedAt=Date.now(); r._bid=bid; analyses[bid.id]=r; saveAnalyses(); }
   catch(e){ analyses[bid.id]={error:'분석 실패: '+e.message}; }
   refreshAnalysisPanel(bid.id); renderList();
 }
@@ -966,7 +1007,7 @@ async function batchAnalyze() {
   btn.disabled=true; bar.classList.add('visible');
   for(let i=0;i<pending.length;i++){
     const bid=pending[i]; txt.textContent=`(${i+1}/${pending.length}) "${bid.title.slice(0,18)}..." 분석 중`; fill.style.width=((i/pending.length)*100)+'%';
-    try{ const r=await callGemini(bid); r.savedAt=Date.now(); analyses[bid.id]=r; saveAnalyses(); } catch(e){ analyses[bid.id]={error:'실패: '+e.message}; }
+    try{ const r=await callGemini(bid); r.savedAt=Date.now(); r._bid=bid; analyses[bid.id]=r; saveAnalyses(); } catch(e){ analyses[bid.id]={error:'실패: '+e.message}; }
     renderList(); refreshAnalysisPanel(bid.id);
     if(i<pending.length-1) await sleep(700);
   }
