@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:47:53.702Z",
+  "updatedAt": "2026-03-31T07:48:04.113Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -8206,6 +8206,48 @@
         "files": [],
         "contact": "안현준 02-6678-9224",
         "qual": "2026-04-09 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01429856": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "원격 협업 솔루션",
+        "디지털 트윈 활용",
+        "스마트 고글 적용"
+      ],
+      "weaknesses": [
+        "GMP 전문성 부족",
+        "핵심 시스템 불일치"
+      ],
+      "strategy": "GMP 연계 통합 제안",
+      "summary": "AR/XR 강점, GMP 경험 부족",
+      "savedAt": 1774943284111,
+      "_bid": {
+        "id": "G2B-R26BK01429856",
+        "bidNo": "R26BK01429856",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "mRNA 백신실증지원기반구축 GMP 전자관리 시스템 구축 용역 재공고",
+        "agency": "미생물실증지원센터",
+        "demandAgency": "",
+        "budget": "250,000,000원",
+        "deadline": "2026-04-07 10:00:00",
+        "openDate": "2026-04-07 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-30",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "mRNA 백신실증지원기반구축 GMP 전자관리 시스템 구축 용역 재공고",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01429856&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "강민주 061-928-8002",
+        "qual": "2026-04-06 18:00",
         "source": "g2b"
       }
     }
