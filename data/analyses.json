@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:49:16.080Z",
+  "updatedAt": "2026-03-31T07:49:35.834Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -8500,6 +8500,51 @@
         "files": [],
         "contact": "양희선 042-724-7360",
         "qual": "2026-04-20 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01426703": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "디지털트윈 기술",
+        "AR/XR 전문성",
+        "현장활용 솔루션",
+        "시뮬레이션 연계",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "경쟁사 존재",
+        "특정 시뮬 경험",
+        "가격 경쟁력"
+      ],
+      "strategy": "디지털트윈 강조, 현장활용 연계 제안, 시뮬 확장성 어필, 맞춤형 제안",
+      "summary": "VIRNECT는 디지털트윈, AR/XR 기술로 여수산단 공간정보 및 시뮬레이션 시스템 구축에 매우 적합하며, 현장활용 시스템 연계 강점.",
+      "savedAt": 1774943375832,
+      "_bid": {
+        "id": "G2B-R26BK01426703",
+        "bidNo": "R26BK01426703",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "여수산단 3차원 통합 공간정보시스템 업데이트, 현장활용 시스템 및 침수, 화재·폭발 시뮬레이션 시스템 개발 재공고",
+        "agency": "(재)한국건설생활환경시험연구원 오창",
+        "demandAgency": "",
+        "budget": "1,136,363,636원",
+        "deadline": "2026-04-10 12:00:00",
+        "openDate": "2026-04-10 13:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-30",
+        "contractType": "입찰",
+        "category": "시뮬레이션",
+        "keywords": [],
+        "description": "여수산단 3차원 통합 공간정보시스템 업데이트, 현장활용 시스템 및 침수, 화재·폭발 시뮬레이션 시스템 개발 재공고",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01426703&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "이수정 02-6912-2301",
+        "qual": "2026-04-09 18:00",
         "source": "g2b"
       }
     }
