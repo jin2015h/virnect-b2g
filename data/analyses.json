@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:58:56.614Z",
+  "updatedAt": "2026-04-08T06:59:03.312Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -11673,6 +11673,43 @@
         "draftUrl": "",
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120511",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120510": {
+      "probability": 0,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "스마트고글",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "이커머스 무관",
+        "사회적경제 무관"
+      ],
+      "strategy": "참여 불필요",
+      "summary": "사업 분야와 무관함",
+      "savedAt": 1775631543309,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120510",
+        "stage": "지원사업",
+        "title": "2026년 사회적경제기업 이커머스 입점지원사업 참가기업 모집 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-20",
+        "postDate": "2026-03-30",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "2026년 사회적경제기업 이커머스 입점지원사업 참가기업 모집 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120510",
         "source": "bizinfo"
       }
     }
