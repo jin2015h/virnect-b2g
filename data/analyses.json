@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:56:00.117Z",
+  "updatedAt": "2026-04-08T06:56:13.419Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -11066,6 +11066,45 @@
         "draftUrl": "",
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120517",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120508": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "기술 적합성 높음",
+        "다양한 제품군",
+        "상장사 신뢰도",
+        "산업 트렌드 부합",
+        "로봇 산업 시너지"
+      ],
+      "weaknesses": [
+        "예산 미정 불확실",
+        "발주처 정보 부족",
+        "경쟁 심화 우려"
+      ],
+      "strategy": "AR/XR 로봇 솔루션 제안",
+      "summary": "VIRNECT AR/XR 로봇 산업 최적, 수주 가능성 높음.",
+      "savedAt": 1775631373416,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120508",
+        "stage": "지원사업",
+        "title": "[대구] 2026년 1차 지역주력산업육성(지역특화 프로젝트 레전드 50+) 지원 모집 공고(로봇)",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-15",
+        "postDate": "2026-03-31",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "[대구] 2026년 1차 지역주력산업육성(지역특화 프로젝트 레전드 50+) 지원 모집 공고(로봇)",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120508",
         "source": "bizinfo"
       }
     }
