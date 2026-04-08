@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T07:00:21.700Z",
+  "updatedAt": "2026-04-08T07:00:33.051Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -11996,6 +11996,42 @@
         "draftUrl": "",
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120516",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120514": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "해외협업 최적화",
+        "AR/XR 기술력",
+        "비용절감 효과"
+      ],
+      "weaknesses": [
+        "예산 미정",
+        "초기 도입 비용"
+      ],
+      "strategy": "ROI 명확히 제시",
+      "summary": "해외지사 효율 증대",
+      "savedAt": 1775631633049,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120514",
+        "stage": "지원사업",
+        "title": "[경기] 안양시 2026년 중소기업 해외지사화 지원사업 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "-",
+        "postDate": "2026-04-07",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "[경기] 안양시 2026년 중소기업 해외지사화 지원사업 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120514",
         "source": "bizinfo"
       }
     }
