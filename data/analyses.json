@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:51:23.660Z",
+  "updatedAt": "2026-04-08T06:51:36.608Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -10050,6 +10050,49 @@
         "files": [],
         "contact": "연윤영 043-261-3494",
         "qual": "2026-04-19 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01441766": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "국방 분야 잠재력",
+        "기술력 인정",
+        "원격협업 기술"
+      ],
+      "weaknesses": [
+        "핵심사업 불일치",
+        "운송 전문성 부족",
+        "AR/XR 활용성↓"
+      ],
+      "strategy": "입찰 참여 지양",
+      "summary": "AR/XR 기업, 운송 용역과 무관. 수주 가능성 매우 낮음.",
+      "savedAt": 1775631096602,
+      "_bid": {
+        "id": "G2B-R26BK01441766",
+        "bidNo": "R26BK01441766",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "SAR검증위성 및 지원장비 발사장 운송 용역/사후원가검토조건부계약",
+        "agency": "국방과학연구소",
+        "demandAgency": "",
+        "budget": "745,545,455원",
+        "deadline": "2026-05-14 10:00:00",
+        "openDate": "2026-05-29 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-03",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "SAR검증위성 및 지원장비 발사장 운송 용역/사후원가검토조건부계약",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01441766&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "이민주",
+        "qual": "2026-05-13 18:00",
         "source": "g2b"
       }
     }
