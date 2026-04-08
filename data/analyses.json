@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:53:24.558Z",
+  "updatedAt": "2026-04-08T06:53:34.704Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -10519,6 +10519,48 @@
         "files": [],
         "contact": "박성희 043-713-8356",
         "qual": "2026-04-14 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01434164": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "기술 전문성",
+        "R&D 역량",
+        "혁신 기술력"
+      ],
+      "weaknesses": [
+        "핵심사업 불일치",
+        "웹 포털 경험 부족"
+      ],
+      "strategy": "AR/XR 연계 제안",
+      "summary": "핵심 역량 불일치, 수주 낮음",
+      "savedAt": 1775631214702,
+      "_bid": {
+        "id": "G2B-R26BK01434164",
+        "bidNo": "R26BK01434164",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "STAR Library 포털 확장 구축 11차 사업",
+        "agency": "한국과학기술원",
+        "demandAgency": "",
+        "budget": "109,090,909원",
+        "deadline": "-",
+        "openDate": "2026-04-13 14:00:00",
+        "openPlace": "한국과학기술원(대전본원) 행정본관(E14) 구매팀(4층)",
+        "postDate": "2026-04-01",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "STAR Library 포털 확장 구축 11차 사업",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01434164&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "임정빈 042-350-2331",
+        "qual": "",
         "source": "g2b"
       }
     }
