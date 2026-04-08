@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:51:50.341Z",
+  "updatedAt": "2026-04-08T06:51:58.827Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -10137,6 +10137,49 @@
         "files": [],
         "contact": "이유정 031-460-5174",
         "qual": "2026-04-13 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01444895": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "코스닥 상장사",
+        "SW 개발 역량",
+        "공공기관 경험"
+      ],
+      "weaknesses": [
+        "핵심사업 불일치",
+        "골프SW 전문성↓",
+        "예산 규모 작음"
+      ],
+      "strategy": "사업 불참 고려",
+      "summary": "핵심사업 불일치로 수주 가능성 낮음.",
+      "savedAt": 1775631118825,
+      "_bid": {
+        "id": "G2B-R26BK01444895",
+        "bidNo": "R26BK01444895",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "SW 3자단가(Peach Park Golf V2.0 (커스터마이징) (주)피치파크게임즈)",
+        "agency": "조달청",
+        "demandAgency": "",
+        "budget": "56,884,545원",
+        "deadline": "2026-04-08 12:00:00",
+        "openDate": "2026-04-08 13:00:00",
+        "openPlace": "",
+        "postDate": "2026-04-06",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "SW 3자단가(Peach Park Golf V2.0 (커스터마이징) (주)피치파크게임즈)",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01444895&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "김범준 070-4056-7369",
+        "qual": "2026-04-07 18:00",
         "source": "g2b"
       }
     }
