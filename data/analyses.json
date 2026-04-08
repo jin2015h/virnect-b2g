@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:59:48.032Z",
+  "updatedAt": "2026-04-08T07:00:00.910Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -11874,6 +11874,49 @@
         "draftUrl": "",
         "files": [],
         "contact": "류하연 041-521-5292",
+        "qual": "",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01444412": {
+      "probability": 55,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 혁신 기술",
+        "물리 AI 교육 시너지",
+        "실습 교육 강화"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "교육 기획 경험 부족",
+        "경쟁사 존재"
+      ],
+      "strategy": "AR/XR로 교육 혁신 제안",
+      "summary": "AR/XR 기술로 물리 AI 교육 혁신 가능. 교육 기획 경험 부족이 약점.",
+      "savedAt": 1775631600908,
+      "_bid": {
+        "id": "G2B-R26BK01444412",
+        "bidNo": "R26BK01444412",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "가천대학교 AI부트캠프 사업 피지컬 AI 교육 기획·운영 위탁 용역",
+        "agency": "가천대학교 산학협력단",
+        "demandAgency": "",
+        "budget": "74,900,000원",
+        "deadline": "-",
+        "openDate": "2026-04-24 14:30:00",
+        "openPlace": "전자입찰사이트 이비즈포유(Ebiz4u)",
+        "postDate": "2026-04-06",
+        "contractType": "입찰",
+        "category": "AI",
+        "keywords": [],
+        "description": "가천대학교 AI부트캠프 사업 피지컬 AI 교육 기획·운영 위탁 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01444412&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "강혜연 031-750-6976",
         "qual": "",
         "source": "g2b"
       }
