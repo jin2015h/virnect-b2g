@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:53:34.704Z",
+  "updatedAt": "2026-04-08T06:53:45.813Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -10561,6 +10561,49 @@
         "files": [],
         "contact": "임정빈 042-350-2331",
         "qual": "",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01437480": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 전문성",
+        "트래킹 기술 부합",
+        "코스닥 상장사",
+        "제품 직접 연관"
+      ],
+      "weaknesses": [
+        "예산 규모 보통",
+        "경쟁사 존재 가능"
+      ],
+      "strategy": "핵심기술 부합 강조",
+      "summary": "핵심 역량 부합, 수주 유력",
+      "savedAt": 1775631225811,
+      "_bid": {
+        "id": "G2B-R26BK01437480",
+        "bidNo": "R26BK01437480",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "광주실감콘텐츠큐브 스튜디오 운영지원·트래킹장비 유지보수",
+        "agency": "재단법인 광주정보.문화산업진흥원",
+        "demandAgency": "",
+        "budget": "76,363,636원",
+        "deadline": "2026-04-13 10:00:00",
+        "openDate": "2026-04-13 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-02",
+        "contractType": "입찰",
+        "category": "스마트팩토리",
+        "keywords": [],
+        "description": "광주실감콘텐츠큐브 스튜디오 운영지원·트래킹장비 유지보수",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01437480&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "서희현 062-610-2923",
+        "qual": "2026-04-12 18:00",
         "source": "g2b"
       }
     }
