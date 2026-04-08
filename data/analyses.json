@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:57:00.897Z",
+  "updatedAt": "2026-04-08T06:57:09.437Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -11264,6 +11264,47 @@
         "files": [],
         "contact": "황도연 061-797-4362",
         "qual": "2026-04-16 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01446323": {
+      "probability": 0,
+      "grade": "D",
+      "strengths": [
+        "해당없음"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "금융 전문성 부족",
+        "제품 무관"
+      ],
+      "strategy": "참여 지양",
+      "summary": "AR/XR과 무관, 수주 불가",
+      "savedAt": 1775631429432,
+      "_bid": {
+        "id": "G2B-R26BK01446323",
+        "bidNo": "R26BK01446323",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "우체국예금 자산군별 BM(Benchmark) 적정성 검토",
+        "agency": "과학기술정보통신부 우정사업본부 우정사업조달센터",
+        "demandAgency": "",
+        "budget": "45,454,545원",
+        "deadline": "2026-04-23 10:00:00",
+        "openDate": "2026-04-23 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-07",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "우체국예금 자산군별 BM(Benchmark) 적정성 검토",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01446323&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "김범수 054-429-0135",
+        "qual": "2026-04-22 18:00",
         "source": "g2b"
       }
     }
