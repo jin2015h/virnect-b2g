@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:55:48.454Z",
+  "updatedAt": "2026-04-08T06:56:00.117Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -11029,6 +11029,44 @@
         "contact": "김응례 02-2222-3877",
         "qual": "2026-04-16 18:00",
         "source": "g2b"
+      }
+    },
+    "BIZ-PBLN_000000000120517": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술 적합",
+        "다양한 제품군",
+        "원격협업 강점",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "예산 미정",
+        "사업 초기 단계",
+        "경쟁 가능성"
+      ],
+      "strategy": "맞춤형 제안",
+      "summary": "AR/XR, 지산학 사업 적합, 참여 가능성 높음.",
+      "savedAt": 1775631360115,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120517",
+        "stage": "지원사업",
+        "title": "[부산] 2026년 지산학 브랜치 융복합 지원사업 참여기업 모집 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-13",
+        "postDate": "2026-03-30",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "[부산] 2026년 지산학 브랜치 융복합 지원사업 참여기업 모집 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120517",
+        "source": "bizinfo"
       }
     }
   }
