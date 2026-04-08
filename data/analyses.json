@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:58:15.940Z",
+  "updatedAt": "2026-04-08T06:58:25.875Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -11561,6 +11561,43 @@
         "contact": "박형재 031-929-0992",
         "qual": "2026-05-17 18:00",
         "source": "g2b"
+      }
+    },
+    "BIZ-PBLN_000000000120515": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "인프라 관리 기술",
+        "원격 지원 솔루션",
+        "스마트 공장 연계"
+      ],
+      "weaknesses": [
+        "ESG 비즈니스 이탈",
+        "핵심 사업 불일치",
+        "AR/XR 명시 없음"
+      ],
+      "strategy": "인프라 관리 제안",
+      "summary": "ESG 컨설팅과 AR/XR 사업 연관성 낮음.",
+      "savedAt": 1775631505871,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120515",
+        "stage": "지원사업",
+        "title": "[경북] 구미시 2026년 이차전지기업 맞춤형 ESG 컨설팅 및 인프라 지원사업 참여기업 모집 추가 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-17",
+        "postDate": "2026-03-30",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "[경북] 구미시 2026년 이차전지기업 맞춤형 ESG 컨설팅 및 인프라 지원사업 참여기업 모집 추가 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120515",
+        "source": "bizinfo"
       }
     }
   }
