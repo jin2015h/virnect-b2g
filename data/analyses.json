@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T07:00:33.051Z",
+  "updatedAt": "2026-04-08T07:00:46.063Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -12032,6 +12032,43 @@
         "draftUrl": "",
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120514",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120512": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술 선도",
+        "산업 특화 솔루션",
+        "다양한 제품군 보유"
+      ],
+      "weaknesses": [
+        "사업 내용 불일치",
+        "직접 수주 아님",
+        "발주/예산 미정"
+      ],
+      "strategy": "지원사업 동향 주시",
+      "summary": "직접 수주 가능성 낮음",
+      "savedAt": 1775631646060,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120512",
+        "stage": "지원사업",
+        "title": "[울산] 2026년 1차 통상변화 대응 중소기업 육성자금 지원계획 변경 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "-",
+        "postDate": "2026-04-07",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "[울산] 2026년 1차 통상변화 대응 중소기업 육성자금 지원계획 변경 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120512",
         "source": "bizinfo"
       }
     }
