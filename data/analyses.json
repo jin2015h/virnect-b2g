@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:52:39.204Z",
+  "updatedAt": "2026-04-08T06:52:48.131Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -10350,6 +10350,48 @@
         "files": [],
         "contact": "김신철 063-219-9294",
         "qual": "2026-04-08 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01446443": {
+      "probability": 40,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 기술력",
+        "디지털트윈 활용",
+        "혁신 솔루션 제시"
+      ],
+      "weaknesses": [
+        "드론 전문성 부족",
+        "직접 연관성 낮음"
+      ],
+      "strategy": "드론업체와 협력",
+      "summary": "AR/XR로 드론연출",
+      "savedAt": 1775631168129,
+      "_bid": {
+        "id": "G2B-R26BK01446443",
+        "bidNo": "R26BK01446443",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "2026 밀양강오딧세이 드론연출 운영용역",
+        "agency": "재단법인밀양문화관광재단",
+        "demandAgency": "",
+        "budget": "100,000,000원",
+        "deadline": "2026-04-15 10:00:00",
+        "openDate": "2026-04-15 11:00:00",
+        "openPlace": "밀양문화관광재단 입찰담당관 PC",
+        "postDate": "2026-04-07",
+        "contractType": "입찰",
+        "category": "로봇",
+        "keywords": [],
+        "description": "2026 밀양강오딧세이 드론연출 운영용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01446443&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "손미향 055-359-4513",
+        "qual": "2026-04-14 18:00",
         "source": "g2b"
       }
     }
