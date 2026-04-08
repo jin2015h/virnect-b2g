@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:50:23.971Z",
+  "updatedAt": "2026-04-08T06:50:35.630Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -9880,6 +9880,49 @@
         "files": [],
         "contact": "최경연 054-779-6768",
         "qual": "2026-04-12 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01439374": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 전문기술",
+        "원격협업 솔루션",
+        "디지털트윈 활용",
+        "국방분야 확장성"
+      ],
+      "weaknesses": [
+        "음탐조사 전문성↓",
+        "기술적용 설득 중요"
+      ],
+      "strategy": "AR/XR로 효율 증대, 디지털트윈 강조, 국방부 맞춤 제안",
+      "summary": "AR/XR로 해양조사 효율↑, 국방부 협업 가능성 높음",
+      "savedAt": 1775631035628,
+      "_bid": {
+        "id": "G2B-R26BK01439374",
+        "bidNo": "R26BK01439374",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "26-N-SHAREM 해역해양 음탐환경 조사용역",
+        "agency": "국방부 국군재정관리단",
+        "demandAgency": "",
+        "budget": "300,000,000원",
+        "deadline": "2026-04-20 11:00:00",
+        "openDate": "2026-04-22 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-02",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "26-N-SHAREM 해역해양 음탐환경 조사용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01439374&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "박지은 02-3146-6680",
+        "qual": "2026-04-17 18:00",
         "source": "g2b"
       }
     }
