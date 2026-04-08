@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:55:22.997Z",
+  "updatedAt": "2026-04-08T06:55:34.424Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -10943,6 +10943,49 @@
         "files": [],
         "contact": "이소정 054-240-2589",
         "qual": "2026-04-13 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01444798": {
+      "probability": 20,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "3D 모델링 경험",
+        "디지털트윈 역량"
+      ],
+      "weaknesses": [
+        "핵심사업 불일치",
+        "애니메이션 전문성",
+        "경쟁 우위 부족"
+      ],
+      "strategy": "기술 협력 제안",
+      "summary": "AR/XR 기업, 모델링 불일치, 수주 낮음.",
+      "savedAt": 1775631334422,
+      "_bid": {
+        "id": "G2B-R26BK01444798",
+        "bidNo": "R26BK01444798",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "애니메이션IP 로봇 및 배경 모델링 용역",
+        "agency": "주식회사디자인에그",
+        "demandAgency": "",
+        "budget": "50,000,000원",
+        "deadline": "2026-04-15 18:00:00",
+        "openDate": "2026-04-16 10:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-06",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "애니메이션IP 로봇 및 배경 모델링 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01444798&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "전준영 ***********",
+        "qual": "2026-04-15 18:00",
         "source": "g2b"
       }
     }
