@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:53:13.407Z",
+  "updatedAt": "2026-04-08T06:53:24.558Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -10475,6 +10475,49 @@
         "draftUrl": "",
         "files": [],
         "contact": "강현빈 032-260-5186",
+        "qual": "2026-04-14 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01436503": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "원격협업 솔루션",
+        "디지털트윈 경험"
+      ],
+      "weaknesses": [
+        "백신 사업 경험 부족",
+        "사업계획 수립 미흡",
+        "바이오 전문성 부재"
+      ],
+      "strategy": "컨소시엄 구성",
+      "summary": "AR/XR-백신 사업 불일치, 수주 가능성 희박.",
+      "savedAt": 1775631204556,
+      "_bid": {
+        "id": "G2B-R26BK01436503",
+        "bidNo": "R26BK01436503",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "mRNA 백신 실증 및 제품화 지원 사업계획 수립",
+        "agency": "한국보건산업진흥원",
+        "demandAgency": "",
+        "budget": "90,909,091원",
+        "deadline": "2026-04-15 10:00:00",
+        "openDate": "2026-04-15 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-01",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "mRNA 백신 실증 및 제품화 지원 사업계획 수립",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01436503&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "박성희 043-713-8356",
         "qual": "2026-04-14 18:00",
         "source": "g2b"
       }
