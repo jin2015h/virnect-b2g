@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:49:33.208Z",
+  "updatedAt": "2026-04-08T06:49:47.218Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -9708,6 +9708,49 @@
         "files": [],
         "contact": "박주영 031-460-5449",
         "qual": "2026-04-08 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01438465": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "산업용 AR/XR 전문",
+        "원격협업/디지털트윈",
+        "설치/운영 효율 증대"
+      ],
+      "weaknesses": [
+        "핵심 설계 전문성 부족",
+        "원자력 분야 경험 미지",
+        "예산 규모 상대적 소액"
+      ],
+      "strategy": "AR/XR 활용 방안 제안",
+      "summary": "NMS 설치/운영에 AR/XR 활용 제안, 핵심 설계는 협력 필요.",
+      "savedAt": 1775630987214,
+      "_bid": {
+        "id": "G2B-R26BK01438465",
+        "bidNo": "R26BK01438465",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "MARINA 노외중성자감시계통(NMS) 기본설계 완료 및 설치·운영방안 수립",
+        "agency": "한국원자력연구원",
+        "demandAgency": "",
+        "budget": "27,272,727원",
+        "deadline": "2026-04-10 11:00:00",
+        "openDate": "2026-04-15 10:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-02",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "MARINA 노외중성자감시계통(NMS) 기본설계 완료 및 설치·운영방안 수립",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01438465&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "김정호 042-868-8128",
+        "qual": "2026-04-09 18:00",
         "source": "g2b"
       }
     }
