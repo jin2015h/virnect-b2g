@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:50:35.630Z",
+  "updatedAt": "2026-04-08T06:50:56.078Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -9923,6 +9923,48 @@
         "files": [],
         "contact": "박지은 02-3146-6680",
         "qual": "2026-04-17 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01436644": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "디지털트윈 제품 일치",
+        "핵심 기술 보유",
+        "AR/XR 확장성"
+      ],
+      "weaknesses": [
+        "DevOps/MLOps 전문성",
+        "해사 도메인 경험"
+      ],
+      "strategy": "Twin 강점, 연계성 강조",
+      "summary": "Twin 제품 일치로 수주 유력. DevOps/MLOps, 해사 역량 강조 필요.",
+      "savedAt": 1775631056077,
+      "_bid": {
+        "id": "G2B-R26BK01436644",
+        "bidNo": "R26BK01436644",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "디지털트윈 기반 해사 서비스를 위한DevOps 체계 개발 및 MLOps 확장 설계 용역",
+        "agency": "조달청 대전지방조달청",
+        "demandAgency": "",
+        "budget": "145,454,545원",
+        "deadline": "2026-04-22 10:00:00",
+        "openDate": "2026-04-22 11:00:00",
+        "openPlace": "",
+        "postDate": "2026-04-01",
+        "contractType": "입찰",
+        "category": "디지털트윈",
+        "keywords": [],
+        "description": "디지털트윈 기반 해사 서비스를 위한DevOps 체계 개발 및 MLOps 확장 설계 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01436644&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "차도빈 070-4056-8393",
+        "qual": "2026-04-21 18:00",
         "source": "g2b"
       }
     }
