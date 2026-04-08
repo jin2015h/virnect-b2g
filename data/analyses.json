@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:59:25.655Z",
+  "updatedAt": "2026-04-08T06:59:37.766Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -11787,6 +11787,51 @@
         "draftUrl": "",
         "files": [],
         "contact": "임아인 055-320-3527",
+        "qual": "",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01443056": {
+      "probability": 90,
+      "grade": "A",
+      "strengths": [
+        "제품군 적합성",
+        "원격협업 강점",
+        "스마트팩토리 특화",
+        "국제협력 지원",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "경쟁사 존재",
+        "초기 구축 비용",
+        "기술 이해도 필요"
+      ],
+      "strategy": "제품 시연 강조",
+      "summary": "VIRNECT, 스마트팩토리 교육 최적화",
+      "savedAt": 1775631577764,
+      "_bid": {
+        "id": "G2B-R26BK01443056",
+        "bidNo": "R26BK01443056",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "한-인니 스마트팩토리 기업 세미나 행사 및 교육센터 운영",
+        "agency": "(사)중소기업기술혁신협회",
+        "demandAgency": "",
+        "budget": "206,500,000원",
+        "deadline": "-",
+        "openDate": "2026-04-17 16:00:00",
+        "openPlace": "이노비즈협회",
+        "postDate": "2026-04-06",
+        "contractType": "입찰",
+        "category": "스마트팩토리",
+        "keywords": [],
+        "description": "한-인니 스마트팩토리 기업 세미나 행사 및 교육센터 운영",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01443056&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "박소혜 031-628-9647",
         "qual": "",
         "source": "g2b"
       }
