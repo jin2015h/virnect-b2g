@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T07:54:18.928Z",
+  "updatedAt": "2026-04-08T06:48:55.959Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -17,6 +17,1330 @@
       "strategy": "AR/XR 활용 제안, 운영 효율성 강조, 기술 차별화 시도",
       "summary": "사업 연관성 낮음, 기술로 차별화 필요.",
       "savedAt": 1773824886816
+    },
+    "G2B-R26BK01424481": {
+      "probability": 1,
+      "grade": "D",
+      "strengths": [
+        "해당사항 없음",
+        "해당사항 없음",
+        "해당사항 없음"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "제품/서비스 무관"
+      ],
+      "strategy": "참여 철회 권고",
+      "summary": "VIRNECT 사업과 무관, 수주 가능성 희박.",
+      "savedAt": 1774859979032
+    },
+    "G2B-R26BK01421833": {
+      "probability": 55,
+      "grade": "C",
+      "strengths": [
+        "현장 데이터 수집",
+        "원격 전문가 협업",
+        "혁신 AR/XR 기술"
+      ],
+      "weaknesses": [
+        "MRV 핵심 기능 부족",
+        "산림 분야 경험 부족"
+      ],
+      "strategy": "컨소시엄 구성 제안",
+      "summary": "AR/XR 현장 MRV 강점, 파트너십 필수",
+      "savedAt": 1774860014913
+    },
+    "G2B-R26BK01418650": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "XR 전문성",
+        "코스닥 상장사",
+        "다양한 기술력"
+      ],
+      "weaknesses": [
+        "VR 콘텐츠 경험",
+        "산업용 AR 주력"
+      ],
+      "strategy": "VR 콘텐츠 협력 제안",
+      "summary": "XR 전문성 강점, VR 콘텐츠 보완 필요",
+      "savedAt": 1774860380909
+    },
+    "G2B-R26BK01416282": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술 적합",
+        "디지털트윈 핵심",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "드론 운영 경험X",
+        "경쟁 심화 예상"
+      ],
+      "strategy": "AR/XR-DT 융합 강조, 드론 협력 제안",
+      "summary": "AR/XR-DT-원격협업, 드론 점검 플랫폼에 최적. 수주 가능성 높음.",
+      "savedAt": 1774860635410
+    },
+    "G2B-R26BK01421627": {
+      "probability": 25,
+      "grade": "D",
+      "strengths": [
+        "혁신기술 보유",
+        "로봇분류 적합",
+        "AR/XR 연계 가능"
+      ],
+      "weaknesses": [
+        "주력사업 불일치",
+        "드론운영 경험↓",
+        "직접운영 미흡"
+      ],
+      "strategy": "드론전문 협력, AR/XR 가치 제안, 데이터 활용 강조",
+      "summary": "직접운영 미흡, 협력 필수",
+      "savedAt": 1774860695324
+    },
+    "G2B-R26BK01423522": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "디지털트윈 강점",
+        "AR/XR 시각화",
+        "원격협업 가능",
+        "혁신기술 적용"
+      ],
+      "weaknesses": [
+        "주력분야 상이",
+        "예산 규모 협소"
+      ],
+      "strategy": "Twin, AR/XR 시각화 제안",
+      "summary": "VIRNECT는 UTM 실증에 Twin, AR/XR 시각화로 기여 가능.",
+      "savedAt": 1774860710492
+    },
+    "G2B-R26BK01425870": {
+      "probability": 40,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 기술력",
+        "스마트고글 활용",
+        "디지털트윈 연동",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "초분광 전문성 부족",
+        "데이터수집 불일치",
+        "드론운용 경험 부족"
+      ],
+      "strategy": "AR/XR 관측/분석 제안",
+      "summary": "AR/XR로 관측/분석 효율화",
+      "savedAt": 1774860723191
+    },
+    "G2B-R26BK01406196": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "기술력 우수",
+        "코스닥 상장사",
+        "공공기관 경험"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "AR/XR 활용 無",
+        "경쟁사 우위"
+      ],
+      "strategy": "IT 전문 협력",
+      "summary": "핵심 역량과 사업 불일치",
+      "savedAt": 1774860818526
+    },
+    "G2B-R26BK01420033": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "제품 적합성 우수",
+        "원격 협업 강점",
+        "산업 현장 특화"
+      ],
+      "weaknesses": [
+        "경쟁사 존재",
+        "해외 사업 경험"
+      ],
+      "strategy": "맞춤형 솔루션 제안",
+      "summary": "AR/XR 기술이 LNG 사업에 매우 적합하여 수주 가능성 높음.",
+      "savedAt": 1774860838714
+    },
+    "G2B-R26BK01413908": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "첨단기술기업 이미지",
+        "로봇 분류 부합",
+        "디지털트윈 활용"
+      ],
+      "weaknesses": [
+        "드론쇼 운영 경험無",
+        "핵심사업과 불일치",
+        "제품 직접 연관성↓"
+      ],
+      "strategy": "전문기업 협력 및 AR/DT 시뮬 강조",
+      "summary": "AR/XR 기업으로 드론쇼 운영 직접 연관성 낮음.",
+      "savedAt": 1774860849866
+    },
+    "G2B-R26BK01423166": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "첨단 기술 기업",
+        "로봇 분류 부합",
+        "데이터 구축 경험"
+      ],
+      "weaknesses": [
+        "핵심 역량 불일치",
+        "농업 드론 경험 無"
+      ],
+      "strategy": "드론 전문기업 협력",
+      "summary": "핵심 역량 불일치로 수주 가능성 매우 낮음.",
+      "savedAt": 1774860859757
+    },
+    "G2B-R26BK01424651": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "첨단 AR/XR 기술",
+        "로봇 분류 일치",
+        "디지털트윈 활용"
+      ],
+      "weaknesses": [
+        "드론쇼 운영 경험 부족",
+        "핵심 사업 불일치",
+        "엔터테인먼트 약점"
+      ],
+      "strategy": "디지털트윈/AR 활용 제안",
+      "summary": "AR/XR 기술은 우수하나 드론쇼 운영 경험 부족.",
+      "savedAt": 1774860871017
+    },
+    "G2B-R26BK01418445": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술력",
+        "KAIST 연관성",
+        "디지털트윈"
+      ],
+      "weaknesses": [
+        "타당성 검토 경험",
+        "예술 분야 전문성"
+      ],
+      "strategy": "AR/XR 기술 적용 제안",
+      "summary": "AR/XR 적합, 경험 보완",
+      "savedAt": 1774860954096
+    },
+    "G2B-R26BK01425480": {
+      "probability": 80,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 교육 적합성",
+        "혁신사업 부합",
+        "원격협업/실습"
+      ],
+      "weaknesses": [
+        "경쟁사 존재",
+        "솔루션 도입 복잡성"
+      ],
+      "strategy": "직업교육 특화 제안, 성공사례 강조, 쉬운 도입 방안 제시",
+      "summary": "VIRNECT의 AR/XR 기술은 전문대학 혁신사업에 매우 적합하여 수주 가능성이 높음.",
+      "savedAt": 1774860963260
+    },
+    "G2B-R26BK01430245": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "디지털트윈 경험",
+        "혁신기술 보유"
+      ],
+      "weaknesses": [
+        "전문분야 불일치",
+        "연구역량 부족"
+      ],
+      "strategy": "전문기관과 협력",
+      "summary": "핵심역량과 무관, 수주난망",
+      "savedAt": 1774943199777,
+      "_bid": {
+        "id": "G2B-R26BK01430245",
+        "bidNo": "R26BK01430245",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "SMR 추진 15,000 TEU 컨테이너선의 동복원 안정성 평가 및 선박-원자로 통합 사고 시나리오 도출 연구",
+        "agency": "한국해양과학기술원 부설 선박해양플랜트연구소",
+        "demandAgency": "",
+        "budget": "36,363,636원",
+        "deadline": "2026-04-08 11:00:00",
+        "openDate": "2026-04-08 12:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-30",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "SMR 추진 15,000 TEU 컨테이너선의 동복원 안정성 평가 및 선박-원자로 통합 사고 시나리오 도출 연구",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01430245&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "최휘련 070-8028-7030",
+        "qual": "2026-04-07 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01430285": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "디지털트윈 솔루션",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "전문성 부족"
+      ],
+      "strategy": "사업 분야 재검토",
+      "summary": "AR/XR과 연구 불일치",
+      "savedAt": 1774943210217,
+      "_bid": {
+        "id": "G2B-R26BK01430285",
+        "bidNo": "R26BK01430285",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "SMR 추진선 충돌해석 모델 구축 및 가이드라인 개발 연구",
+        "agency": "한국해양과학기술원 부설 선박해양플랜트연구소",
+        "demandAgency": "",
+        "budget": "45,454,545원",
+        "deadline": "2026-04-08 11:00:00",
+        "openDate": "2026-04-08 12:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-30",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "SMR 추진선 충돌해석 모델 구축 및 가이드라인 개발 연구",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01430285&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "최휘련 070-8028-7030",
+        "qual": "2026-04-07 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01431879": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "제품명 일치",
+        "핵심 기술력 보유",
+        "공공기관 경험"
+      ],
+      "weaknesses": [
+        "경쟁사 존재",
+        "세부 요구 불명확"
+      ],
+      "strategy": "Twin 제품 강점 부각",
+      "summary": "핵심 제품과 사업 일치",
+      "savedAt": 1774943233317,
+      "_bid": {
+        "id": "G2B-R26BK01431879",
+        "bidNo": "R26BK01431879",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "2026년 이천시 디지털트윈 솔루션 확산 및 개발",
+        "agency": "조달청 서울지방조달청",
+        "demandAgency": "",
+        "budget": "272,727,273원",
+        "deadline": "2026-04-14 10:00:00",
+        "openDate": "2026-04-14 11:00:00",
+        "openPlace": "",
+        "postDate": "2026-03-31",
+        "contractType": "입찰",
+        "category": "디지털트윈",
+        "keywords": [],
+        "description": "2026년 이천시 디지털트윈 솔루션 확산 및 개발",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01431879&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "조윤정 02-590-8873",
+        "qual": "2026-04-13 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01429528": {
+      "probability": 25,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 기술력",
+        "원격협업 솔루션",
+        "디지털트윈 활용"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "MRO 전문성 부족"
+      ],
+      "strategy": "MRO 효율화 제안",
+      "summary": "간접적 연관성",
+      "savedAt": 1774943273700,
+      "_bid": {
+        "id": "G2B-R26BK01429528",
+        "bidNo": "R26BK01429528",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "2026년 소모성자재(MRO) 납품 중소기업 지원 용역",
+        "agency": "주식회사한국중소벤처기업유통원",
+        "demandAgency": "",
+        "budget": "92,354,555원",
+        "deadline": "2026-04-10 15:00:00",
+        "openDate": "2026-04-10 16:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-30",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "2026년 소모성자재(MRO) 납품 중소기업 지원 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01429528&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "안현준 02-6678-9224",
+        "qual": "2026-04-09 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01431267": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "XR/AR 전문기업",
+        "디지털트윈 강점",
+        "공공기관 경험"
+      ],
+      "weaknesses": [
+        "VR영상 제작 경험",
+        "콘텐츠 제작 특화"
+      ],
+      "strategy": "트윈 활용 안전 특화 솔루션 제시",
+      "summary": "XR 기술력과 트윈 강점, VR 영상 제작 역량 보완 필요",
+      "savedAt": 1774943295017,
+      "_bid": {
+        "id": "G2B-R26BK01431267",
+        "bidNo": "R26BK01431267",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "현장안전 훈련용VR시뮬레이션 영상 제작",
+        "agency": "소방청 국립소방연구원",
+        "demandAgency": "",
+        "budget": "36,363,636원",
+        "deadline": "2026-04-13 10:00:00",
+        "openDate": "2026-04-13 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-31",
+        "contractType": "입찰",
+        "category": "XR/AR",
+        "keywords": [],
+        "description": "현장안전 훈련용VR시뮬레이션 영상 제작",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01431267&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "최인영 041-559-0522",
+        "qual": "2026-04-12 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01396391": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술력",
+        "디지털트윈 솔루션",
+        "원격협업 솔루션",
+        "조선해양산업 적합",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "연구용역 특성",
+        "경쟁사 존재",
+        "MRV 전문성 입증"
+      ],
+      "strategy": "Twin/Remote 활용 강조",
+      "summary": "VIRNECT 기술, MRV 연구 적합, 상장사 역량 우수.",
+      "savedAt": 1774943356078,
+      "_bid": {
+        "id": "G2B-R26BK01396391",
+        "bidNo": "R26BK01396391",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "조선해양산업 MRV 시스템 표준체계 연구용역",
+        "agency": "조달청",
+        "demandAgency": "",
+        "budget": "409,090,909원",
+        "deadline": "2026-04-21 10:00:00",
+        "openDate": "2026-04-21 11:00:00",
+        "openPlace": "",
+        "postDate": "2026-03-30",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "조선해양산업 MRV 시스템 표준체계 연구용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01396391&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "양희선 042-724-7360",
+        "qual": "2026-04-20 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01426703": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "디지털트윈 기술",
+        "AR/XR 전문성",
+        "현장활용 솔루션",
+        "시뮬레이션 연계",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "경쟁사 존재",
+        "특정 시뮬 경험",
+        "가격 경쟁력"
+      ],
+      "strategy": "디지털트윈 강조, 현장활용 연계 제안, 시뮬 확장성 어필, 맞춤형 제안",
+      "summary": "VIRNECT는 디지털트윈, AR/XR 기술로 여수산단 공간정보 및 시뮬레이션 시스템 구축에 매우 적합하며, 현장활용 시스템 연계 강점.",
+      "savedAt": 1774943375832,
+      "_bid": {
+        "id": "G2B-R26BK01426703",
+        "bidNo": "R26BK01426703",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "여수산단 3차원 통합 공간정보시스템 업데이트, 현장활용 시스템 및 침수, 화재·폭발 시뮬레이션 시스템 개발 재공고",
+        "agency": "(재)한국건설생활환경시험연구원 오창",
+        "demandAgency": "",
+        "budget": "1,136,363,636원",
+        "deadline": "2026-04-10 12:00:00",
+        "openDate": "2026-04-10 13:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-30",
+        "contractType": "입찰",
+        "category": "시뮬레이션",
+        "keywords": [],
+        "description": "여수산단 3차원 통합 공간정보시스템 업데이트, 현장활용 시스템 및 침수, 화재·폭발 시뮬레이션 시스템 개발 재공고",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01426703&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "이수정 02-6912-2301",
+        "qual": "2026-04-09 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01433214": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 전문기업",
+        "제품 직접 연관",
+        "산업 XR 경험",
+        "코스닥 상장사",
+        "분류 일치"
+      ],
+      "weaknesses": [
+        "예산 규모 작음",
+        "KEPIC 도메인",
+        "경쟁사 존재"
+      ],
+      "strategy": "핵심 기술 강조, 예산 맞춤",
+      "summary": "AR/XR 전문성, 수주 기대",
+      "savedAt": 1774943444076,
+      "_bid": {
+        "id": "G2B-R26BK01433214",
+        "bidNo": "R26BK01433214",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "KEPIC-MR(과압보호)분야 2026년 판 개발",
+        "agency": "(사)대한전기협회",
+        "demandAgency": "",
+        "budget": "15,554,000원",
+        "deadline": "-",
+        "openDate": "2026-04-21 15:00:00",
+        "openPlace": "대한전기협회",
+        "postDate": "2026-03-31",
+        "contractType": "입찰",
+        "category": "XR/AR",
+        "keywords": [],
+        "description": "KEPIC-MR(과압보호)분야 2026년 판 개발",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01433214&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "강은하 02-2223-3622",
+        "qual": "",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01429207": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "디지털트윈 연계",
+        "기술원 발주",
+        "혁신기술 이미지"
+      ],
+      "weaknesses": [
+        "컨설팅 전문성 부족",
+        "드론물류 전문성",
+        "직접 연관성 낮음"
+      ],
+      "strategy": "디지털트윈 강조, 파트너십 모색",
+      "summary": "기술 연계 가능하나 컨설팅 전문성 보완 필요.",
+      "savedAt": 1774943452863,
+      "_bid": {
+        "id": "G2B-R26BK01429207",
+        "bidNo": "R26BK01429207",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "2026년 드론배송 유통‧물류 연계 컨설팅 용역",
+        "agency": "항공안전기술원",
+        "demandAgency": "",
+        "budget": "163,636,364원",
+        "deadline": "2026-04-14 10:00:00",
+        "openDate": "2026-04-14 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-31",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "2026년 드론배송 유통‧물류 연계 컨설팅 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01429207&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "하창일 032-727-5625",
+        "qual": "2026-04-13 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01429516": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술력",
+        "원격협업 솔루션",
+        "디지털트윈 활용",
+        "스마트고글 연동"
+      ],
+      "weaknesses": [
+        "드론 직접 기술X",
+        "식생판별 전문성",
+        "예산 규모 제약"
+      ],
+      "strategy": "드론 데이터 시각화, 원격 협업, 디지털 트윈 활용",
+      "summary": "AR/XR은 드론 데이터 분석 및 원격 협업에 기여 가능. 식생 피해 판별 전문성 보완 필요.",
+      "savedAt": 1774943471793,
+      "_bid": {
+        "id": "G2B-R26BK01429516",
+        "bidNo": "R26BK01429516",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "드론 활용 화학사고 환경영향 조사 연구(Ⅱ)-식생의 화학사고 피해 판별 가능성 탐구",
+        "agency": "기후에너지환경부 화학물질안전원",
+        "demandAgency": "",
+        "budget": "46,363,636원",
+        "deadline": "2026-04-14 11:00:00",
+        "openDate": "2026-04-14 12:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-30",
+        "contractType": "입찰",
+        "category": "로봇",
+        "keywords": [],
+        "description": "드론 활용 화학사고 환경영향 조사 연구(Ⅱ)-식생의 화학사고 피해 판별 가능성 탐구",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01429516&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "석재원 043-830-4035",
+        "qual": "2026-04-13 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01424791": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술 전문성",
+        "혁신적 기획 제안",
+        "디지털트윈, AR 활용"
+      ],
+      "weaknesses": [
+        "행사 기획 경험 부족",
+        "경쟁사 존재"
+      ],
+      "strategy": "협력 및 AR/XR 기획",
+      "summary": "AR/XR로 혁신 기회, 기획 경험 보완 필요.",
+      "savedAt": 1774943486164,
+      "_bid": {
+        "id": "G2B-R26BK01424791",
+        "bidNo": "R26BK01424791",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "(협상에의한 계약) 2026 강남 로봇플러스 페스티벌 기획·운영 용역",
+        "agency": "서울특별시 강남구",
+        "demandAgency": "",
+        "budget": "541,636,364원",
+        "deadline": "-",
+        "openDate": "2026-04-16 16:00:00",
+        "openPlace": "2026. 4. 16.(목) 16:00 까지 강남구 혁신전략과로 '직접 방문' 제출",
+        "postDate": "2026-03-26",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "(협상에의한 계약) 2026 강남 로봇플러스 페스티벌 기획·운영 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01424791&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "배영현 02-3423-5255",
+        "qual": "",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01426949": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술 전문성",
+        "로봇 축제 연관성",
+        "혁신 경험 제공",
+        "협상 계약 유리"
+      ],
+      "weaknesses": [
+        "행사 기획 경험 부족",
+        "경쟁사 존재",
+        "운영 범위 광범위"
+      ],
+      "strategy": "AR/XR 솔루션 제안, 축제 혁신 강조, 파트너십 모색, 구체적 기획 제시",
+      "summary": "AR/XR 강점, 축제 혁신 기여. 기획 경험 보완 필요.",
+      "savedAt": 1774943498022,
+      "_bid": {
+        "id": "G2B-R26BK01426949",
+        "bidNo": "R26BK01426949",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "(협상에의한 계약) 2026 강남 로봇플러스 페스티벌 기획·운영 용역",
+        "agency": "서울특별시 강남구",
+        "demandAgency": "",
+        "budget": "541,636,364원",
+        "deadline": "-",
+        "openDate": "2026-04-16 16:00:00",
+        "openPlace": "2026. 4. 16.(목) 16:00 까지 강남구 혁신전략과로 '직접 방문' 제출",
+        "postDate": "2026-03-27",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "(협상에의한 계약) 2026 강남 로봇플러스 페스티벌 기획·운영 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01426949&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "배영현 02-3423-5255",
+        "qual": "",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01428051": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술 적합",
+        "신산업 운영 지원",
+        "제품 포트폴리오",
+        "규제혁신 기여"
+      ],
+      "weaknesses": [
+        "AI 직접성 부족",
+        "예산 규모 제한"
+      ],
+      "strategy": "AR/XR로 AI운영/규제혁신 기여 강조",
+      "summary": "AR/XR로 신산업 운영/규제 혁신 기여, 수주 가능성 높음.",
+      "savedAt": 1774943507754,
+      "_bid": {
+        "id": "G2B-R26BK01428051",
+        "bidNo": "R26BK01428051",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "2026년 서울시 신산업분야 규제혁신 협력사업 (인공지능·로봇·모빌리티 분야 운영 용역)",
+        "agency": "(재)서울경제진흥원",
+        "demandAgency": "",
+        "budget": "64,700,000원",
+        "deadline": "2026-04-10 10:00:00",
+        "openDate": "2026-04-10 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-30",
+        "contractType": "입찰",
+        "category": "AI",
+        "keywords": [],
+        "description": "2026년 서울시 신산업분야 규제혁신 협력사업 (인공지능·로봇·모빌리티 분야 운영 용역)",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01428051&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "김응례 02-2222-3877",
+        "qual": "2026-04-09 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01428651": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "코스닥 상장사",
+        "기술력 우수",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "RPA 전문성 부족",
+        "핵심사업 불일치",
+        "경쟁사 우위"
+      ],
+      "strategy": "RPA 전문기업 협력",
+      "summary": "RPA 사업과 무관, 수주 희박",
+      "savedAt": 1774943517480,
+      "_bid": {
+        "id": "G2B-R26BK01428651",
+        "bidNo": "R26BK01428651",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "2026년 그린워싱 위반 조사업무 로봇자동화(RPA) 운영",
+        "agency": "한국환경산업기술원",
+        "demandAgency": "",
+        "budget": "40,909,091원",
+        "deadline": "2026-04-10 10:00:00",
+        "openDate": "2026-04-10 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-30",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "2026년 그린워싱 위반 조사업무 로봇자동화(RPA) 운영",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01428651&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "김태민 02-2284-1143",
+        "qual": "2026-04-09 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01431699": {
+      "probability": 25,
+      "grade": "D",
+      "strengths": [
+        "혁신기술 보유",
+        "교육효과 증대",
+        "브랜드 인지도"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "예산규모 작음",
+        "교육경험 부족"
+      ],
+      "strategy": "AR/XR 교육 접목 제안",
+      "summary": "핵심사업과 괴리, 혁신성 어필 필요",
+      "savedAt": 1774943526128,
+      "_bid": {
+        "id": "G2B-R26BK01431699",
+        "bidNo": "R26BK01431699",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "2026 청소년 창작 로봇교실 운영 용역",
+        "agency": "인천테크노파크",
+        "demandAgency": "",
+        "budget": "35,454,545원",
+        "deadline": "2026-04-14 10:00:00",
+        "openDate": "2026-04-14 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-03-31",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "2026 청소년 창작 로봇교실 운영 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01431699&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "이석우 032-260-0738",
+        "qual": "2026-04-13 18:00",
+        "source": "g2b"
+      }
+    },
+    "BIZ-PBLN_000000000120208": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술력 우수",
+        "혁신제품 적합성",
+        "다양한 제품군 보유",
+        "코스닥 상장 기업"
+      ],
+      "weaknesses": [
+        "경쟁사 많음",
+        "예산 미정 불확실",
+        "규격 맞춤 필요"
+      ],
+      "strategy": "혁신성 적극 강조, 정책 부합성 제시, 실증 사례 확보, 기술 우위 입증, 맞춤형 제안 준비",
+      "summary": "AR/XR 혁신성 강점, 수주 가능성 높음",
+      "savedAt": 1774943536472,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120208",
+        "stage": "지원사업",
+        "title": "2026년 1차 중소벤처기업부 혁신제품 규격추가 모집 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-13",
+        "postDate": "2026-03-23",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "2026년 1차 중소벤처기업부 혁신제품 규격추가 모집 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120208",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120205": {
+      "probability": 75,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 기술력",
+        "산업현장 적용",
+        "원격협업 솔루션",
+        "디지털트윈",
+        "포항시 산업특성"
+      ],
+      "weaknesses": [
+        "예산 미정",
+        "경쟁 심화 가능",
+        "사업 분류 모호"
+      ],
+      "strategy": "포항시 산업 분석, 맞춤형 솔루션 제안, 성공사례 강조, 비용 효율성 어필, 지역 고용 창출",
+      "summary": "VIRNECT AR/XR, 포항 산업 위기 대응",
+      "savedAt": 1774943545800,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120205",
+        "stage": "지원사업",
+        "title": "[경북] 포항시 2026년 지역산업위기대응 맞춤형 지원사업 참여기업 모집 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-10",
+        "postDate": "2026-04-01",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "[경북] 포항시 2026년 지역산업위기대응 맞춤형 지원사업 참여기업 모집 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120205",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120202": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "원격협업 가능",
+        "디지털트윈 활용",
+        "AR/XR 기술력"
+      ],
+      "weaknesses": [
+        "사업분야 불일치",
+        "그린바이오 경험無"
+      ],
+      "strategy": "AR/XR 활용 제안 및 원격협업 강조",
+      "summary": "그린바이오 연관성 낮음, 수주 희박",
+      "savedAt": 1774943556146,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120202",
+        "stage": "지원사업",
+        "title": "[강원] 평창군 2026년 2차 그린바이오 사업화지원(비R&D) 모집 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-14",
+        "postDate": "2026-03-23",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "[강원] 평창군 2026년 2차 그린바이오 사업화지원(비R&D) 모집 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120202",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120200": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "첨단 AR/XR 기술",
+        "산업 현장 솔루션",
+        "원격 협업 기능"
+      ],
+      "weaknesses": [
+        "그린바이오 불일치",
+        "기술개발 초점 상이",
+        "바이오 특화 부족"
+      ],
+      "strategy": "운영 효율성 강조 및 바이오 기업 협력",
+      "summary": "그린바이오 분야 연관성 낮아 수주 가능성 희박",
+      "savedAt": 1774943567083,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120200",
+        "stage": "지원사업",
+        "title": "2026년 2차 평창군 그린바이오 기술개발(R&BD) 기술고도화지원(비R&D) 모집 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-14",
+        "postDate": "2026-03-23",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "2026년 2차 평창군 그린바이오 기술개발(R&BD) 기술고도화지원(비R&D) 모집 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120200",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120199": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력 우수",
+        "원격협업 솔루션",
+        "디지털트윈 기술"
+      ],
+      "weaknesses": [
+        "핵심사업 불일치",
+        "소재개발 경험無"
+      ],
+      "strategy": "AR/XR 활용 제안",
+      "summary": "사업 연관성 낮아 수주난항",
+      "savedAt": 1774943578305,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120199",
+        "stage": "지원사업",
+        "title": "[충북] 바이오세라믹 소재기업 기술개발 지원사업(3차연도) 신규지원 대상과제 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-13",
+        "postDate": "2026-03-23",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "[충북] 바이오세라믹 소재기업 기술개발 지원사업(3차연도) 신규지원 대상과제 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120199",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120196": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력 보유",
+        "원격 협업 솔루션",
+        "디지털 트윈 가능"
+      ],
+      "weaknesses": [
+        "소비재 기업 아님",
+        "사업 목적 불일치",
+        "직접 연관성 부족"
+      ],
+      "strategy": "참여 대신 협력 제안, AR/XR 마케팅 제안",
+      "summary": "소비재전과 무관, 수주 희박",
+      "savedAt": 1774943592268,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120196",
+        "stage": "지원사업",
+        "title": "[경남] 양산시 2026년 베트남 국제 프리미엄 소비재전 참여업체 모집 공고(소비재 수출 초보기업 O2O 해외마케팅 지원사업)",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-10",
+        "postDate": "2026-03-23",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "[경남] 양산시 2026년 베트남 국제 프리미엄 소비재전 참여업체 모집 공고(소비재 수출 초보기업 O2O 해외마케팅 지원사업)",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120196",
+        "source": "bizinfo"
+      }
+    },
+    "G2B-R26BK01428931": {
+      "probability": 55,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 기술력 우수",
+        "시뮬레이션 연관성",
+        "혁신 교육 가능성"
+      ],
+      "weaknesses": [
+        "주력 분야 불일치",
+        "교육 콘텐츠 부족"
+      ],
+      "strategy": "AR/XR 교육 특화 제안",
+      "summary": "AR/XR 교육 적용 가능",
+      "savedAt": 1774943604348,
+      "_bid": {
+        "id": "G2B-R26BK01428931",
+        "bidNo": "R26BK01428931",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "‘청소년AI로봇체험교육사업’ 2026년 경상북도 청소년 AI로봇체험교육 사업 온라인 확산형 프로그램 운영 용역",
+        "agency": "사단법인 경북아이씨티융합산업진흥협회",
+        "demandAgency": "",
+        "budget": "104,545,455원",
+        "deadline": "-",
+        "openDate": "2026-03-30 15:00:00",
+        "openPlace": "경상북도 포항시 남구 지곡로 394, 포항테크노파크 제1벤처동 201-202호",
+        "postDate": "2026-03-30",
+        "contractType": "입찰",
+        "category": "시뮬레이션",
+        "keywords": [],
+        "description": "‘청소년AI로봇체험교육사업’ 2026년 경상북도 청소년 AI로봇체험교육 사업 온라인 확산형 프로그램 운영 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01428931&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "김신영 053-851-9125",
+        "qual": "",
+        "source": "g2b"
+      }
+    },
+    "BIZ-PBLN_000000000120206": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "기술 적합성",
+        "제품 다양성",
+        "지역 연관성"
+      ],
+      "weaknesses": [
+        "예산 미정",
+        "사업 범위 모호"
+      ],
+      "strategy": "포항시와 협력,맞춤형 제안,성공사례 강조",
+      "summary": "VIRNECT 기술 적합, 예산 확보 및 맞춤형 제안 중요.",
+      "savedAt": 1774943614834,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120206",
+        "stage": "지원사업",
+        "title": "[경북] 2026년 포항시 유망강소기업 육성사업 시행계획 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-17",
+        "postDate": "2026-04-01",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "[경북] 2026년 포항시 유망강소기업 육성사업 시행계획 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120206",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120204": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "디지털트윈 기술",
+        "AR/XR 기술력"
+      ],
+      "weaknesses": [
+        "AI 특화 아님",
+        "스타트업 아님"
+      ],
+      "strategy": "직접 참여 부적합",
+      "summary": "사업 성격 및 대상 불일치",
+      "savedAt": 1774943626971,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120204",
+        "stage": "지원사업",
+        "title": "2026년 AI 특화 창업 프로그램(인공지능사관학교 수료생 대상) 참가자 모집 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-17",
+        "postDate": "2026-03-23",
+        "contractType": "공모/지원",
+        "category": "AI",
+        "keywords": [],
+        "description": "2026년 AI 특화 창업 프로그램(인공지능사관학교 수료생 대상) 참가자 모집 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120204",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120203": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "뿌리산업 기술 적합",
+        "생산성/안전성 향상",
+        "정부 정책 부합"
+      ],
+      "weaknesses": [
+        "직접 수주 아님",
+        "간접적 기회"
+      ],
+      "strategy": "포상 신청 및 홍보",
+      "summary": "기술력 인정 통한 기회",
+      "savedAt": 1774943635938,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120203",
+        "stage": "지원사업",
+        "title": "2026년 소재ㆍ부품ㆍ장비-뿌리 산업 발전 유공 포상계획 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-21",
+        "postDate": "2026-03-23",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "2026년 소재ㆍ부품ㆍ장비-뿌리 산업 발전 유공 포상계획 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120203",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120201": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 기술력 보유",
+        "원격협업 솔루션",
+        "디지털트윈 역량"
+      ],
+      "weaknesses": [
+        "사업 연관성 낮음",
+        "요구사항 불명확"
+      ],
+      "strategy": "AR/XR로 R&D 효율화",
+      "summary": "AR/XR R&D 지원 제안",
+      "savedAt": 1774943647077,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120201",
+        "stage": "지원사업",
+        "title": "[경기] 포천시 2026년 신소재개발 프로그램 지원사업 모집 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-09-30",
+        "postDate": "2026-03-18",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "[경기] 포천시 2026년 신소재개발 프로그램 지원사업 모집 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120201",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120197": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "제품-시장 적합성",
+        "안전/효율 개선",
+        "종합 솔루션 제공",
+        "작업환경 개선"
+      ],
+      "weaknesses": [
+        "예산 미정 불확실",
+        "기술 도입 저항",
+        "경쟁 심화 가능성"
+      ],
+      "strategy": "뿌리산업 특화 제안, ROI 및 안전 강조, 파일럿 프로그램, 작업환경 개선 부각",
+      "summary": "VIRNECT AR/XR, 뿌리산업 개선 기여, 수주↑",
+      "savedAt": 1774943658925,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120197",
+        "stage": "지원사업",
+        "title": "2026년 뿌리기업 명가, 일하기 좋은 뿌리기업 선정 통합 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-22",
+        "postDate": "2026-03-23",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "2026년 뿌리기업 명가, 일하기 좋은 뿌리기업 선정 통합 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120197",
+        "source": "bizinfo"
+      }
     },
     "G2B-R26BK01399461": {
       "probability": 85,
@@ -235,38 +1559,6 @@
       "summary": "핵심사업과 불일치",
       "savedAt": 1774859838783
     },
-    "G2B-R26BK01424481": {
-      "probability": 1,
-      "grade": "D",
-      "strengths": [
-        "해당사항 없음",
-        "해당사항 없음",
-        "해당사항 없음"
-      ],
-      "weaknesses": [
-        "사업 분야 불일치",
-        "제품/서비스 무관"
-      ],
-      "strategy": "참여 철회 권고",
-      "summary": "VIRNECT 사업과 무관, 수주 가능성 희박.",
-      "savedAt": 1774859979032
-    },
-    "G2B-R26BK01421833": {
-      "probability": 55,
-      "grade": "C",
-      "strengths": [
-        "현장 데이터 수집",
-        "원격 전문가 협업",
-        "혁신 AR/XR 기술"
-      ],
-      "weaknesses": [
-        "MRV 핵심 기능 부족",
-        "산림 분야 경험 부족"
-      ],
-      "strategy": "컨소시엄 구성 제안",
-      "summary": "AR/XR 현장 MRV 강점, 파트너십 필수",
-      "savedAt": 1774860014913
-    },
     "G2B-R26BK01414428": {
       "probability": 85,
       "grade": "A",
@@ -314,22 +1606,6 @@
       "strategy": "AR/XR 교육 제안, 협력",
       "summary": "AR/XR 교육 접목 시 수주 가능.",
       "savedAt": 1774860069397
-    },
-    "G2B-R26BK01418650": {
-      "probability": 70,
-      "grade": "B",
-      "strengths": [
-        "XR 전문성",
-        "코스닥 상장사",
-        "다양한 기술력"
-      ],
-      "weaknesses": [
-        "VR 콘텐츠 경험",
-        "산업용 AR 주력"
-      ],
-      "strategy": "VR 콘텐츠 협력 제안",
-      "summary": "XR 전문성 강점, VR 콘텐츠 보완 필요",
-      "savedAt": 1774860380909
     },
     "G2B-R26BK01419570": {
       "probability": 80,
@@ -448,22 +1724,6 @@
       "summary": "로봇 운영 효율화 기여",
       "savedAt": 1774860623189
     },
-    "G2B-R26BK01416282": {
-      "probability": 85,
-      "grade": "A",
-      "strengths": [
-        "AR/XR 기술 적합",
-        "디지털트윈 핵심",
-        "원격협업 솔루션"
-      ],
-      "weaknesses": [
-        "드론 운영 경험X",
-        "경쟁 심화 예상"
-      ],
-      "strategy": "AR/XR-DT 융합 강조, 드론 협력 제안",
-      "summary": "AR/XR-DT-원격협업, 드론 점검 플랫폼에 최적. 수주 가능성 높음.",
-      "savedAt": 1774860635410
-    },
     "G2B-R26BK01417547": {
       "probability": 75,
       "grade": "A",
@@ -480,75 +1740,6 @@
       "strategy": "Twin 솔루션 강조, 유지보수 역량 부각, 성공사례 제시",
       "summary": "Twin 솔루션으로 수주 가능성 높음.",
       "savedAt": 1774860682794
-    },
-    "G2B-R26BK01421627": {
-      "probability": 25,
-      "grade": "D",
-      "strengths": [
-        "혁신기술 보유",
-        "로봇분류 적합",
-        "AR/XR 연계 가능"
-      ],
-      "weaknesses": [
-        "주력사업 불일치",
-        "드론운영 경험↓",
-        "직접운영 미흡"
-      ],
-      "strategy": "드론전문 협력, AR/XR 가치 제안, 데이터 활용 강조",
-      "summary": "직접운영 미흡, 협력 필수",
-      "savedAt": 1774860695324
-    },
-    "G2B-R26BK01423522": {
-      "probability": 70,
-      "grade": "B",
-      "strengths": [
-        "디지털트윈 강점",
-        "AR/XR 시각화",
-        "원격협업 가능",
-        "혁신기술 적용"
-      ],
-      "weaknesses": [
-        "주력분야 상이",
-        "예산 규모 협소"
-      ],
-      "strategy": "Twin, AR/XR 시각화 제안",
-      "summary": "VIRNECT는 UTM 실증에 Twin, AR/XR 시각화로 기여 가능.",
-      "savedAt": 1774860710492
-    },
-    "G2B-R26BK01425870": {
-      "probability": 40,
-      "grade": "C",
-      "strengths": [
-        "AR/XR 기술력",
-        "스마트고글 활용",
-        "디지털트윈 연동",
-        "원격협업 솔루션"
-      ],
-      "weaknesses": [
-        "초분광 전문성 부족",
-        "데이터수집 불일치",
-        "드론운용 경험 부족"
-      ],
-      "strategy": "AR/XR 관측/분석 제안",
-      "summary": "AR/XR로 관측/분석 효율화",
-      "savedAt": 1774860723191
-    },
-    "G2B-R26BK01406196": {
-      "probability": 10,
-      "grade": "D",
-      "strengths": [
-        "기술력 우수",
-        "코스닥 상장사",
-        "공공기관 경험"
-      ],
-      "weaknesses": [
-        "사업분야 불일치",
-        "AR/XR 활용 無",
-        "경쟁사 우위"
-      ],
-      "strategy": "IT 전문 협력",
-      "summary": "핵심 역량과 사업 불일치",
-      "savedAt": 1774860818526
     },
     "G2B-R26BK01413877": {
       "probability": 10,
@@ -568,104 +1759,6 @@
       "strategy": "AR/XR 보안 접목",
       "summary": "AR/XR 기술, 보안 용역과 직접 연관성 낮음.",
       "savedAt": 1774860828487
-    },
-    "G2B-R26BK01420033": {
-      "probability": 85,
-      "grade": "A",
-      "strengths": [
-        "제품 적합성 우수",
-        "원격 협업 강점",
-        "산업 현장 특화"
-      ],
-      "weaknesses": [
-        "경쟁사 존재",
-        "해외 사업 경험"
-      ],
-      "strategy": "맞춤형 솔루션 제안",
-      "summary": "AR/XR 기술이 LNG 사업에 매우 적합하여 수주 가능성 높음.",
-      "savedAt": 1774860838714
-    },
-    "G2B-R26BK01413908": {
-      "probability": 10,
-      "grade": "D",
-      "strengths": [
-        "첨단기술기업 이미지",
-        "로봇 분류 부합",
-        "디지털트윈 활용"
-      ],
-      "weaknesses": [
-        "드론쇼 운영 경험無",
-        "핵심사업과 불일치",
-        "제품 직접 연관성↓"
-      ],
-      "strategy": "전문기업 협력 및 AR/DT 시뮬 강조",
-      "summary": "AR/XR 기업으로 드론쇼 운영 직접 연관성 낮음.",
-      "savedAt": 1774860849866
-    },
-    "G2B-R26BK01423166": {
-      "probability": 10,
-      "grade": "D",
-      "strengths": [
-        "첨단 기술 기업",
-        "로봇 분류 부합",
-        "데이터 구축 경험"
-      ],
-      "weaknesses": [
-        "핵심 역량 불일치",
-        "농업 드론 경험 無"
-      ],
-      "strategy": "드론 전문기업 협력",
-      "summary": "핵심 역량 불일치로 수주 가능성 매우 낮음.",
-      "savedAt": 1774860859757
-    },
-    "G2B-R26BK01424651": {
-      "probability": 35,
-      "grade": "C",
-      "strengths": [
-        "첨단 AR/XR 기술",
-        "로봇 분류 일치",
-        "디지털트윈 활용"
-      ],
-      "weaknesses": [
-        "드론쇼 운영 경험 부족",
-        "핵심 사업 불일치",
-        "엔터테인먼트 약점"
-      ],
-      "strategy": "디지털트윈/AR 활용 제안",
-      "summary": "AR/XR 기술은 우수하나 드론쇼 운영 경험 부족.",
-      "savedAt": 1774860871017
-    },
-    "G2B-R26BK01418445": {
-      "probability": 70,
-      "grade": "B",
-      "strengths": [
-        "AR/XR 기술력",
-        "KAIST 연관성",
-        "디지털트윈"
-      ],
-      "weaknesses": [
-        "타당성 검토 경험",
-        "예술 분야 전문성"
-      ],
-      "strategy": "AR/XR 기술 적용 제안",
-      "summary": "AR/XR 적합, 경험 보완",
-      "savedAt": 1774860954096
-    },
-    "G2B-R26BK01425480": {
-      "probability": 80,
-      "grade": "B",
-      "strengths": [
-        "AR/XR 교육 적합성",
-        "혁신사업 부합",
-        "원격협업/실습"
-      ],
-      "weaknesses": [
-        "경쟁사 존재",
-        "솔루션 도입 복잡성"
-      ],
-      "strategy": "직업교육 특화 제안, 성공사례 강조, 쉬운 도입 방안 제시",
-      "summary": "VIRNECT의 AR/XR 기술은 전문대학 혁신사업에 매우 적합하여 수주 가능성이 높음.",
-      "savedAt": 1774860963260
     },
     "G2B-R26BK01412696": {
       "probability": 80,
@@ -7907,90 +9000,6 @@
         "source": "g2b"
       }
     },
-    "G2B-R26BK01430245": {
-      "probability": 5,
-      "grade": "D",
-      "strengths": [
-        "AR/XR 기술력",
-        "디지털트윈 경험",
-        "혁신기술 보유"
-      ],
-      "weaknesses": [
-        "전문분야 불일치",
-        "연구역량 부족"
-      ],
-      "strategy": "전문기관과 협력",
-      "summary": "핵심역량과 무관, 수주난망",
-      "savedAt": 1774943199777,
-      "_bid": {
-        "id": "G2B-R26BK01430245",
-        "bidNo": "R26BK01430245",
-        "bidOrd": "000",
-        "stage": "입찰공고",
-        "title": "SMR 추진 15,000 TEU 컨테이너선의 동복원 안정성 평가 및 선박-원자로 통합 사고 시나리오 도출 연구",
-        "agency": "한국해양과학기술원 부설 선박해양플랜트연구소",
-        "demandAgency": "",
-        "budget": "36,363,636원",
-        "deadline": "2026-04-08 11:00:00",
-        "openDate": "2026-04-08 12:00:00",
-        "openPlace": "국가종합전자조달시스템(나라장터)",
-        "postDate": "2026-03-30",
-        "contractType": "입찰",
-        "category": "기타",
-        "keywords": [],
-        "description": "SMR 추진 15,000 TEU 컨테이너선의 동복원 안정성 평가 및 선박-원자로 통합 사고 시나리오 도출 연구",
-        "requirements": [],
-        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01430245&bidPbancOrd=000",
-        "specUrl": "",
-        "draftUrl": "",
-        "files": [],
-        "contact": "최휘련 070-8028-7030",
-        "qual": "2026-04-07 18:00",
-        "source": "g2b"
-      }
-    },
-    "G2B-R26BK01430285": {
-      "probability": 5,
-      "grade": "D",
-      "strengths": [
-        "AR/XR 기술력",
-        "디지털트윈 솔루션",
-        "원격협업 솔루션"
-      ],
-      "weaknesses": [
-        "사업분야 불일치",
-        "전문성 부족"
-      ],
-      "strategy": "사업 분야 재검토",
-      "summary": "AR/XR과 연구 불일치",
-      "savedAt": 1774943210217,
-      "_bid": {
-        "id": "G2B-R26BK01430285",
-        "bidNo": "R26BK01430285",
-        "bidOrd": "000",
-        "stage": "입찰공고",
-        "title": "SMR 추진선 충돌해석 모델 구축 및 가이드라인 개발 연구",
-        "agency": "한국해양과학기술원 부설 선박해양플랜트연구소",
-        "demandAgency": "",
-        "budget": "45,454,545원",
-        "deadline": "2026-04-08 11:00:00",
-        "openDate": "2026-04-08 12:00:00",
-        "openPlace": "국가종합전자조달시스템(나라장터)",
-        "postDate": "2026-03-30",
-        "contractType": "입찰",
-        "category": "기타",
-        "keywords": [],
-        "description": "SMR 추진선 충돌해석 모델 구축 및 가이드라인 개발 연구",
-        "requirements": [],
-        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01430285&bidPbancOrd=000",
-        "specUrl": "",
-        "draftUrl": "",
-        "files": [],
-        "contact": "최휘련 070-8028-7030",
-        "qual": "2026-04-07 18:00",
-        "source": "g2b"
-      }
-    },
     "G2B-R26BK01431791": {
       "probability": 70,
       "grade": "B",
@@ -8034,48 +9043,6 @@
         "files": [],
         "contact": "손국환 044-201-3186",
         "qual": "2026-03-31 18:00",
-        "source": "g2b"
-      }
-    },
-    "G2B-R26BK01431879": {
-      "probability": 85,
-      "grade": "A",
-      "strengths": [
-        "제품명 일치",
-        "핵심 기술력 보유",
-        "공공기관 경험"
-      ],
-      "weaknesses": [
-        "경쟁사 존재",
-        "세부 요구 불명확"
-      ],
-      "strategy": "Twin 제품 강점 부각",
-      "summary": "핵심 제품과 사업 일치",
-      "savedAt": 1774943233317,
-      "_bid": {
-        "id": "G2B-R26BK01431879",
-        "bidNo": "R26BK01431879",
-        "bidOrd": "000",
-        "stage": "입찰공고",
-        "title": "2026년 이천시 디지털트윈 솔루션 확산 및 개발",
-        "agency": "조달청 서울지방조달청",
-        "demandAgency": "",
-        "budget": "272,727,273원",
-        "deadline": "2026-04-14 10:00:00",
-        "openDate": "2026-04-14 11:00:00",
-        "openPlace": "",
-        "postDate": "2026-03-31",
-        "contractType": "입찰",
-        "category": "디지털트윈",
-        "keywords": [],
-        "description": "2026년 이천시 디지털트윈 솔루션 확산 및 개발",
-        "requirements": [],
-        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01431879&bidPbancOrd=000",
-        "specUrl": "",
-        "draftUrl": "",
-        "files": [],
-        "contact": "조윤정 02-590-8873",
-        "qual": "2026-04-13 18:00",
         "source": "g2b"
       }
     },
@@ -8167,48 +9134,6 @@
         "source": "g2b"
       }
     },
-    "G2B-R26BK01429528": {
-      "probability": 25,
-      "grade": "C",
-      "strengths": [
-        "AR/XR 기술력",
-        "원격협업 솔루션",
-        "디지털트윈 활용"
-      ],
-      "weaknesses": [
-        "사업분야 불일치",
-        "MRO 전문성 부족"
-      ],
-      "strategy": "MRO 효율화 제안",
-      "summary": "간접적 연관성",
-      "savedAt": 1774943273700,
-      "_bid": {
-        "id": "G2B-R26BK01429528",
-        "bidNo": "R26BK01429528",
-        "bidOrd": "000",
-        "stage": "입찰공고",
-        "title": "2026년 소모성자재(MRO) 납품 중소기업 지원 용역",
-        "agency": "주식회사한국중소벤처기업유통원",
-        "demandAgency": "",
-        "budget": "92,354,555원",
-        "deadline": "2026-04-10 15:00:00",
-        "openDate": "2026-04-10 16:00:00",
-        "openPlace": "국가종합전자조달시스템(나라장터)",
-        "postDate": "2026-03-30",
-        "contractType": "입찰",
-        "category": "기타",
-        "keywords": [],
-        "description": "2026년 소모성자재(MRO) 납품 중소기업 지원 용역",
-        "requirements": [],
-        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01429528&bidPbancOrd=000",
-        "specUrl": "",
-        "draftUrl": "",
-        "files": [],
-        "contact": "안현준 02-6678-9224",
-        "qual": "2026-04-09 18:00",
-        "source": "g2b"
-      }
-    },
     "G2B-R26BK01429856": {
       "probability": 65,
       "grade": "B",
@@ -8248,48 +9173,6 @@
         "files": [],
         "contact": "강민주 061-928-8002",
         "qual": "2026-04-06 18:00",
-        "source": "g2b"
-      }
-    },
-    "G2B-R26BK01431267": {
-      "probability": 65,
-      "grade": "B",
-      "strengths": [
-        "XR/AR 전문기업",
-        "디지털트윈 강점",
-        "공공기관 경험"
-      ],
-      "weaknesses": [
-        "VR영상 제작 경험",
-        "콘텐츠 제작 특화"
-      ],
-      "strategy": "트윈 활용 안전 특화 솔루션 제시",
-      "summary": "XR 기술력과 트윈 강점, VR 영상 제작 역량 보완 필요",
-      "savedAt": 1774943295017,
-      "_bid": {
-        "id": "G2B-R26BK01431267",
-        "bidNo": "R26BK01431267",
-        "bidOrd": "000",
-        "stage": "입찰공고",
-        "title": "현장안전 훈련용VR시뮬레이션 영상 제작",
-        "agency": "소방청 국립소방연구원",
-        "demandAgency": "",
-        "budget": "36,363,636원",
-        "deadline": "2026-04-13 10:00:00",
-        "openDate": "2026-04-13 11:00:00",
-        "openPlace": "국가종합전자조달시스템(나라장터)",
-        "postDate": "2026-03-31",
-        "contractType": "입찰",
-        "category": "XR/AR",
-        "keywords": [],
-        "description": "현장안전 훈련용VR시뮬레이션 영상 제작",
-        "requirements": [],
-        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01431267&bidPbancOrd=000",
-        "specUrl": "",
-        "draftUrl": "",
-        "files": [],
-        "contact": "최인영 041-559-0522",
-        "qual": "2026-04-12 18:00",
         "source": "g2b"
       }
     },
@@ -8456,96 +9339,6 @@
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120195",
         "source": "bizinfo"
-      }
-    },
-    "G2B-R26BK01396391": {
-      "probability": 85,
-      "grade": "A",
-      "strengths": [
-        "AR/XR 기술력",
-        "디지털트윈 솔루션",
-        "원격협업 솔루션",
-        "조선해양산업 적합",
-        "코스닥 상장사"
-      ],
-      "weaknesses": [
-        "연구용역 특성",
-        "경쟁사 존재",
-        "MRV 전문성 입증"
-      ],
-      "strategy": "Twin/Remote 활용 강조",
-      "summary": "VIRNECT 기술, MRV 연구 적합, 상장사 역량 우수.",
-      "savedAt": 1774943356078,
-      "_bid": {
-        "id": "G2B-R26BK01396391",
-        "bidNo": "R26BK01396391",
-        "bidOrd": "000",
-        "stage": "입찰공고",
-        "title": "조선해양산업 MRV 시스템 표준체계 연구용역",
-        "agency": "조달청",
-        "demandAgency": "",
-        "budget": "409,090,909원",
-        "deadline": "2026-04-21 10:00:00",
-        "openDate": "2026-04-21 11:00:00",
-        "openPlace": "",
-        "postDate": "2026-03-30",
-        "contractType": "입찰",
-        "category": "기타",
-        "keywords": [],
-        "description": "조선해양산업 MRV 시스템 표준체계 연구용역",
-        "requirements": [],
-        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01396391&bidPbancOrd=000",
-        "specUrl": "",
-        "draftUrl": "",
-        "files": [],
-        "contact": "양희선 042-724-7360",
-        "qual": "2026-04-20 18:00",
-        "source": "g2b"
-      }
-    },
-    "G2B-R26BK01426703": {
-      "probability": 80,
-      "grade": "A",
-      "strengths": [
-        "디지털트윈 기술",
-        "AR/XR 전문성",
-        "현장활용 솔루션",
-        "시뮬레이션 연계",
-        "코스닥 상장사"
-      ],
-      "weaknesses": [
-        "경쟁사 존재",
-        "특정 시뮬 경험",
-        "가격 경쟁력"
-      ],
-      "strategy": "디지털트윈 강조, 현장활용 연계 제안, 시뮬 확장성 어필, 맞춤형 제안",
-      "summary": "VIRNECT는 디지털트윈, AR/XR 기술로 여수산단 공간정보 및 시뮬레이션 시스템 구축에 매우 적합하며, 현장활용 시스템 연계 강점.",
-      "savedAt": 1774943375832,
-      "_bid": {
-        "id": "G2B-R26BK01426703",
-        "bidNo": "R26BK01426703",
-        "bidOrd": "000",
-        "stage": "입찰공고",
-        "title": "여수산단 3차원 통합 공간정보시스템 업데이트, 현장활용 시스템 및 침수, 화재·폭발 시뮬레이션 시스템 개발 재공고",
-        "agency": "(재)한국건설생활환경시험연구원 오창",
-        "demandAgency": "",
-        "budget": "1,136,363,636원",
-        "deadline": "2026-04-10 12:00:00",
-        "openDate": "2026-04-10 13:00:00",
-        "openPlace": "국가종합전자조달시스템(나라장터)",
-        "postDate": "2026-03-30",
-        "contractType": "입찰",
-        "category": "시뮬레이션",
-        "keywords": [],
-        "description": "여수산단 3차원 통합 공간정보시스템 업데이트, 현장활용 시스템 및 침수, 화재·폭발 시뮬레이션 시스템 개발 재공고",
-        "requirements": [],
-        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01426703&bidPbancOrd=000",
-        "specUrl": "",
-        "draftUrl": "",
-        "files": [],
-        "contact": "이수정 02-6912-2301",
-        "qual": "2026-04-09 18:00",
-        "source": "g2b"
       }
     },
     "G2B-R26BK01429799": {
@@ -8746,797 +9539,49 @@
         "source": "bizinfo"
       }
     },
-    "G2B-R26BK01433214": {
-      "probability": 80,
+    "G2B-R26BK01447108": {
+      "probability": 90,
       "grade": "A",
       "strengths": [
-        "AR/XR 전문기업",
-        "제품 직접 연관",
-        "산업 XR 경험",
-        "코스닥 상장사",
-        "분류 일치"
+        "XR/AR 전문기업",
+        "원격협업 솔루션",
+        "병원 디지털 전환",
+        "대규모 예산",
+        "발주처 니즈 부합"
       ],
       "weaknesses": [
-        "예산 규모 작음",
-        "KEPIC 도메인",
-        "경쟁사 존재"
+        "직접 판독 SW X",
+        "경쟁사 존재",
+        "의료 특화 경험?"
       ],
-      "strategy": "핵심 기술 강조, 예산 맞춤",
-      "summary": "AR/XR 전문성, 수주 기대",
-      "savedAt": 1774943444076,
+      "strategy": "Remote 솔루션 강조",
+      "summary": "XR/AR 분류 적합, 수주 유력",
+      "savedAt": 1775630935958,
       "_bid": {
-        "id": "G2B-R26BK01433214",
-        "bidNo": "R26BK01433214",
+        "id": "G2B-R26BK01447108",
+        "bidNo": "R26BK01447108",
         "bidOrd": "000",
         "stage": "입찰공고",
-        "title": "KEPIC-MR(과압보호)분야 2026년 판 개발",
-        "agency": "(사)대한전기협회",
+        "title": "의료영상(CR, RF, MG, CT, MR) 외주판독 용역 단가계약",
+        "agency": "부산대학교병원",
         "demandAgency": "",
-        "budget": "15,554,000원",
-        "deadline": "-",
-        "openDate": "2026-04-21 15:00:00",
-        "openPlace": "대한전기협회",
-        "postDate": "2026-03-31",
+        "budget": "3,615,661,560원",
+        "deadline": "2026-04-15 10:00:00",
+        "openDate": "2026-04-15 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-07",
         "contractType": "입찰",
         "category": "XR/AR",
         "keywords": [],
-        "description": "KEPIC-MR(과압보호)분야 2026년 판 개발",
+        "description": "의료영상(CR, RF, MG, CT, MR) 외주판독 용역 단가계약",
         "requirements": [],
-        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01433214&bidPbancOrd=000",
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01447108&bidPbancOrd=000",
         "specUrl": "",
         "draftUrl": "",
         "files": [],
-        "contact": "강은하 02-2223-3622",
-        "qual": "",
+        "contact": "권송이 051-240-7475",
+        "qual": "2026-04-14 18:00",
         "source": "g2b"
-      }
-    },
-    "G2B-R26BK01429207": {
-      "probability": 35,
-      "grade": "C",
-      "strengths": [
-        "디지털트윈 연계",
-        "기술원 발주",
-        "혁신기술 이미지"
-      ],
-      "weaknesses": [
-        "컨설팅 전문성 부족",
-        "드론물류 전문성",
-        "직접 연관성 낮음"
-      ],
-      "strategy": "디지털트윈 강조, 파트너십 모색",
-      "summary": "기술 연계 가능하나 컨설팅 전문성 보완 필요.",
-      "savedAt": 1774943452863,
-      "_bid": {
-        "id": "G2B-R26BK01429207",
-        "bidNo": "R26BK01429207",
-        "bidOrd": "000",
-        "stage": "입찰공고",
-        "title": "2026년 드론배송 유통‧물류 연계 컨설팅 용역",
-        "agency": "항공안전기술원",
-        "demandAgency": "",
-        "budget": "163,636,364원",
-        "deadline": "2026-04-14 10:00:00",
-        "openDate": "2026-04-14 11:00:00",
-        "openPlace": "국가종합전자조달시스템(나라장터)",
-        "postDate": "2026-03-31",
-        "contractType": "입찰",
-        "category": "기타",
-        "keywords": [],
-        "description": "2026년 드론배송 유통‧물류 연계 컨설팅 용역",
-        "requirements": [],
-        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01429207&bidPbancOrd=000",
-        "specUrl": "",
-        "draftUrl": "",
-        "files": [],
-        "contact": "하창일 032-727-5625",
-        "qual": "2026-04-13 18:00",
-        "source": "g2b"
-      }
-    },
-    "G2B-R26BK01429516": {
-      "probability": 65,
-      "grade": "B",
-      "strengths": [
-        "AR/XR 기술력",
-        "원격협업 솔루션",
-        "디지털트윈 활용",
-        "스마트고글 연동"
-      ],
-      "weaknesses": [
-        "드론 직접 기술X",
-        "식생판별 전문성",
-        "예산 규모 제약"
-      ],
-      "strategy": "드론 데이터 시각화, 원격 협업, 디지털 트윈 활용",
-      "summary": "AR/XR은 드론 데이터 분석 및 원격 협업에 기여 가능. 식생 피해 판별 전문성 보완 필요.",
-      "savedAt": 1774943471793,
-      "_bid": {
-        "id": "G2B-R26BK01429516",
-        "bidNo": "R26BK01429516",
-        "bidOrd": "000",
-        "stage": "입찰공고",
-        "title": "드론 활용 화학사고 환경영향 조사 연구(Ⅱ)-식생의 화학사고 피해 판별 가능성 탐구",
-        "agency": "기후에너지환경부 화학물질안전원",
-        "demandAgency": "",
-        "budget": "46,363,636원",
-        "deadline": "2026-04-14 11:00:00",
-        "openDate": "2026-04-14 12:00:00",
-        "openPlace": "국가종합전자조달시스템(나라장터)",
-        "postDate": "2026-03-30",
-        "contractType": "입찰",
-        "category": "로봇",
-        "keywords": [],
-        "description": "드론 활용 화학사고 환경영향 조사 연구(Ⅱ)-식생의 화학사고 피해 판별 가능성 탐구",
-        "requirements": [],
-        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01429516&bidPbancOrd=000",
-        "specUrl": "",
-        "draftUrl": "",
-        "files": [],
-        "contact": "석재원 043-830-4035",
-        "qual": "2026-04-13 18:00",
-        "source": "g2b"
-      }
-    },
-    "G2B-R26BK01424791": {
-      "probability": 65,
-      "grade": "B",
-      "strengths": [
-        "AR/XR 기술 전문성",
-        "혁신적 기획 제안",
-        "디지털트윈, AR 활용"
-      ],
-      "weaknesses": [
-        "행사 기획 경험 부족",
-        "경쟁사 존재"
-      ],
-      "strategy": "협력 및 AR/XR 기획",
-      "summary": "AR/XR로 혁신 기회, 기획 경험 보완 필요.",
-      "savedAt": 1774943486164,
-      "_bid": {
-        "id": "G2B-R26BK01424791",
-        "bidNo": "R26BK01424791",
-        "bidOrd": "000",
-        "stage": "입찰공고",
-        "title": "(협상에의한 계약) 2026 강남 로봇플러스 페스티벌 기획·운영 용역",
-        "agency": "서울특별시 강남구",
-        "demandAgency": "",
-        "budget": "541,636,364원",
-        "deadline": "-",
-        "openDate": "2026-04-16 16:00:00",
-        "openPlace": "2026. 4. 16.(목) 16:00 까지 강남구 혁신전략과로 '직접 방문' 제출",
-        "postDate": "2026-03-26",
-        "contractType": "입찰",
-        "category": "기타",
-        "keywords": [],
-        "description": "(협상에의한 계약) 2026 강남 로봇플러스 페스티벌 기획·운영 용역",
-        "requirements": [],
-        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01424791&bidPbancOrd=000",
-        "specUrl": "",
-        "draftUrl": "",
-        "files": [],
-        "contact": "배영현 02-3423-5255",
-        "qual": "",
-        "source": "g2b"
-      }
-    },
-    "G2B-R26BK01426949": {
-      "probability": 70,
-      "grade": "B",
-      "strengths": [
-        "AR/XR 기술 전문성",
-        "로봇 축제 연관성",
-        "혁신 경험 제공",
-        "협상 계약 유리"
-      ],
-      "weaknesses": [
-        "행사 기획 경험 부족",
-        "경쟁사 존재",
-        "운영 범위 광범위"
-      ],
-      "strategy": "AR/XR 솔루션 제안, 축제 혁신 강조, 파트너십 모색, 구체적 기획 제시",
-      "summary": "AR/XR 강점, 축제 혁신 기여. 기획 경험 보완 필요.",
-      "savedAt": 1774943498022,
-      "_bid": {
-        "id": "G2B-R26BK01426949",
-        "bidNo": "R26BK01426949",
-        "bidOrd": "000",
-        "stage": "입찰공고",
-        "title": "(협상에의한 계약) 2026 강남 로봇플러스 페스티벌 기획·운영 용역",
-        "agency": "서울특별시 강남구",
-        "demandAgency": "",
-        "budget": "541,636,364원",
-        "deadline": "-",
-        "openDate": "2026-04-16 16:00:00",
-        "openPlace": "2026. 4. 16.(목) 16:00 까지 강남구 혁신전략과로 '직접 방문' 제출",
-        "postDate": "2026-03-27",
-        "contractType": "입찰",
-        "category": "기타",
-        "keywords": [],
-        "description": "(협상에의한 계약) 2026 강남 로봇플러스 페스티벌 기획·운영 용역",
-        "requirements": [],
-        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01426949&bidPbancOrd=000",
-        "specUrl": "",
-        "draftUrl": "",
-        "files": [],
-        "contact": "배영현 02-3423-5255",
-        "qual": "",
-        "source": "g2b"
-      }
-    },
-    "G2B-R26BK01428051": {
-      "probability": 85,
-      "grade": "A",
-      "strengths": [
-        "AR/XR 기술 적합",
-        "신산업 운영 지원",
-        "제품 포트폴리오",
-        "규제혁신 기여"
-      ],
-      "weaknesses": [
-        "AI 직접성 부족",
-        "예산 규모 제한"
-      ],
-      "strategy": "AR/XR로 AI운영/규제혁신 기여 강조",
-      "summary": "AR/XR로 신산업 운영/규제 혁신 기여, 수주 가능성 높음.",
-      "savedAt": 1774943507754,
-      "_bid": {
-        "id": "G2B-R26BK01428051",
-        "bidNo": "R26BK01428051",
-        "bidOrd": "000",
-        "stage": "입찰공고",
-        "title": "2026년 서울시 신산업분야 규제혁신 협력사업 (인공지능·로봇·모빌리티 분야 운영 용역)",
-        "agency": "(재)서울경제진흥원",
-        "demandAgency": "",
-        "budget": "64,700,000원",
-        "deadline": "2026-04-10 10:00:00",
-        "openDate": "2026-04-10 11:00:00",
-        "openPlace": "국가종합전자조달시스템(나라장터)",
-        "postDate": "2026-03-30",
-        "contractType": "입찰",
-        "category": "AI",
-        "keywords": [],
-        "description": "2026년 서울시 신산업분야 규제혁신 협력사업 (인공지능·로봇·모빌리티 분야 운영 용역)",
-        "requirements": [],
-        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01428051&bidPbancOrd=000",
-        "specUrl": "",
-        "draftUrl": "",
-        "files": [],
-        "contact": "김응례 02-2222-3877",
-        "qual": "2026-04-09 18:00",
-        "source": "g2b"
-      }
-    },
-    "G2B-R26BK01428651": {
-      "probability": 5,
-      "grade": "D",
-      "strengths": [
-        "코스닥 상장사",
-        "기술력 우수",
-        "원격협업 솔루션"
-      ],
-      "weaknesses": [
-        "RPA 전문성 부족",
-        "핵심사업 불일치",
-        "경쟁사 우위"
-      ],
-      "strategy": "RPA 전문기업 협력",
-      "summary": "RPA 사업과 무관, 수주 희박",
-      "savedAt": 1774943517480,
-      "_bid": {
-        "id": "G2B-R26BK01428651",
-        "bidNo": "R26BK01428651",
-        "bidOrd": "000",
-        "stage": "입찰공고",
-        "title": "2026년 그린워싱 위반 조사업무 로봇자동화(RPA) 운영",
-        "agency": "한국환경산업기술원",
-        "demandAgency": "",
-        "budget": "40,909,091원",
-        "deadline": "2026-04-10 10:00:00",
-        "openDate": "2026-04-10 11:00:00",
-        "openPlace": "국가종합전자조달시스템(나라장터)",
-        "postDate": "2026-03-30",
-        "contractType": "입찰",
-        "category": "기타",
-        "keywords": [],
-        "description": "2026년 그린워싱 위반 조사업무 로봇자동화(RPA) 운영",
-        "requirements": [],
-        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01428651&bidPbancOrd=000",
-        "specUrl": "",
-        "draftUrl": "",
-        "files": [],
-        "contact": "김태민 02-2284-1143",
-        "qual": "2026-04-09 18:00",
-        "source": "g2b"
-      }
-    },
-    "G2B-R26BK01431699": {
-      "probability": 25,
-      "grade": "D",
-      "strengths": [
-        "혁신기술 보유",
-        "교육효과 증대",
-        "브랜드 인지도"
-      ],
-      "weaknesses": [
-        "사업분야 불일치",
-        "예산규모 작음",
-        "교육경험 부족"
-      ],
-      "strategy": "AR/XR 교육 접목 제안",
-      "summary": "핵심사업과 괴리, 혁신성 어필 필요",
-      "savedAt": 1774943526128,
-      "_bid": {
-        "id": "G2B-R26BK01431699",
-        "bidNo": "R26BK01431699",
-        "bidOrd": "000",
-        "stage": "입찰공고",
-        "title": "2026 청소년 창작 로봇교실 운영 용역",
-        "agency": "인천테크노파크",
-        "demandAgency": "",
-        "budget": "35,454,545원",
-        "deadline": "2026-04-14 10:00:00",
-        "openDate": "2026-04-14 11:00:00",
-        "openPlace": "국가종합전자조달시스템(나라장터)",
-        "postDate": "2026-03-31",
-        "contractType": "입찰",
-        "category": "기타",
-        "keywords": [],
-        "description": "2026 청소년 창작 로봇교실 운영 용역",
-        "requirements": [],
-        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01431699&bidPbancOrd=000",
-        "specUrl": "",
-        "draftUrl": "",
-        "files": [],
-        "contact": "이석우 032-260-0738",
-        "qual": "2026-04-13 18:00",
-        "source": "g2b"
-      }
-    },
-    "BIZ-PBLN_000000000120208": {
-      "probability": 85,
-      "grade": "A",
-      "strengths": [
-        "AR/XR 기술력 우수",
-        "혁신제품 적합성",
-        "다양한 제품군 보유",
-        "코스닥 상장 기업"
-      ],
-      "weaknesses": [
-        "경쟁사 많음",
-        "예산 미정 불확실",
-        "규격 맞춤 필요"
-      ],
-      "strategy": "혁신성 적극 강조, 정책 부합성 제시, 실증 사례 확보, 기술 우위 입증, 맞춤형 제안 준비",
-      "summary": "AR/XR 혁신성 강점, 수주 가능성 높음",
-      "savedAt": 1774943536472,
-      "_bid": {
-        "id": "BIZ-PBLN_000000000120208",
-        "stage": "지원사업",
-        "title": "2026년 1차 중소벤처기업부 혁신제품 규격추가 모집 공고",
-        "agency": "",
-        "demandAgency": "",
-        "budget": "미정",
-        "deadline": "2026-04-13",
-        "postDate": "2026-03-23",
-        "contractType": "공모/지원",
-        "category": "기타",
-        "keywords": [],
-        "description": "2026년 1차 중소벤처기업부 혁신제품 규격추가 모집 공고",
-        "requirements": [],
-        "specUrl": "",
-        "draftUrl": "",
-        "contact": "",
-        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120208",
-        "source": "bizinfo"
-      }
-    },
-    "BIZ-PBLN_000000000120205": {
-      "probability": 75,
-      "grade": "A",
-      "strengths": [
-        "AR/XR 기술력",
-        "산업현장 적용",
-        "원격협업 솔루션",
-        "디지털트윈",
-        "포항시 산업특성"
-      ],
-      "weaknesses": [
-        "예산 미정",
-        "경쟁 심화 가능",
-        "사업 분류 모호"
-      ],
-      "strategy": "포항시 산업 분석, 맞춤형 솔루션 제안, 성공사례 강조, 비용 효율성 어필, 지역 고용 창출",
-      "summary": "VIRNECT AR/XR, 포항 산업 위기 대응",
-      "savedAt": 1774943545800,
-      "_bid": {
-        "id": "BIZ-PBLN_000000000120205",
-        "stage": "지원사업",
-        "title": "[경북] 포항시 2026년 지역산업위기대응 맞춤형 지원사업 참여기업 모집 공고",
-        "agency": "",
-        "demandAgency": "",
-        "budget": "미정",
-        "deadline": "2026-04-10",
-        "postDate": "2026-04-01",
-        "contractType": "공모/지원",
-        "category": "기타",
-        "keywords": [],
-        "description": "[경북] 포항시 2026년 지역산업위기대응 맞춤형 지원사업 참여기업 모집 공고",
-        "requirements": [],
-        "specUrl": "",
-        "draftUrl": "",
-        "contact": "",
-        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120205",
-        "source": "bizinfo"
-      }
-    },
-    "BIZ-PBLN_000000000120202": {
-      "probability": 5,
-      "grade": "D",
-      "strengths": [
-        "원격협업 가능",
-        "디지털트윈 활용",
-        "AR/XR 기술력"
-      ],
-      "weaknesses": [
-        "사업분야 불일치",
-        "그린바이오 경험無"
-      ],
-      "strategy": "AR/XR 활용 제안 및 원격협업 강조",
-      "summary": "그린바이오 연관성 낮음, 수주 희박",
-      "savedAt": 1774943556146,
-      "_bid": {
-        "id": "BIZ-PBLN_000000000120202",
-        "stage": "지원사업",
-        "title": "[강원] 평창군 2026년 2차 그린바이오 사업화지원(비R&D) 모집 공고",
-        "agency": "",
-        "demandAgency": "",
-        "budget": "미정",
-        "deadline": "2026-04-14",
-        "postDate": "2026-03-23",
-        "contractType": "공모/지원",
-        "category": "기타",
-        "keywords": [],
-        "description": "[강원] 평창군 2026년 2차 그린바이오 사업화지원(비R&D) 모집 공고",
-        "requirements": [],
-        "specUrl": "",
-        "draftUrl": "",
-        "contact": "",
-        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120202",
-        "source": "bizinfo"
-      }
-    },
-    "BIZ-PBLN_000000000120200": {
-      "probability": 15,
-      "grade": "D",
-      "strengths": [
-        "첨단 AR/XR 기술",
-        "산업 현장 솔루션",
-        "원격 협업 기능"
-      ],
-      "weaknesses": [
-        "그린바이오 불일치",
-        "기술개발 초점 상이",
-        "바이오 특화 부족"
-      ],
-      "strategy": "운영 효율성 강조 및 바이오 기업 협력",
-      "summary": "그린바이오 분야 연관성 낮아 수주 가능성 희박",
-      "savedAt": 1774943567083,
-      "_bid": {
-        "id": "BIZ-PBLN_000000000120200",
-        "stage": "지원사업",
-        "title": "2026년 2차 평창군 그린바이오 기술개발(R&BD) 기술고도화지원(비R&D) 모집 공고",
-        "agency": "",
-        "demandAgency": "",
-        "budget": "미정",
-        "deadline": "2026-04-14",
-        "postDate": "2026-03-23",
-        "contractType": "공모/지원",
-        "category": "기타",
-        "keywords": [],
-        "description": "2026년 2차 평창군 그린바이오 기술개발(R&BD) 기술고도화지원(비R&D) 모집 공고",
-        "requirements": [],
-        "specUrl": "",
-        "draftUrl": "",
-        "contact": "",
-        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120200",
-        "source": "bizinfo"
-      }
-    },
-    "BIZ-PBLN_000000000120199": {
-      "probability": 5,
-      "grade": "D",
-      "strengths": [
-        "AR/XR 기술력 우수",
-        "원격협업 솔루션",
-        "디지털트윈 기술"
-      ],
-      "weaknesses": [
-        "핵심사업 불일치",
-        "소재개발 경험無"
-      ],
-      "strategy": "AR/XR 활용 제안",
-      "summary": "사업 연관성 낮아 수주난항",
-      "savedAt": 1774943578305,
-      "_bid": {
-        "id": "BIZ-PBLN_000000000120199",
-        "stage": "지원사업",
-        "title": "[충북] 바이오세라믹 소재기업 기술개발 지원사업(3차연도) 신규지원 대상과제 공고",
-        "agency": "",
-        "demandAgency": "",
-        "budget": "미정",
-        "deadline": "2026-04-13",
-        "postDate": "2026-03-23",
-        "contractType": "공모/지원",
-        "category": "기타",
-        "keywords": [],
-        "description": "[충북] 바이오세라믹 소재기업 기술개발 지원사업(3차연도) 신규지원 대상과제 공고",
-        "requirements": [],
-        "specUrl": "",
-        "draftUrl": "",
-        "contact": "",
-        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120199",
-        "source": "bizinfo"
-      }
-    },
-    "BIZ-PBLN_000000000120196": {
-      "probability": 5,
-      "grade": "D",
-      "strengths": [
-        "AR/XR 기술력 보유",
-        "원격 협업 솔루션",
-        "디지털 트윈 가능"
-      ],
-      "weaknesses": [
-        "소비재 기업 아님",
-        "사업 목적 불일치",
-        "직접 연관성 부족"
-      ],
-      "strategy": "참여 대신 협력 제안, AR/XR 마케팅 제안",
-      "summary": "소비재전과 무관, 수주 희박",
-      "savedAt": 1774943592268,
-      "_bid": {
-        "id": "BIZ-PBLN_000000000120196",
-        "stage": "지원사업",
-        "title": "[경남] 양산시 2026년 베트남 국제 프리미엄 소비재전 참여업체 모집 공고(소비재 수출 초보기업 O2O 해외마케팅 지원사업)",
-        "agency": "",
-        "demandAgency": "",
-        "budget": "미정",
-        "deadline": "2026-04-10",
-        "postDate": "2026-03-23",
-        "contractType": "공모/지원",
-        "category": "기타",
-        "keywords": [],
-        "description": "[경남] 양산시 2026년 베트남 국제 프리미엄 소비재전 참여업체 모집 공고(소비재 수출 초보기업 O2O 해외마케팅 지원사업)",
-        "requirements": [],
-        "specUrl": "",
-        "draftUrl": "",
-        "contact": "",
-        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120196",
-        "source": "bizinfo"
-      }
-    },
-    "G2B-R26BK01428931": {
-      "probability": 55,
-      "grade": "C",
-      "strengths": [
-        "AR/XR 기술력 우수",
-        "시뮬레이션 연관성",
-        "혁신 교육 가능성"
-      ],
-      "weaknesses": [
-        "주력 분야 불일치",
-        "교육 콘텐츠 부족"
-      ],
-      "strategy": "AR/XR 교육 특화 제안",
-      "summary": "AR/XR 교육 적용 가능",
-      "savedAt": 1774943604348,
-      "_bid": {
-        "id": "G2B-R26BK01428931",
-        "bidNo": "R26BK01428931",
-        "bidOrd": "000",
-        "stage": "입찰공고",
-        "title": "‘청소년AI로봇체험교육사업’ 2026년 경상북도 청소년 AI로봇체험교육 사업 온라인 확산형 프로그램 운영 용역",
-        "agency": "사단법인 경북아이씨티융합산업진흥협회",
-        "demandAgency": "",
-        "budget": "104,545,455원",
-        "deadline": "-",
-        "openDate": "2026-03-30 15:00:00",
-        "openPlace": "경상북도 포항시 남구 지곡로 394, 포항테크노파크 제1벤처동 201-202호",
-        "postDate": "2026-03-30",
-        "contractType": "입찰",
-        "category": "시뮬레이션",
-        "keywords": [],
-        "description": "‘청소년AI로봇체험교육사업’ 2026년 경상북도 청소년 AI로봇체험교육 사업 온라인 확산형 프로그램 운영 용역",
-        "requirements": [],
-        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01428931&bidPbancOrd=000",
-        "specUrl": "",
-        "draftUrl": "",
-        "files": [],
-        "contact": "김신영 053-851-9125",
-        "qual": "",
-        "source": "g2b"
-      }
-    },
-    "BIZ-PBLN_000000000120206": {
-      "probability": 65,
-      "grade": "B",
-      "strengths": [
-        "기술 적합성",
-        "제품 다양성",
-        "지역 연관성"
-      ],
-      "weaknesses": [
-        "예산 미정",
-        "사업 범위 모호"
-      ],
-      "strategy": "포항시와 협력,맞춤형 제안,성공사례 강조",
-      "summary": "VIRNECT 기술 적합, 예산 확보 및 맞춤형 제안 중요.",
-      "savedAt": 1774943614834,
-      "_bid": {
-        "id": "BIZ-PBLN_000000000120206",
-        "stage": "지원사업",
-        "title": "[경북] 2026년 포항시 유망강소기업 육성사업 시행계획 공고",
-        "agency": "",
-        "demandAgency": "",
-        "budget": "미정",
-        "deadline": "2026-04-17",
-        "postDate": "2026-04-01",
-        "contractType": "공모/지원",
-        "category": "기타",
-        "keywords": [],
-        "description": "[경북] 2026년 포항시 유망강소기업 육성사업 시행계획 공고",
-        "requirements": [],
-        "specUrl": "",
-        "draftUrl": "",
-        "contact": "",
-        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120206",
-        "source": "bizinfo"
-      }
-    },
-    "BIZ-PBLN_000000000120204": {
-      "probability": 5,
-      "grade": "D",
-      "strengths": [
-        "디지털트윈 기술",
-        "AR/XR 기술력"
-      ],
-      "weaknesses": [
-        "AI 특화 아님",
-        "스타트업 아님"
-      ],
-      "strategy": "직접 참여 부적합",
-      "summary": "사업 성격 및 대상 불일치",
-      "savedAt": 1774943626971,
-      "_bid": {
-        "id": "BIZ-PBLN_000000000120204",
-        "stage": "지원사업",
-        "title": "2026년 AI 특화 창업 프로그램(인공지능사관학교 수료생 대상) 참가자 모집 공고",
-        "agency": "",
-        "demandAgency": "",
-        "budget": "미정",
-        "deadline": "2026-04-17",
-        "postDate": "2026-03-23",
-        "contractType": "공모/지원",
-        "category": "AI",
-        "keywords": [],
-        "description": "2026년 AI 특화 창업 프로그램(인공지능사관학교 수료생 대상) 참가자 모집 공고",
-        "requirements": [],
-        "specUrl": "",
-        "draftUrl": "",
-        "contact": "",
-        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120204",
-        "source": "bizinfo"
-      }
-    },
-    "BIZ-PBLN_000000000120203": {
-      "probability": 65,
-      "grade": "B",
-      "strengths": [
-        "뿌리산업 기술 적합",
-        "생산성/안전성 향상",
-        "정부 정책 부합"
-      ],
-      "weaknesses": [
-        "직접 수주 아님",
-        "간접적 기회"
-      ],
-      "strategy": "포상 신청 및 홍보",
-      "summary": "기술력 인정 통한 기회",
-      "savedAt": 1774943635938,
-      "_bid": {
-        "id": "BIZ-PBLN_000000000120203",
-        "stage": "지원사업",
-        "title": "2026년 소재ㆍ부품ㆍ장비-뿌리 산업 발전 유공 포상계획 공고",
-        "agency": "",
-        "demandAgency": "",
-        "budget": "미정",
-        "deadline": "2026-04-21",
-        "postDate": "2026-03-23",
-        "contractType": "공모/지원",
-        "category": "기타",
-        "keywords": [],
-        "description": "2026년 소재ㆍ부품ㆍ장비-뿌리 산업 발전 유공 포상계획 공고",
-        "requirements": [],
-        "specUrl": "",
-        "draftUrl": "",
-        "contact": "",
-        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120203",
-        "source": "bizinfo"
-      }
-    },
-    "BIZ-PBLN_000000000120201": {
-      "probability": 35,
-      "grade": "C",
-      "strengths": [
-        "AR/XR 기술력 보유",
-        "원격협업 솔루션",
-        "디지털트윈 역량"
-      ],
-      "weaknesses": [
-        "사업 연관성 낮음",
-        "요구사항 불명확"
-      ],
-      "strategy": "AR/XR로 R&D 효율화",
-      "summary": "AR/XR R&D 지원 제안",
-      "savedAt": 1774943647077,
-      "_bid": {
-        "id": "BIZ-PBLN_000000000120201",
-        "stage": "지원사업",
-        "title": "[경기] 포천시 2026년 신소재개발 프로그램 지원사업 모집 공고",
-        "agency": "",
-        "demandAgency": "",
-        "budget": "미정",
-        "deadline": "2026-09-30",
-        "postDate": "2026-03-18",
-        "contractType": "공모/지원",
-        "category": "기타",
-        "keywords": [],
-        "description": "[경기] 포천시 2026년 신소재개발 프로그램 지원사업 모집 공고",
-        "requirements": [],
-        "specUrl": "",
-        "draftUrl": "",
-        "contact": "",
-        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120201",
-        "source": "bizinfo"
-      }
-    },
-    "BIZ-PBLN_000000000120197": {
-      "probability": 70,
-      "grade": "B",
-      "strengths": [
-        "제품-시장 적합성",
-        "안전/효율 개선",
-        "종합 솔루션 제공",
-        "작업환경 개선"
-      ],
-      "weaknesses": [
-        "예산 미정 불확실",
-        "기술 도입 저항",
-        "경쟁 심화 가능성"
-      ],
-      "strategy": "뿌리산업 특화 제안, ROI 및 안전 강조, 파일럿 프로그램, 작업환경 개선 부각",
-      "summary": "VIRNECT AR/XR, 뿌리산업 개선 기여, 수주↑",
-      "savedAt": 1774943658925,
-      "_bid": {
-        "id": "BIZ-PBLN_000000000120197",
-        "stage": "지원사업",
-        "title": "2026년 뿌리기업 명가, 일하기 좋은 뿌리기업 선정 통합 공고",
-        "agency": "",
-        "demandAgency": "",
-        "budget": "미정",
-        "deadline": "2026-04-22",
-        "postDate": "2026-03-23",
-        "contractType": "공모/지원",
-        "category": "기타",
-        "keywords": [],
-        "description": "2026년 뿌리기업 명가, 일하기 좋은 뿌리기업 선정 통합 공고",
-        "requirements": [],
-        "specUrl": "",
-        "draftUrl": "",
-        "contact": "",
-        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120197",
-        "source": "bizinfo"
       }
     }
   }
