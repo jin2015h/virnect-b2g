@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:54:14.684Z",
+  "updatedAt": "2026-04-08T06:54:40.199Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -10731,6 +10731,48 @@
         "files": [],
         "contact": "류주리 053-210-9964",
         "qual": "2026-04-14 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01432807": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술력",
+        "디지털트윈",
+        "피지컬 AI 연관성"
+      ],
+      "weaknesses": [
+        "농업 분야 경험 부족",
+        "예산 규모 작음"
+      ],
+      "strategy": "AR/XR 기반 농업 AI 전략 제시",
+      "summary": "AR/XR, DT 농업 AI 전략 수립 적합",
+      "savedAt": 1775631280197,
+      "_bid": {
+        "id": "G2B-R26BK01432807",
+        "bidNo": "R26BK01432807",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "스마트농업 구현을 위한 피지컬 AI 기술 확보 전략 수립",
+        "agency": "농림식품기술기획평가원",
+        "demandAgency": "",
+        "budget": "45,454,545원",
+        "deadline": "2026-04-13 10:00:00",
+        "openDate": "2026-04-13 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-01",
+        "contractType": "입찰",
+        "category": "AI",
+        "keywords": [],
+        "description": "스마트농업 구현을 위한 피지컬 AI 기술 확보 전략 수립",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01432807&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "신승현 061-338-9833",
+        "qual": "2026-04-12 18:00",
         "source": "g2b"
       }
     }
