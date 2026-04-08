@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:56:36.244Z",
+  "updatedAt": "2026-04-08T06:56:47.461Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -11178,6 +11178,49 @@
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120503",
         "source": "bizinfo"
+      }
+    },
+    "G2B-R26BK01441158": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술 보유",
+        "원격 협업 가능",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "핵심 사업 불일치",
+        "DB 서버 전문성 無",
+        "IT 인프라 경험 無"
+      ],
+      "strategy": "핵심 역량 집중, 협력사 발굴 제안",
+      "summary": "사업 분야 불일치로 수주 가능성 매우 낮음.",
+      "savedAt": 1775631407458,
+      "_bid": {
+        "id": "G2B-R26BK01441158",
+        "bidNo": "R26BK01441158",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "노후화 원격지(DR) PACS·EMR DB 서버 교체 업체 공고",
+        "agency": "조선대학교병원",
+        "demandAgency": "",
+        "budget": "10원",
+        "deadline": "-",
+        "openDate": "2026-04-17 10:30:00",
+        "openPlace": "조선대병원 1관 10층 소회의실",
+        "postDate": "2026-04-03",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "노후화 원격지(DR) PACS·EMR DB 서버 교체 업체 공고",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01441158&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "송성환 062-220-3335",
+        "qual": "",
+        "source": "g2b"
       }
     }
   }
