@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:52:16.762Z",
+  "updatedAt": "2026-04-08T06:52:26.908Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -10264,6 +10264,49 @@
         "files": [],
         "contact": "지재현 02-2276-2043",
         "qual": "2026-04-12 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01438101": {
+      "probability": 25,
+      "grade": "D",
+      "strengths": [
+        "혁신 기술 보유",
+        "산업 현장 경험",
+        "비전 기술 활용"
+      ],
+      "weaknesses": [
+        "핵심 역량 불일치",
+        "직접 제품 부재",
+        "경쟁사 우위 예상"
+      ],
+      "strategy": "AI 비전 역량 강조, AR/XR 연계 제안, 협력사 발굴 고려",
+      "summary": "핵심 역량 불일치로 수주 가능성 낮음.",
+      "savedAt": 1775631146907,
+      "_bid": {
+        "id": "G2B-R26BK01438101",
+        "bidNo": "R26BK01438101",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "MEA 막/전극 표면 결함 AI 비전 검사 시스템",
+        "agency": "한국에너지기술연구원",
+        "demandAgency": "",
+        "budget": "55,747,735원",
+        "deadline": "2026-04-10 10:00:00",
+        "openDate": "2026-04-10 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-02",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "MEA 막/전극 표면 결함 AI 비전 검사 시스템",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01438101&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "장형욱 042-860-3213",
+        "qual": "2026-04-09 18:00",
         "source": "g2b"
       }
     }
