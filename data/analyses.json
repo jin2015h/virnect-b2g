@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:58:25.875Z",
+  "updatedAt": "2026-04-08T06:58:41.193Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -11597,6 +11597,45 @@
         "draftUrl": "",
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120515",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120513": {
+      "probability": 55,
+      "grade": "B",
+      "strengths": [
+        "산업용 AR/XR 전문",
+        "원격협업/디지털트윈",
+        "생산성/안전성 기여",
+        "기술 역량 강화 적합"
+      ],
+      "weaknesses": [
+        "이차전지 직접 연관↓",
+        "사업 성격 간접적",
+        "예산 규모 미정",
+        "경쟁사 존재 가능"
+      ],
+      "strategy": "이차전지 특화 제안, 원격/트윈 솔루션, 컨설팅사 협력, 생산성/안전 강조",
+      "summary": "AR/XR로 이차전지 역량 강화 기여 가능.",
+      "savedAt": 1775631521191,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120513",
+        "stage": "지원사업",
+        "title": "[경북] 구미시 2026년 이차전지 기술 역량 강화를 위한 기술컨설팅 지원사업 참여기업 추가모집 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-17",
+        "postDate": "2026-03-30",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "[경북] 구미시 2026년 이차전지 기술 역량 강화를 위한 기술컨설팅 지원사업 참여기업 추가모집 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120513",
         "source": "bizinfo"
       }
     }
