@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:55:13.234Z",
+  "updatedAt": "2026-04-08T06:55:22.997Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -10900,6 +10900,48 @@
         "draftUrl": "",
         "files": [],
         "contact": "정지현 052-714-8103",
+        "qual": "2026-04-13 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01440722": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "원격 협업 솔루션",
+        "동남아 시장 관심"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "로봇 사업 경험 부족"
+      ],
+      "strategy": "핵심 역량 집중",
+      "summary": "핵심 사업과 무관함",
+      "savedAt": 1775631322995,
+      "_bid": {
+        "id": "G2B-R26BK01440722",
+        "bidNo": "R26BK01440722",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "동남아(베트남) 로봇 비즈니스 브릿지 프로그램 운영 용역",
+        "agency": "한국로봇융합연구원",
+        "demandAgency": "",
+        "budget": "33,636,364원",
+        "deadline": "2026-04-14 11:00:00",
+        "openDate": "2026-04-14 12:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-03",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "동남아(베트남) 로봇 비즈니스 브릿지 프로그램 운영 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01440722&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "이소정 054-240-2589",
         "qual": "2026-04-13 18:00",
         "source": "g2b"
       }
