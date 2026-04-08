@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:52:48.131Z",
+  "updatedAt": "2026-04-08T06:53:01.746Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -10392,6 +10392,48 @@
         "files": [],
         "contact": "손미향 055-359-4513",
         "qual": "2026-04-14 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01438857": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "디지털트윈 기술",
+        "원격협업 솔루션",
+        "AR 시각화 역량"
+      ],
+      "weaknesses": [
+        "구조해석 전문성↓",
+        "핵심사업 불일치"
+      ],
+      "strategy": "전문업체와 협력",
+      "summary": "AR/XR-구조해석 연관성 낮아 수주↓",
+      "savedAt": 1775631181744,
+      "_bid": {
+        "id": "G2B-R26BK01438857",
+        "bidNo": "R26BK01438857",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "판형궤도 자율주행비행로봇 시스템 구조 안전성 분석",
+        "agency": "한국철도기술연구원",
+        "demandAgency": "",
+        "budget": "29,090,909원",
+        "deadline": "2026-04-08 11:00:00",
+        "openDate": "2026-04-08 12:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-02",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "판형궤도 자율주행비행로봇 시스템 구조 안전성 분석",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01438857&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "이슬비",
+        "qual": "2026-04-07 18:00",
         "source": "g2b"
       }
     }
