@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T07:00:57.565Z",
+  "updatedAt": "2026-04-08T07:01:06.779Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -12109,6 +12109,43 @@
         "draftUrl": "",
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120509",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120506": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "원격협업 솔루션",
+        "디지털트윈 기술"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "소상공인 경험 부족",
+        "기술 활용성 낮음"
+      ],
+      "strategy": "사업 참여 부적합",
+      "summary": "사업 불일치, 가능성 낮음",
+      "savedAt": 1775631666777,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120506",
+        "stage": "지원사업",
+        "title": "[대전] 소상공인ㆍ자영업자 재기지원사업(컨설팅ㆍ경영개선) 참여자 모집 공고(새출발기금 협업)",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "-",
+        "postDate": "2026-04-07",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "[대전] 소상공인ㆍ자영업자 재기지원사업(컨설팅ㆍ경영개선) 참여자 모집 공고(새출발기금 협업)",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120506",
         "source": "bizinfo"
       }
     }
