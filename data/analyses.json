@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:51:36.608Z",
+  "updatedAt": "2026-04-08T06:51:50.341Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -10093,6 +10093,50 @@
         "files": [],
         "contact": "이민주",
         "qual": "2026-05-13 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01441866": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "혁신기술 보유",
+        "정부과제 경험",
+        "혁신기업 이미지"
+      ],
+      "weaknesses": [
+        "핵심역량 불일치",
+        "사업분야 상이",
+        "경쟁사 우위",
+        "레퍼런스 부족"
+      ],
+      "strategy": "컨소시엄 필수",
+      "summary": "핵심역량과 무관한 건",
+      "savedAt": 1775631110335,
+      "_bid": {
+        "id": "G2B-R26BK01441866",
+        "bidNo": "R26BK01441866",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "범부처 연구비통합관리시스템(Ezbaro/RCMS) 통합 연계시스템 구축",
+        "agency": "한국철도기술연구원",
+        "demandAgency": "",
+        "budget": "180,000,000원",
+        "deadline": "2026-04-14 11:00:00",
+        "openDate": "2026-04-14 12:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-03",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "범부처 연구비통합관리시스템(Ezbaro/RCMS) 통합 연계시스템 구축",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01441866&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "이유정 031-460-5174",
+        "qual": "2026-04-13 18:00",
         "source": "g2b"
       }
     }
