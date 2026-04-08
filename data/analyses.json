@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:54:53.490Z",
+  "updatedAt": "2026-04-08T06:55:03.594Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -10815,6 +10815,49 @@
         "draftUrl": "",
         "files": [],
         "contact": "하창일 032-727-5625",
+        "qual": "2026-04-13 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01439102": {
+      "probability": 30,
+      "grade": "C",
+      "strengths": [
+        "로봇 분류 일치",
+        "디지털트윈 연계",
+        "정부과제 경험"
+      ],
+      "weaknesses": [
+        "핵심기술 불일치",
+        "측정/표준화 전문성",
+        "주력제품과 거리"
+      ],
+      "strategy": "AR/XR 연구지원 제안 및 전문기업 협력",
+      "summary": "핵심사업과 거리, AR/XR 연구지원 가능성 모색",
+      "savedAt": 1775631303592,
+      "_bid": {
+        "id": "G2B-R26BK01439102",
+        "bidNo": "R26BK01439102",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "드론을 이용한 방송국 지향특성 측정방법 표준화 연구",
+        "agency": "과학기술정보통신부 국립전파연구원",
+        "demandAgency": "",
+        "budget": "27,272,727원",
+        "deadline": "2026-04-14 10:00:00",
+        "openDate": "2026-04-14 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-03",
+        "contractType": "입찰",
+        "category": "로봇",
+        "keywords": [],
+        "description": "드론을 이용한 방송국 지향특성 측정방법 표준화 연구",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01439102&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "최보미 061-338-4841",
         "qual": "2026-04-13 18:00",
         "source": "g2b"
       }
