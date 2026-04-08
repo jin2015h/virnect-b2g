@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:53:55.411Z",
+  "updatedAt": "2026-04-08T06:54:05.241Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -10646,6 +10646,49 @@
         "files": [],
         "contact": "이유정 031-460-5174",
         "qual": "2026-04-12 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01446026": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "디지털트윈 플랫폼",
+        "데이터 통합/관리",
+        "혁신 기술력 보유"
+      ],
+      "weaknesses": [
+        "CFD 전문성 부족",
+        "원전 도메인 경험↓",
+        "핵심 사업과 이격"
+      ],
+      "strategy": "CFD 전문기업과 협력, Twin 활용 제안.",
+      "summary": "핵심 CFD 역량 부족, 파트너십 필수.",
+      "savedAt": 1775631245239,
+      "_bid": {
+        "id": "G2B-R26BK01446026",
+        "bidNo": "R26BK01446026",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "원전 부지 풍환경 평가를 위한 다중 도메인 CFD 풍속 시뮬레이션 체계 및 DB 개발 용역",
+        "agency": "한국원자력연구원",
+        "demandAgency": "",
+        "budget": "86,363,636원",
+        "deadline": "2026-04-14 11:00:00",
+        "openDate": "2026-04-20 10:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-06",
+        "contractType": "입찰",
+        "category": "시뮬레이션",
+        "keywords": [],
+        "description": "원전 부지 풍환경 평가를 위한 다중 도메인 CFD 풍속 시뮬레이션 체계 및 DB 개발 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01446026&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "김정호 042-868-8128",
+        "qual": "2026-04-13 18:00",
         "source": "g2b"
       }
     }
