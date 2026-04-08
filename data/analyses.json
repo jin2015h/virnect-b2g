@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:50:56.078Z",
+  "updatedAt": "2026-04-08T06:51:14.740Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -9965,6 +9965,49 @@
         "files": [],
         "contact": "차도빈 070-4056-8393",
         "qual": "2026-04-21 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01439103": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술 선도",
+        "혁신적 솔루션",
+        "원격협업 강점"
+      ],
+      "weaknesses": [
+        "XRD 수리 전문성 無",
+        "핵심 사업과 무관",
+        "기술 역량 불일치"
+      ],
+      "strategy": "입찰 참여 지양",
+      "summary": "AR/XR 기업, XRD 수리 전문성 없어 수주 가능성 극히 낮음.",
+      "savedAt": 1775631074739,
+      "_bid": {
+        "id": "G2B-R26BK01439103",
+        "bidNo": "R26BK01439103",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "엑스선 회절 분석기(XRD) D8 Advance controller 수리(기술용역)",
+        "agency": "서울대학교 신소재공동연구소",
+        "demandAgency": "",
+        "budget": "25,000,000원",
+        "deadline": "2026-04-20 10:00:00",
+        "openDate": "2026-04-20 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-02",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "엑스선 회절 분석기(XRD) D8 Advance controller 수리(기술용역)",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01439103&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "노윤정 02-880-9008",
+        "qual": "2026-04-19 18:00",
         "source": "g2b"
       }
     }
