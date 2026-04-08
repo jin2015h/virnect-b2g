@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:52:09.434Z",
+  "updatedAt": "2026-04-08T06:52:16.762Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -10222,6 +10222,48 @@
         "files": [],
         "contact": "홍정현 033-570-6531",
         "qual": "2026-04-20 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01434405": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "실감형 기술 보유",
+        "디지털트윈 역량",
+        "AR/XR 기술 적합"
+      ],
+      "weaknesses": [
+        "의료콘텐츠 경험",
+        "산업분야 주력"
+      ],
+      "strategy": "의료 시뮬 특화 제안",
+      "summary": "AR/XR 기반 의료 시뮬 콘텐츠 개발 적합.",
+      "savedAt": 1775631136761,
+      "_bid": {
+        "id": "G2B-R26BK01434405",
+        "bidNo": "R26BK01434405",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "지속적 신대체요법(CRRT) 시뮬레이션 실감형 콘텐츠 개발",
+        "agency": "국립중앙의료원",
+        "demandAgency": "",
+        "budget": "134,272,727원",
+        "deadline": "2026-04-13 11:00:00",
+        "openDate": "2026-04-13 12:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-01",
+        "contractType": "입찰",
+        "category": "시뮬레이션",
+        "keywords": [],
+        "description": "지속적 신대체요법(CRRT) 시뮬레이션 실감형 콘텐츠 개발",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01434405&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "지재현 02-2276-2043",
+        "qual": "2026-04-12 18:00",
         "source": "g2b"
       }
     }
