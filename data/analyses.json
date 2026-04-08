@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:59:16.462Z",
+  "updatedAt": "2026-04-08T06:59:25.655Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -11747,6 +11747,48 @@
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120504",
         "source": "bizinfo"
+      }
+    },
+    "G2B-R26BK01446616": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 핵심기술 적합",
+        "스마트고글 교육 활용",
+        "디지털트윈 물류 연계"
+      ],
+      "weaknesses": [
+        "경쟁사 존재 가능성",
+        "물류 전문성 보강"
+      ],
+      "strategy": "맞춤형 교육 솔루션",
+      "summary": "핵심기술-프로젝트 연관성 높음",
+      "savedAt": 1775631565654,
+      "_bid": {
+        "id": "G2B-R26BK01446616",
+        "bidNo": "R26BK01446616",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "Smart LogiCampus(현장 중심 교육용 물류플랫폼) 구축",
+        "agency": "인제대학교 산학협력단",
+        "demandAgency": "",
+        "budget": "268,636,364원",
+        "deadline": "-",
+        "openDate": "2026-05-18 14:00:00",
+        "openPlace": "인제대학교 산학협력단",
+        "postDate": "2026-04-07",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "Smart LogiCampus(현장 중심 교육용 물류플랫폼) 구축",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01446616&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "임아인 055-320-3527",
+        "qual": "",
+        "source": "g2b"
       }
     }
   }
