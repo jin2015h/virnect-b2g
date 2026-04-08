@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:57:09.437Z",
+  "updatedAt": "2026-04-08T06:57:17.554Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -11305,6 +11305,48 @@
         "files": [],
         "contact": "김범수 054-429-0135",
         "qual": "2026-04-22 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01442874": {
+      "probability": 80,
+      "grade": "A",
+      "strengths": [
+        "디지털트윈 제품",
+        "AR/XR 기술력",
+        "산업현장 경험"
+      ],
+      "weaknesses": [
+        "예산 규모 작음",
+        "웹기반 특화 필요"
+      ],
+      "strategy": "Twin 솔루션 강조",
+      "summary": "DT 제품 및 AR/XR 기술로 교량 유지관리 최적화.",
+      "savedAt": 1775631437546,
+      "_bid": {
+        "id": "G2B-R26BK01442874",
+        "bidNo": "R26BK01442874",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "웹기반 교량 유지관리 디지털 트윈 모델 고도화",
+        "agency": "한국건설기술연구원",
+        "demandAgency": "",
+        "budget": "23,636,364원",
+        "deadline": "2026-04-17 11:00:00",
+        "openDate": "2026-04-17 12:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-06",
+        "contractType": "입찰",
+        "category": "디지털트윈",
+        "keywords": [],
+        "description": "웹기반 교량 유지관리 디지털 트윈 모델 고도화",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01442874&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "류문선 031-910-0481",
+        "qual": "2026-04-16 18:00",
         "source": "g2b"
       }
     }
