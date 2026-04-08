@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:57:17.554Z",
+  "updatedAt": "2026-04-08T06:57:28.333Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -11347,6 +11347,49 @@
         "files": [],
         "contact": "류문선 031-910-0481",
         "qual": "2026-04-16 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01449050": {
+      "probability": 10,
+      "grade": "D",
+      "strengths": [
+        "디지털트윈 기술",
+        "혁신기술 이미지",
+        "데이터 시각화"
+      ],
+      "weaknesses": [
+        "핵심역량 불일치",
+        "바이오 전문성↓",
+        "사업분야 상이"
+      ],
+      "strategy": "전문기업과 협력",
+      "summary": "AR/XR기업, 바이오 시뮬레이션 전문성 부족, 수주 가능성 낮음.",
+      "savedAt": 1775631448331,
+      "_bid": {
+        "id": "G2B-R26BK01449050",
+        "bidNo": "R26BK01449050",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "(위탁)바이오화합물 생산시설 설치를 위한 분리·정제 단계의 수율 예측 시뮬레이션",
+        "agency": "산림청 국립산림과학원",
+        "demandAgency": "",
+        "budget": "45,320,000원",
+        "deadline": "2026-04-20 10:00:00",
+        "openDate": "2026-04-20 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-07",
+        "contractType": "입찰",
+        "category": "시뮬레이션",
+        "keywords": [],
+        "description": "(위탁)바이오화합물 생산시설 설치를 위한 분리·정제 단계의 수율 예측 시뮬레이션",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01449050&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "강주형 02-961-2533",
+        "qual": "2026-04-17 18:00",
         "source": "g2b"
       }
     }
