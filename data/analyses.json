@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:53:01.746Z",
+  "updatedAt": "2026-04-08T06:53:13.407Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -10434,6 +10434,48 @@
         "files": [],
         "contact": "이슬비",
         "qual": "2026-04-07 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01445615": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "디지털트윈 기술",
+        "첨단단지 연관성",
+        "혁신기술 보유"
+      ],
+      "weaknesses": [
+        "주력사업 불일치",
+        "에너지계획 비전문"
+      ],
+      "strategy": "전문기업과 협력",
+      "summary": "수주 가능성 낮음",
+      "savedAt": 1775631193405,
+      "_bid": {
+        "id": "G2B-R26BK01445615",
+        "bidNo": "R26BK01445615",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "인천로봇랜드 도시첨단산업단지 에너지사용계획 수립 용역",
+        "agency": "인천도시공사",
+        "demandAgency": "",
+        "budget": "228,836,364원",
+        "deadline": "2026-04-15 12:00:00",
+        "openDate": "2026-04-15 13:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-07",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "인천로봇랜드 도시첨단산업단지 에너지사용계획 수립 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01445615&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "강현빈 032-260-5186",
+        "qual": "2026-04-14 18:00",
         "source": "g2b"
       }
     }
