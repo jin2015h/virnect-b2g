@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:56:13.419Z",
+  "updatedAt": "2026-04-08T06:56:25.002Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -11105,6 +11105,42 @@
         "draftUrl": "",
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120508",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120507": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "해외시장 잠재력",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "지역 연관성 부족",
+        "경쟁 심화 가능성"
+      ],
+      "strategy": "해외 진출 강조",
+      "summary": "혁신 기술로 참가 유력",
+      "savedAt": 1775631385000,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120507",
+        "stage": "지원사업",
+        "title": "[대전] 2026년 충청권 중소ㆍ벤처기업 해외박람회 참가기업 모집 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-14",
+        "postDate": "2026-04-01",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "[대전] 2026년 충청권 중소ㆍ벤처기업 해외박람회 참가기업 모집 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120507",
         "source": "bizinfo"
       }
     }
