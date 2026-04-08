@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:49:47.218Z",
+  "updatedAt": "2026-04-08T06:50:00.882Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -9746,6 +9746,50 @@
         "description": "MARINA 노외중성자감시계통(NMS) 기본설계 완료 및 설치·운영방안 수립",
         "requirements": [],
         "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01438465&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "김정호 042-868-8128",
+        "qual": "2026-04-09 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01438546": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "디지털트윈 기술",
+        "SW 개발 역량",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "핵심 역량 불일치",
+        "원자력 전문성 부족",
+        "제어논리 경험 부족",
+        "사업 분야 상이"
+      ],
+      "strategy": "협력사 발굴 필수",
+      "summary": "핵심 역량과 불일치, 수주 가능성 낮음.",
+      "savedAt": 1775631000880,
+      "_bid": {
+        "id": "G2B-R26BK01438546",
+        "bidNo": "R26BK01438546",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "MARINA 출력제어계통 운전시나리오 기반 제어논리 설계",
+        "agency": "한국원자력연구원",
+        "demandAgency": "",
+        "budget": "36,363,636원",
+        "deadline": "2026-04-10 11:00:00",
+        "openDate": "2026-04-15 11:50:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-02",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "MARINA 출력제어계통 운전시나리오 기반 제어논리 설계",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01438546&bidPbancOrd=000",
         "specUrl": "",
         "draftUrl": "",
         "files": [],
