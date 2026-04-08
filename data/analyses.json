@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:55:34.424Z",
+  "updatedAt": "2026-04-08T06:55:48.454Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -10986,6 +10986,48 @@
         "files": [],
         "contact": "전준영 ***********",
         "qual": "2026-04-15 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01444716": {
+      "probability": 40,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 기술력 우수",
+        "AI/로봇쇼 테마 적합",
+        "혁신적 전시 가능성"
+      ],
+      "weaknesses": [
+        "행사운영 경험 부족",
+        "주사업 분야 상이"
+      ],
+      "strategy": "이벤트 전문사 협력",
+      "summary": "기술력 기반 차별화",
+      "savedAt": 1775631348445,
+      "_bid": {
+        "id": "G2B-R26BK01444716",
+        "bidNo": "R26BK01444716",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "2026년 서울AI로봇쇼 행사운영 대행 용역",
+        "agency": "(재)서울경제진흥원",
+        "demandAgency": "",
+        "budget": "1,397,724,516원",
+        "deadline": "2026-04-17 10:00:00",
+        "openDate": "2026-04-17 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-06",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "2026년 서울AI로봇쇼 행사운영 대행 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01444716&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "김응례 02-2222-3877",
+        "qual": "2026-04-16 18:00",
         "source": "g2b"
       }
     }
