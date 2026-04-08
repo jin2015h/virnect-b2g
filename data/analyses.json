@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:57:53.059Z",
+  "updatedAt": "2026-04-08T06:58:03.861Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -11476,6 +11476,48 @@
         "files": [],
         "contact": "최선호 02-3151-1514",
         "qual": "2026-04-16 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R25BK01239108": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력 우수",
+        "스마트고글 보유",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "로봇사업 불일치",
+        "임대서비스 경험無"
+      ],
+      "strategy": "로봇기업과 협력",
+      "summary": "로봇 임대사업과 불일치, 수주 가능성 매우 낮음.",
+      "savedAt": 1775631483858,
+      "_bid": {
+        "id": "G2B-R25BK01239108",
+        "bidNo": "R25BK01239108",
+        "bidOrd": "002",
+        "stage": "입찰공고",
+        "title": "개인서비스용로봇 임대서비스",
+        "agency": "조달청",
+        "demandAgency": "",
+        "budget": "9,090,909,090원",
+        "deadline": "2031-08-20 18:00:00",
+        "openDate": "2030-12-18 18:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-02",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "개인서비스용로봇 임대서비스",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01239108&bidPbancOrd=002",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "김원균 070-4056-6129",
+        "qual": "",
         "source": "g2b"
       }
     }
