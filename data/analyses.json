@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:54:05.241Z",
+  "updatedAt": "2026-04-08T06:54:14.684Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -10689,6 +10689,48 @@
         "files": [],
         "contact": "김정호 042-868-8128",
         "qual": "2026-04-13 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01448074": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "Twin 제품 적합",
+        "AR/XR 기술력",
+        "로봇산업 연관"
+      ],
+      "weaknesses": [
+        "예산 규모 작음",
+        "AI 특화 부족"
+      ],
+      "strategy": "Twin 기능 강조",
+      "summary": "Twin 활용 수주 유력",
+      "savedAt": 1775631254677,
+      "_bid": {
+        "id": "G2B-R26BK01448074",
+        "bidNo": "R26BK01448074",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "AI 로봇 가상 시뮬레이션 플랫폼을 활용한 환경구축 용역",
+        "agency": "한국로봇산업진흥원",
+        "demandAgency": "",
+        "budget": "25,885,568원",
+        "deadline": "2026-04-15 10:00:00",
+        "openDate": "2026-04-15 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-07",
+        "contractType": "입찰",
+        "category": "시뮬레이션",
+        "keywords": [],
+        "description": "AI 로봇 가상 시뮬레이션 플랫폼을 활용한 환경구축 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01448074&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "류주리 053-210-9964",
+        "qual": "2026-04-14 18:00",
         "source": "g2b"
       }
     }
