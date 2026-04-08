@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:51:58.827Z",
+  "updatedAt": "2026-04-08T06:52:09.434Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -10180,6 +10180,48 @@
         "files": [],
         "contact": "김범준 070-4056-7369",
         "qual": "2026-04-07 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01444503": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "AR/XR 전문성",
+        "메타버스 적합",
+        "제품군 다양성"
+      ],
+      "weaknesses": [
+        "예산 제약 가능성",
+        "운영 전문성 필요"
+      ],
+      "strategy": "맞춤 솔루션 제안 및 운영 효율 강조",
+      "summary": "VIRNECT, AR/XR 강점. 메타버스 체험관 운영 적합.",
+      "savedAt": 1775631129430,
+      "_bid": {
+        "id": "G2B-R26BK01444503",
+        "bidNo": "R26BK01444503",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "삼척형 메타버스 체험관 시설 운영·관리 용역",
+        "agency": "강원대학교 삼척캠퍼스 삼척산학협력단",
+        "demandAgency": "",
+        "budget": "80,000,000원",
+        "deadline": "2026-04-21 10:00:00",
+        "openDate": "2026-04-21 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-06",
+        "contractType": "입찰",
+        "category": "시뮬레이션",
+        "keywords": [],
+        "description": "삼척형 메타버스 체험관 시설 운영·관리 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01444503&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "홍정현 033-570-6531",
+        "qual": "2026-04-20 18:00",
         "source": "g2b"
       }
     }
