@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:59:37.766Z",
+  "updatedAt": "2026-04-08T06:59:48.032Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -11832,6 +11832,48 @@
         "draftUrl": "",
         "files": [],
         "contact": "박소혜 031-628-9647",
+        "qual": "",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01441273": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 기술 활용",
+        "디지털트윈 연계",
+        "원격협업 솔루션"
+      ],
+      "weaknesses": [
+        "드론쇼 운영 경험 부족",
+        "핵심 사업과 거리"
+      ],
+      "strategy": "드론 운영사와 컨소시엄",
+      "summary": "AR/XR 기술 활용 가능성 있으나, 드론쇼 운영 전문성 부족.",
+      "savedAt": 1775631588029,
+      "_bid": {
+        "id": "G2B-R26BK01441273",
+        "bidNo": "R26BK01441273",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "2026 천안 드론라이트쇼 운영 대행 용역",
+        "agency": "충청남도 천안시",
+        "demandAgency": "",
+        "budget": "227,272,727원",
+        "deadline": "-",
+        "openDate": "2026-04-24 17:00:00",
+        "openPlace": "천안시청 오룡홀 2층 토지정보과 공간드론팀",
+        "postDate": "2026-04-03",
+        "contractType": "입찰",
+        "category": "로봇",
+        "keywords": [],
+        "description": "2026 천안 드론라이트쇼 운영 대행 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01441273&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "류하연 041-521-5292",
         "qual": "",
         "source": "g2b"
       }
