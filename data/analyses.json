@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:58:41.193Z",
+  "updatedAt": "2026-04-08T06:58:56.614Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -11636,6 +11636,43 @@
         "draftUrl": "",
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120513",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120511": {
+      "probability": 1,
+      "grade": "D",
+      "strengths": [
+        "혁신 AR/XR 기술",
+        "코스닥 상장사",
+        "다양한 제품군"
+      ],
+      "weaknesses": [
+        "사업 목적 불일치",
+        "수주 대상 아님",
+        "제품 활용성 없음"
+      ],
+      "strategy": "수주 목표 제외, 다른 기회 모색",
+      "summary": "사업 연관성 낮아 수주 희박",
+      "savedAt": 1775631536612,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120511",
+        "stage": "지원사업",
+        "title": "[경북] 구미시 2026년 일자리 박람회 참여기업 지원사업 추가모집 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-17",
+        "postDate": "2026-03-27",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "[경북] 구미시 2026년 일자리 박람회 참여기업 지원사업 추가모집 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120511",
         "source": "bizinfo"
       }
     }
