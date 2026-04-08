@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:57:42.442Z",
+  "updatedAt": "2026-04-08T06:57:53.059Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -11434,6 +11434,48 @@
         "files": [],
         "contact": "양나현 051-610-4146",
         "qual": "2026-05-12 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01444281": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력 보유",
+        "산업용 솔루션 경험",
+        "원격 협업 솔루션"
+      ],
+      "weaknesses": [
+        "드론 교육 운영 경험 無",
+        "사업 직접 연관성 낮음"
+      ],
+      "strategy": "파트너십 및 AR/XR 교육 효과 강조",
+      "summary": "핵심 사업과 거리, 수주 가능성 낮음",
+      "savedAt": 1775631473056,
+      "_bid": {
+        "id": "G2B-R26BK01444281",
+        "bidNo": "R26BK01444281",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "2026년 시흥시민 드론 체험교육 프로그램 운영",
+        "agency": "한국교통안전공단",
+        "demandAgency": "",
+        "budget": "39,931,250원",
+        "deadline": "2026-04-17 12:00:00",
+        "openDate": "2026-04-22 12:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-06",
+        "contractType": "입찰",
+        "category": "로봇",
+        "keywords": [],
+        "description": "2026년 시흥시민 드론 체험교육 프로그램 운영",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01444281&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "최선호 02-3151-1514",
+        "qual": "2026-04-16 18:00",
         "source": "g2b"
       }
     }
