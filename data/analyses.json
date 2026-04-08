@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T07:00:00.910Z",
+  "updatedAt": "2026-04-08T07:00:11.791Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -11917,6 +11917,48 @@
         "draftUrl": "",
         "files": [],
         "contact": "강혜연 031-750-6976",
+        "qual": "",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01433862": {
+      "probability": 35,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 기술력",
+        "교육 훈련 활용",
+        "디지털 트윈"
+      ],
+      "weaknesses": [
+        "낮은 직접 연관성",
+        "핵심 기술 차이"
+      ],
+      "strategy": "AR/XR 교육+트윈 제안",
+      "summary": "AR/XR 교육 강점. 직접 연관성 낮음. 트윈/원격 활용 제안.",
+      "savedAt": 1775631611789,
+      "_bid": {
+        "id": "G2B-R26BK01433862",
+        "bidNo": "R26BK01433862",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "RISE행정팀 AI·로봇 인증체계 개발 및 전문가 양성 교육 운영",
+        "agency": "계명대학교 산학협력단",
+        "demandAgency": "",
+        "budget": "72,727,273원",
+        "deadline": "-",
+        "openDate": "2026-04-13 11:00:00",
+        "openPlace": "성서캠퍼스 행소관 소회의실",
+        "postDate": "2026-03-31",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "RISE행정팀 AI·로봇 인증체계 개발 및 전문가 양성 교육 운영",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01433862&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "김예지 053-580-6159",
         "qual": "",
         "source": "g2b"
       }
