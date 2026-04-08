@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:56:25.002Z",
+  "updatedAt": "2026-04-08T06:56:36.244Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -11141,6 +11141,42 @@
         "draftUrl": "",
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120507",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120503": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "AR/XR 기술력 우수",
+        "의료 분야 적용 가능",
+        "전시회 경험 증진"
+      ],
+      "weaknesses": [
+        "직접 의료기기 아님",
+        "사업 목적 부합 필요"
+      ],
+      "strategy": "AR/XR 활용 전시 제안",
+      "summary": "AR/XR로 의료 전시 지원",
+      "savedAt": 1775631396238,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120503",
+        "stage": "지원사업",
+        "title": "2026년 베트남 K 의료기기 전시회(K Med Expo) 참가 지원사업 모집 공고(G밸리의료기기개발지원센터)",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-16",
+        "postDate": "2026-03-30",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "2026년 베트남 K 의료기기 전시회(K Med Expo) 참가 지원사업 모집 공고(G밸리의료기기개발지원센터)",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120503",
         "source": "bizinfo"
       }
     }
