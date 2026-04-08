@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:52:26.908Z",
+  "updatedAt": "2026-04-08T06:52:39.204Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -10307,6 +10307,49 @@
         "files": [],
         "contact": "장형욱 042-860-3213",
         "qual": "2026-04-09 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01432139": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력",
+        "산업용 솔루션",
+        "디지털트윈 경험"
+      ],
+      "weaknesses": [
+        "로봇 제조 경험 無",
+        "사업 분야 불일치",
+        "하드웨어 공급 불가"
+      ],
+      "strategy": "입찰 참여 지양",
+      "summary": "로봇 공급과 사업 불일치로 수주 가능성 매우 낮음.",
+      "savedAt": 1775631159198,
+      "_bid": {
+        "id": "G2B-R26BK01432139",
+        "bidNo": "R26BK01432139",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "12kg 다관절 6축 협동로봇 및 제어기",
+        "agency": "한국식품연구원",
+        "demandAgency": "",
+        "budget": "30,909,091원",
+        "deadline": "2026-04-09 10:00:00",
+        "openDate": "2026-04-09 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-01",
+        "contractType": "입찰",
+        "category": "로봇",
+        "keywords": [],
+        "description": "12kg 다관절 6축 협동로봇 및 제어기",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01432139&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "김신철 063-219-9294",
+        "qual": "2026-04-08 18:00",
         "source": "g2b"
       }
     }
