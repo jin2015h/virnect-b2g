@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:49:19.659Z",
+  "updatedAt": "2026-04-08T06:49:33.208Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -9665,6 +9665,48 @@
         "draftUrl": "",
         "files": [],
         "contact": "박자영 042-879-6226",
+        "qual": "2026-04-08 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01438383": {
+      "probability": 70,
+      "grade": "B",
+      "strengths": [
+        "디지털트윈 강점",
+        "공간데이터 처리",
+        "AR/XR 기술력"
+      ],
+      "weaknesses": [
+        "LiDAR 분석 특화",
+        "예산 규모 제한"
+      ],
+      "strategy": "LiDAR 연동/분석",
+      "summary": "디지털트윈 연계로 수주 가능성 높음",
+      "savedAt": 1775630973206,
+      "_bid": {
+        "id": "G2B-R26BK01438383",
+        "bidNo": "R26BK01438383",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "오송시험선 터널 LiDAR 시계열 계측을 위한 위치 정합 및 곡선 선형 파라미터 자동 추출 기술 개발",
+        "agency": "한국철도기술연구원",
+        "demandAgency": "",
+        "budget": "50,000,000원",
+        "deadline": "2026-04-09 11:00:00",
+        "openDate": "2026-04-09 12:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-02",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "오송시험선 터널 LiDAR 시계열 계측을 위한 위치 정합 및 곡선 선형 파라미터 자동 추출 기술 개발",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01438383&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "박주영 031-460-5449",
         "qual": "2026-04-08 18:00",
         "source": "g2b"
       }
