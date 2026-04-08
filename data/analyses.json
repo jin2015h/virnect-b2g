@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:58:03.861Z",
+  "updatedAt": "2026-04-08T06:58:15.940Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -11518,6 +11518,48 @@
         "files": [],
         "contact": "김원균 070-4056-6129",
         "qual": "",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01442558": {
+      "probability": 15,
+      "grade": "D",
+      "strengths": [
+        "디지털트윈 연계",
+        "원격협업 솔루션",
+        "기술력 보유"
+      ],
+      "weaknesses": [
+        "핵심사업 불일치",
+        "HW 전문성 부족"
+      ],
+      "strategy": "협력사 통해 HW 구축, AR/XR 솔루션 연동 제안",
+      "summary": "AR/XR 연계성 낮아, 협력 필수.",
+      "savedAt": 1775631495936,
+      "_bid": {
+        "id": "G2B-R26BK01442558",
+        "bidNo": "R26BK01442558",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "레일로봇을 활용한 자동유량측정시설 검·보정측정 레일 개발·제작 및 설치 용역",
+        "agency": "한국수자원조사기술원",
+        "demandAgency": "",
+        "budget": "567,327,209원",
+        "deadline": "2026-05-18 10:00:00",
+        "openDate": "2026-05-18 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-06",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "레일로봇을 활용한 자동유량측정시설 검·보정측정 레일 개발·제작 및 설치 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01442558&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "박형재 031-929-0992",
+        "qual": "2026-05-17 18:00",
         "source": "g2b"
       }
     }
