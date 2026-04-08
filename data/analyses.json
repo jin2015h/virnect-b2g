@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:48:55.959Z",
+  "updatedAt": "2026-04-08T06:49:06.524Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -9581,6 +9581,49 @@
         "files": [],
         "contact": "권송이 051-240-7475",
         "qual": "2026-04-14 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01428972": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "디지털트윈 제품",
+        "AR/XR 핵심기술",
+        "기술개발 적합성",
+        "코스닥 상장사"
+      ],
+      "weaknesses": [
+        "물관리 경험 부족",
+        "경쟁 심화 가능성"
+      ],
+      "strategy": "물관리 특화 제안, AR/XR 융합 강조, 기술개발 역량 부각, 유사 레퍼런스 제시",
+      "summary": "VIRNECT는 디지털트윈 제품과 AR/XR 기술로 본 사업 수주 가능성이 높음.",
+      "savedAt": 1775630946522,
+      "_bid": {
+        "id": "G2B-R26BK01428972",
+        "bidNo": "R26BK01428972",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "통합물관리를 위한 디지털트윈 요소기술 개발연구(V)",
+        "agency": "조달청 인천지방조달청",
+        "demandAgency": "",
+        "budget": "545,454,545원",
+        "deadline": "2026-04-14 10:00:00",
+        "openDate": "2026-04-14 11:00:00",
+        "openPlace": "",
+        "postDate": "2026-04-01",
+        "contractType": "입찰",
+        "category": "디지털트윈",
+        "keywords": [],
+        "description": "통합물관리를 위한 디지털트윈 요소기술 개발연구(V)",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01428972&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "길선정 070-4056-7777",
+        "qual": "2026-04-13 18:00",
         "source": "g2b"
       }
     }
