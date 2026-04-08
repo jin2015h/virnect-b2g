@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:56:47.461Z",
+  "updatedAt": "2026-04-08T06:57:00.897Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -11220,6 +11220,50 @@
         "files": [],
         "contact": "송성환 062-220-3335",
         "qual": "",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01443065": {
+      "probability": 65,
+      "grade": "B",
+      "strengths": [
+        "디지털트윈",
+        "원격협업",
+        "AR/XR 시각화",
+        "항만 인프라"
+      ],
+      "weaknesses": [
+        "CCUS 전문성",
+        "연구용역",
+        "예산 제약"
+      ],
+      "strategy": "CCUS 연구 시각화/협업. 전문기관 협력.",
+      "summary": "VIRNECT AR/XR, CCUS 항만 연구 기여",
+      "savedAt": 1775631420889,
+      "_bid": {
+        "id": "G2B-R26BK01443065",
+        "bidNo": "R26BK01443065",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "CCUS(Carbon Capture, Utilization and Storage) 기반 저탄소 항만건설 및 배후산업 인프라 구축 기술개발 연구용역",
+        "agency": "여수광양항만공사",
+        "demandAgency": "",
+        "budget": "100,000,000원",
+        "deadline": "2026-04-17 14:00:00",
+        "openDate": "2026-04-17 15:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-06",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "CCUS(Carbon Capture, Utilization and Storage) 기반 저탄소 항만건설 및 배후산업 인프라 구축 기술개발 연구용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01443065&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "황도연 061-797-4362",
+        "qual": "2026-04-16 18:00",
         "source": "g2b"
       }
     }
