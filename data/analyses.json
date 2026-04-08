@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:50:13.452Z",
+  "updatedAt": "2026-04-08T06:50:23.971Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -9837,6 +9837,49 @@
         "files": [],
         "contact": "류문선 031-910-0481",
         "qual": "2026-04-13 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01447347": {
+      "probability": 85,
+      "grade": "A",
+      "strengths": [
+        "핵심 제품 일치",
+        "디지털트윈 전문성",
+        "AR/XR 기술 연계"
+      ],
+      "weaknesses": [
+        "기존 시스템 파악",
+        "경쟁사 존재",
+        "예산 규모 제한"
+      ],
+      "strategy": "핵심 역량 강조 및 맞춤 제안",
+      "summary": "제품 일치, 수주 가능성 높음",
+      "savedAt": 1775631023969,
+      "_bid": {
+        "id": "G2B-R26BK01447347",
+        "bidNo": "R26BK01447347",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "2026년 디지털트윈 시스템 유지보수 용역",
+        "agency": "경상북도 경주시",
+        "demandAgency": "",
+        "budget": "30,000,000원",
+        "deadline": "2026-04-13 10:00:00",
+        "openDate": "2026-04-13 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-07",
+        "contractType": "입찰",
+        "category": "디지털트윈",
+        "keywords": [],
+        "description": "2026년 디지털트윈 시스템 유지보수 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01447347&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "최경연 054-779-6768",
+        "qual": "2026-04-12 18:00",
         "source": "g2b"
       }
     }
