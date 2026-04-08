@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:54:40.199Z",
+  "updatedAt": "2026-04-08T06:54:53.490Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -10773,6 +10773,49 @@
         "files": [],
         "contact": "신승현 061-338-9833",
         "qual": "2026-04-12 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01434107": {
+      "probability": 30,
+      "grade": "C",
+      "strengths": [
+        "AR/XR 시각화",
+        "원격 협업 가능",
+        "디지털 트윈 연계"
+      ],
+      "weaknesses": [
+        "표준 도출 비전문",
+        "핵심 사업 불일치",
+        "예산 규모 소액"
+      ],
+      "strategy": "AR/XR 활용 제안",
+      "summary": "AR/XR로 안전 시각화",
+      "savedAt": 1775631293482,
+      "_bid": {
+        "id": "G2B-R26BK01434107",
+        "bidNo": "R26BK01434107",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "드론 비행 안전 데이터 표준 항목 도출 및 이종 감시정보 연계를 통한 안전증진 방안 고도화 연구",
+        "agency": "항공안전기술원",
+        "demandAgency": "",
+        "budget": "44,545,455원",
+        "deadline": "2026-04-14 10:00:00",
+        "openDate": "2026-04-14 11:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-02",
+        "contractType": "입찰",
+        "category": "로봇",
+        "keywords": [],
+        "description": "드론 비행 안전 데이터 표준 항목 도출 및 이종 감시정보 연계를 통한 안전증진 방안 고도화 연구",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01434107&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "하창일 032-727-5625",
+        "qual": "2026-04-13 18:00",
         "source": "g2b"
       }
     }
