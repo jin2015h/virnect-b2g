@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T07:01:06.779Z",
+  "updatedAt": "2026-04-08T07:01:18.485Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -12146,6 +12146,42 @@
         "draftUrl": "",
         "contact": "",
         "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120506",
+        "source": "bizinfo"
+      }
+    },
+    "BIZ-PBLN_000000000120505": {
+      "probability": 5,
+      "grade": "D",
+      "strengths": [
+        "AR/XR 기술력 우수",
+        "다양한 솔루션 보유"
+      ],
+      "weaknesses": [
+        "사업 분야 불일치",
+        "AR/XR 수요 불명확",
+        "예산 정보 없음"
+      ],
+      "strategy": "사업 적합성 재검토",
+      "summary": "사업 불일치로 수주 낮음",
+      "savedAt": 1775631678482,
+      "_bid": {
+        "id": "BIZ-PBLN_000000000120505",
+        "stage": "지원사업",
+        "title": "2026년 한복상점 참가사 모집 공고",
+        "agency": "",
+        "demandAgency": "",
+        "budget": "미정",
+        "deadline": "2026-04-24",
+        "postDate": "2026-04-20",
+        "contractType": "공모/지원",
+        "category": "기타",
+        "keywords": [],
+        "description": "2026년 한복상점 참가사 모집 공고",
+        "requirements": [],
+        "specUrl": "",
+        "draftUrl": "",
+        "contact": "",
+        "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120505",
         "source": "bizinfo"
       }
     }
