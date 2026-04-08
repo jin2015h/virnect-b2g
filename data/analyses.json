@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:49:06.524Z",
+  "updatedAt": "2026-04-08T06:49:19.659Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -9624,6 +9624,48 @@
         "files": [],
         "contact": "길선정 070-4056-7777",
         "qual": "2026-04-13 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01434415": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "원격협업 솔루션",
+        "스마트고글 활용",
+        "디지털트윈 적용"
+      ],
+      "weaknesses": [
+        "핵융합 전문성 부족",
+        "AR/XR 직접 요구 無"
+      ],
+      "strategy": "원격협업 효율 강조",
+      "summary": "AR/XR로 유지관리 효율 증대 가능",
+      "savedAt": 1775630959658,
+      "_bid": {
+        "id": "G2B-R26BK01434415",
+        "bidNo": "R26BK01434415",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "[재공고] KSTAR 제어시스템 통합유지관리 용역 - 개발 프로그램 운용 및 시스템 점검",
+        "agency": "한국핵융합에너지연구원",
+        "demandAgency": "",
+        "budget": "87,000,000원",
+        "deadline": "2026-04-09 14:00:00",
+        "openDate": "2026-04-09 15:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-01",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "[재공고] KSTAR 제어시스템 통합유지관리 용역 - 개발 프로그램 운용 및 시스템 점검",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01434415&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "박자영 042-879-6226",
+        "qual": "2026-04-08 18:00",
         "source": "g2b"
       }
     }
