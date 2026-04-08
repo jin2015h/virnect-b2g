@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:53:45.813Z",
+  "updatedAt": "2026-04-08T06:53:55.411Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -10603,6 +10603,48 @@
         "draftUrl": "",
         "files": [],
         "contact": "서희현 062-610-2923",
+        "qual": "2026-04-12 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01444735": {
+      "probability": 75,
+      "grade": "B",
+      "strengths": [
+        "디지털트윈 기술",
+        "AR/XR 시각화",
+        "연구기관 협력"
+      ],
+      "weaknesses": [
+        "AI 전문성 부각",
+        "경쟁사 존재"
+      ],
+      "strategy": "디지털트윈 강조",
+      "summary": "디지털트윈 기반 AI 연구 강점",
+      "savedAt": 1775631235409,
+      "_bid": {
+        "id": "G2B-R26BK01444735",
+        "bidNo": "R26BK01444735",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "시뮬레이션-물리 데이터 정합성 향상을 위한 AI 기술 연구",
+        "agency": "한국철도기술연구원",
+        "demandAgency": "",
+        "budget": "45,454,545원",
+        "deadline": "2026-04-13 11:00:00",
+        "openDate": "2026-04-13 12:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-06",
+        "contractType": "입찰",
+        "category": "시뮬레이션",
+        "keywords": [],
+        "description": "시뮬레이션-물리 데이터 정합성 향상을 위한 AI 기술 연구",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01444735&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "이유정 031-460-5174",
         "qual": "2026-04-12 18:00",
         "source": "g2b"
       }
