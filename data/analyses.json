@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T06:50:00.882Z",
+  "updatedAt": "2026-04-08T06:50:13.452Z",
   "analyses": {
     "G2B-R26BK01399242": {
       "probability": 25,
@@ -9795,6 +9795,48 @@
         "files": [],
         "contact": "김정호 042-868-8128",
         "qual": "2026-04-09 18:00",
+        "source": "g2b"
+      }
+    },
+    "G2B-R26BK01434459": {
+      "probability": 35,
+      "grade": "D",
+      "strengths": [
+        "디지털트윈 연계",
+        "건설 분야 관심",
+        "데이터 시각화"
+      ],
+      "weaknesses": [
+        "SAR 전처리 전문성",
+        "핵심 사업과 괴리"
+      ],
+      "strategy": "SAR 전문 파트너십",
+      "summary": "SAR 전문성 부족, 디지털트윈 연계 및 파트너십 필수.",
+      "savedAt": 1775631013451,
+      "_bid": {
+        "id": "G2B-R26BK01434459",
+        "bidNo": "R26BK01434459",
+        "bidOrd": "000",
+        "stage": "입찰공고",
+        "title": "교량 변위 분석을 위한 SAR 데이터 전처리 고도화 용역",
+        "agency": "한국건설기술연구원",
+        "demandAgency": "",
+        "budget": "76,994,394원",
+        "deadline": "2026-04-14 11:00:00",
+        "openDate": "2026-04-14 12:00:00",
+        "openPlace": "국가종합전자조달시스템(나라장터)",
+        "postDate": "2026-04-01",
+        "contractType": "입찰",
+        "category": "기타",
+        "keywords": [],
+        "description": "교량 변위 분석을 위한 SAR 데이터 전처리 고도화 용역",
+        "requirements": [],
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01434459&bidPbancOrd=000",
+        "specUrl": "",
+        "draftUrl": "",
+        "files": [],
+        "contact": "류문선 031-910-0481",
+        "qual": "2026-04-13 18:00",
         "source": "g2b"
       }
     }
