@@ -1,9 +1,29 @@
 {
-  "updatedAt": "2026-04-12 06:33",
+  "updatedAt": "2026-04-13 06:35",
   "status": "done",
   "stage": "✅ 완료 — 15건",
   "total": 15,
   "bids": [
+    {
+      "id": "BIZ-PBLN_000000000120689",
+      "stage": "지원사업",
+      "title": "[부산] 2026년 클린에너지기술 혁신기업 육성사업 모집 공고",
+      "agency": "",
+      "demandAgency": "",
+      "budget": "미정",
+      "deadline": "2026-04-17",
+      "postDate": "2026-04-01",
+      "contractType": "공모/지원",
+      "category": "기타",
+      "keywords": [],
+      "description": "[부산] 2026년 클린에너지기술 혁신기업 육성사업 모집 공고",
+      "requirements": [],
+      "specUrl": "",
+      "draftUrl": "",
+      "contact": "",
+      "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120689",
+      "source": "bizinfo"
+    },
     {
       "id": "BIZ-PBLN_000000000120692",
       "stage": "지원사업",
@@ -42,26 +62,6 @@
       "draftUrl": "",
       "contact": "",
       "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120690",
-      "source": "bizinfo"
-    },
-    {
-      "id": "BIZ-PBLN_000000000120689",
-      "stage": "지원사업",
-      "title": "[부산] 2026년 클린에너지기술 혁신기업 육성사업 모집 공고",
-      "agency": "",
-      "demandAgency": "",
-      "budget": "미정",
-      "deadline": "2026-04-17",
-      "postDate": "2026-04-01",
-      "contractType": "공모/지원",
-      "category": "기타",
-      "keywords": [],
-      "description": "[부산] 2026년 클린에너지기술 혁신기업 육성사업 모집 공고",
-      "requirements": [],
-      "specUrl": "",
-      "draftUrl": "",
-      "contact": "",
-      "url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000120689",
       "source": "bizinfo"
     },
     {
